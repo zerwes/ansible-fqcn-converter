@@ -1,4 +1,7 @@
 ---
 exclude_paths:
-  - test2.yml
+  - test3.yml
   - .github/
+
+kinds:
+  - tasks: "**/test*.yml"
