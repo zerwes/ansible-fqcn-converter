@@ -1,5 +1,7 @@
+[![pylint](https://github.com/zerwes/ansible-fqcn-converter/actions/workflows/pylint.yml/badge.svg)](https://github.com/zerwes/ansible-fqcn-converter/actions/workflows/pylint.yml)
+
 # ansible-fqcn-converter
-ansible fqcn converter
+ansible fqcn converter: update ansible tasks, playbooks etc. to use fully qualified collection name in playbooks (even for ansible buildins)
 
 ## usage
 ```
