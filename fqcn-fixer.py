@@ -11,6 +11,7 @@ import re
 import fileinput
 import difflib
 import fnmatch
+import copy
 import yaml
 
 __doc__ = """
@@ -95,11 +96,11 @@ argparser.add_argument(
 args = argparser.parse_args()
 
 # get a dict of ansible modules
-fqdndict = {}
+fqcndict = {}
 fqcnmapfile = True
 try:
     with open(args.fqcnmapfile, "r") as fqcnf:
-        fqdndict = yaml.load(fqcnf, Loader=yaml.BaseLoader)
+        fqcndict = yaml.load(fqcnf, Loader=yaml.BaseLoader)
 except FileNotFoundError:
     fqcnmapfile = False
 
@@ -125,14 +126,14 @@ if not fqcnmapfile or args.updatefqcnmapfile:
         modjson = json.loads(modpr.stdout)
         moddict = modjson[modname]
         if 'doc' in moddict and 'collection' in moddict['doc'] and 'module' in moddict['doc']:
-            fqdn = '%s.%s' % (moddict['doc']['collection'], moddict['doc']['module'])
-            nonfqdn = fqdn.split('.')[-1]
-            fqdndict[nonfqdn] = fqdn
-            print('%s : %s -> %s' % (modname, nonfqdn, fqdn))
+            fqcn = '%s.%s' % (moddict['doc']['collection'], moddict['doc']['module'])
+            nonfqcn = fqcn.split('.')[-1]
+            fqcndict[nonfqcn] = fqcn
+            print('%s : %s -> %s' % (modname, nonfqcn, fqcn))
     fqcnmapfile = open(args.fqcnmapfile, 'w')
     fqcnmapfile.write(
         yaml.dump(
-            fqdndict,
+            fqcndict,
             sort_keys=True,
             indent=2,
             width=70,
@@ -143,6 +144,10 @@ if not fqcnmapfile or args.updatefqcnmapfile:
         )
     fqcnmapfile.close()
     print('fqcn map written to %s' % args.fqcnmapfile)
+
+# add the fqcn as key to
+for fqcn in copy.copy(fqcndict).values():
+    fqcndict[fqcn] = fqcn
 
 # build exclude_paths
 exclude_paths = []
@@ -175,7 +180,7 @@ for dirpath, dirnames, files in os.walk(os.path.abspath(args.directory)):
                 parsefiles.append(f)
 
 # prepare regex
-_fqcnregex = re.compile(r'^(?P<white>\s*-?\s+)(?P<module>%s):' % '|'.join(fqdndict.keys()))
+_fqcnregex = re.compile(r'^(?P<white>\s*-?\s+)(?P<module>%s):' % '|'.join(fqcndict.keys()))
 
 # do it
 for f in parsefiles:
@@ -196,12 +201,12 @@ for f in parsefiles:
                 if not startingwhitespaces:
                     startingwhitespaces = fqcnmatch.group('white')
                     fqcnregex = re.compile('^%s(?P<module>%s):' %
-                        (startingwhitespaces, '|'.join(fqdndict.keys()))
+                        (startingwhitespaces, '|'.join(fqcndict.keys()))
                         )
                 fqcnmodule = fqcnmatch.group('module')
                 nline = re.sub(
                     '^(%s)%s:' % (startingwhitespaces, fqcnmodule),
-                    '\\1%s:' % fqdndict[fqcnmodule],
+                    '\\1%s:' % fqcndict[fqcnmodule],
                     line
                     )
                 print('*', file=sys.stderr, end='', flush=True)
