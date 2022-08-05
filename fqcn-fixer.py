@@ -96,30 +96,53 @@ args = argparser.parse_args()
 
 # get a dict of ansible modules
 fqdndict = {}
-modulespr = subprocess.run(
-    ['ansible-doc', '-lj'],
-    stdout=subprocess.PIPE,
-    stderr=subprocess.PIPE,
-    check = True
-    )
+fqcnmapfile = True
+try:
+    with open(args.fqcnmapfile, "r") as ymlfile:
+        fqdndict = yaml.load(args.fqcnmapfile, Loader=yaml.BaseLoader)
+except FileNotFoundError:
+    fqcnmapfile = False
 
-modulesdict = json.loads(modulespr.stdout)
-for modname in modulesdict.keys():
-    modpr = subprocess.run(
-        ['ansible-doc', '-j', modname],
+if not fqcnmapfile or args.updatefqcnmapfile:
+    print('we will generate the fqcn map, this will take some time ...')
+    modulespr = subprocess.run(
+        ['ansible-doc', '-lj'],
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
-        check = False
+        check = True
         )
-    modjson = json.loads(modpr.stdout)
-    moddict = modjson[modname]
-    if 'doc' in moddict and 'collection' in moddict['doc'] and 'module' in moddict['doc']:
-        fqdn = '%s.%s' % (moddict['doc']['collection'], moddict['doc']['module'])
-        nonfqdn = fqdn.split('.')[-1]
-        fqdndict[nonfqdn] = fqdn
-for s, r in fqdndict.items():
-    print('%s -> %s' % (s, r))
-sys.exit()
+    modulesdict = json.loads(modulespr.stdout)
+    for modname in modulesdict.keys():
+        modpr = subprocess.run(
+            ['ansible-doc', '-j', modname],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            check = False
+            )
+        if modpr.returncode > 0:
+            print('error parsing %s' % modname)
+            continue
+        modjson = json.loads(modpr.stdout)
+        moddict = modjson[modname]
+        if 'doc' in moddict and 'collection' in moddict['doc'] and 'module' in moddict['doc']:
+            fqdn = '%s.%s' % (moddict['doc']['collection'], moddict['doc']['module'])
+            nonfqdn = fqdn.split('.')[-1]
+            fqdndict[nonfqdn] = fqdn
+            print('%s : %s -> %s' % (modname, nonfqdn, fqdn))
+    fqcnmapfile = open(args.fqcnmapfile, 'w')
+    fqcnmapfile.write(
+        yaml.dump(
+            fqdndict,
+            sort_keys=True,
+            indent=2,
+            width=70,
+            explicit_start=True,
+            explicit_end=True,
+            default_flow_style=False
+            )
+        )
+    fqcnmapfile.close()
+    print('fqcn map written to %s' % args.fqcnmapfile)
 
 # build exclude_paths
 exclude_paths = []
