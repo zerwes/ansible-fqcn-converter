@@ -209,7 +209,10 @@ for f in parsefiles:
                     '\\1%s:' % fqcndict[fqcnmodule],
                     line
                     )
-                print('*', file=sys.stderr, end='', flush=True)
+                if fqcnmodule == fqcndict[fqcnmodule]:
+                    print('.', file=sys.stderr, end='', flush=True)
+                else:
+                    print('*', file=sys.stderr, end='', flush=True)
             else:
                 print('.', file=sys.stderr, end='', flush=True)
 
