@@ -47,7 +47,7 @@ optional arguments:
 ```
 
 ## caveats
-:warning: for now, a yaml file must use uniq nbotation: either 'named tasks' or not; mixim then in a one file is not supported yet!
+:warning: for now, a yaml file must use uniqe notation: either 'named tasks' or not; mixing them in a one file is not supported yet!
 
 ## notes
 
