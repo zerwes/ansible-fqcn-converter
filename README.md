@@ -3,7 +3,18 @@
 # ansible-fqcn-converter
 ansible fqcn converter: update ansible tasks, playbooks etc. to use fully qualified collection name in playbooks (even for ansible buildins)
 
+## howto
+ 1. Clone this repo to a convenient place: `git clone https://github.com/zerwes/ansible-fqcn-converter.git`
 
+ 2. Ensure the python script is executable: `chmod 755 ansible-fqcn-converter/fqcn-fixer.py`
+
+ 3. Optional: re-create the `fqcn-map-file` (:warning: takes at least 20 minutes :warning:): `./ansible-fqcn-converter/fqcn-fixer.py --update-fqcn-map-file`
+
+ 4. Go to the desired directory containing the ansible roles/playbooks etc and execute: `$PATH_TO_ansible-fqcn-converter/fqcn-fixer.py`
+
+ 5. If the diff displayed seems OK to you, let the script modify your files (:exclamation: use at your own risk :exclamation:): `$PATH_TO_ansible-fqcn-converter/fqcn-fixer.py -w`
+
+ 6. Run the latest `ansible-lint` and enjoy missing the `Error: fqcn-builtins Use FQCN for builtin actions.`
 
 ## usage
 ```
