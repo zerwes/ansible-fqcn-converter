@@ -175,7 +175,7 @@ for dirpath, dirnames, files in os.walk(os.path.abspath(args.directory)):
                 parsefiles.append(f)
 
 # prepare regex
-_fqcnregex = re.compile(r'^(?P<white>\s*-?\s*)(?P<module>%s):' % '|'.join(fqdndict.keys()))
+_fqcnregex = re.compile(r'^(?P<white>\s*-?\s+)(?P<module>%s):' % '|'.join(fqdndict.keys()))
 
 # do it
 for f in parsefiles:
