@@ -8,7 +8,7 @@ ansible fqcn converter: update ansible tasks, playbooks etc. to use fully qualif
 
  2. Ensure the python script is executable: `chmod 755 ansible-fqcn-converter/fqcn-fixer.py`
 
- 3. Optional: re-create the `fqcn-map-file` (:warning: takes at least 20 minutes :warning:): `./ansible-fqcn-converter/fqcn-fixer.py --update-fqcn-map-file`
+ 3. Optional: re-create the `fqcn-map-file` (:warning: takes about 40 minutes :warning:): `./ansible-fqcn-converter/fqcn-fixer.py --update-fqcn-map-file`
 
  4. Go to the desired directory containing the ansible roles/playbooks etc and execute: `$PATH_TO_ansible-fqcn-converter/fqcn-fixer.py`
 
