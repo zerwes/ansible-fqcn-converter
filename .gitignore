@@ -1,5 +1,4 @@
 *.swp
 *.pyc
 *.bak
-*.yml
-*.yaml
+test*.yml
