@@ -10,11 +10,13 @@ ansible fqcn converter: update ansible tasks, playbooks etc. to use fully qualif
 
  3. Optional: re-create the `fqcn-map-file` (:warning: takes about 40 minutes :warning:): `./ansible-fqcn-converter/fqcn-fixer.py --update-fqcn-map-file`
 
- 4. Go to the desired directory containing the ansible roles/playbooks etc and execute: `$PATH_TO_ansible-fqcn-converter/fqcn-fixer.py`
+ 4. Optional: Go to the desired directory containing the ansible roles/playbooks etc and execute: `ansible-lint .`and ensure the yaml syntax ist OK
 
- 5. If the diff displayed seems OK to you, let the script modify your files (:exclamation: use at your own risk :exclamation:): `$PATH_TO_ansible-fqcn-converter/fqcn-fixer.py -w`
+ 5. Go to the desired directory containing the ansible roles/playbooks etc and execute: `$PATH_TO_ansible-fqcn-converter/fqcn-fixer.py`
 
- 6. Run the latest `ansible-lint` and enjoy missing the `Error: fqcn-builtins Use FQCN for builtin actions.`
+ 6. If the diff displayed seems OK to you, let the script modify your files (:exclamation: use at your own risk :exclamation:): `$PATH_TO_ansible-fqcn-converter/fqcn-fixer.py -w`
+
+ 7. Run the latest `ansible-lint` and enjoy missing the `Error: fqcn-builtins Use FQCN for builtin actions.`
 
 ## usage
 ```
