@@ -127,6 +127,9 @@ for dirpath, dirnames, files in os.walk(os.path.abspath(args.directory)):
                     break
                 parsefiles.append(f)
 
+# prepare regex
+_fqcnregex = re.compile(r'^(?P<white>\s*)(?P<module>%s):' % '|'.join(fqdndict.keys()))
+
 # do it
 for f in parsefiles:
     print('parsing file %s ' % f, file=sys.stderr, end='', flush=True)
@@ -136,18 +139,25 @@ for f in parsefiles:
         originallines = []
         changedlines = []
         startingwhitespaces = False
+        fqcnregex = _fqcnregex
         for line in fi:
             print('.', file=sys.stderr, end='', flush=True)
-            nline = line
             if args.printdiff:
                 originallines.append(line)
-            for s, r in fqdndict.items():
+            nline = line
+            fqcnmatch = fqcnregex.match(line)
+            if fqcnmatch:
                 if not startingwhitespaces:
-                    nline = re.sub(r'^(\s*)%s:' % s, '\\1%s:' % r, nline)
-                    if nline != line:
-                        startingwhitespaces = re.search(r'^\s*', nline).group()
-                else:
-                    nline = re.sub('^(%s)%s:' % (startingwhitespaces, s), '\\1%s:' % r, nline)
+                    startingwhitespaces = fqcnmatch.group('white')
+                    fqcnregex = re.compile('^%s(?P<module>%s):' %
+                        (startingwhitespaces, '|'.join(fqdndict.keys()))
+                        )
+                fqcnmodule = fqcnmatch.group('module')
+                nline = re.sub(
+                    '^(%s)%s:' % (startingwhitespaces, fqcnmodule),
+                    '\\1%s:' % fqdndict[fqcnmodule],
+                    line
+                    )
             if args.writefiles:
                 print(nline, end='')
             if args.printdiff:
