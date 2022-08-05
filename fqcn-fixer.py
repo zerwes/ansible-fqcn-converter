@@ -13,7 +13,7 @@ import difflib
 import fnmatch
 
 __doc__ = """
-simple script to update the fix the fqcn module names
+simple script to fix the fqcn module names
 """
 
 def isexcluded(path, exclude_paths):

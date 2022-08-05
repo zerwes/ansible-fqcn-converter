@@ -6,7 +6,7 @@ ansible fqcn converter
 usage: fqcn-fixer.py [-h] [-d DIRECTORY] [-e FILEEXTENSIONS [FILEEXTENSIONS ...]] [--exclude EXCLUDE_PATHS [EXCLUDE_PATHS ...]]
                      [-c CONFIG] [-w] [-b BACKUPEXTENSION] [-x]
 
-simple script to update the fix the fqcn module names
+simple script to fix the fqcn module names
 
 optional arguments:
   -h, --help            show this help message and exit
