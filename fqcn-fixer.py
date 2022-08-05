@@ -221,3 +221,5 @@ for f in parsefiles:
                 tofile='b/%s' % f
                 )
             sys.stderr.writelines(diff)
+        if args.writefiles:
+            print('updated %s' % f)
