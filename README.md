@@ -18,7 +18,8 @@ ansible fqcn converter: update ansible tasks, playbooks etc. to use fully qualif
 
 ## usage
 ```
-usage: fqcn-fixer.py [-h] [-d DIRECTORY] [-e FILEEXTENSIONS [FILEEXTENSIONS ...]] [--exclude EXCLUDE_PATHS [EXCLUDE_PATHS ...]]
+usage: fqcn-fixer.py [-h] [-d DIRECTORY] [-e FILEEXTENSIONS [FILEEXTENSIONS ...]]
+                     [--exclude EXCLUDE_PATHS [EXCLUDE_PATHS ...]]
                      [-c CONFIG] [-w] [-b BACKUPEXTENSION] [-x] [-m FQCNMAPFILE] [-u]
 
 simple script to fix the fqcn module names
