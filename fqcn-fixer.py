@@ -146,7 +146,7 @@ if not fqcnmapfile or args.updatefqcnmapfile:
 
 # build exclude_paths
 exclude_paths = []
-for ep in args.exclude_paths + [".cache", ".git", ".hg", ".svn", ".tox"]:
+for ep in args.exclude_paths + [".cache", ".git", ".hg", ".svn", ".tox", args.fqcnmapfile]:
     exclude_paths.append(os.path.abspath(ep))
 
 # update some args from optional config file
