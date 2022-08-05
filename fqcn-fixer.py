@@ -160,5 +160,4 @@ for f in parsefiles:
                 fromfile='a/%s' % f,
                 tofile='b/%s' % f
                 )
-            if len(diff):
-                sys.stderr.writelines(diff)
+            sys.stderr.writelines(diff)
