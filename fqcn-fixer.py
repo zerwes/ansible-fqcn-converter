@@ -1,28 +1,30 @@
 #! /usr/bin/env python3
 # vim: tabstop=4 expandtab shiftwidth=4 softtabstop=4 smartindent
+# pylint: disable=invalid-name
 
 import sys
 import os
 import subprocess
 import argparse
 import json
-import yaml
 import re
 import fileinput
 import difflib
 import fnmatch
+import yaml
 
 __doc__ = """
 simple script to fix the fqcn module names
 """
 
-def isexcluded(path, exclude_paths):
+def isexcluded(path, _exclude_paths):
+    """check if a path element should be excluded"""
     path = os.path.abspath(path)
     return any(
         path.startswith(ep)
         or
         fnmatch.fnmatch(path, ep)
-        for ep in exclude_paths
+        for ep in _exclude_paths
         )
 
 argparser = argparse.ArgumentParser(description=__doc__)
@@ -141,9 +143,9 @@ for f in parsefiles:
                 originallines.append(line)
             for s, r in fqdndict.items():
                 if not startingwhitespaces:
-                    nline = re.sub('^(\s*)%s:' % s, '\\1%s:' % r, nline)
+                    nline = re.sub(r'^(\s*)%s:' % s, '\\1%s:' % r, nline)
                     if nline != line:
-                        startingwhitespaces = re.search('^\s*', nline).group()
+                        startingwhitespaces = re.search(r'^\s*', nline).group()
                 else:
                     nline = re.sub('^(%s)%s:' % (startingwhitespaces, s), '\\1%s:' % r, nline)
             if args.writefiles:
@@ -152,6 +154,11 @@ for f in parsefiles:
                 changedlines.append(nline)
         print('', file=sys.stderr)
         if args.printdiff:
-            diff = difflib.unified_diff(originallines, changedlines, fromfile='a/%s' % f, tofile='b/%s' % f)
-            if diff:
+            diff = difflib.unified_diff(
+                originallines,
+                changedlines,
+                fromfile='a/%s' % f,
+                tofile='b/%s' % f
+                )
+            if len(diff):
                 sys.stderr.writelines(diff)
