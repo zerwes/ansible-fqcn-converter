@@ -27,6 +27,8 @@ def isexcluded(path, _exclude_paths):
         for ep in _exclude_paths
         )
 
+basepath = os.path.dirname(os.path.realpath(__file__))
+
 argparser = argparse.ArgumentParser(description=__doc__)
 argparser.add_argument(
     '-d', '--directory',
@@ -75,10 +77,25 @@ argparser.add_argument(
     default=True,
     help="do not print a diff after parsing a file (default: print it)"
     )
+argparser.add_argument(
+    '-m', '--fqcn-map-file',
+    type=str,
+    dest='fqcnmapfile',
+    default='%s' % os.path.join(basepath, 'fqcn.yml'),
+    help="yaml file to use for the fqcn map (default: %s)" % os.path.join(basepath, 'fqcn.yml')
+    )
+argparser.add_argument(
+    '-u', '--update-fqcn-map-file',
+    dest='updatefqcnmapfile',
+    action='store_true',
+    default=False,
+    help="update the fqcn-map-file"
+    )
 
 args = argparser.parse_args()
 
 # get a dict of ansible modules
+fqdndict = {}
 modulespr = subprocess.run(
     ['ansible-doc', '-lj'],
     stdout=subprocess.PIPE,
@@ -86,16 +103,23 @@ modulespr = subprocess.run(
     check = True
     )
 
-fqdndict = {}
 modulesdict = json.loads(modulespr.stdout)
 for modname in modulesdict.keys():
-    fqdn = modname
-    if '.' not in modname:
-        fqdn = 'ansible.builtin.%s' % modname
-    nonfqdn = fqdn.split('.')[-1]
-    fqdndict[nonfqdn] = fqdn
-#for s, r in fqdndict.items():
-#    print('%s -> %s' % (s, r))
+    modpr = subprocess.run(
+        ['ansible-doc', '-j', modname],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check = False
+        )
+    modjson = json.loads(modpr.stdout)
+    moddict = modjson[modname]
+    if 'doc' in moddict and 'collection' in moddict['doc'] and 'module' in moddict['doc']:
+        fqdn = '%s.%s' % (moddict['doc']['collection'], moddict['doc']['module'])
+        nonfqdn = fqdn.split('.')[-1]
+        fqdndict[nonfqdn] = fqdn
+for s, r in fqdndict.items():
+    print('%s -> %s' % (s, r))
+sys.exit()
 
 # build exclude_paths
 exclude_paths = []
