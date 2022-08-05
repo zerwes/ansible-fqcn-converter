@@ -46,6 +46,9 @@ optional arguments:
                         update the fqcn-map-file
 ```
 
+## caveats
+:warning: for now, a yaml file must use uniq nbotation: either 'named tasks' or not; mixim then in a one file is not supported yet!
+
 ## notes
 
 ### collections
@@ -55,3 +58,6 @@ If the file is not found (or `--update-fqcn-map-file` is in use), the file defin
 
 ### exclude paths
 You can use a `.ansible-lint` config file as input to `-c` in order to define `EXCLUDE_PATHS`
+
+### tricks
+parse just one file: use `-e $FILENAME`
