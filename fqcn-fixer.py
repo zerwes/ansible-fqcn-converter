@@ -2,16 +2,28 @@
 # vim: tabstop=4 expandtab shiftwidth=4 softtabstop=4 smartindent
 
 import sys
+import os
 import subprocess
 import argparse
 import json
+import yaml
 import re
-from fileinput import FileInput
+import fileinput
 import difflib
+import fnmatch
 
 __doc__ = """
 simple script to update the fix the fqcn module names
 """
+
+def isexcluded(path, exclude_paths):
+    path = os.path.abspath(path)
+    return any(
+        path.startswith(ep)
+        or
+        fnmatch.fnmatch(path, ep)
+        for ep in exclude_paths
+        )
 
 argparser = argparse.ArgumentParser(description=__doc__)
 argparser.add_argument(
@@ -27,6 +39,19 @@ argparser.add_argument(
     dest='fileextensions',
     default=['yml', 'yaml'],
     help='list of file extensions to use (default: \'yml\', \'yaml\')'
+    )
+argparser.add_argument(
+    '--exclude',
+    dest="exclude_paths",
+    type=str, nargs='+',
+    default=[],
+    help="path(s) to directories or files to skip.",
+    )
+argparser.add_argument(
+    '-c', '--config',
+    dest="config",
+    type=str,
+    help="read some cfg args from this file (.ansible-lint can be used)",
     )
 argparser.add_argument(
     '-w', '--write-files',
@@ -51,6 +76,7 @@ argparser.add_argument(
 
 args = argparser.parse_args()
 
+# get a dict of ansible modules
 modulespr = subprocess.run(
     ['ansible-doc', '-lj'],
     stdout=subprocess.PIPE,
@@ -69,10 +95,40 @@ for modname in modulesdict.keys():
 #for s, r in fqdndict.items():
 #    print('%s -> %s' % (s, r))
 
-files = ['test1.yml', 'test2.yml']
-for f in files:
+# build exclude_paths
+exclude_paths = []
+for ep in args.exclude_paths + [".cache", ".git", ".hg", ".svn", ".tox"]:
+    exclude_paths.append(os.path.abspath(ep))
+
+# update some args from optional config file
+config = False
+if args.config:
+    try:
+        with open(args.config) as ymlfile:
+            config = yaml.load(ymlfile, Loader=yaml.BaseLoader)
+    except FileNotFoundError:
+        pass
+if config and config['exclude_paths']:
+    for ep in config['exclude_paths']:
+        exclude_paths.append(os.path.abspath(ep))
+
+# find files to parse
+parsefiles = []
+for dirpath, dirnames, files in os.walk(os.path.abspath(args.directory)):
+    if isexcluded(dirpath, exclude_paths):
+        continue
+    for name in files:
+        for ext in args.fileextensions:
+            if name.lower().endswith(ext.lower()):
+                f = os.path.join(dirpath, name)
+                if isexcluded(f, exclude_paths):
+                    break
+                parsefiles.append(f)
+
+# do it
+for f in parsefiles:
     print('parsing file %s ' % f, file=sys.stderr, end='', flush=True)
-    with FileInput(f,
+    with fileinput.input(f,
             inplace=args.writefiles,
             backup=args.backupextension) as fi:
         originallines = []
@@ -91,7 +147,7 @@ for f in files:
                 else:
                     nline = re.sub('^(%s)%s:' % (startingwhitespaces, s), '\\1%s:' % r, nline)
             if args.writefiles:
-                print(nline)
+                print(nline, end='')
             if args.printdiff:
                 changedlines.append(nline)
         print('', file=sys.stderr)
