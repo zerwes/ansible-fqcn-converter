@@ -3,10 +3,12 @@
 # ansible-fqcn-converter
 ansible fqcn converter: update ansible tasks, playbooks etc. to use fully qualified collection name in playbooks (even for ansible buildins)
 
+
+
 ## usage
 ```
 usage: fqcn-fixer.py [-h] [-d DIRECTORY] [-e FILEEXTENSIONS [FILEEXTENSIONS ...]] [--exclude EXCLUDE_PATHS [EXCLUDE_PATHS ...]]
-                     [-c CONFIG] [-w] [-b BACKUPEXTENSION] [-x]
+                     [-c CONFIG] [-w] [-b BACKUPEXTENSION] [-x] [-m FQCNMAPFILE] [-u]
 
 simple script to fix the fqcn module names
 
@@ -24,12 +26,20 @@ optional arguments:
   -b BACKUPEXTENSION, --backup-extension BACKUPEXTENSION
                         backup extension to use (default: .bak)
   -x, --no-diff         do not print a diff after parsing a file (default: print it)
+  -m FQCNMAPFILE, --fqcn-map-file FQCNMAPFILE
+                        yaml file to use for the fqcn map (default: /home/zerwes/git/ansible-fqcn-converter/fqcn.yml)
+  -u, --update-fqcn-map-file
+                        update the fqcn-map-file
 ```
 
 ## notes
 
 ### collections
-the scripts uses all collections installed (in the current directory) to build a translation map
+The script uses all collections installed (in the current directory) to build a translation map (aka. `fqcn-map-file`).
+If the file is not found (or `--update-fqcn-map-file` is in use), the file defined by `--fqcn-map-file` will be created.
+
+| :warning:     | this wounds time      |
+|---------------|:----------------------|
 
 ### exclude paths
-you can use a `.ansible-lint` config file as input to `-c` in order to define `EXCLUDE_PATHS`
+You can use a `.ansible-lint` config file as input to `-c` in order to define `EXCLUDE_PATHS`
