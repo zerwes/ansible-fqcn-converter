@@ -98,8 +98,8 @@ args = argparser.parse_args()
 fqdndict = {}
 fqcnmapfile = True
 try:
-    with open(args.fqcnmapfile, "r") as ymlfile:
-        fqdndict = yaml.load(args.fqcnmapfile, Loader=yaml.BaseLoader)
+    with open(args.fqcnmapfile, "r") as fqcnf:
+        fqdndict = yaml.load(fqcnf, Loader=yaml.BaseLoader)
 except FileNotFoundError:
     fqcnmapfile = False
 
@@ -188,7 +188,6 @@ for f in parsefiles:
         startingwhitespaces = False
         fqcnregex = _fqcnregex
         for line in fi:
-            print('.', file=sys.stderr, end='', flush=True)
             if args.printdiff:
                 originallines.append(line)
             nline = line
@@ -205,6 +204,10 @@ for f in parsefiles:
                     '\\1%s:' % fqdndict[fqcnmodule],
                     line
                     )
+                print('*', file=sys.stderr, end='', flush=True)
+            else:
+                print('.', file=sys.stderr, end='', flush=True)
+
             if args.writefiles:
                 print(nline, end='')
             if args.printdiff:
