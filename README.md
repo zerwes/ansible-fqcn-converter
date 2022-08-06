@@ -1,22 +1,27 @@
 [![pylint](https://github.com/zerwes/ansible-fqcn-converter/actions/workflows/pylint.yml/badge.svg)](https://github.com/zerwes/ansible-fqcn-converter/actions/workflows/pylint.yml)
 
-# ansible-fqcn-converter
-ansible fqcn converter: update ansible tasks, playbooks etc. to use fully qualified collection name in playbooks (even for ansible buildins)
+# Ansible FQCN converter
+Update ansible tasks, playbooks, handlers etc. to use fully qualified module names (even for ansible buildins) by searching for all known modules that are not in fqcn notation and replacing them with the fqcn name.
 
-## howto
+Tha ansible files should be linted and valid yaml files. Esp. the following ansible-lint tags should be covered:
+ - no-tabs
+ - yaml
+ - unnamed-task
+ 
+## HowTo
  1. Clone this repo to a convenient place: `git clone https://github.com/zerwes/ansible-fqcn-converter.git`
 
  2. Ensure the python script is executable: `chmod 755 ansible-fqcn-converter/fqcn-fixer.py`
 
  3. Optional: re-create the `fqcn-map-file` (:warning: takes about 40 minutes :warning:): `./ansible-fqcn-converter/fqcn-fixer.py --update-fqcn-map-file`
 
- 4. Optional: Go to the desired directory containing the ansible roles/playbooks etc and execute: `ansible-lint .`and ensure the yaml syntax ist OK
+ 4. Optional: Go to the desired directory containing the ansible roles/playbooks etc. and execute: `ansible-lint .` and ensure the yaml syntax ist OK
 
- 5. Go to the desired directory containing the ansible roles/playbooks etc and execute: `$PATH_TO_ansible-fqcn-converter/fqcn-fixer.py`
+ 5. Go to the desired directory containing the ansible roles/playbooks etc. and execute: `$PATH_TO_ansible-fqcn-converter/fqcn-fixer.py`
 
  6. If the diff displayed seems OK to you, let the script modify your files (:exclamation: use at your own risk :exclamation:): `$PATH_TO_ansible-fqcn-converter/fqcn-fixer.py -w`
 
- 7. Run the latest `ansible-lint` and enjoy missing the `Error: fqcn-builtins Use FQCN for builtin actions.`
+ 7. Run the latest `ansible-lint .` and enjoy missing the `Error: fqcn-builtins Use FQCN for builtin actions.`
 
 ## usage
 ```
@@ -41,7 +46,8 @@ optional arguments:
                         backup extension to use (default: .bak)
   -x, --no-diff         do not print a diff after parsing a file (default: print it)
   -m FQCNMAPFILE, --fqcn-map-file FQCNMAPFILE
-                        yaml file to use for the fqcn map (default: /home/zerwes/git/ansible-fqcn-converter/fqcn.yml)
+                        yaml file to use for the fqcn map
+                        (default: fqcn.yml in the directory of the script)
   -u, --update-fqcn-map-file
                         update the fqcn-map-file
 ```
