@@ -61,3 +61,133 @@ You can use a `.ansible-lint` config file as input to `-c` in order to define `E
 
 ### tricks
 parse just one file: use `-e $FILENAME`
+
+## example
+Example result from [ansible-opnsense-checkmk](https://github.com/Rosa-Luxemburgstiftung-Berlin/ansible-opnsense-checkmk): [commit ffb281e67511c3c729661e8bbd3ca460b8c3d190](https://github.com/Rosa-Luxemburgstiftung-Berlin/ansible-opnsense-checkmk/commit/ffb281e67511c3c729661e8bbd3ca460b8c3d190)
+
+```diff
+commit ffb281e67511c3c729661e8bbd3ca460b8c3d190
+Author: Klaus Zerwes <zerwes@users.noreply.github.com>
+Date:   Fri Aug 5 22:42:16 2022 +0200
+
+    applied changes using https://github.com/zerwes/ansible-fqcn-converter/blob/main/fqcn-fixer.py
+
+diff --git a/handlers/main.yml b/handlers/main.yml
+index 4757041..03970f4 100644
+--- a/handlers/main.yml
++++ b/handlers/main.yml
+@@ -1,7 +1,7 @@
+ ---
+ 
+ - name: service inetd
+-  service:
++  ansible.builtin.service:
+     name: inetd
+     state: restarted
+ 
+diff --git a/tasks/main.yml b/tasks/main.yml
+index d9885ca..dca0b0c 100644
+--- a/tasks/main.yml
++++ b/tasks/main.yml
+@@ -1,11 +1,11 @@
+ ---
+ - name: Install opnsense packages
+-  pkgng:
++  community.general.pkgng:
+     name: "{{ opn_packages }}"
+     state: present
+ 
+ - name: copy check_mk_agent
+-  copy:
++  ansible.builtin.copy:
+     src: check_mk_agent.freebsd
+     dest: "{{ opn_check_mk_path }}"
+     mode: 0700
+@@ -13,7 +13,7 @@
+   when: opn_install_check_mk
+ 
+ - name: create lib dirs
+-  file:
++  ansible.builtin.file:
+     path: "{{ opn_check_mk_lib_dir }}/{{ item }}"
+     state: directory
+     mode: 0755
+@@ -23,7 +23,7 @@
+   when: opn_install_check_mk
+ 
+ - name: copy check_mk plugins
+-  copy:
++  ansible.builtin.copy:
+     src: "{{ item }}"
+     dest: "{{ opn_check_mk_lib_dir }}/plugins/{{ item }}"
+     mode: 0700
+@@ -31,7 +31,7 @@
+   when: opn_install_check_mk
+ 
+ - name: copy check_mk local checks
+-  copy:
++  ansible.builtin.copy:
+     src: "{{ item }}"
+     dest: "{{ opn_check_mk_lib_dir }}/local/{{ item }}"
+     mode: 0700
+@@ -39,7 +39,7 @@
+   when: opn_install_check_mk
+ 
+ - name: copy check_mk additional files
+-  copy:
++  ansible.builtin.copy:
+     src: "{{ item.key }}"
+     dest: "{{ item.value }}"
+     mode: 0600
+@@ -47,7 +47,7 @@
+   when: opn_install_check_mk
+ 
+ - name: enable check_mk_agent in /etc/inetd.conf
+-  lineinfile:
++  ansible.builtin.lineinfile:
+     path: /etc/inetd.conf
+     line: "check_mk  stream  tcp nowait  root  {{ opn_check_mk_path }} {{ opn_check_mk_path | basename }}"
+     regexp: "^check_mk "
+@@ -55,7 +55,7 @@
+   when: opn_install_check_mk
+ 
+ - name: add service to /etc/services
+-  lineinfile:
++  ansible.builtin.lineinfile:
+     path: /etc/services
+     line: "check_mk	{{ opn_check_mk_port }}/tcp   #check_mk agent"  # noqa no-tabs
+     regexp: "^check_mk "
+@@ -63,7 +63,7 @@
+   when: opn_install_check_mk
+ 
+ - name: setup /etc/hosts.allow
+-  lineinfile:
++  ansible.builtin.lineinfile:
+     path: /etc/hosts.allow
+     line: "check_mk	: {{ checkmk_ip }} : allow"  # noqa no-tabs
+     regexp: "^check_mk "
+@@ -71,12 +71,12 @@
+   when: opn_install_check_mk
+ 
+ - name: debug ansible_local
+-  debug:
++  ansible.builtin.debug:
+     var: ansible_local
+     verbosity: 1
+ 
+ - name: enable inetd
+-  blockinfile:
++  ansible.builtin.blockinfile:
+     backup: true
+     path: /etc/rc.conf
+     block: |
+@@ -87,7 +87,7 @@
+   notify: service inetd
+ 
+ - name: enable inetd
+-  blockinfile:
++  ansible.builtin.blockinfile:
+     backup: true
+     path: /etc/rc.conf.d/inetd
+     create: true
+```
