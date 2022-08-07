@@ -154,7 +154,10 @@ for fqcn in copy.copy(fqcndict).values():
 
 # build exclude_paths
 exclude_paths = []
-for ep in args.exclude_paths + [".cache", ".git", ".hg", ".svn", ".tox", args.fqcnmapfile]:
+for ep in args.exclude_paths:
+    exclude_paths.append(os.path.abspath(ep))
+# some deafaults to exclude
+for ep in [".cache", ".git", ".hg", ".svn", ".tox", ".collections", args.fqcnmapfile]:
     exclude_paths.append(os.path.abspath(ep))
 
 # update some args from optional config file
