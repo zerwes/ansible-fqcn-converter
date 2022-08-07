@@ -124,6 +124,9 @@ if not fqcnmapfile or args.updatefqcnmapfile:
             print('error parsing %s' % modname)
             continue
         modjson = json.loads(modpr.stdout)
+        if not modjson or not modname in modjson.keys():
+            print('error: no informations for %s' % modname)
+            continue
         moddict = modjson[modname]
         if 'doc' in moddict and 'collection' in moddict['doc'] and 'module' in moddict['doc']:
             fqcn = '%s.%s' % (moddict['doc']['collection'], moddict['doc']['module'])
