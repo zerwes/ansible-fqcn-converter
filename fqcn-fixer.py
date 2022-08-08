@@ -187,7 +187,7 @@ if args.config:
             config = yaml.load(ymlfile, Loader=yaml.BaseLoader)
     except FileNotFoundError:
         pass
-if config and config['exclude_paths']:
+if config and 'exclude_paths' in config.keys():
     for ep in config['exclude_paths']:
         exclude_paths.append(os.path.abspath(ep))
 
