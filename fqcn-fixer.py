@@ -11,6 +11,7 @@ import re
 import fileinput
 import difflib
 import fnmatch
+import pathlib
 import copy
 import yaml
 
@@ -20,15 +21,35 @@ simple script to fix the fqcn module names
 
 def isexcluded(path, _exclude_paths):
     """check if a path element should be excluded"""
+    ppath = pathlib.PurePath(path)
     path = os.path.abspath(path)
     return any(
         path.startswith(ep)
         or
+        ppath.match(ep)
+        or
         fnmatch.fnmatch(path, ep)
+        or
+        fnmatch.fnmatch(ppath, ep)
         for ep in _exclude_paths
         )
 
 basepath = os.path.dirname(os.path.realpath(__file__))
+
+# this will be excluded
+_general_exclude_paths = [
+    ".cache",
+    ".git",
+    ".hg",
+    ".svn",
+    ".tox",
+    ".collections/*",
+    ".github/*",
+    "*/group_vars/",
+    "*/host_vars/",
+    "*/vars/",
+    "*/defaults/",
+    ]
 
 argparser = argparse.ArgumentParser(description=__doc__)
 argparser.add_argument(
@@ -154,11 +175,9 @@ for fqcn in copy.copy(fqcndict).values():
 
 # build exclude_paths
 exclude_paths = []
-for ep in args.exclude_paths:
-    exclude_paths.append(os.path.abspath(ep))
-# some deafaults to exclude
-for ep in [".cache", ".git", ".hg", ".svn", ".tox", ".collections", args.fqcnmapfile]:
-    exclude_paths.append(os.path.abspath(ep))
+for ep in args.exclude_paths + _general_exclude_paths:
+    exclude_paths.append(ep)
+exclude_paths.append(args.fqcnmapfile)
 
 # update some args from optional config file
 config = False
@@ -176,6 +195,7 @@ if config and config['exclude_paths']:
 parsefiles = []
 for dirpath, dirnames, files in os.walk(os.path.abspath(args.directory)):
     if isexcluded(dirpath, exclude_paths):
+        #print('exclude %s' % dirpath)
         continue
     for name in files:
         for ext in args.fileextensions:
