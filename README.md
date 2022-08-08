@@ -27,6 +27,7 @@ Tha ansible files should be linted and valid yaml files. Esp. the following ansi
 ```
 usage: fqcn-fixer.py [-h] [-d DIRECTORY] [-e FILEEXTENSIONS [FILEEXTENSIONS ...]]
                      [--exclude EXCLUDE_PATHS [EXCLUDE_PATHS ...]]
+                     [--do-not-use-default-exclude]
                      [-c CONFIG] [-w] [-b BACKUPEXTENSION] [-x] [-m FQCNMAPFILE] [-u]
 
 simple script to fix the fqcn module names
@@ -39,6 +40,8 @@ optional arguments:
                         list of file extensions to use (default: 'yml', 'yaml')
   --exclude EXCLUDE_PATHS [EXCLUDE_PATHS ...]
                         path(s) to directories or files to skip.
+  --do-not-use-default-exclude
+                        do not use the default excludes
   -c CONFIG, --config CONFIG
                         read some cfg args from this file (.ansible-lint can be used)
   -w, --write-files     write back changed files
