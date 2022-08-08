@@ -187,11 +187,11 @@ config = False
 if args.config:
     try:
         with open(args.config) as ymlfile:
-            config = yaml.load(ymlfile, Loader=yaml.BaseLoader)
+            _config = yaml.load(ymlfile, Loader=yaml.BaseLoader)
     except FileNotFoundError:
         pass
-if config and 'exclude_paths' in config.keys():
-    for ep in config['exclude_paths']:
+if _config and 'exclude_paths' in _config.keys():
+    for ep in _config['exclude_paths']:
         exclude_paths.append(os.path.abspath(ep))
 
 # find files to parse
