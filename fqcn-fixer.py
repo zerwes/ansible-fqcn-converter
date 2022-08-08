@@ -26,6 +26,8 @@ def isexcluded(path, _exclude_paths):
     return any(
         path.startswith(ep)
         or
+        path.startswith(os.path.abspath(ep))
+        or
         ppath.match(ep)
         or
         fnmatch.fnmatch(path, ep)
@@ -43,12 +45,13 @@ _general_exclude_paths = [
     ".hg",
     ".svn",
     ".tox",
-    ".collections/*",
-    ".github/*",
-    "*/group_vars/",
-    "*/host_vars/",
-    "*/vars/",
-    "*/defaults/",
+    ".collections",
+    "*/.github/*",
+    "*/molecule/*",
+    "*/group_vars/*",
+    "*/host_vars/*",
+    "*/vars/*",
+    "*/defaults/*",
     ]
 
 argparser = argparse.ArgumentParser(description=__doc__)
@@ -195,7 +198,6 @@ if config and 'exclude_paths' in config.keys():
 parsefiles = []
 for dirpath, dirnames, files in os.walk(os.path.abspath(args.directory)):
     if isexcluded(dirpath, exclude_paths):
-        #print('exclude %s' % dirpath)
         continue
     for name in files:
         for ext in args.fileextensions:
