@@ -193,7 +193,7 @@ if not args.no_general_exclude_paths:
 exclude_paths.append(args.fqcnmapfile)
 
 # update some args from optional config file
-_config = False
+_config = {}
 if args.config:
     try:
         with open(args.config) as ymlfile:
