@@ -77,6 +77,13 @@ argparser.add_argument(
     help="path(s) to directories or files to skip.",
     )
 argparser.add_argument(
+    '--do-not-use-default-exclude',
+    dest="no_general_exclude_paths",
+    action='store_true',
+    default=False,
+    help="do not use the default excludes",
+    )
+argparser.add_argument(
     '-c', '--config',
     dest="config",
     type=str,
@@ -178,12 +185,15 @@ for fqcn in copy.copy(fqcndict).values():
 
 # build exclude_paths
 exclude_paths = []
-for ep in args.exclude_paths + _general_exclude_paths:
+for ep in args.exclude_paths:
     exclude_paths.append(ep)
+if not args.no_general_exclude_paths:
+    for ep in _general_exclude_paths:
+        exclude_paths.append(ep)
 exclude_paths.append(args.fqcnmapfile)
 
 # update some args from optional config file
-config = False
+_config = False
 if args.config:
     try:
         with open(args.config) as ymlfile:
