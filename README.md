@@ -26,9 +26,8 @@ Tha ansible files should be linted and valid yaml files. Esp. the following ansi
 ## usage
 ```
 usage: fqcn-fixer.py [-h] [-d DIRECTORY] [-e FILEEXTENSIONS [FILEEXTENSIONS ...]]
-                     [--exclude EXCLUDE_PATHS [EXCLUDE_PATHS ...]]
-                     [--do-not-use-default-exclude]
-                     [-c CONFIG] [-w] [-b BACKUPEXTENSION] [-x] [-m FQCNMAPFILE] [-u]
+                     [--exclude EXCLUDE_PATHS [EXCLUDE_PATHS ...]] [--do-not-use-default-exclude]
+                     [-c CONFIG] [-w] [-W] [-b BACKUPEXTENSION] [-x] [-m FQCNMAPFILE] [-u]
 
 simple script to fix the fqcn module names
 
@@ -45,6 +44,8 @@ optional arguments:
   -c CONFIG, --config CONFIG
                         read some cfg args from this file (.ansible-lint can be used)
   -w, --write-files     write back changed files
+  -W, --no-write-warnings
+                        do not write warnings as comments to files and diff
   -b BACKUPEXTENSION, --backup-extension BACKUPEXTENSION
                         backup extension to use (default: .bak)
   -x, --no-diff         do not print a diff after parsing a file (default: print it)
