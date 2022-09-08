@@ -35,6 +35,9 @@ def isexcluded(path, _exclude_paths):
         fnmatch.fnmatch(ppath, ep)
         for ep in _exclude_paths
         )
+class Dumper(yaml.Dumper):
+    def increase_indent(self, flow=False, *args, **kwargs):
+        return super().increase_indent(flow=flow, indentless=False)
 
 basepath = os.path.dirname(os.path.realpath(__file__))
 
@@ -173,6 +176,7 @@ if not fqcnmapfile or args.updatefqcnmapfile:
     fqcnmapfile.write(
         yaml.dump(
             fqcndict,
+            Dumper=Dumper,
             sort_keys=True,
             indent=2,
             width=70,
