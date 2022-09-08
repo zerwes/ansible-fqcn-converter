@@ -2,6 +2,7 @@
 
 # Ansible FQCN converter
 Update ansible tasks, playbooks, handlers etc. to use fully qualified module names (even for ansible buildins) by searching for all known modules that are not in fqcn notation and replacing them with the fqcn name.
+In some cases the replacement might be ambiguous, so a warning will be printed (and by default added as a comment to the changed files).
 
 Tha ansible files should be linted and valid yaml files. Esp. the following ansible-lint tags should be covered:
  - no-tabs
