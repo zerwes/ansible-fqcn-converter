@@ -35,9 +35,10 @@ def isexcluded(path, _exclude_paths):
         fnmatch.fnmatch(ppath, ep)
         for ep in _exclude_paths
         )
-class Dumper(yaml.Dumper):
-    def increase_indent(self, flow=False, *args, **kwargs):
-        return super().increase_indent(flow=flow, indentless=False)
+class Dumper(yaml.Dumper): # pylint: disable=too-many-ancestors
+    """https://github.com/yaml/pyyaml/issues/234"""
+    def increase_indent(self, flow=False, *dargs): # pylint: disable=keyword-arg-before-vararg
+        return super().increase_indent(dargs, indentless=False)
 
 basepath = os.path.dirname(os.path.realpath(__file__))
 
@@ -262,7 +263,7 @@ for f in parsefiles:
                     print('.', file=sys.stderr, end='', flush=True)
                 else:
                     print('*', file=sys.stderr, end='', flush=True)
-                    if len(fqcndict[fqcnmodule]) > 0:
+                    if len(fqcndict[fqcnmodule]) > 1:
                         warnings.append(
                             'alternative replacement of %s : %s' %
                             (fqcnmodule, ' | '.join(fqcndict[fqcnmodule]),)
