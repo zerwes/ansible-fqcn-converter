@@ -102,6 +102,13 @@ argparser.add_argument(
     help="write back changed files"
     )
 argparser.add_argument(
+    '-W', '--no-write-warnings',
+    dest='writewarnings',
+    action='store_false',
+    default=True,
+    help="do not write warnings as comments to files and diff"
+    )
+argparser.add_argument(
     '-b', '--backup-extension',
     dest='backupextension',
     default='.bak',
@@ -264,10 +271,14 @@ for f in parsefiles:
                 else:
                     print('*', file=sys.stderr, end='', flush=True)
                     if len(fqcndict[fqcnmodule]) > 1:
-                        warnings.append(
-                            'alternative replacement of %s : %s' %
-                            (fqcnmodule, ' | '.join(fqcndict[fqcnmodule]),)
-                            )
+                        wtxt = ('possible ambiguous replacement: %s : %s' %
+                               (fqcnmodule, ' | '.join(fqcndict[fqcnmodule])))
+                        warnings.append(wtxt)
+                        if args.writewarnings:
+                            if args.writefiles:
+                                print('# %s\n' % wtxt)
+                            if args.printdiff:
+                                changedlines.append('# %s\n' % wtxt)
             else:
                 print('.', file=sys.stderr, end='', flush=True)
 
