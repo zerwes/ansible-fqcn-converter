@@ -59,6 +59,8 @@ _general_exclude_paths = [
     "*/meta/*",
     ]
 
+required_fqcnconverter_file_version = '0.0.5'
+
 argparser = argparse.ArgumentParser(description=__doc__)
 argparser.add_argument(
     '-d', '--directory',
@@ -145,11 +147,18 @@ if not args.updatefqcnmapfile:
     try:
         with open(args.fqcnmapfile, "r") as fqcnf:
             fqcndict = yaml.load(fqcnf, Loader=yaml.BaseLoader)
-    except FileNotFoundError:
+            if fqcndict['__fqcnconverter_file_version__'] != required_fqcnconverter_file_version:
+                print('fqcnconverter_file_version missmatch: got %s but expected %s' %
+                    (fqcndict['__fqcnconverter_file_version__'], required_fqcnconverter_file_version,)
+                    )
+                fqcnmapfile = False
+    except (FileNotFoundError, KeyError) as fqcnmapfilerror:
+        print(fqcnmapfilerror)
         fqcnmapfile = False
 
 if not fqcnmapfile or args.updatefqcnmapfile:
     print('we will generate the fqcn map, this will take some time ...')
+    fqcndict = {'__fqcnconverter_file_version__': required_fqcnconverter_file_version}
     modulespr = subprocess.run(
         ['ansible-doc', '-lj'],
         stdout=subprocess.PIPE,
