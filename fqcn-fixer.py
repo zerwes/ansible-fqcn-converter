@@ -130,11 +130,12 @@ args = argparser.parse_args()
 # get a dict of ansible modules
 fqcndict = {}
 fqcnmapfile = True
-try:
-    with open(args.fqcnmapfile, "r") as fqcnf:
-        fqcndict = yaml.load(fqcnf, Loader=yaml.BaseLoader)
-except FileNotFoundError:
-    fqcnmapfile = False
+if not args.updatefqcnmapfile:
+    try:
+        with open(args.fqcnmapfile, "r") as fqcnf:
+            fqcndict = yaml.load(fqcnf, Loader=yaml.BaseLoader)
+    except FileNotFoundError:
+        fqcnmapfile = False
 
 if not fqcnmapfile or args.updatefqcnmapfile:
     print('we will generate the fqcn map, this will take some time ...')
@@ -163,14 +164,10 @@ if not fqcnmapfile or args.updatefqcnmapfile:
         if 'doc' in moddict and 'collection' in moddict['doc'] and 'module' in moddict['doc']:
             fqcn = '%s.%s' % (moddict['doc']['collection'], moddict['doc']['module'])
             nonfqcn = fqcn.split('.')[-1]
-            if nonfqcn in fqcndict.keys():
-                if fqcn != fqcndict[nonfqcn]:
-                    print(
-                        'warn: duplicated match for %s : will use %s and ignore %s' %
-                        (nonfqcn, fqcndict[nonfqcn], fqcn)
-                        )
-                continue
-            fqcndict[nonfqcn] = fqcn
+            if nonfqcn not in fqcndict.keys():
+                fqcndict[nonfqcn] = []
+            if fqcn not in fqcndict[nonfqcn]:
+                fqcndict[nonfqcn].append(fqcn)
             print('%s : %s -> %s' % (modname, nonfqcn, fqcn))
     fqcnmapfile = open(args.fqcnmapfile, 'w')
     fqcnmapfile.write(
@@ -231,6 +228,7 @@ _fqcnregex = re.compile(r'^(?P<white>\s*-?\s+)(?P<module>%s):' % '|'.join(fqcndi
 # do it
 for f in parsefiles:
     print('parsing file %s ' % f, file=sys.stderr, end='', flush=True)
+    warnings = []
     with fileinput.input(f,
             inplace=args.writefiles,
             backup=args.backupextension) as fi:
@@ -252,13 +250,18 @@ for f in parsefiles:
                 fqcnmodule = fqcnmatch.group('module')
                 nline = re.sub(
                     '^(%s)%s:' % (startingwhitespaces, fqcnmodule),
-                    '\\1%s:' % fqcndict[fqcnmodule],
+                    '\\1%s:' % fqcndict[fqcnmodule][0],
                     line
                     )
-                if fqcnmodule == fqcndict[fqcnmodule]:
+                if fqcnmodule == fqcndict[fqcnmodule][0]:
                     print('.', file=sys.stderr, end='', flush=True)
                 else:
                     print('*', file=sys.stderr, end='', flush=True)
+                    if len(fqcndict[fqcnmodule]) > 0:
+                        warnings.append(
+                            'alternative replacement of %s : %s' %
+                            (fqcnmodule, ' | '.join(fqcndict[fqcnmodule]),)
+                            )
             else:
                 print('.', file=sys.stderr, end='', flush=True)
 
@@ -277,3 +280,6 @@ for f in parsefiles:
             sys.stderr.writelines(diff)
         if args.writefiles:
             print('updated %s' % f)
+        if warnings:
+            for warnline in warnings:
+                print('warning: %s' % warnline)
