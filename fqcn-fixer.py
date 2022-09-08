@@ -149,7 +149,8 @@ if not args.updatefqcnmapfile:
             fqcndict = yaml.load(fqcnf, Loader=yaml.BaseLoader)
             if fqcndict['__fqcnconverter_file_version__'] != required_fqcnconverter_file_version:
                 print('fqcnconverter_file_version missmatch: got %s but expected %s' %
-                    (fqcndict['__fqcnconverter_file_version__'], required_fqcnconverter_file_version,)
+                    (fqcndict['__fqcnconverter_file_version__'],
+                        required_fqcnconverter_file_version,)
                     )
                 fqcnmapfile = False
     except (FileNotFoundError, KeyError) as fqcnmapfilerror:
