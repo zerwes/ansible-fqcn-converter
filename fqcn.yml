@@ -1,5 +1,5 @@
 ---
-__fqcnconverter_file_version__: '0.0.4'
+__fqcnconverter_file_version__: '0.0.5'
 a10_server:
   - community.network.a10_server
 a10_server_axapi3:
