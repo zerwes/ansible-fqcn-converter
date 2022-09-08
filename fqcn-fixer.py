@@ -163,6 +163,13 @@ if not fqcnmapfile or args.updatefqcnmapfile:
         if 'doc' in moddict and 'collection' in moddict['doc'] and 'module' in moddict['doc']:
             fqcn = '%s.%s' % (moddict['doc']['collection'], moddict['doc']['module'])
             nonfqcn = fqcn.split('.')[-1]
+            if nonfqcn in fqcndict.keys():
+                if fqcn != fqcndict[nonfqcn]:
+                    print(
+                        'warn: duplicated match for %s : will use %s and ignore %s' %
+                        (nonfqcn, fqcndict[nonfqcn], fqcn)
+                        )
+                continue
             fqcndict[nonfqcn] = fqcn
             print('%s : %s -> %s' % (modname, nonfqcn, fqcn))
     fqcnmapfile = open(args.fqcnmapfile, 'w')
