@@ -189,8 +189,9 @@ if not fqcnmapfile or args.updatefqcnmapfile:
     print('fqcn map written to %s' % args.fqcnmapfile)
 
 # add the fqcn as key to
-for fqcn in copy.copy(fqcndict).values():
-    fqcndict[fqcn] = fqcn
+for fqcnlist in copy.copy(fqcndict).values():
+    for fqcn in fqcnlist:
+        fqcndict[fqcn] = fqcn
 
 # build exclude_paths
 exclude_paths = []
