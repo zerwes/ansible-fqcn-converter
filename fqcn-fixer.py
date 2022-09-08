@@ -52,6 +52,7 @@ _general_exclude_paths = [
     "*/host_vars/*",
     "*/vars/*",
     "*/defaults/*",
+    "*/meta/*",
     ]
 
 argparser = argparse.ArgumentParser(description=__doc__)
