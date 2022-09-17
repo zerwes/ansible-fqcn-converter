@@ -21,12 +21,12 @@
 # just tasks list
 
 # named task
-- name: test
+- name: test apt unnamed
   apt:
     name: ipsum
 
 # named task w/ group as pitfall
-- name: test
+- name: test copy with group as pitfall
   copy:
     content: aaa
     dest: xyz
