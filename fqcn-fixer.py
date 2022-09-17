@@ -35,6 +35,10 @@ def isexcluded(path, _exclude_paths):
         fnmatch.fnmatch(ppath, ep)
         for ep in _exclude_paths
         )
+
+def debugmsg(msg):
+    print(msg, file=sys.stderr, flush=True)
+
 class Dumper(yaml.Dumper): # pylint: disable=too-many-ancestors
     """https://github.com/yaml/pyyaml/issues/234"""
     def increase_indent(self, flow=False, *dargs): # pylint: disable=keyword-arg-before-vararg
@@ -133,6 +137,13 @@ argparser.add_argument(
 argparser.add_argument(
     '-u', '--update-fqcn-map-file',
     dest='updatefqcnmapfile',
+    action='store_true',
+    default=False,
+    help="update the fqcn-map-file"
+    )
+argparser.add_argument(
+    '-D', '--debug',
+    dest='debug',
     action='store_true',
     default=False,
     help="update the fqcn-map-file"
@@ -267,28 +278,36 @@ for f in parsefiles:
         in_task_done = False
         fqcnregex = _fqcnregex
         for line in fi:
-            print('STARTLINE : line: %s in_task: %s in_task_done: %s\n' % (line, in_task, in_task_done,))
+            if args.debug:
+                debugmsg(
+                    'STARTLINE : line: %s in_task: %s in_task_done: %s\n' %
+                    (line, in_task, in_task_done,)
+                    )
             if args.printdiff:
                 originallines.append(line)
             nline = line
             taskmatch = _taskstartregex.match(line)
             if in_task_done and not taskmatch:
-                print('SKIPLINE! %s\n' % (in_task_done and not in_task))
+                if args.debug:
+                    debugmsg('SKIPLINE! %s\n' % (in_task_done and not in_task))
                 print('.', file=sys.stderr, end='', flush=True)
             else:
                 if not in_task:
-                    print('TASKMATCH : line: %s taskmatch: %s\n' % (line, taskmatch,))
+                    if args.debug:
+                        debugmsg('TASKMATCH : line: %s taskmatch: %s\n' % (line, taskmatch,))
                     if taskmatch:
                         in_task = True
                         in_task_done = False
                         startingwhitespacesaftertask = len(taskmatch.group('white'))
-                        print(
-                            'line: %s startingwhitespacesaftertask: %s taskmatch: %s' %
-                            (line, startingwhitespacesaftertask, taskmatch,)
-                            )
+                        if args.debug:
+                            debugmsg(
+                                'line: %s startingwhitespacesaftertask: %s taskmatch: %s' %
+                                (line, startingwhitespacesaftertask, taskmatch,)
+                                )
                 fqcnmatch = fqcnregex.match(line)
-                print('FQCNMATCH : line: %s fqcnmatch: %s\n' % (line, fqcnmatch,))
-                print('fqcnregex: %s' % fqcnregex)
+                if args.debug:
+                    debugmsg('FQCNMATCH : line: %s fqcnmatch: %s\n' % (line, fqcnmatch,))
+                    #debugmsg('fqcnregex: %s' % fqcnregex)
                 if fqcnmatch:
                     in_task_done = True
                     in_task = False
@@ -319,7 +338,8 @@ for f in parsefiles:
                         fqcnregex = re.compile('^%s(?P<module>%s):' %
                             (startingwhitespaces, '|'.join(fqcndict.keys()))
                             )
-                        print('set STARTINGWHITESPACES to "%s"' % startingwhitespaces)
+                        if args.debug:
+                            debugmsg('set STARTINGWHITESPACES to "%s"' % startingwhitespaces)
 
             if args.writefiles:
                 print(nline, end='')
