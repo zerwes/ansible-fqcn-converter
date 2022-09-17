@@ -274,6 +274,7 @@ for f in parsefiles:
         changedlines = []
         startingwhitespaces = '\s*-?\s+'
         startingwhitespacesaftertask = 0
+        startingwhitespaces4comments = 0
         in_task = False
         in_task_done = False
         fqcnregex = _fqcnregex
@@ -327,13 +328,16 @@ for f in parsefiles:
                             warnings.append(wtxt)
                             if args.writewarnings:
                                 if args.writefiles:
-                                    print('# %s' % wtxt)
+                                    print('%s# %s' % (' '*startingwhitespaces4comments, wtxt))
                                 if args.printdiff:
-                                    changedlines.append('# %s\n' % wtxt)
+                                    changedlines.append(
+                                        '%s# %s\n' % (' '*startingwhitespaces4comments, wtxt)
+                                        )
                 else:
                     print('.', file=sys.stderr, end='', flush=True)
                     if startingwhitespacesaftertask > 0:
                         startingwhitespaces = ' ' * startingwhitespacesaftertask
+                        startingwhitespaces4comments = startingwhitespacesaftertask
                         startingwhitespacesaftertask = 0
                         fqcnregex = re.compile('^%s(?P<module>%s):' %
                             (startingwhitespaces, '|'.join(fqcndict.keys()))
