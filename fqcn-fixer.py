@@ -74,6 +74,7 @@ _general_exclude_paths = [
 # case insensitive list of regex to exclude / skip replacements
 _general_exclude_regex = [
     re.compile('\s*gather_facts:\s*(no|yes|true|false)', re.IGNORECASE),
+    re.compile('\s*-\srole:\s*\w+'),
 ]
 
 required_fqcnconverter_file_version = '0.0.5'
