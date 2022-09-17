@@ -73,8 +73,8 @@ _general_exclude_paths = [
 
 # case insensitive list of regex to exclude / skip replacements
 _general_exclude_regex = [
-    re.compile('\s*gather_facts:\s*(no|yes|true|false)', re.IGNORECASE),
-    re.compile('\s*-\srole:\s*\w+'),
+    re.compile(r'\s*gather_facts:\s*(no|yes|true|false)', re.IGNORECASE),
+    re.compile(r'\s*-\srole:\s*\w+'),
 ]
 
 required_fqcnconverter_file_version = '0.0.5'
@@ -286,7 +286,7 @@ for f in parsefiles:
             backup=args.backupextension) as fi:
         originallines = []
         changedlines = []
-        startingwhitespaces = '\s*-?\s+'
+        startingwhitespaces = r'\s*-?\s+'
         startingwhitespacesaftertask = 0
         startingwhitespaces4comments = 0
         in_task = False
@@ -317,7 +317,7 @@ for f in parsefiles:
                         in_task = True
                         in_task_done = False
                         fqcnregex = _fqcnregex
-                        startingwhitespaces = '\s*-?\s+'
+                        startingwhitespaces = r'\s*-?\s+'
                         startingwhitespacesaftertask = len(taskmatch.group('white'))
                         if args.debug:
                             debugmsg('line: %s taskmatch: %s' % (line, taskmatch,))
