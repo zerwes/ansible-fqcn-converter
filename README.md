@@ -59,8 +59,6 @@ optional arguments:
 ```
 
 ## caveats
-  * :warning: for now, a yaml file must use uniqe notation: either 'named tasks' or not; mixing them in a one file is not supported yet!
-
   * :warning: you should exclude VAR files, molecule and other CI/CD files etc.
 
 ## notes
