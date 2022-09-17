@@ -19,6 +19,12 @@
       ansible.builtin.command:
         cmd: cat dog
 
+    - name: assert
+      ansible.builtin.assert:
+        that: true
+    - ansible.builtin.assert:
+        that: not false
+
 - name: roles
   collections:
     - 'debops.debops'
