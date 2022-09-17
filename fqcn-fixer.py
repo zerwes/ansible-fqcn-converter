@@ -288,6 +288,9 @@ for f in parsefiles:
                 originallines.append(line)
             nline = line
             taskmatch = _taskstartregex.match(line)
+            if taskmatch:
+                in_task_done = False
+                in_task = False
             if in_task_done and not taskmatch:
                 if args.debug:
                     debugmsg('SKIPLINE! %s\n' % (in_task_done and not in_task))
