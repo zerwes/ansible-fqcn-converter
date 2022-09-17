@@ -267,27 +267,19 @@ for f in parsefiles:
         in_task_done = False
         fqcnregex = _fqcnregex
         for line in fi:
-            print('STARTLINE : line: %s in_task: %s in_task_done: %s\n' % (line, in_task, in_task_done,))
             if args.printdiff:
                 originallines.append(line)
             nline = line
             taskmatch = _taskstartregex.match(line)
             if in_task_done and not taskmatch:
-                print('SKIPLINE! %s\n' % (in_task_done and not in_task))
                 print('.', file=sys.stderr, end='', flush=True)
             else:
                 if not in_task:
-                    print('TASKMATCH : line: %s taskmatch: %s\n' % (line, taskmatch,))
                     if taskmatch:
                         in_task = True
                         in_task_done = False
                         startingwhitespacesaftertask = len(taskmatch.group('white'))
-                        print(
-                            'line: %s startingwhitespacesaftertask: %s taskmatch: %s' %
-                            (line, startingwhitespacesaftertask, taskmatch,)
-                            )
                 fqcnmatch = fqcnregex.match(line)
-                print('FQCNMATCH : line: %s fqcnmatch: %s\n' % (line, fqcnmatch,))
                 if fqcnmatch:
                     in_task_done = True
                     in_task = False
