@@ -1,0 +1,95 @@
+---
+- name: ansible fqcn test playbook
+  hosts: localhost
+  gather_facts: true
+  tasks:
+    - name: test task 1
+      # possible ambiguous replacement: command : ansible.builtin.command | community.ciscosmb.command | community.routeros.command
+      ansible.builtin.command: cat dog
+
+    - name: test task 2
+      # possible ambiguous replacement: command : ansible.builtin.command | community.ciscosmb.command | community.routeros.command
+      ansible.builtin.command:
+        cmd: cat dog
+
+    - name: test task 1 fqcn
+      ansible.builtin.command: cat dog
+
+    - name: test task 2 fqcn
+      ansible.builtin.command:
+        cmd: cat dog
+
+- name: roles
+  collections:
+    - 'debops.debops'
+    - 'debops.roles01'
+    - 'debops.roles02'
+    - 'debops.roles03'
+  roles:
+    - role: bootstrap
+      tags:
+        - bootstrap
+    - role: common
+      tags:
+        - common
+
+---
+# just tasks list
+
+# named task
+- name: test apt unnamed
+  ansible.builtin.apt:
+    name: ipsum
+
+# named task w/ group as pitfall
+- name: test copy with group as pitfall
+  ansible.builtin.copy:
+    content: aaa
+    dest: xyz
+    group: lorem
+
+# galaxy module
+- name: general command os6_config
+  dellemc.os6.os6_config:
+    commands: "{{ dellos_general_command | default([]) }}"
+  when: ansible_network_os == "dellemc.os6.os6"
+
+# unnamed task
+- ansible.builtin.file:
+    path: /etc/apt/sources.list.d/pve-enterprise.list
+    state: absent
+  when: "'ox' in group_names"
+
+# unnamed fqcn
+- ansible.builtin.copy:
+    src: a
+    dest: b
+
+# named fqcn
+- name: lorem ipsum
+  ansible.builtin.copy:
+    src: lorem
+    dest: ipsum
+
+# block
+- name: "configure ..."
+  block:
+    - name: "read ..."
+      # possible ambiguous replacement: command : ansible.builtin.command | community.ciscosmb.command | community.routeros.command
+      ansible.builtin.command: cat dog
+      become: true
+      check_mode: false
+      changed_when: false
+      register: _local_json
+
+    - name: read json
+      ansible.builtin.set_fact:
+        current_of_local_json: "{{ _local_json.stdout | from_json }}"
+
+    - name: "write {{ of_default_config }}"
+      ansible.builtin.copy:
+        dest: "{{ of_default_config }}"
+        content: "{{ current_of_local_json | combine(of_local_json, recursive=true) | to_nice_json(indent=2, sort_keys=false) }}\n"
+      notify: restart-xyz
+  when: of_local_json
+
