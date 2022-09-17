@@ -2,3 +2,5 @@
 *.pyc
 *.bak
 test*.yml
+xyz/
+.collections/
