@@ -248,7 +248,7 @@ for dirpath, dirnames, files in os.walk(os.path.abspath(args.directory)):
 # prepare regex
 _fqcnregex = re.compile(r'^(?P<white>\s*-?\s+)(?P<module>%s):' % '|'.join(fqcndict.keys()))
 _taskstartregex = re.compile(
-    r'^(?P<white>\s*-?\s+)(?P<nm>%s):' %
+    r'^(?P<white>\s*-\s+)(?P<nm>%s):' %
         '|'.join(['name'] + list(fqcndict.keys()))
     )
 
@@ -288,6 +288,7 @@ for f in parsefiles:
                             )
                 fqcnmatch = fqcnregex.match(line)
                 print('FQCNMATCH : line: %s fqcnmatch: %s\n' % (line, fqcnmatch,))
+                print('fqcnregex: %s' % fqcnregex)
                 if fqcnmatch:
                     in_task_done = True
                     in_task = False
@@ -318,6 +319,7 @@ for f in parsefiles:
                         fqcnregex = re.compile('^%s(?P<module>%s):' %
                             (startingwhitespaces, '|'.join(fqcndict.keys()))
                             )
+                        print('set STARTINGWHITESPACES to "%s"' % startingwhitespaces)
 
             if args.writefiles:
                 print(nline, end='')
