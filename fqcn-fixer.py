@@ -159,7 +159,7 @@ argparser.add_argument(
     dest='debug',
     action='store_true',
     default=False,
-    help="update the fqcn-map-file"
+    help="debug output"
     )
 
 args = argparser.parse_args()
