@@ -40,10 +40,10 @@ def debugmsg(msg):
     """debug msg"""
     print(msg, file=sys.stderr, flush=True)
 
-def checkignoreregex(line):
+def checkignoreregex(checkline):
     """check if we should ignore replacement"""
     for exre in _general_exclude_regex:
-        if exre.match(line):
+        if exre.match(checkline):
             return True
     return False
 
