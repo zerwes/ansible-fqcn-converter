@@ -17,6 +17,20 @@
       ansible.builtin.command:
         cmd: cat dog
 
+- name: roles
+  collections:
+    - 'debops.debops'
+    - 'debops.roles01'
+    - 'debops.roles02'
+    - 'debops.roles03'
+  roles:
+    - role: bootstrap
+      tags:
+        - bootstrap
+    - role: common
+      tags:
+        - common
+
 ---
 # just tasks list
 
