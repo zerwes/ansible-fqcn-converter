@@ -315,16 +315,19 @@ for f in parsefiles:
                     if taskmatch:
                         in_task = True
                         in_task_done = False
+                        fqcnregex = _fqcnregex
+                        startingwhitespaces = '\s*-?\s+'
                         startingwhitespacesaftertask = len(taskmatch.group('white'))
                         if args.debug:
+                            debugmsg('line: %s taskmatch: %s' % (line, taskmatch,))
                             debugmsg(
-                                'line: %s startingwhitespacesaftertask: %s taskmatch: %s' %
-                                (line, startingwhitespacesaftertask, taskmatch,)
-                                )
+                                'startingwhitespaces "%s" startingwhitespacesaftertask "%s"' %
+                                (startingwhitespaces, startingwhitespacesaftertask,)
+                            )
                 fqcnmatch = fqcnregex.match(line)
                 if args.debug:
                     debugmsg('FQCNMATCH : line: %s fqcnmatch: %s\n' % (line, fqcnmatch,))
-                    #debugmsg('fqcnregex: %s' % fqcnregex)
+                    debugmsg('fqcnregex: %s' % fqcnregex)
                 if fqcnmatch and not checkignoreregex(line):
                     in_task_done = True
                     in_task = False
