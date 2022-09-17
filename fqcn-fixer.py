@@ -247,6 +247,10 @@ for dirpath, dirnames, files in os.walk(os.path.abspath(args.directory)):
 
 # prepare regex
 _fqcnregex = re.compile(r'^(?P<white>\s*-?\s+)(?P<module>%s):' % '|'.join(fqcndict.keys()))
+_taskstartregex = re.compile(
+    r'^(?P<white>\s*-?\s+)(?P<nm>%s):' %
+        '|'.join(['name'] + list(fqcndict.keys()))
+    )
 
 # do it
 for f in parsefiles:
@@ -257,40 +261,63 @@ for f in parsefiles:
             backup=args.backupextension) as fi:
         originallines = []
         changedlines = []
-        startingwhitespaces = False
+        startingwhitespaces = '\s*-?\s+'
+        startingwhitespacesaftertask = 0
+        in_task = False
+        in_task_done = False
         fqcnregex = _fqcnregex
         for line in fi:
+            print('STARTLINE : line: %s in_task: %s in_task_done: %s\n' % (line, in_task, in_task_done,))
             if args.printdiff:
                 originallines.append(line)
             nline = line
-            fqcnmatch = fqcnregex.match(line)
-            if fqcnmatch:
-                if not startingwhitespaces:
-                    startingwhitespaces = fqcnmatch.group('white')
-                    fqcnregex = re.compile('^%s(?P<module>%s):' %
-                        (startingwhitespaces, '|'.join(fqcndict.keys()))
-                        )
-                fqcnmodule = fqcnmatch.group('module')
-                nline = re.sub(
-                    '^(%s)%s:' % (startingwhitespaces, fqcnmodule),
-                    '\\1%s:' % fqcndict[fqcnmodule][0],
-                    line
-                    )
-                if fqcnmodule == fqcndict[fqcnmodule][0]:
-                    print('.', file=sys.stderr, end='', flush=True)
-                else:
-                    print('*', file=sys.stderr, end='', flush=True)
-                    if len(fqcndict[fqcnmodule]) > 1:
-                        wtxt = ('possible ambiguous replacement: %s : %s' %
-                               (fqcnmodule, ' | '.join(fqcndict[fqcnmodule])))
-                        warnings.append(wtxt)
-                        if args.writewarnings:
-                            if args.writefiles:
-                                print('# %s\n' % wtxt)
-                            if args.printdiff:
-                                changedlines.append('# %s\n' % wtxt)
-            else:
+            taskmatch = _taskstartregex.match(line)
+            if in_task_done and not taskmatch:
+                print('SKIPLINE! %s\n' % (in_task_done and not in_task))
                 print('.', file=sys.stderr, end='', flush=True)
+            else:
+                if not in_task:
+                    print('TASKMATCH : line: %s taskmatch: %s\n' % (line, taskmatch,))
+                    if taskmatch:
+                        in_task = True
+                        in_task_done = False
+                        startingwhitespacesaftertask = len(taskmatch.group('white'))
+                        print(
+                            'line: %s startingwhitespacesaftertask: %s taskmatch: %s' %
+                            (line, startingwhitespacesaftertask, taskmatch,)
+                            )
+                fqcnmatch = fqcnregex.match(line)
+                print('FQCNMATCH : line: %s fqcnmatch: %s\n' % (line, fqcnmatch,))
+                if fqcnmatch:
+                    in_task_done = True
+                    in_task = False
+                    fqcnmodule = fqcnmatch.group('module')
+                    nline = re.sub(
+                        '^(%s)%s:' % (startingwhitespaces, fqcnmodule),
+                        '\\1%s:' % fqcndict[fqcnmodule][0],
+                        line
+                        )
+                    if fqcnmodule == fqcndict[fqcnmodule][0]:
+                        print('.', file=sys.stderr, end='', flush=True)
+                    else:
+                        print('*', file=sys.stderr, end='', flush=True)
+                        if len(fqcndict[fqcnmodule]) > 1:
+                            wtxt = ('possible ambiguous replacement: %s : %s' %
+                                   (fqcnmodule, ' | '.join(fqcndict[fqcnmodule])))
+                            warnings.append(wtxt)
+                            if args.writewarnings:
+                                if args.writefiles:
+                                    print('# %s\n' % wtxt)
+                                if args.printdiff:
+                                    changedlines.append('# %s\n' % wtxt)
+                else:
+                    print('.', file=sys.stderr, end='', flush=True)
+                    if startingwhitespacesaftertask > 0:
+                        startingwhitespaces = ' ' * startingwhitespacesaftertask
+                        startingwhitespacesaftertask = 0
+                        fqcnregex = re.compile('^%s(?P<module>%s):' %
+                            (startingwhitespaces, '|'.join(fqcndict.keys()))
+                            )
 
             if args.writefiles:
                 print(nline, end='')
