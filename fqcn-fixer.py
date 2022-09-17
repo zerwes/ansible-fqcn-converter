@@ -327,7 +327,7 @@ for f in parsefiles:
                             warnings.append(wtxt)
                             if args.writewarnings:
                                 if args.writefiles:
-                                    print('# %s\n' % wtxt)
+                                    print('# %s' % wtxt)
                                 if args.printdiff:
                                     changedlines.append('# %s\n' % wtxt)
                 else:
