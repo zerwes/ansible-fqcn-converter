@@ -37,7 +37,15 @@ def isexcluded(path, _exclude_paths):
         )
 
 def debugmsg(msg):
+    """debug msg"""
     print(msg, file=sys.stderr, flush=True)
+
+def checkignoreregex(line):
+    """check if we should ignore replacement"""
+    for exre in _general_exclude_regex:
+        if exre.match(line):
+            return True
+    return False
 
 class Dumper(yaml.Dumper): # pylint: disable=too-many-ancestors
     """https://github.com/yaml/pyyaml/issues/234"""
@@ -62,6 +70,11 @@ _general_exclude_paths = [
     "*/defaults/*",
     "*/meta/*",
     ]
+
+# case insensitive list of regex to exclude / skip replacements
+_general_exclude_regex = [
+    re.compile('\s*gather_facts:\s*(no|yes|true|false)', re.IGNORECASE),
+]
 
 required_fqcnconverter_file_version = '0.0.5'
 
@@ -312,7 +325,7 @@ for f in parsefiles:
                 if args.debug:
                     debugmsg('FQCNMATCH : line: %s fqcnmatch: %s\n' % (line, fqcnmatch,))
                     #debugmsg('fqcnregex: %s' % fqcnregex)
-                if fqcnmatch:
+                if fqcnmatch and not checkignoreregex(line):
                     in_task_done = True
                     in_task = False
                     fqcnmodule = fqcnmatch.group('module')
