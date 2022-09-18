@@ -49,8 +49,9 @@ def checkignoreregex(checkline):
 
 class Dumper(yaml.Dumper): # pylint: disable=too-many-ancestors
     """https://github.com/yaml/pyyaml/issues/234"""
-    def increase_indent(self, flow=False, *dargs): # pylint: disable=keyword-arg-before-vararg
-        return super().increase_indent(dargs, indentless=False)
+    def increase_indent(self, flow=False, *dargs, **dkwargs): # pylint: disable=keyword-arg-before-vararg,unused-argument
+        return super().increase_indent(flow=flow, indentless=False)
+
 
 basepath = os.path.dirname(os.path.realpath(__file__))
 
