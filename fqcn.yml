@@ -1,5 +1,5 @@
 ---
-__fqcnconverter_file_version__: '0.0.5'
+__fqcnconverter_file_version__: 0.1.2
 a10_server:
   - community.network.a10_server
 a10_server_axapi3:
@@ -392,6 +392,8 @@ aix_lvol:
   - community.general.aix_lvol
 alert_policy_info:
   - inspur.sm.alert_policy_info
+alerta_customer:
+  - community.general.alerta_customer
 ali_instance:
   - community.general.ali_instance
 ali_instance_info:
@@ -426,6 +428,7 @@ apache2_mod_proxy:
   - community.general.apache2_mod_proxy
 apache2_module:
   - community.general.apache2_module
+  - debops.debops.apache2_module
 apconos_command:
   - community.network.apconos_command
 api:
@@ -1955,6 +1958,8 @@ campfire:
   - community.general.campfire
 capabilities:
   - community.general.capabilities
+cargo:
+  - community.general.cargo
 catalog_service:
   - openstack.cloud.catalog_service
 catapult:
@@ -2730,6 +2735,8 @@ cpm_user:
   - wti.remote.cpm_user
 cpu_info:
   - inspur.sm.cpu_info
+cran:
+  - debops.debops.cran
 credential:
   - awx.awx.credential
 credential_input_source:
@@ -3162,6 +3169,8 @@ dnacaap_management_execution_status_info:
   - cisco.dnac.dnacaap_management_execution_status_info
 dnf:
   - ansible.builtin.dnf
+dnf_versionlock:
+  - community.general.dnf_versionlock
 dns_info:
   - inspur.sm.dns_info
 dns_zone:
@@ -3170,6 +3179,8 @@ dns_zone_info:
   - openstack.cloud.dns_zone_info
 dnsimple:
   - community.general.dnsimple
+dnsimple_info:
+  - community.general.dnsimple_info
 dnsmadeeasy:
   - community.general.dnsmadeeasy
 docker_compose:
@@ -3238,6 +3249,7 @@ downloadable_acl_info:
   - cisco.ise.downloadable_acl_info
 dpkg_divert:
   - community.general.dpkg_divert
+  - debops.debops.dpkg_divert
 dpkg_selections:
   - ansible.builtin.dpkg_selections
 dynamodb_table:
@@ -7038,6 +7050,8 @@ gce_tag:
   - community.google.gce_tag
 gconftool2:
   - community.general.gconftool2
+gconftool2_info:
+  - community.general.gconftool2_info
 gcp_appengine_firewall_rule:
   - google.cloud.gcp_appengine_firewall_rule
 gcp_appengine_firewall_rule_info:
@@ -7410,6 +7424,8 @@ github_webhook:
   - community.general.github_webhook
 github_webhook_info:
   - community.general.github_webhook_info
+gitlab_branch:
+  - community.general.gitlab_branch
 gitlab_deploy_key:
   - community.general.gitlab_deploy_key
 gitlab_group:
@@ -7635,6 +7651,8 @@ homebrew_cask:
   - community.general.homebrew_cask
 homebrew_tap:
   - community.general.homebrew_tap
+homectl:
+  - community.general.homectl
 honeybadger_deployment:
   - community.general.honeybadger_deployment
 hook:
@@ -8052,6 +8070,10 @@ ig_config:
   - community.network.ig_config
 ig_unit_information:
   - community.network.ig_unit_information
+ilo_redfish_config:
+  - community.general.ilo_redfish_config
+ilo_redfish_info:
+  - community.general.ilo_redfish_info
 image:
   - openstack.cloud.image
   - theforeman.foreman.image
@@ -8561,12 +8583,20 @@ keycloak_identity_provider:
   - community.general.keycloak_identity_provider
 keycloak_realm:
   - community.general.keycloak_realm
+keycloak_realm_info:
+  - community.general.keycloak_realm_info
 keycloak_role:
   - community.general.keycloak_role
+keycloak_user_federation:
+  - community.general.keycloak_user_federation
 keypair:
   - openstack.cloud.keypair
 keypair_info:
   - openstack.cloud.keypair_info
+keyring:
+  - community.general.keyring
+keyring_info:
+  - community.general.keyring_info
 keystone_federation_protocol:
   - openstack.cloud.keystone_federation_protocol
 keystone_federation_protocol_info:
@@ -8617,6 +8647,7 @@ lbu:
   - community.general.lbu
 ldap_attrs:
   - community.general.ldap_attrs
+  - debops.debops.ldap_attrs
 ldap_auth_provider:
   - sensu.sensu_go.ldap_auth_provider
 ldap_entry:
@@ -8723,6 +8754,8 @@ lxd_container:
   - community.general.lxd_container
 lxd_profile:
   - community.general.lxd_profile
+lxd_project:
+  - community.general.lxd_project
 macports:
   - community.general.macports
 mail:
@@ -9045,6 +9078,8 @@ mso_version:
   - cisco.mso.mso_version
 mssql_db:
   - community.general.mssql_db
+mssql_script:
+  - community.general.mssql_script
 mtu_validate:
   - dellemc.os10.mtu_validate
 mutator:
@@ -9972,16 +10007,12 @@ nginx_status_info:
 nictagadm:
   - community.general.nictagadm
 nios_a_record:
-  - community.general.nios_a_record
   - infoblox.nios_modules.nios_a_record
 nios_aaaa_record:
-  - community.general.nios_aaaa_record
   - infoblox.nios_modules.nios_aaaa_record
 nios_cname_record:
-  - community.general.nios_cname_record
   - infoblox.nios_modules.nios_cname_record
 nios_dns_view:
-  - community.general.nios_dns_view
   - infoblox.nios_modules.nios_dns_view
 nios_dtc_lbdn:
   - infoblox.nios_modules.nios_dtc_lbdn
@@ -9990,42 +10021,30 @@ nios_dtc_pool:
 nios_dtc_server:
   - infoblox.nios_modules.nios_dtc_server
 nios_fixed_address:
-  - community.general.nios_fixed_address
   - infoblox.nios_modules.nios_fixed_address
 nios_host_record:
-  - community.general.nios_host_record
   - infoblox.nios_modules.nios_host_record
 nios_member:
-  - community.general.nios_member
   - infoblox.nios_modules.nios_member
 nios_mx_record:
-  - community.general.nios_mx_record
   - infoblox.nios_modules.nios_mx_record
 nios_naptr_record:
-  - community.general.nios_naptr_record
   - infoblox.nios_modules.nios_naptr_record
 nios_network:
-  - community.general.nios_network
   - infoblox.nios_modules.nios_network
 nios_network_view:
-  - community.general.nios_network_view
   - infoblox.nios_modules.nios_network_view
 nios_nsgroup:
-  - community.general.nios_nsgroup
   - infoblox.nios_modules.nios_nsgroup
 nios_ptr_record:
-  - community.general.nios_ptr_record
   - infoblox.nios_modules.nios_ptr_record
 nios_restartservices:
   - infoblox.nios_modules.nios_restartservices
 nios_srv_record:
-  - community.general.nios_srv_record
   - infoblox.nios_modules.nios_srv_record
 nios_txt_record:
-  - community.general.nios_txt_record
   - infoblox.nios_modules.nios_txt_record
 nios_zone:
-  - community.general.nios_zone
   - infoblox.nios_modules.nios_zone
 nmcli:
   - community.general.nmcli
@@ -10864,6 +10883,10 @@ pip_package_info:
   - community.general.pip_package_info
 pipe_handler:
   - sensu.sensu_go.pipe_handler
+pipx:
+  - community.general.pipx
+pipx_info:
+  - community.general.pipx_info
 pkg5:
   - community.general.pkg5
 pkg5_publisher:
@@ -10880,6 +10903,8 @@ platform_nodes_configuration_summary_info:
   - cisco.dnac.platform_nodes_configuration_summary_info
 platform_release_summary_info:
   - cisco.dnac.platform_release_summary_info
+pmem:
+  - community.general.pmem
 pn_access_list:
   - community.network.pn_access_list
 pn_access_list_ip:
@@ -11094,6 +11119,8 @@ postgresql_query:
   - community.postgresql.postgresql_query
 postgresql_schema:
   - community.postgresql.postgresql_schema
+postgresql_script:
+  - community.postgresql.postgresql_script
 postgresql_sequence:
   - community.postgresql.postgresql_sequence
 postgresql_set:
@@ -11173,6 +11200,8 @@ proxmox_snap:
   - community.general.proxmox_snap
 proxmox_storage_info:
   - community.general.proxmox_storage_info
+proxmox_tasks_info:
+  - community.general.proxmox_tasks_info
 proxmox_template:
   - community.general.proxmox_template
 proxmox_user_info:
@@ -11631,6 +11660,12 @@ redhat_subscription:
   - community.general.redhat_subscription
 redis:
   - community.general.redis
+redis_data:
+  - community.general.redis_data
+redis_data_incr:
+  - community.general.redis_data_incr
+redis_data_info:
+  - community.general.redis_data_info
 redis_info:
   - community.general.redis_info
 redshift:
@@ -11751,6 +11786,10 @@ rule_info:
   - ibm.qradar.rule_info
 rundeck_acl_policy:
   - community.general.rundeck_acl_policy
+rundeck_job_executions_info:
+  - community.general.rundeck_job_executions_info
+rundeck_job_run:
+  - community.general.rundeck_job_run
 rundeck_project:
   - community.general.rundeck_project
 runit:
@@ -11797,6 +11836,8 @@ say:
   - community.general.say
 scaleway_compute:
   - community.general.scaleway_compute
+scaleway_compute_private_network:
+  - community.general.scaleway_compute_private_network
 scaleway_database_backup:
   - community.general.scaleway_database_backup
 scaleway_image_info:
@@ -11809,6 +11850,8 @@ scaleway_lb:
   - community.general.scaleway_lb
 scaleway_organization_info:
   - community.general.scaleway_organization_info
+scaleway_private_network:
+  - community.general.scaleway_private_network
 scaleway_security_group:
   - community.general.scaleway_security_group
 scaleway_security_group_info:
@@ -12145,6 +12188,8 @@ smtp_info:
   - inspur.sm.smtp_info
 snap:
   - community.general.snap
+snap_alias:
+  - community.general.snap_alias
 snapshot:
   - theforeman.foreman.snapshot
 snmp_facts:
@@ -12305,6 +12350,8 @@ subscriptions:
   - awx.awx.subscriptions
 subversion:
   - ansible.builtin.subversion
+sudoers:
+  - community.general.sudoers
 supervisorctl:
   - community.general.supervisorctl
 support_bundle:
@@ -13349,6 +13396,10 @@ wait_for_txt:
   - community.dns.wait_for_txt
 wakeonlan:
   - community.general.wakeonlan
+wdc_redfish_command:
+  - community.general.wdc_redfish_command
+wdc_redfish_info:
+  - community.general.wdc_redfish_info
 webfaction_app:
   - community.general.webfaction_app
 webfaction_db:
