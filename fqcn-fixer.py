@@ -102,6 +102,13 @@ argparser.add_argument(
     help="path(s) to directories or files to skip.",
     )
 argparser.add_argument(
+    '-f', '--filter',
+    dest="filter_path",
+    type=str,
+    default=None,
+    help="path(s)/file(s) to limit processing to.",
+    )
+argparser.add_argument(
     '--do-not-use-default-exclude',
     dest="no_general_exclude_paths",
     action='store_true',
@@ -170,7 +177,7 @@ fqcndict = {}
 fqcnmapfile = True
 if not args.updatefqcnmapfile:
     try:
-        with open(args.fqcnmapfile, "r") as fqcnf:
+        with open(args.fqcnmapfile, "r", encoding="utf-8") as fqcnf:
             fqcndict = yaml.load(fqcnf, Loader=yaml.BaseLoader)
             if fqcndict['__fqcnconverter_file_version__'] != required_fqcnconverter_file_version:
                 print('fqcnconverter_file_version missmatch: got %s but expected %s' %
@@ -215,20 +222,19 @@ if not fqcnmapfile or args.updatefqcnmapfile:
             if fqcn not in fqcndict[nonfqcn]:
                 fqcndict[nonfqcn].append(fqcn)
             print('%s : %s -> %s' % (modname, nonfqcn, fqcn))
-    fqcnmapfile = open(args.fqcnmapfile, 'w')
-    fqcnmapfile.write(
-        yaml.dump(
-            fqcndict,
-            Dumper=Dumper,
-            sort_keys=True,
-            indent=2,
-            width=70,
-            explicit_start=True,
-            explicit_end=True,
-            default_flow_style=False
+    with open(args.fqcnmapfile, "w", encoding="utf-8") as fqcnmapfile:
+        fqcnmapfile.write(
+            yaml.dump(
+                fqcndict,
+                Dumper=Dumper,
+                sort_keys=True,
+                indent=2,
+                width=70,
+                explicit_start=True,
+                explicit_end=True,
+                default_flow_style=False
+                )
             )
-        )
-    fqcnmapfile.close()
     print('fqcn map written to %s' % args.fqcnmapfile)
 
 # add the fqcn as key to
@@ -249,7 +255,7 @@ exclude_paths.append(args.fqcnmapfile)
 _config = {}
 if args.config:
     try:
-        with open(args.config) as ymlfile:
+        with open(args.config, "r", encoding="utf-8") as ymlfile:
             _config = yaml.load(ymlfile, Loader=yaml.BaseLoader)
     except FileNotFoundError:
         pass
@@ -267,6 +273,8 @@ for dirpath, dirnames, files in os.walk(os.path.abspath(args.directory)):
             if name.lower().endswith(ext.lower()):
                 f = os.path.join(dirpath, name)
                 if isexcluded(f, exclude_paths):
+                    break
+                if args.filter_path and not f.endswith(args.filter_path):
                     break
                 parsefiles.append(f)
 
