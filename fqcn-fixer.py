@@ -78,7 +78,7 @@ _general_exclude_regex = [
     re.compile(r'\s*-\srole:\s*\w+'),
 ]
 
-required_fqcnconverter_file_version = '0.0.5'
+required_fqcnconverter_file_version = '0.1.2'
 
 argparser = argparse.ArgumentParser(description=__doc__)
 argparser.add_argument(
