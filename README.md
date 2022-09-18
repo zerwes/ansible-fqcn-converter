@@ -8,7 +8,6 @@ In some cases the replacement might be ambiguous, so a warning will be printed (
 Tha ansible files should be linted and valid yaml files. Esp. the following ansible-lint tags should be covered:
  - no-tabs
  - yaml
- - unnamed-task
  
 ## HowTo
  1. Clone this repo to a convenient place: `git clone https://github.com/zerwes/ansible-fqcn-converter.git`
