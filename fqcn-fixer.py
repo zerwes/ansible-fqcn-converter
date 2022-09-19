@@ -222,7 +222,11 @@ if not fqcnmapfile or args.updatefqcnmapfile:
             if nonfqcn not in fqcndict.keys():
                 fqcndict[nonfqcn] = []
             if fqcn not in fqcndict[nonfqcn]:
-                fqcndict[nonfqcn].append(fqcn)
+                # this defines the precedence of the replacements made
+                if fqcn.startswith('ansible.'):
+                    fqcndict[nonfqcn].insert(0, fqcn)
+                else:
+                    fqcndict[nonfqcn].append(fqcn)
             print('%s : %s -> %s' % (modname, nonfqcn, fqcn))
     with open(args.fqcnmapfile, "w", encoding="utf-8") as fqcnmapfile:
         fqcnmapfile.write(

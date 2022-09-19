@@ -99,3 +99,8 @@
       notify: restart-xyz
   when: of_local_json
 
+- name: test user ... expect buildin
+  # possible ambiguous replacement: user : ansible.builtin.user | awx.awx.user | inspur.sm.user | sensu.sensu_go.user | theforeman.foreman.user
+  ansible.builtin.user:
+    name: test
+    password: '!'

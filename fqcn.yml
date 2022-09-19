@@ -2183,8 +2183,8 @@ cli_config:
 cli_credential:
   - cisco.dnac.cli_credential
 cli_parse:
-  - ansible.netcommon.cli_parse
   - ansible.utils.cli_parse
+  - ansible.netcommon.cli_parse
 client_detail_info:
   - cisco.dnac.client_detail_info
 client_enrichment_details_info:
@@ -7491,8 +7491,8 @@ grafana_team:
 grafana_user:
   - community.grafana.grafana_user
 group:
-  - awx.awx.group
   - ansible.builtin.group
+  - awx.awx.group
 group_assignment:
   - openstack.cloud.group_assignment
 group_by:
@@ -12687,11 +12687,11 @@ uri:
 urpmi:
   - community.general.urpmi
 user:
+  - ansible.builtin.user
   - awx.awx.user
   - inspur.sm.user
   - sensu.sensu_go.user
   - theforeman.foreman.user
-  - ansible.builtin.user
 user_enrichment_details_info:
   - cisco.dnac.user_enrichment_details_info
 user_group:
