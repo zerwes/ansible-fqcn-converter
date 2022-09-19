@@ -40,7 +40,7 @@ optional arguments:
                         list of file extensions to use (default: 'yml', 'yaml')
   --exclude EXCLUDE_PATHS [EXCLUDE_PATHS ...]
                         path(s) to directories or files to skip.
-  -f FILTER_PATH, --filter FILTER_PATH
+  -f FILTER_PATH [FILTER_PATH ...], --filter FILTER_PATH [FILTER_PATH ...]
                         path(s)/file(s) to limit processing to.
   --do-not-use-default-exclude
                         do not use the default excludes
