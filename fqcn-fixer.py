@@ -179,6 +179,7 @@ fqcnmapfile = True
 if not args.updatefqcnmapfile:
     try:
         with open(args.fqcnmapfile, "r", encoding="utf-8") as fqcnf:
+            print('loading fqcn map from %s ...' % args.fqcnmapfile)
             fqcndict = yaml.load(fqcnf, Loader=yaml.BaseLoader)
             if fqcndict['__fqcnconverter_file_version__'] != required_fqcnconverter_file_version:
                 print('fqcnconverter_file_version missmatch: got %s but expected %s' %
