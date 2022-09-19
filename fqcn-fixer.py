@@ -252,6 +252,10 @@ if not args.no_general_exclude_paths:
         exclude_paths.append(ep)
 exclude_paths.append(args.fqcnmapfile)
 
+filter_path = ()
+if args.filter_path:
+    filter_path = tuple(args.filter_path)
+
 # update some args from optional config file
 _config = {}
 if args.config:
@@ -272,10 +276,10 @@ for dirpath, dirnames, files in os.walk(os.path.abspath(args.directory)):
     for name in files:
         for ext in args.fileextensions:
             if name.lower().endswith(ext.lower()):
-                if args.filter_path and not name in args.filter_path:
-                    break
                 f = os.path.join(dirpath, name)
                 if isexcluded(f, exclude_paths):
+                    break
+                if filter_path and not f.endswith(filter_path):
                     break
                 parsefiles.append(f)
 
