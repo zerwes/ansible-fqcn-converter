@@ -223,9 +223,7 @@ if not fqcnmapfile or args.updatefqcnmapfile:
                 fqcndict[nonfqcn] = []
             if fqcn not in fqcndict[nonfqcn]:
                 # this defines the precedence of the replacements made
-                if fqcn.startswith('ansible.builtin.'):
-                    fqcndict[nonfqcn].insert(0, fqcn)
-                elif fqcn.startswith('ansible.'):
+                if fqcn.startswith('ansible.'):
                     fqcndict[nonfqcn].insert(0, fqcn)
                 else:
                     fqcndict[nonfqcn].append(fqcn)
