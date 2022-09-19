@@ -96,3 +96,7 @@
       notify: restart-xyz
   when: of_local_json
 
+- name: test user ... expect buildin
+  user:
+    name: test
+    password: '!'
