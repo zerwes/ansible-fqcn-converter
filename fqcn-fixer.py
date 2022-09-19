@@ -105,8 +105,8 @@ argparser.add_argument(
 argparser.add_argument(
     '-f', '--filter',
     dest="filter_path",
-    type=str,
-    default=None,
+    type=str, nargs='+',
+    default=[],
     help="path(s)/file(s) to limit processing to.",
     )
 argparser.add_argument(
@@ -272,10 +272,10 @@ for dirpath, dirnames, files in os.walk(os.path.abspath(args.directory)):
     for name in files:
         for ext in args.fileextensions:
             if name.lower().endswith(ext.lower()):
+                if args.filter_path and not name in args.filter_path:
+                    break
                 f = os.path.join(dirpath, name)
                 if isexcluded(f, exclude_paths):
-                    break
-                if args.filter_path and not f.endswith(args.filter_path):
                     break
                 parsefiles.append(f)
 
