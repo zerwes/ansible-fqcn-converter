@@ -3,7 +3,17 @@
 
 # Ansible FQCN converter
 Update ansible tasks, playbooks, handlers etc. to use fully qualified module names (even for ansible buildins) by searching for all known modules that are not in fqcn notation and replacing them with the fqcn name.
-In some cases the replacement might be ambiguous, so a warning will be printed (and by default added as a comment to the changed files).
+In some cases the replacement might be ambiguous, so a warning will be issued (and by default added as a comment to the changed files; see `-W` arg).
+Ansible native modules (`ansible.builtin`, `ansible.posix `ansible.utils`, ...) will have precedence on ambiguous module names.
+Example diff:
+```diff
+ - name: test user ... expect buildin
+-  user:
++  # possible ambiguous replacement: user : ansible.builtin.user | awx.awx.user | inspur.sm.user | sensu.sensu_go.user | theforeman.foreman.user
++  ansible.builtin.user:
+     name: test
+     password: '!'
+```
 
 Tha ansible files should be linted and valid yaml files. Esp. the following ansible-lint tags should be covered:
  - no-tabs
