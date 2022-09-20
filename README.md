@@ -21,17 +21,37 @@ The ansible files should be linted and valid yaml files! Esp. the following ansi
  - yaml
  
 ## HowTo
- 1. Clone this repo to a convenient place: `git clone https://github.com/zerwes/ansible-fqcn-converter.git`
+ 1. Clone this repo to a convenient place:
 
- 2. Ensure the python script is executable: `chmod 755 ansible-fqcn-converter/fqcn-fixer.py`
+    `git clone https://github.com/zerwes/ansible-fqcn-converter.git`
 
- 3. Optional: re-create the `fqcn-map-file` (:warning: takes about 40 minutes :warning:): `./ansible-fqcn-converter/fqcn-fixer.py --update-fqcn-map-file`
+ 2. Ensure the python script is executable:
 
- 4. Optional: Go to the desired directory containing the ansible roles/playbooks etc. and execute: `ansible-lint .` and ensure the yaml syntax ist OK
+    `chmod 755 ansible-fqcn-converter/fqcn-fixer.py`
 
- 5. Go to the desired directory containing the ansible roles/playbooks etc. and execute: `$PATH_TO_ansible-fqcn-converter/fqcn-fixer.py`
+ 3. Optional: install collections you miss in the `fqcn.yml` file and re-create the `fqcn-map-file` (:warning: takes about 40 minutes :warning:):
 
- 6. If the diff displayed seems OK to you, let the script modify your files (:exclamation: it is **your job and responsability** to inspect the diff vigilant and alerted; use at your own risk :exclamation:): `$PATH_TO_ansible-fqcn-converter/fqcn-fixer.py -w`
+  ```
+  cd ansible-fqcn-converter
+  ansible-galaxy collection install ...
+  ./fqcn-fixer.py --update-fqcn-map-file
+  ```
+
+ 4. Optional: Go to the desired directory containing the ansible roles/playbooks etc. and execute:
+
+    `ansible-lint .`
+
+    and ensure the yaml syntax ist OK
+
+ 5. Go to the desired directory containing the ansible roles/playbooks etc. and execute:
+
+    `$PATH_TO_ansible-fqcn-converter/fqcn-fixer.py`
+
+ 6. If the diff displayed seems OK to you, let the script modify your files:
+
+    (:exclamation: it is **your job and responsability** to inspect the diff vigilant and alerted; use at your own risk :exclamation:)
+
+    `$PATH_TO_ansible-fqcn-converter/fqcn-fixer.py -w`
 
  7. Run the latest `ansible-lint .` and enjoy missing the `Error: fqcn-builtins Use FQCN for builtin actions.`
 
