@@ -16,7 +16,7 @@ Example diff:
      password: '!'
 ```
 
-Tha ansible files should be linted and valid yaml files. Esp. the following ansible-lint tags should be covered:
+The ansible files should be linted and valid yaml files! Esp. the following ansible-lint tags should be covered:
  - no-tabs
  - yaml
  
