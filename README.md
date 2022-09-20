@@ -31,7 +31,7 @@ The ansible files should be linted and valid yaml files! Esp. the following ansi
 
  5. Go to the desired directory containing the ansible roles/playbooks etc. and execute: `$PATH_TO_ansible-fqcn-converter/fqcn-fixer.py`
 
- 6. If the diff displayed seems OK to you, let the script modify your files (:exclamation: use at your own risk :exclamation:): `$PATH_TO_ansible-fqcn-converter/fqcn-fixer.py -w`
+ 6. If the diff displayed seems OK to you, let the script modify your files (:exclamation: it is **your job and responsability** to inspect the diff vigilant and alerted; use at your own risk :exclamation:): `$PATH_TO_ansible-fqcn-converter/fqcn-fixer.py -w`
 
  7. Run the latest `ansible-lint .` and enjoy missing the `Error: fqcn-builtins Use FQCN for builtin actions.`
 
