@@ -72,7 +72,10 @@ _general_exclude_paths = [
     "*/meta/*",
     ]
 
-# case insensitive list of regex to exclude / skip replacements
+# list of regex to exclude / skip replacements
+#   for a example see issue #6 regarding gather_facts as
+#   a keyword used for a module (ansible.builtin.gather_facts called by the setup task)
+#   and for a configuration option at play level
 _general_exclude_regex = [
     re.compile(r'\s*gather_facts:\s*(no|yes|true|false)', re.IGNORECASE),
     re.compile(r'\s*-\srole:\s*\w+'),
