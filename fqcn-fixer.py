@@ -70,6 +70,8 @@ _general_exclude_paths = [
     "*/vars/*",
     "*/defaults/*",
     "*/meta/*",
+    ".config/*",
+    ".yamllint*",
     ]
 
 # list of regex to exclude / skip replacements
