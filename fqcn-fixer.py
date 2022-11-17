@@ -299,6 +299,10 @@ _taskstartregex = re.compile(
     r'^(?P<white>\s*-\s+)(?P<nm>%s):' %
         '|'.join(['name'] + list(fqcndict.keys()))
     )
+if args.debug:
+    debugmsg('_fqcnregex : "%s"' % _fqcnregex)
+    debugmsg('_taskstartregex: "%s"' % _taskstartregex)
+
 
 # do it
 for f in parsefiles:
