@@ -2,6 +2,11 @@
 - name: ansible fqcn test playbook
   hosts: localhost
   gather_facts: true
+  vars:
+    xyz: abc
+    num: 1
+    deploy: true
+    domain: example.com
   tasks:
     - name: test task 1
       command: cat dog
