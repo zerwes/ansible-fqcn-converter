@@ -248,6 +248,8 @@ if not fqcnmapfile or args.updatefqcnmapfile:
             )
     print('fqcn map written to %s' % args.fqcnmapfile)
 
+fqcndict.pop('__fqcnconverter_file_version__', None)
+
 # add the fqcn as key to
 for fqcnlist in copy.copy(fqcndict).values():
     for fqcn in fqcnlist:
