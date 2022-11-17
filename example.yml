@@ -75,6 +75,19 @@
     src: lorem
     dest: ipsum
 
+# issue #11 check double colon
+- name: update mysql root password for all root accounts
+  mysql_user:
+    name: root
+    host: "{{ item }}"
+    password: "{{ mysql_root_password }}"
+  with_items:
+    - "{{ inventory_hostname_short }}"
+    - 127.0.0.1
+    - ::1
+  ignore_errors: true
+  run_once: true
+
 # block
 - name: "configure ..."
   block:
