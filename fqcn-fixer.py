@@ -47,6 +47,13 @@ def checkignoreregex(checkline):
             return True
     return False
 
+def checkstartexcludeblock(checkline):
+    """check if line starts a exclude block"""
+    for exre in _general_exclude_blocks_regex:
+        if exre.match(checkline):
+            return True
+    return False
+
 class Dumper(yaml.Dumper): # pylint: disable=too-many-ancestors
     """https://github.com/yaml/pyyaml/issues/234"""
     def increase_indent(self, flow=False, *dargs, **dkwargs): # pylint: disable=keyword-arg-before-vararg,unused-argument
@@ -81,6 +88,11 @@ _general_exclude_paths = [
 _general_exclude_regex = [
     re.compile(r'\s*gather_facts:\s*(no|yes|true|false)', re.IGNORECASE),
     re.compile(r'\s*-\srole:\s*\w+'),
+]
+
+# list of starting regex to exclude complete subsequent blocks
+_general_exclude_blocks_regex = [
+    re.compile(r'\s*-*\s*vars:$'),
 ]
 
 required_fqcnconverter_file_version = '0.1.2'
@@ -320,79 +332,101 @@ for f in parsefiles:
         startingwhitespaces4comments = 0
         in_task = False
         in_task_done = False
+        in_ignore_block = False
+        startingwhitespaces_ignore_block = None
         fqcnregex = _fqcnregex
         for line in fi:
             if args.debug:
                 debugmsg(
-                    'STARTLINE : line: %s in_task: %s in_task_done: %s\n' %
+                    '\n\n\nSTARTLINE : line: %s in_task: %s in_task_done: %s\n' %
                     (line, in_task, in_task_done,)
                     )
             if args.printdiff:
                 originallines.append(line)
             nline = line
-            taskmatch = _taskstartregex.match(line)
-            if taskmatch:
-                in_task_done = False
-                in_task = False
-            if in_task_done and not taskmatch:
+            if checkstartexcludeblock(line):
+                in_ignore_block = True
+                startingwhitespaces_ignore_block = re.match(r'\s*-?\s*', line).group()
                 if args.debug:
-                    debugmsg('SKIPLINE! %s\n' % (in_task_done and not in_task))
-                print('.', file=sys.stderr, end='', flush=True)
-            else:
-                if not in_task:
-                    if args.debug:
-                        debugmsg('TASKMATCH : line: %s taskmatch: %s\n' % (line, taskmatch,))
-                    if taskmatch:
-                        in_task = True
-                        in_task_done = False
-                        fqcnregex = _fqcnregex
-                        startingwhitespaces = r'\s*-?\s+'
-                        startingwhitespacesaftertask = len(taskmatch.group('white'))
-                        if args.debug:
-                            debugmsg('line: %s taskmatch: %s' % (line, taskmatch,))
-                            debugmsg(
-                                'startingwhitespaces "%s" startingwhitespacesaftertask "%s"' %
-                                (startingwhitespaces, startingwhitespacesaftertask,)
-                            )
-                fqcnmatch = fqcnregex.match(line)
-                if args.debug:
-                    debugmsg('FQCNMATCH : line: %s fqcnmatch: %s\n' % (line, fqcnmatch,))
-                    debugmsg('fqcnregex: %s' % fqcnregex)
-                if fqcnmatch and not checkignoreregex(line):
-                    in_task_done = True
-                    in_task = False
-                    fqcnmodule = fqcnmatch.group('module')
-                    nline = re.sub(
-                        '^(%s)%s:' % (startingwhitespaces, fqcnmodule),
-                        '\\1%s:' % fqcndict[fqcnmodule][0],
-                        line
+                    debugmsg(
+                        'start exclude block : startingwhitespaces_ignore_block : "%s"' %
+                        startingwhitespaces_ignore_block
                         )
-                    if fqcnmodule == fqcndict[fqcnmodule][0]:
-                        print('.', file=sys.stderr, end='', flush=True)
-                    else:
-                        print('*', file=sys.stderr, end='', flush=True)
-                        if len(fqcndict[fqcnmodule]) > 1:
-                            wtxt = ('possible ambiguous replacement: %s : %s' %
-                                   (fqcnmodule, ' | '.join(fqcndict[fqcnmodule])))
-                            warnings.append(wtxt)
-                            if args.writewarnings:
-                                if args.writefiles:
-                                    print('%s# %s' % (' '*startingwhitespaces4comments, wtxt))
-                                if args.printdiff:
-                                    changedlines.append(
-                                        '%s# %s\n' % (' '*startingwhitespaces4comments, wtxt)
-                                        )
+            elif in_ignore_block:
+                if re.match(r'%s\w+' % startingwhitespaces_ignore_block, line):
+                    in_ignore_block = False
+                    startingwhitespaces_ignore_block = None
+                    if args.debug:
+                        debugmsg('end exclude block!')
                 else:
+                    if args.debug:
+                        debugmsg('... in exclude block ... ignore line')
+            if not in_ignore_block:
+                taskmatch = _taskstartregex.match(line)
+                if taskmatch:
+                    if args.debug:
+                        debugmsg('taskmatch: %s' % taskmatch)
+                    in_task_done = False
+                    in_task = False
+                if in_task_done and not taskmatch:
+                    if args.debug:
+                        debugmsg('SKIPLINE! %s\n' % (in_task_done and not in_task))
                     print('.', file=sys.stderr, end='', flush=True)
-                    if startingwhitespacesaftertask > 0:
-                        startingwhitespaces = ' ' * startingwhitespacesaftertask
-                        startingwhitespaces4comments = startingwhitespacesaftertask
-                        startingwhitespacesaftertask = 0
-                        fqcnregex = re.compile('^%s(?P<module>%s):' %
-                            (startingwhitespaces, '|'.join(fqcndict.keys()))
-                            )
+                else:
+                    if not in_task:
                         if args.debug:
-                            debugmsg('set STARTINGWHITESPACES to "%s"' % startingwhitespaces)
+                            debugmsg('TASKMATCH : line: %s taskmatch: %s\n' % (line, taskmatch,))
+                        if taskmatch:
+                            in_task = True
+                            in_task_done = False
+                            fqcnregex = _fqcnregex
+                            startingwhitespaces = r'\s*-?\s+'
+                            startingwhitespacesaftertask = len(taskmatch.group('white'))
+                            if args.debug:
+                                debugmsg('line: %s taskmatch: %s' % (line, taskmatch,))
+                                debugmsg(
+                                    'startingwhitespaces "%s" startingwhitespacesaftertask "%s"' %
+                                    (startingwhitespaces, startingwhitespacesaftertask,)
+                                )
+                    fqcnmatch = fqcnregex.match(line)
+                    if args.debug:
+                        debugmsg('FQCNMATCH : line: %s fqcnmatch: %s\n' % (line, fqcnmatch,))
+                        debugmsg('fqcnregex: %s' % fqcnregex)
+                    if fqcnmatch and not checkignoreregex(line):
+                        in_task_done = True
+                        in_task = False
+                        fqcnmodule = fqcnmatch.group('module')
+                        nline = re.sub(
+                            '^(%s)%s:' % (startingwhitespaces, fqcnmodule),
+                            '\\1%s:' % fqcndict[fqcnmodule][0],
+                            line
+                            )
+                        if fqcnmodule == fqcndict[fqcnmodule][0]:
+                            print('.', file=sys.stderr, end='', flush=True)
+                        else:
+                            print('*', file=sys.stderr, end='', flush=True)
+                            if len(fqcndict[fqcnmodule]) > 1:
+                                wtxt = ('possible ambiguous replacement: %s : %s' %
+                                       (fqcnmodule, ' | '.join(fqcndict[fqcnmodule])))
+                                warnings.append(wtxt)
+                                if args.writewarnings:
+                                    if args.writefiles:
+                                        print('%s# %s' % (' '*startingwhitespaces4comments, wtxt))
+                                    if args.printdiff:
+                                        changedlines.append(
+                                            '%s# %s\n' % (' '*startingwhitespaces4comments, wtxt)
+                                            )
+                    else:
+                        print('.', file=sys.stderr, end='', flush=True)
+                        if startingwhitespacesaftertask > 0:
+                            startingwhitespaces = ' ' * startingwhitespacesaftertask
+                            startingwhitespaces4comments = startingwhitespacesaftertask
+                            startingwhitespacesaftertask = 0
+                            fqcnregex = re.compile('^%s(?P<module>%s):' %
+                                (startingwhitespaces, '|'.join(fqcndict.keys()))
+                                )
+                            if args.debug:
+                                debugmsg('set STARTINGWHITESPACES to "%s"' % startingwhitespaces)
 
             if args.writefiles:
                 print(nline, end='')
