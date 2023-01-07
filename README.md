@@ -93,6 +93,12 @@ optional arguments:
                         update the fqcn-map-file
 ```
 
+## config
+currently implemented config settings:
+
+  * `ignore_modules` : list of module names to ignore
+  * `exclude_paths` : list of paths to ignore
+
 ## caveats
   * :warning: you should exclude VAR files, molecule and other CI/CD files etc.
 
