@@ -134,6 +134,12 @@ argparser.add_argument(
     help="do not use the default excludes",
     )
 argparser.add_argument(
+    '-i', '--ignore-module',
+    type=str, nargs='+',
+    dest='ignore_module',
+    help="list of modules names to ignore",
+    )
+argparser.add_argument(
     '-c', '--config',
     dest="config",
     type=str,
@@ -280,6 +286,11 @@ filter_path = ()
 if args.filter_path:
     filter_path = tuple(args.filter_path)
 
+ignore_modules = []
+if args.ignore_module:
+    for imod in args.ignore_module:
+        ignore_modules.append(imod)
+
 # update some args from optional config file
 _config = {}
 if args.config:
@@ -291,6 +302,9 @@ if args.config:
 if _config and 'exclude_paths' in _config.keys():
     for ep in _config['exclude_paths']:
         exclude_paths.append(os.path.abspath(ep))
+if _config and 'ignore_modules' in _config.keys():
+    for imod in _config['ignore_modules']:
+        ignore_modules.append(imod)
 
 # find files to parse
 parsefiles = []
@@ -396,14 +410,16 @@ for f in parsefiles:
                         in_task_done = True
                         in_task = False
                         fqcnmodule = fqcnmatch.group('module')
-                        nline = re.sub(
-                            '^(%s)%s:' % (startingwhitespaces, fqcnmodule),
-                            '\\1%s:' % fqcndict[fqcnmodule][0],
-                            line
-                            )
-                        if fqcnmodule == fqcndict[fqcnmodule][0]:
+                        if fqcnmodule == fqcndict[fqcnmodule][0] or fqcnmodule in ignore_modules:
+                            if args.debug:
+                                debugmsg('ignore module %s' % fqcnmodule)
                             print('.', file=sys.stderr, end='', flush=True)
                         else:
+                            nline = re.sub(
+                                '^(%s)%s:' % (startingwhitespaces, fqcnmodule),
+                                '\\1%s:' % fqcndict[fqcnmodule][0],
+                                line
+                                )
                             print('*', file=sys.stderr, end='', flush=True)
                             if len(fqcndict[fqcnmodule]) > 1:
                                 wtxt = ('possible ambiguous replacement: %s : %s' %
