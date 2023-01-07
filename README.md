@@ -76,6 +76,8 @@ optional arguments:
                         path(s)/file(s) to limit processing to.
   --do-not-use-default-exclude
                         do not use the default excludes
+  -i IGNORE_MODULE [IGNORE_MODULE ...], --ignore-module IGNORE_MODULE [IGNORE_MODULE ...]
+                        list of modules names to ignore
   -c CONFIG, --config CONFIG
                         read some cfg args from this file (.ansible-lint can be used)
   -w, --write-files     write back changed files
