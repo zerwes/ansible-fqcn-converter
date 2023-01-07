@@ -6,7 +6,7 @@ cd $(dirname $0)
 
 cp example.yml example.yml.orig
 
-./fqcn-fixer.py -f example.yml -w -x
+./fqcn-fixer.py -c examplecfg.yml -f example.yml -w -x
 
 cmp example.yml exampleconverted.yml
 E=$?
