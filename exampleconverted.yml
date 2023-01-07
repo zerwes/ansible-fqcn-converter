@@ -65,6 +65,11 @@
     commands: "{{ dellos_general_command | default([]) }}"
   when: ansible_network_os == "dellemc.os6.os6"
 
+# this will be ignored due to cfg
+- name: general command os10_config
+  os10_config:
+    commands: "{{ dellos_general_command | default([]) }}"
+
 # unnamed task
 - ansible.builtin.file:
     path: /etc/apt/sources.list.d/pve-enterprise.list

@@ -1,0 +1,9 @@
+---
+
+ignore_modules:
+  - os10_config
+#  - os9_config
+#  - os6_config
+
+exclude_paths:
+  - .github/
