@@ -86,7 +86,7 @@ _general_exclude_paths = [
 #   a keyword used for a module (ansible.builtin.gather_facts called by the setup task)
 #   and for a configuration option at play level
 _general_exclude_regex = [
-    re.compile(r'\s*gather_facts:\s*(no|yes|true|false)', re.IGNORECASE),
+    re.compile(r'\s*gather_facts:\s*\S+', re.IGNORECASE),
     re.compile(r'\s*-\srole:\s*\w+'),
 ]
 
