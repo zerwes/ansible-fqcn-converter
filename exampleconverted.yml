@@ -127,3 +127,11 @@
   ansible.builtin.user:
     name: test
     password: '!'
+
+- name: test issue 18
+  # possible ambiguous replacement: command : ansible.builtin.command | community.ciscosmb.command | community.routeros.command
+  ansible.builtin.command: echo "expect no openstack.cloud.config:system:set here"
+  with_items:
+    - app:disable dashboard
+    - config:system:set a b
+    - no:such:xxx
