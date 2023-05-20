@@ -9,11 +9,9 @@
     domain: example.com
   tasks:
     - name: test task 1
-      # possible ambiguous replacement: command : ansible.builtin.command | community.ciscosmb.command | community.routeros.command
       ansible.builtin.command: cat dog
 
     - name: test task 2
-      # possible ambiguous replacement: command : ansible.builtin.command | community.ciscosmb.command | community.routeros.command
       ansible.builtin.command:
         cmd: cat dog
 
@@ -104,7 +102,6 @@
 - name: "configure ..."
   block:
     - name: "read ..."
-      # possible ambiguous replacement: command : ansible.builtin.command | community.ciscosmb.command | community.routeros.command
       ansible.builtin.command: cat dog
       become: true
       check_mode: false
@@ -123,13 +120,11 @@
   when: of_local_json
 
 - name: test user ... expect buildin
-  # possible ambiguous replacement: user : ansible.builtin.user | awx.awx.user | inspur.sm.user | sensu.sensu_go.user | theforeman.foreman.user
   ansible.builtin.user:
     name: test
     password: '!'
 
 - name: test issue 18
-  # possible ambiguous replacement: command : ansible.builtin.command | community.ciscosmb.command | community.routeros.command
   ansible.builtin.command: echo "expect no openstack.cloud.config:system:set here"
   with_items:
     - app:disable dashboard
