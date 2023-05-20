@@ -8,10 +8,26 @@ a10_service_group:
   - community.network.a10_service_group
 a10_virtual_server:
   - community.network.a10_virtual_server
+accessanalyzer_validate_policy_info:
+  - community.aws.accessanalyzer_validate_policy_info
+account_info:
+  - vultr.cloud.account_info
+aci_aaa_custom_privilege:
+  - cisco.aci.aci_aaa_custom_privilege
+aci_aaa_domain:
+  - cisco.aci.aci_aaa_domain
+aci_aaa_role:
+  - cisco.aci.aci_aaa_role
+aci_aaa_ssh_auth:
+  - cisco.aci.aci_aaa_ssh_auth
 aci_aaa_user:
   - cisco.aci.aci_aaa_user
 aci_aaa_user_certificate:
   - cisco.aci.aci_aaa_user_certificate
+aci_aaa_user_domain:
+  - cisco.aci.aci_aaa_user_domain
+aci_aaa_user_role:
+  - cisco.aci.aci_aaa_user_role
 aci_access_port_block_to_access_port:
   - cisco.aci.aci_access_port_block_to_access_port
 aci_access_port_to_interface_policy_leaf_profile:
@@ -40,6 +56,8 @@ aci_bgp_rr_node:
   - cisco.aci.aci_bgp_rr_node
 aci_bindings_info:
   - cisco.ise.aci_bindings_info
+aci_bulk_static_binding_to_epg:
+  - cisco.aci.aci_bulk_static_binding_to_epg
 aci_cloud_ap:
   - cisco.aci.aci_cloud_ap
 aci_cloud_aws_provider:
@@ -130,6 +148,8 @@ aci_fabric_leaf_switch_assoc:
   - cisco.aci.aci_fabric_leaf_switch_assoc
 aci_fabric_node:
   - cisco.aci.aci_fabric_node
+aci_fabric_pod_policy_group:
+  - cisco.aci.aci_fabric_pod_policy_group
 aci_fabric_scheduler:
   - cisco.aci.aci_fabric_scheduler
 aci_fabric_spine_profile:
@@ -168,6 +188,8 @@ aci_interface_policy_leaf_policy_group:
   - cisco.aci.aci_interface_policy_leaf_policy_group
 aci_interface_policy_leaf_profile:
   - cisco.aci.aci_interface_policy_leaf_profile
+aci_interface_policy_leaf_profile_fex_policy_group:
+  - cisco.aci.aci_interface_policy_leaf_profile_fex_policy_group
 aci_interface_policy_link_level:
   - cisco.aci.aci_interface_policy_link_level
 aci_interface_policy_lldp:
@@ -210,6 +232,8 @@ aci_l3out_interface_secondary_ip:
   - cisco.aci.aci_l3out_interface_secondary_ip
 aci_l3out_logical_interface_profile:
   - cisco.aci.aci_l3out_logical_interface_profile
+aci_l3out_logical_interface_profile_ospf_policy:
+  - cisco.aci.aci_l3out_logical_interface_profile_ospf_policy
 aci_l3out_logical_interface_vpc_member:
   - cisco.aci.aci_l3out_logical_interface_vpc_member
 aci_l3out_logical_node:
@@ -230,6 +254,10 @@ aci_maintenance_policy:
   - cisco.aci.aci_maintenance_policy
 aci_node_mgmt_epg:
   - cisco.aci.aci_node_mgmt_epg
+aci_ntp_policy:
+  - cisco.aci.aci_ntp_policy
+aci_ntp_server:
+  - cisco.aci.aci_ntp_server
 aci_rest:
   - cisco.aci.aci_rest
 aci_settings:
@@ -278,6 +306,8 @@ aci_tenant_span_dst_group:
   - cisco.aci.aci_tenant_span_dst_group
 aci_tenant_span_src_group:
   - cisco.aci.aci_tenant_span_src_group
+aci_tenant_span_src_group_src:
+  - cisco.aci.aci_tenant_span_src_group_src
 aci_tenant_span_src_group_to_dst_group:
   - cisco.aci.aci_tenant_span_src_group_to_dst_group
 aci_test_connectivity:
@@ -302,6 +332,10 @@ aci_vzany_to_contract:
   - cisco.aci.aci_vzany_to_contract
 acl:
   - ansible.posix.acl
+acm_certificate:
+  - community.aws.acm_certificate
+acm_certificate_info:
+  - community.aws.acm_certificate_info
 acme_account:
   - community.crypto.acme_account
 acme_account_info:
@@ -341,8 +375,10 @@ active_directory_user_groups_info:
 ad_auth_provider:
   - sensu.sensu_go.ad_auth_provider
 ad_group:
+  - inspur.ispim.ad_group
   - inspur.sm.ad_group
 ad_group_info:
+  - inspur.ispim.ad_group_info
   - inspur.sm.ad_group_info
 ad_hoc_command:
   - awx.awx.ad_hoc_command
@@ -351,8 +387,10 @@ ad_hoc_command_cancel:
 ad_hoc_command_wait:
   - awx.awx.ad_hoc_command_wait
 ad_info:
+  - inspur.ispim.ad_info
   - inspur.sm.ad_info
 adapter_info:
+  - inspur.ispim.adapter_info
   - inspur.sm.adapter_info
 adaptive_response_notable_event:
   - splunk.es.adaptive_response_notable_event
@@ -363,6 +401,7 @@ add_host:
 add_ldap_group:
   - inspur.sm.add_ldap_group
 add_ldisk:
+  - inspur.ispim.add_ldisk
   - inspur.sm.add_ldisk
 add_user:
   - inspur.sm.add_user
@@ -374,6 +413,18 @@ admin_user_info:
   - cisco.ise.admin_user_info
 aerospike_migrations:
   - community.general.aerospike_migrations
+ag_listener:
+  - lowlydba.sqlserver.ag_listener
+ag_replica:
+  - lowlydba.sqlserver.ag_replica
+agent_job:
+  - lowlydba.sqlserver.agent_job
+agent_job_category:
+  - lowlydba.sqlserver.agent_job_category
+agent_job_schedule:
+  - lowlydba.sqlserver.agent_job_schedule
+agent_job_step:
+  - lowlydba.sqlserver.agent_job_step
 airbrake_deployment:
   - community.general.airbrake_deployment
 aireos_command:
@@ -390,7 +441,12 @@ aix_lvg:
   - community.general.aix_lvg
 aix_lvol:
   - community.general.aix_lvol
+alert_contact_point:
+  - grafana.grafana.alert_contact_point
+alert_notification_policy:
+  - grafana.grafana.alert_notification_policy
 alert_policy_info:
+  - inspur.ispim.alert_policy_info
   - inspur.sm.alert_policy_info
 alerta_customer:
   - community.general.alerta_customer
@@ -437,6 +493,10 @@ api_facts:
   - community.routeros.api_facts
 api_find_and_modify:
   - community.routeros.api_find_and_modify
+api_gateway:
+  - community.aws.api_gateway
+api_gateway_domain:
+  - community.aws.api_gateway_domain
 api_info:
   - community.routeros.api_info
 api_modify:
@@ -581,6 +641,8 @@ appliance_vmon_service_info:
   - vmware.vmware_rest.appliance_vmon_service_info
 application:
   - awx.awx.application
+application_autoscaling_policy:
+  - community.aws.application_autoscaling_policy
 application_sets:
   - cisco.dnac.application_sets
 application_sets_count_info:
@@ -613,8 +675,6 @@ aruba_command:
   - community.network.aruba_command
 aruba_config:
   - community.network.aruba_config
-asa_acl:
-  - cisco.asa.asa_acl
 asa_acls:
   - cisco.asa.asa_acls
 asa_command:
@@ -623,8 +683,6 @@ asa_config:
   - cisco.asa.asa_config
 asa_facts:
   - cisco.asa.asa_facts
-asa_og:
-  - cisco.asa.asa_og
 asa_ogs:
   - cisco.asa.asa_ogs
 assemble:
@@ -640,6 +698,7 @@ assign_device_to_site:
 associate_site_to_network_profile:
   - cisco.dnac.associate_site_to_network_profile
 async_status:
+  - ansible.windows.async_status
   - ansible.builtin.async_status
 at:
   - ansible.posix.at
@@ -650,6 +709,7 @@ atomic_host:
 atomic_image:
   - community.general.atomic_image
 audit_log_info:
+  - inspur.ispim.audit_log_info
   - inspur.sm.audit_log_info
 auth:
   - openstack.cloud.auth
@@ -668,7 +728,32 @@ authorization_profile_info:
 authorized_key:
   - ansible.posix.authorized_key
 auto_capture_info:
+  - inspur.ispim.auto_capture_info
   - inspur.sm.auto_capture_info
+autoscaling_complete_lifecycle_action:
+  - community.aws.autoscaling_complete_lifecycle_action
+autoscaling_group:
+  - amazon.aws.autoscaling_group
+autoscaling_group_info:
+  - amazon.aws.autoscaling_group_info
+autoscaling_instance_refresh:
+  - community.aws.autoscaling_instance_refresh
+autoscaling_instance_refresh_info:
+  - community.aws.autoscaling_instance_refresh_info
+autoscaling_launch_config:
+  - community.aws.autoscaling_launch_config
+autoscaling_launch_config_find:
+  - community.aws.autoscaling_launch_config_find
+autoscaling_launch_config_info:
+  - community.aws.autoscaling_launch_config_info
+autoscaling_lifecycle_hook:
+  - community.aws.autoscaling_lifecycle_hook
+autoscaling_policy:
+  - community.aws.autoscaling_policy
+autoscaling_scheduled_action:
+  - community.aws.autoscaling_scheduled_action
+availability_group:
+  - lowlydba.sqlserver.availability_group
 avi_actiongroupconfig:
   - community.network.avi_actiongroupconfig
 avi_alertconfig:
@@ -801,70 +886,10 @@ avi_webhook:
   - community.network.avi_webhook
 awall:
   - community.general.awall
-aws_acm:
-  - community.aws.aws_acm
-aws_acm_info:
-  - community.aws.aws_acm_info
-aws_api_gateway:
-  - community.aws.aws_api_gateway
-aws_api_gateway_domain:
-  - community.aws.aws_api_gateway_domain
-aws_application_scaling_policy:
-  - community.aws.aws_application_scaling_policy
 aws_az_info:
   - amazon.aws.aws_az_info
-aws_batch_compute_environment:
-  - community.aws.aws_batch_compute_environment
-aws_batch_job_definition:
-  - community.aws.aws_batch_job_definition
-aws_batch_job_queue:
-  - community.aws.aws_batch_job_queue
 aws_caller_info:
   - amazon.aws.aws_caller_info
-aws_codebuild:
-  - community.aws.aws_codebuild
-aws_codecommit:
-  - community.aws.aws_codecommit
-aws_codepipeline:
-  - community.aws.aws_codepipeline
-aws_config_aggregation_authorization:
-  - community.aws.aws_config_aggregation_authorization
-aws_config_aggregator:
-  - community.aws.aws_config_aggregator
-aws_config_delivery_channel:
-  - community.aws.aws_config_delivery_channel
-aws_config_recorder:
-  - community.aws.aws_config_recorder
-aws_config_rule:
-  - community.aws.aws_config_rule
-aws_direct_connect_confirm_connection:
-  - community.aws.aws_direct_connect_confirm_connection
-aws_direct_connect_connection:
-  - community.aws.aws_direct_connect_connection
-aws_direct_connect_gateway:
-  - community.aws.aws_direct_connect_gateway
-aws_direct_connect_link_aggregation_group:
-  - community.aws.aws_direct_connect_link_aggregation_group
-aws_direct_connect_virtual_interface:
-  - community.aws.aws_direct_connect_virtual_interface
-aws_eks_cluster:
-  - community.aws.aws_eks_cluster
-aws_elasticbeanstalk_app:
-  - community.aws.aws_elasticbeanstalk_app
-aws_glue_connection:
-  - community.aws.aws_glue_connection
-aws_glue_job:
-  - community.aws.aws_glue_job
-aws_inspector_target:
-  - community.aws.aws_inspector_target
-aws_kms:
-  - community.aws.aws_kms
-aws_kms_info:
-  - community.aws.aws_kms_info
-aws_msk_cluster:
-  - community.aws.aws_msk_cluster
-aws_msk_config:
-  - community.aws.aws_msk_config
 aws_netapp_cvs_active_directory:
   - netapp.aws.aws_netapp_cvs_active_directory
 aws_netapp_cvs_filesystems:
@@ -875,36 +900,8 @@ aws_netapp_cvs_snapshots:
   - netapp.aws.aws_netapp_cvs_snapshots
 aws_region_info:
   - community.aws.aws_region_info
-aws_s3:
-  - amazon.aws.aws_s3
-aws_s3_bucket_info:
-  - community.aws.aws_s3_bucket_info
-aws_s3_cors:
-  - community.aws.aws_s3_cors
-aws_secret:
-  - community.aws.aws_secret
-aws_ses_identity:
-  - community.aws.aws_ses_identity
-aws_ses_identity_policy:
-  - community.aws.aws_ses_identity_policy
-aws_ses_rule_set:
-  - community.aws.aws_ses_rule_set
-aws_sgw_info:
-  - community.aws.aws_sgw_info
-aws_ssm_parameter_store:
-  - community.aws.aws_ssm_parameter_store
-aws_step_functions_state_machine:
-  - community.aws.aws_step_functions_state_machine
-aws_step_functions_state_machine_execution:
-  - community.aws.aws_step_functions_state_machine_execution
-aws_waf_condition:
-  - community.aws.aws_waf_condition
-aws_waf_info:
-  - community.aws.aws_waf_info
-aws_waf_rule:
-  - community.aws.aws_waf_rule
-aws_waf_web_acl:
-  - community.aws.aws_waf_web_acl
+azure_rm_account_info:
+  - azure.azcollection.azure_rm_account_info
 azure_rm_adapplication:
   - azure.azcollection.azure_rm_adapplication
 azure_rm_adapplication_info:
@@ -929,12 +926,16 @@ azure_rm_aks:
   - azure.azcollection.azure_rm_aks
 azure_rm_aks_info:
   - azure.azcollection.azure_rm_aks_info
-  - community.azure.azure_rm_aks_info
+azure_rm_aksagentpool:
+  - azure.azcollection.azure_rm_aksagentpool
+azure_rm_aksagentpool_info:
+  - azure.azcollection.azure_rm_aksagentpool_info
+azure_rm_aksagentpoolversion_info:
+  - azure.azcollection.azure_rm_aksagentpoolversion_info
 azure_rm_aksupgrade_info:
   - azure.azcollection.azure_rm_aksupgrade_info
 azure_rm_aksversion_info:
   - azure.azcollection.azure_rm_aksversion_info
-  - community.azure.azure_rm_aksversion_info
 azure_rm_apimanagement:
   - azure.azcollection.azure_rm_apimanagement
 azure_rm_apimanagement_info:
@@ -951,17 +952,14 @@ azure_rm_applicationsecuritygroup:
   - azure.azcollection.azure_rm_applicationsecuritygroup
 azure_rm_applicationsecuritygroup_info:
   - azure.azcollection.azure_rm_applicationsecuritygroup_info
-  - community.azure.azure_rm_applicationsecuritygroup_info
 azure_rm_appserviceplan:
   - azure.azcollection.azure_rm_appserviceplan
 azure_rm_appserviceplan_info:
   - azure.azcollection.azure_rm_appserviceplan_info
-  - community.azure.azure_rm_appserviceplan_info
 azure_rm_automationaccount:
   - azure.azcollection.azure_rm_automationaccount
 azure_rm_automationaccount_info:
   - azure.azcollection.azure_rm_automationaccount_info
-  - community.azure.azure_rm_automationaccount_info
 azure_rm_automationrunbook:
   - azure.azcollection.azure_rm_automationrunbook
 azure_rm_automationrunbook_info:
@@ -970,12 +968,10 @@ azure_rm_autoscale:
   - azure.azcollection.azure_rm_autoscale
 azure_rm_autoscale_info:
   - azure.azcollection.azure_rm_autoscale_info
-  - community.azure.azure_rm_autoscale_info
 azure_rm_availabilityset:
   - azure.azcollection.azure_rm_availabilityset
 azure_rm_availabilityset_info:
   - azure.azcollection.azure_rm_availabilityset_info
-  - community.azure.azure_rm_availabilityset_info
 azure_rm_azurefirewall:
   - azure.azcollection.azure_rm_azurefirewall
 azure_rm_azurefirewall_info:
@@ -988,18 +984,20 @@ azure_rm_backuppolicy:
   - azure.azcollection.azure_rm_backuppolicy
 azure_rm_backuppolicy_info:
   - azure.azcollection.azure_rm_backuppolicy_info
+azure_rm_bastionhost:
+  - azure.azcollection.azure_rm_bastionhost
+azure_rm_bastionhost_info:
+  - azure.azcollection.azure_rm_bastionhost_info
 azure_rm_batchaccount:
   - azure.azcollection.azure_rm_batchaccount
 azure_rm_cdnendpoint:
   - azure.azcollection.azure_rm_cdnendpoint
 azure_rm_cdnendpoint_info:
   - azure.azcollection.azure_rm_cdnendpoint_info
-  - community.azure.azure_rm_cdnendpoint_info
 azure_rm_cdnprofile:
   - azure.azcollection.azure_rm_cdnprofile
 azure_rm_cdnprofile_info:
   - azure.azcollection.azure_rm_cdnprofile_info
-  - community.azure.azure_rm_cdnprofile_info
 azure_rm_cognitivesearch:
   - azure.azcollection.azure_rm_cognitivesearch
 azure_rm_cognitivesearch_info:
@@ -1008,16 +1006,18 @@ azure_rm_containerinstance:
   - azure.azcollection.azure_rm_containerinstance
 azure_rm_containerinstance_info:
   - azure.azcollection.azure_rm_containerinstance_info
-  - community.azure.azure_rm_containerinstance_info
 azure_rm_containerregistry:
   - azure.azcollection.azure_rm_containerregistry
 azure_rm_containerregistry_info:
   - azure.azcollection.azure_rm_containerregistry_info
-  - community.azure.azure_rm_containerregistry_info
 azure_rm_containerregistryreplication:
   - azure.azcollection.azure_rm_containerregistryreplication
 azure_rm_containerregistryreplication_info:
   - azure.azcollection.azure_rm_containerregistryreplication_info
+azure_rm_containerregistrytag:
+  - azure.azcollection.azure_rm_containerregistrytag
+azure_rm_containerregistrytag_info:
+  - azure.azcollection.azure_rm_containerregistrytag_info
 azure_rm_containerregistrywebhook:
   - azure.azcollection.azure_rm_containerregistrywebhook
 azure_rm_containerregistrywebhook_info:
@@ -1026,7 +1026,6 @@ azure_rm_cosmosdbaccount:
   - azure.azcollection.azure_rm_cosmosdbaccount
 azure_rm_cosmosdbaccount_info:
   - azure.azcollection.azure_rm_cosmosdbaccount_info
-  - community.azure.azure_rm_cosmosdbaccount_info
 azure_rm_datafactory:
   - azure.azcollection.azure_rm_datafactory
 azure_rm_datafactory_info:
@@ -1043,53 +1042,42 @@ azure_rm_deployment:
   - azure.azcollection.azure_rm_deployment
 azure_rm_deployment_info:
   - azure.azcollection.azure_rm_deployment_info
-  - community.azure.azure_rm_deployment_info
 azure_rm_devtestlab:
   - azure.azcollection.azure_rm_devtestlab
 azure_rm_devtestlab_info:
   - azure.azcollection.azure_rm_devtestlab_info
-  - community.azure.azure_rm_devtestlab_info
 azure_rm_devtestlabarmtemplate_info:
   - azure.azcollection.azure_rm_devtestlabarmtemplate_info
-  - community.azure.azure_rm_devtestlabarmtemplate_info
 azure_rm_devtestlabartifact_info:
   - azure.azcollection.azure_rm_devtestlabartifact_info
-  - community.azure.azure_rm_devtestlabartifact_info
 azure_rm_devtestlabartifactsource:
   - azure.azcollection.azure_rm_devtestlabartifactsource
 azure_rm_devtestlabartifactsource_info:
   - azure.azcollection.azure_rm_devtestlabartifactsource_info
-  - community.azure.azure_rm_devtestlabartifactsource_info
 azure_rm_devtestlabcustomimage:
   - azure.azcollection.azure_rm_devtestlabcustomimage
 azure_rm_devtestlabcustomimage_info:
   - azure.azcollection.azure_rm_devtestlabcustomimage_info
-  - community.azure.azure_rm_devtestlabcustomimage_info
 azure_rm_devtestlabenvironment:
   - azure.azcollection.azure_rm_devtestlabenvironment
 azure_rm_devtestlabenvironment_info:
   - azure.azcollection.azure_rm_devtestlabenvironment_info
-  - community.azure.azure_rm_devtestlabenvironment_info
 azure_rm_devtestlabpolicy:
   - azure.azcollection.azure_rm_devtestlabpolicy
 azure_rm_devtestlabpolicy_info:
   - azure.azcollection.azure_rm_devtestlabpolicy_info
-  - community.azure.azure_rm_devtestlabpolicy_info
 azure_rm_devtestlabschedule:
   - azure.azcollection.azure_rm_devtestlabschedule
 azure_rm_devtestlabschedule_info:
   - azure.azcollection.azure_rm_devtestlabschedule_info
-  - community.azure.azure_rm_devtestlabschedule_info
 azure_rm_devtestlabvirtualmachine:
   - azure.azcollection.azure_rm_devtestlabvirtualmachine
 azure_rm_devtestlabvirtualmachine_info:
   - azure.azcollection.azure_rm_devtestlabvirtualmachine_info
-  - community.azure.azure_rm_devtestlabvirtualmachine_info
 azure_rm_devtestlabvirtualnetwork:
   - azure.azcollection.azure_rm_devtestlabvirtualnetwork
 azure_rm_devtestlabvirtualnetwork_info:
   - azure.azcollection.azure_rm_devtestlabvirtualnetwork_info
-  - community.azure.azure_rm_devtestlabvirtualnetwork_info
 azure_rm_diskencryptionset:
   - azure.azcollection.azure_rm_diskencryptionset
 azure_rm_diskencryptionset_info:
@@ -1098,12 +1086,10 @@ azure_rm_dnsrecordset:
   - azure.azcollection.azure_rm_dnsrecordset
 azure_rm_dnsrecordset_info:
   - azure.azcollection.azure_rm_dnsrecordset_info
-  - community.azure.azure_rm_dnsrecordset_info
 azure_rm_dnszone:
   - azure.azcollection.azure_rm_dnszone
 azure_rm_dnszone_info:
   - azure.azcollection.azure_rm_dnszone_info
-  - community.azure.azure_rm_dnszone_info
 azure_rm_eventhub:
   - azure.azcollection.azure_rm_eventhub
 azure_rm_eventhub_info:
@@ -1112,11 +1098,14 @@ azure_rm_expressroute:
   - azure.azcollection.azure_rm_expressroute
 azure_rm_expressroute_info:
   - azure.azcollection.azure_rm_expressroute_info
+azure_rm_firewallpolicy:
+  - azure.azcollection.azure_rm_firewallpolicy
+azure_rm_firewallpolicy_info:
+  - azure.azcollection.azure_rm_firewallpolicy_info
 azure_rm_functionapp:
   - azure.azcollection.azure_rm_functionapp
 azure_rm_functionapp_info:
   - azure.azcollection.azure_rm_functionapp_info
-  - community.azure.azure_rm_functionapp_info
 azure_rm_gallery:
   - azure.azcollection.azure_rm_gallery
 azure_rm_gallery_info:
@@ -1133,7 +1122,6 @@ azure_rm_hdinsightcluster:
   - azure.azcollection.azure_rm_hdinsightcluster
 azure_rm_hdinsightcluster_info:
   - azure.azcollection.azure_rm_hdinsightcluster_info
-  - community.azure.azure_rm_hdinsightcluster_info
 azure_rm_hostgroup:
   - azure.azcollection.azure_rm_hostgroup
 azure_rm_hostgroup_info:
@@ -1142,7 +1130,6 @@ azure_rm_image:
   - azure.azcollection.azure_rm_image
 azure_rm_image_info:
   - azure.azcollection.azure_rm_image_info
-  - community.azure.azure_rm_image_info
 azure_rm_iotdevice:
   - azure.azcollection.azure_rm_iotdevice
 azure_rm_iotdevice_info:
@@ -1175,23 +1162,18 @@ azure_rm_loadbalancer:
   - azure.azcollection.azure_rm_loadbalancer
 azure_rm_loadbalancer_info:
   - azure.azcollection.azure_rm_loadbalancer_info
-  - community.azure.azure_rm_loadbalancer_info
 azure_rm_lock:
   - azure.azcollection.azure_rm_lock
 azure_rm_lock_info:
   - azure.azcollection.azure_rm_lock_info
-  - community.azure.azure_rm_lock_info
 azure_rm_loganalyticsworkspace:
   - azure.azcollection.azure_rm_loganalyticsworkspace
 azure_rm_loganalyticsworkspace_info:
   - azure.azcollection.azure_rm_loganalyticsworkspace_info
-  - community.azure.azure_rm_loganalyticsworkspace_info
 azure_rm_manageddisk:
   - azure.azcollection.azure_rm_manageddisk
-  - community.azure.azure_rm_manageddisk
 azure_rm_manageddisk_info:
   - azure.azcollection.azure_rm_manageddisk_info
-  - community.azure.azure_rm_manageddisk_info
 azure_rm_managementgroup:
   - azure.azcollection.azure_rm_managementgroup
 azure_rm_managementgroup_info:
@@ -1200,48 +1182,46 @@ azure_rm_mariadbconfiguration:
   - azure.azcollection.azure_rm_mariadbconfiguration
 azure_rm_mariadbconfiguration_info:
   - azure.azcollection.azure_rm_mariadbconfiguration_info
-  - community.azure.azure_rm_mariadbconfiguration_info
 azure_rm_mariadbdatabase:
   - azure.azcollection.azure_rm_mariadbdatabase
 azure_rm_mariadbdatabase_info:
   - azure.azcollection.azure_rm_mariadbdatabase_info
-  - community.azure.azure_rm_mariadbdatabase_info
 azure_rm_mariadbfirewallrule:
   - azure.azcollection.azure_rm_mariadbfirewallrule
 azure_rm_mariadbfirewallrule_info:
   - azure.azcollection.azure_rm_mariadbfirewallrule_info
-  - community.azure.azure_rm_mariadbfirewallrule_info
 azure_rm_mariadbserver:
   - azure.azcollection.azure_rm_mariadbserver
 azure_rm_mariadbserver_info:
   - azure.azcollection.azure_rm_mariadbserver_info
-  - community.azure.azure_rm_mariadbserver_info
 azure_rm_monitordiagnosticsetting:
   - azure.azcollection.azure_rm_monitordiagnosticsetting
 azure_rm_monitordiagnosticsetting_info:
   - azure.azcollection.azure_rm_monitordiagnosticsetting_info
 azure_rm_monitorlogprofile:
   - azure.azcollection.azure_rm_monitorlogprofile
+azure_rm_multiplemanageddisks:
+  - azure.azcollection.azure_rm_multiplemanageddisks
 azure_rm_mysqlconfiguration:
   - azure.azcollection.azure_rm_mysqlconfiguration
 azure_rm_mysqlconfiguration_info:
   - azure.azcollection.azure_rm_mysqlconfiguration_info
-  - community.azure.azure_rm_mysqlconfiguration_info
 azure_rm_mysqldatabase:
   - azure.azcollection.azure_rm_mysqldatabase
 azure_rm_mysqldatabase_info:
   - azure.azcollection.azure_rm_mysqldatabase_info
-  - community.azure.azure_rm_mysqldatabase_info
 azure_rm_mysqlfirewallrule:
   - azure.azcollection.azure_rm_mysqlfirewallrule
 azure_rm_mysqlfirewallrule_info:
   - azure.azcollection.azure_rm_mysqlfirewallrule_info
-  - community.azure.azure_rm_mysqlfirewallrule_info
 azure_rm_mysqlserver:
   - azure.azcollection.azure_rm_mysqlserver
 azure_rm_mysqlserver_info:
   - azure.azcollection.azure_rm_mysqlserver_info
-  - community.azure.azure_rm_mysqlserver_info
+azure_rm_natgateway:
+  - azure.azcollection.azure_rm_natgateway
+azure_rm_natgateway_info:
+  - azure.azcollection.azure_rm_natgateway_info
 azure_rm_netapp_account:
   - netapp.azure.azure_rm_netapp_account
 azure_rm_netapp_capacity_pool:
@@ -1254,7 +1234,6 @@ azure_rm_networkinterface:
   - azure.azcollection.azure_rm_networkinterface
 azure_rm_networkinterface_info:
   - azure.azcollection.azure_rm_networkinterface_info
-  - community.azure.azure_rm_networkinterface_info
 azure_rm_notificationhub:
   - azure.azcollection.azure_rm_notificationhub
 azure_rm_notificationhub_info:
@@ -1267,22 +1246,18 @@ azure_rm_postgresqlconfiguration:
   - azure.azcollection.azure_rm_postgresqlconfiguration
 azure_rm_postgresqlconfiguration_info:
   - azure.azcollection.azure_rm_postgresqlconfiguration_info
-  - community.azure.azure_rm_postgresqlconfiguration_info
 azure_rm_postgresqldatabase:
   - azure.azcollection.azure_rm_postgresqldatabase
 azure_rm_postgresqldatabase_info:
   - azure.azcollection.azure_rm_postgresqldatabase_info
-  - community.azure.azure_rm_postgresqldatabase_info
 azure_rm_postgresqlfirewallrule:
   - azure.azcollection.azure_rm_postgresqlfirewallrule
 azure_rm_postgresqlfirewallrule_info:
   - azure.azcollection.azure_rm_postgresqlfirewallrule_info
-  - community.azure.azure_rm_postgresqlfirewallrule_info
 azure_rm_postgresqlserver:
   - azure.azcollection.azure_rm_postgresqlserver
 azure_rm_postgresqlserver_info:
   - azure.azcollection.azure_rm_postgresqlserver_info
-  - community.azure.azure_rm_postgresqlserver_info
 azure_rm_privatednsrecordset:
   - azure.azcollection.azure_rm_privatednsrecordset
 azure_rm_privatednsrecordset_info:
@@ -1299,10 +1274,18 @@ azure_rm_privateendpoint:
   - azure.azcollection.azure_rm_privateendpoint
 azure_rm_privateendpoint_info:
   - azure.azcollection.azure_rm_privateendpoint_info
+azure_rm_privateendpointconnection:
+  - azure.azcollection.azure_rm_privateendpointconnection
+azure_rm_privateendpointconnection_info:
+  - azure.azcollection.azure_rm_privateendpointconnection_info
 azure_rm_privateendpointdnszonegroup:
   - azure.azcollection.azure_rm_privateendpointdnszonegroup
 azure_rm_privateendpointdnszonegroup_info:
   - azure.azcollection.azure_rm_privateendpointdnszonegroup_info
+azure_rm_privatelinkservice:
+  - azure.azcollection.azure_rm_privatelinkservice
+azure_rm_privatelinkservice_info:
+  - azure.azcollection.azure_rm_privatelinkservice_info
 azure_rm_proximityplacementgroup:
   - azure.azcollection.azure_rm_proximityplacementgroup
 azure_rm_proximityplacementgroup_info:
@@ -1311,7 +1294,6 @@ azure_rm_publicipaddress:
   - azure.azcollection.azure_rm_publicipaddress
 azure_rm_publicipaddress_info:
   - azure.azcollection.azure_rm_publicipaddress_info
-  - community.azure.azure_rm_publicipaddress_info
 azure_rm_recoveryservicesvault:
   - azure.azcollection.azure_rm_recoveryservicesvault
 azure_rm_recoveryservicesvault_info:
@@ -1320,7 +1302,6 @@ azure_rm_rediscache:
   - azure.azcollection.azure_rm_rediscache
 azure_rm_rediscache_info:
   - azure.azcollection.azure_rm_rediscache_info
-  - community.azure.azure_rm_rediscache_info
 azure_rm_rediscachefirewallrule:
   - azure.azcollection.azure_rm_rediscachefirewallrule
 azure_rm_registrationassignment:
@@ -1335,22 +1316,18 @@ azure_rm_resource:
   - azure.azcollection.azure_rm_resource
 azure_rm_resource_info:
   - azure.azcollection.azure_rm_resource_info
-  - community.azure.azure_rm_resource_info
 azure_rm_resourcegroup:
   - azure.azcollection.azure_rm_resourcegroup
 azure_rm_resourcegroup_info:
   - azure.azcollection.azure_rm_resourcegroup_info
-  - community.azure.azure_rm_resourcegroup_info
 azure_rm_roleassignment:
   - azure.azcollection.azure_rm_roleassignment
 azure_rm_roleassignment_info:
   - azure.azcollection.azure_rm_roleassignment_info
-  - community.azure.azure_rm_roleassignment_info
 azure_rm_roledefinition:
   - azure.azcollection.azure_rm_roledefinition
 azure_rm_roledefinition_info:
   - azure.azcollection.azure_rm_roledefinition_info
-  - community.azure.azure_rm_roledefinition_info
 azure_rm_route:
   - azure.azcollection.azure_rm_route
 azure_rm_route_info:
@@ -1359,17 +1336,14 @@ azure_rm_routetable:
   - azure.azcollection.azure_rm_routetable
 azure_rm_routetable_info:
   - azure.azcollection.azure_rm_routetable_info
-  - community.azure.azure_rm_routetable_info
 azure_rm_securitygroup:
   - azure.azcollection.azure_rm_securitygroup
 azure_rm_securitygroup_info:
   - azure.azcollection.azure_rm_securitygroup_info
-  - community.azure.azure_rm_securitygroup_info
 azure_rm_servicebus:
   - azure.azcollection.azure_rm_servicebus
 azure_rm_servicebus_info:
   - azure.azcollection.azure_rm_servicebus_info
-  - community.azure.azure_rm_servicebus_info
 azure_rm_servicebusqueue:
   - azure.azcollection.azure_rm_servicebusqueue
 azure_rm_servicebussaspolicy:
@@ -1384,22 +1358,26 @@ azure_rm_sqldatabase:
   - azure.azcollection.azure_rm_sqldatabase
 azure_rm_sqldatabase_info:
   - azure.azcollection.azure_rm_sqldatabase_info
-  - community.azure.azure_rm_sqldatabase_info
+azure_rm_sqlelasticpool:
+  - azure.azcollection.azure_rm_sqlelasticpool
+azure_rm_sqlelasticpool_info:
+  - azure.azcollection.azure_rm_sqlelasticpool_info
 azure_rm_sqlfirewallrule:
   - azure.azcollection.azure_rm_sqlfirewallrule
 azure_rm_sqlfirewallrule_info:
   - azure.azcollection.azure_rm_sqlfirewallrule_info
-  - community.azure.azure_rm_sqlfirewallrule_info
+azure_rm_sqlmanagedinstance:
+  - azure.azcollection.azure_rm_sqlmanagedinstance
+azure_rm_sqlmanagedinstance_info:
+  - azure.azcollection.azure_rm_sqlmanagedinstance_info
 azure_rm_sqlserver:
   - azure.azcollection.azure_rm_sqlserver
 azure_rm_sqlserver_info:
   - azure.azcollection.azure_rm_sqlserver_info
-  - community.azure.azure_rm_sqlserver_info
 azure_rm_storageaccount:
   - azure.azcollection.azure_rm_storageaccount
 azure_rm_storageaccount_info:
   - azure.azcollection.azure_rm_storageaccount_info
-  - community.azure.azure_rm_storageaccount_info
 azure_rm_storageblob:
   - azure.azcollection.azure_rm_storageblob
 azure_rm_storageshare:
@@ -1410,7 +1388,6 @@ azure_rm_subnet:
   - azure.azcollection.azure_rm_subnet
 azure_rm_subnet_info:
   - azure.azcollection.azure_rm_subnet_info
-  - community.azure.azure_rm_subnet_info
 azure_rm_subscription_info:
   - azure.azcollection.azure_rm_subscription_info
 azure_rm_trafficmanager:
@@ -1419,60 +1396,52 @@ azure_rm_trafficmanagerendpoint:
   - azure.azcollection.azure_rm_trafficmanagerendpoint
 azure_rm_trafficmanagerendpoint_info:
   - azure.azcollection.azure_rm_trafficmanagerendpoint_info
-  - community.azure.azure_rm_trafficmanagerendpoint_info
 azure_rm_trafficmanagerprofile:
   - azure.azcollection.azure_rm_trafficmanagerprofile
 azure_rm_trafficmanagerprofile_info:
   - azure.azcollection.azure_rm_trafficmanagerprofile_info
-  - community.azure.azure_rm_trafficmanagerprofile_info
 azure_rm_virtualhub:
   - azure.azcollection.azure_rm_virtualhub
 azure_rm_virtualhub_info:
   - azure.azcollection.azure_rm_virtualhub_info
+azure_rm_virtualhubconnection:
+  - azure.azcollection.azure_rm_virtualhubconnection
+azure_rm_virtualhubconnection_info:
+  - azure.azcollection.azure_rm_virtualhubconnection_info
 azure_rm_virtualmachine:
   - azure.azcollection.azure_rm_virtualmachine
 azure_rm_virtualmachine_info:
   - azure.azcollection.azure_rm_virtualmachine_info
-  - community.azure.azure_rm_virtualmachine_info
 azure_rm_virtualmachineextension:
   - azure.azcollection.azure_rm_virtualmachineextension
-  - community.azure.azure_rm_virtualmachineextension
 azure_rm_virtualmachineextension_info:
   - azure.azcollection.azure_rm_virtualmachineextension_info
-  - community.azure.azure_rm_virtualmachineextension_info
 azure_rm_virtualmachineimage_info:
   - azure.azcollection.azure_rm_virtualmachineimage_info
-  - community.azure.azure_rm_virtualmachineimage_info
 azure_rm_virtualmachinescaleset:
   - azure.azcollection.azure_rm_virtualmachinescaleset
-  - community.azure.azure_rm_virtualmachinescaleset
 azure_rm_virtualmachinescaleset_info:
   - azure.azcollection.azure_rm_virtualmachinescaleset_info
-  - community.azure.azure_rm_virtualmachinescaleset_info
 azure_rm_virtualmachinescalesetextension:
   - azure.azcollection.azure_rm_virtualmachinescalesetextension
 azure_rm_virtualmachinescalesetextension_info:
   - azure.azcollection.azure_rm_virtualmachinescalesetextension_info
-  - community.azure.azure_rm_virtualmachinescalesetextension_info
 azure_rm_virtualmachinescalesetinstance:
   - azure.azcollection.azure_rm_virtualmachinescalesetinstance
 azure_rm_virtualmachinescalesetinstance_info:
   - azure.azcollection.azure_rm_virtualmachinescalesetinstance_info
-  - community.azure.azure_rm_virtualmachinescalesetinstance_info
 azure_rm_virtualmachinesize_info:
   - azure.azcollection.azure_rm_virtualmachinesize_info
 azure_rm_virtualnetwork:
   - azure.azcollection.azure_rm_virtualnetwork
 azure_rm_virtualnetwork_info:
   - azure.azcollection.azure_rm_virtualnetwork_info
-  - community.azure.azure_rm_virtualnetwork_info
 azure_rm_virtualnetworkgateway:
   - azure.azcollection.azure_rm_virtualnetworkgateway
 azure_rm_virtualnetworkpeering:
   - azure.azcollection.azure_rm_virtualnetworkpeering
 azure_rm_virtualnetworkpeering_info:
   - azure.azcollection.azure_rm_virtualnetworkpeering_info
-  - community.azure.azure_rm_virtualnetworkpeering_info
 azure_rm_virtualwan:
   - azure.azcollection.azure_rm_virtualwan
 azure_rm_virtualwan_info:
@@ -1491,7 +1460,6 @@ azure_rm_webapp:
   - azure.azcollection.azure_rm_webapp
 azure_rm_webapp_info:
   - azure.azcollection.azure_rm_webapp_info
-  - community.azure.azure_rm_webapp_info
 azure_rm_webappaccessrestriction:
   - azure.azcollection.azure_rm_webappaccessrestriction
 azure_rm_webappaccessrestriction_info:
@@ -1503,9 +1471,12 @@ azure_rm_webappvnetconnection:
 azure_rm_webappvnetconnection_info:
   - azure.azcollection.azure_rm_webappvnetconnection_info
 backplane_info:
+  - inspur.ispim.backplane_info
   - inspur.sm.backplane_info
 backup:
+  - inspur.ispim.backup
   - inspur.sm.backup
+  - lowlydba.sqlserver.backup
 backup_cancel:
   - cisco.ise.backup_cancel
 backup_config:
@@ -1532,6 +1503,12 @@ baremetal_port_info:
   - openstack.cloud.baremetal_port_info
 base_xml_to_dict:
   - dellemc.os10.base_xml_to_dict
+batch_compute_environment:
+  - community.aws.batch_compute_environment
+batch_job_definition:
+  - community.aws.batch_job_definition
+batch_job_queue:
+  - community.aws.batch_job_queue
 bcf_switch:
   - community.network.bcf_switch
 beadm:
@@ -1905,10 +1882,13 @@ bigpanda:
 bind_signed_certificate:
   - cisco.ise.bind_signed_certificate
 bios_export:
+  - inspur.ispim.bios_export
   - inspur.sm.bios_export
 bios_import:
+  - inspur.ispim.bios_import
   - inspur.sm.bios_import
 bios_info:
+  - inspur.ispim.bios_info
   - inspur.sm.bios_info
 bitbucket_access_key:
   - community.general.bitbucket_access_key
@@ -1918,9 +1898,14 @@ bitbucket_pipeline_known_host:
   - community.general.bitbucket_pipeline_known_host
 bitbucket_pipeline_variable:
   - community.general.bitbucket_pipeline_variable
+block_storage:
+  - vultr.cloud.block_storage
+block_storage_info:
+  - vultr.cloud.block_storage_info
 blockinfile:
   - ansible.builtin.blockinfile
 bmc_info:
+  - inspur.ispim.bmc_info
   - inspur.sm.bmc_info
 bonsai_asset:
   - sensu.sensu_go.bonsai_asset
@@ -1929,13 +1914,19 @@ bookmark:
 boot:
   - community.hrobot.boot
 boot_image_info:
+  - inspur.ispim.boot_image_info
   - inspur.sm.boot_image_info
 boot_option_info:
+  - inspur.ispim.boot_option_info
   - inspur.sm.boot_option_info
 bower:
   - community.general.bower
 buildings_planned_access_points_info:
   - cisco.dnac.buildings_planned_access_points_info
+bulk_host_create:
+  - awx.awx.bulk_host_create
+bulk_job_launch:
+  - awx.awx.bulk_job_launch
 bundler:
   - community.general.bundler
 business_sda_hostonboarding_ssid_ippool:
@@ -2128,24 +2119,8 @@ check:
   - sensu.sensu_go.check
 check_info:
   - sensu.sensu_go.check_info
-checkpoint_access_layer_facts:
-  - check_point.mgmt.checkpoint_access_layer_facts
-checkpoint_access_rule:
-  - check_point.mgmt.checkpoint_access_rule
-checkpoint_access_rule_facts:
-  - check_point.mgmt.checkpoint_access_rule_facts
-checkpoint_host:
-  - check_point.mgmt.checkpoint_host
-checkpoint_host_facts:
-  - check_point.mgmt.checkpoint_host_facts
-checkpoint_object_facts:
-  - check_point.mgmt.checkpoint_object_facts
-checkpoint_run_script:
-  - check_point.mgmt.checkpoint_run_script
-checkpoint_session:
-  - check_point.mgmt.checkpoint_session
-checkpoint_task_facts:
-  - check_point.mgmt.checkpoint_task_facts
+cifsserver:
+  - dellemc.unity.cifsserver
 circonus_annotation:
   - community.general.circonus_annotation
 cisco_webex:
@@ -2171,10 +2146,13 @@ clc_server:
 clc_server_snapshot:
   - community.general.clc_server_snapshot
 clear_audit_log:
+  - inspur.ispim.clear_audit_log
   - inspur.sm.clear_audit_log
 clear_event_log:
+  - inspur.ispim.clear_event_log
   - inspur.sm.clear_event_log
 clear_system_log:
+  - inspur.ispim.clear_system_log
   - inspur.sm.clear_system_log
 cli_command:
   - ansible.netcommon.cli_command
@@ -2193,8 +2171,14 @@ client_health_info:
   - cisco.dnac.client_health_info
 client_proximity_info:
   - cisco.dnac.client_proximity_info
+cloud_api_key:
+  - grafana.grafana.cloud_api_key
 cloud_init_data_facts:
   - community.general.cloud_init_data_facts
+cloud_plugin:
+  - grafana.grafana.cloud_plugin
+cloud_stack:
+  - grafana.grafana.cloud_stack
 cloudflare_dns:
   - community.general.cloudflare_dns
 cloudformation:
@@ -2207,8 +2191,8 @@ cloudformation_stack_set:
   - community.aws.cloudformation_stack_set
 cloudfront_distribution:
   - community.aws.cloudfront_distribution
-cloudfront_info:
-  - community.aws.cloudfront_info
+cloudfront_distribution_info:
+  - community.aws.cloudfront_distribution_info
 cloudfront_invalidation:
   - community.aws.cloudfront_invalidation
 cloudfront_origin_access_identity:
@@ -2216,15 +2200,21 @@ cloudfront_origin_access_identity:
 cloudfront_response_headers_policy:
   - community.aws.cloudfront_response_headers_policy
 cloudtrail:
-  - community.aws.cloudtrail
+  - amazon.aws.cloudtrail
+cloudtrail_info:
+  - amazon.aws.cloudtrail_info
+cloudwatch_metric_alarm:
+  - amazon.aws.cloudwatch_metric_alarm
+cloudwatch_metric_alarm_info:
+  - amazon.aws.cloudwatch_metric_alarm_info
 cloudwatchevent_rule:
-  - community.aws.cloudwatchevent_rule
+  - amazon.aws.cloudwatchevent_rule
 cloudwatchlogs_log_group:
-  - community.aws.cloudwatchlogs_log_group
+  - amazon.aws.cloudwatchlogs_log_group
 cloudwatchlogs_log_group_info:
-  - community.aws.cloudwatchlogs_log_group_info
+  - amazon.aws.cloudwatchlogs_log_group_info
 cloudwatchlogs_log_group_metric_filter:
-  - community.aws.cloudwatchlogs_log_group_metric_filter
+  - amazon.aws.cloudwatchlogs_log_group_metric_filter
 cluster:
   - sensu.sensu_go.cluster
 cluster_info:
@@ -2295,13 +2285,21 @@ cobbler_sync:
   - community.general.cobbler_sync
 cobbler_system:
   - community.general.cobbler_system
+codebuild_project:
+  - community.aws.codebuild_project
+codecommit_repository:
+  - community.aws.codecommit_repository
+codepipeline:
+  - community.aws.codepipeline
 coe_cluster:
   - openstack.cloud.coe_cluster
 coe_cluster_template:
   - openstack.cloud.coe_cluster_template
 collect_blackbox:
+  - inspur.ispim.collect_blackbox
   - inspur.sm.collect_blackbox
 collect_log:
+  - inspur.ispim.collect_log
   - inspur.sm.collect_log
 command:
   - ansible.builtin.command
@@ -2337,8 +2335,18 @@ compute_service_info:
   - openstack.cloud.compute_service_info
 config:
   - openstack.cloud.config
+config_aggregation_authorization:
+  - community.aws.config_aggregation_authorization
+config_aggregator:
+  - community.aws.config_aggregator
+config_delivery_channel:
+  - community.aws.config_delivery_channel
 config_group:
   - theforeman.foreman.config_group
+config_recorder:
+  - community.aws.config_recorder
+config_rule:
+  - community.aws.config_rule
 configuration_template:
   - cisco.dnac.configuration_template
 configuration_template_clone:
@@ -2370,7 +2378,10 @@ configuration_template_version_create:
 configuration_template_version_info:
   - cisco.dnac.configuration_template_version_info
 connect_media_info:
+  - inspur.ispim.connect_media_info
   - inspur.sm.connect_media_info
+consistencygroup:
+  - dellemc.unity.consistencygroup
 consul:
   - community.general.consul
 consul_acl:
@@ -2385,6 +2396,14 @@ content_configuration_info:
   - vmware.vmware_rest.content_configuration_info
 content_credential:
   - theforeman.foreman.content_credential
+content_export_info:
+  - theforeman.foreman.content_export_info
+content_export_library:
+  - theforeman.foreman.content_export_library
+content_export_repository:
+  - theforeman.foreman.content_export_repository
+content_export_version:
+  - theforeman.foreman.content_export_version
 content_library_item_info:
   - vmware.vmware_rest.content_library_item_info
 content_locallibrary:
@@ -2401,6 +2420,12 @@ content_view:
   - theforeman.foreman.content_view
 content_view_filter:
   - theforeman.foreman.content_view_filter
+content_view_filter_info:
+  - theforeman.foreman.content_view_filter_info
+content_view_filter_rule:
+  - theforeman.foreman.content_view_filter_rule
+content_view_filter_rule_info:
+  - theforeman.foreman.content_view_filter_rule_info
 content_view_info:
   - theforeman.foreman.content_view_info
 content_view_version:
@@ -2441,6 +2466,8 @@ cp_mgmt_add_domain:
   - check_point.mgmt.cp_mgmt_add_domain
 cp_mgmt_add_nat_rule:
   - check_point.mgmt.cp_mgmt_add_nat_rule
+cp_mgmt_add_rules_batch:
+  - check_point.mgmt.cp_mgmt_add_rules_batch
 cp_mgmt_address_range:
   - check_point.mgmt.cp_mgmt_address_range
 cp_mgmt_address_range_facts:
@@ -2461,8 +2488,18 @@ cp_mgmt_application_site_group:
   - check_point.mgmt.cp_mgmt_application_site_group
 cp_mgmt_application_site_group_facts:
   - check_point.mgmt.cp_mgmt_application_site_group_facts
+cp_mgmt_approve_session:
+  - check_point.mgmt.cp_mgmt_approve_session
 cp_mgmt_assign_global_assignment:
   - check_point.mgmt.cp_mgmt_assign_global_assignment
+cp_mgmt_check_network_feed:
+  - check_point.mgmt.cp_mgmt_check_network_feed
+cp_mgmt_check_threat_ioc_feed:
+  - check_point.mgmt.cp_mgmt_check_threat_ioc_feed
+cp_mgmt_cluster_members_facts:
+  - check_point.mgmt.cp_mgmt_cluster_members_facts
+cp_mgmt_connect_cloud_services:
+  - check_point.mgmt.cp_mgmt_connect_cloud_services
 cp_mgmt_data_center_object_facts:
   - check_point.mgmt.cp_mgmt_data_center_object_facts
 cp_mgmt_delete_api_key:
@@ -2473,14 +2510,22 @@ cp_mgmt_delete_domain:
   - check_point.mgmt.cp_mgmt_delete_domain
 cp_mgmt_delete_nat_rule:
   - check_point.mgmt.cp_mgmt_delete_nat_rule
+cp_mgmt_delete_rules_batch:
+  - check_point.mgmt.cp_mgmt_delete_rules_batch
 cp_mgmt_discard:
   - check_point.mgmt.cp_mgmt_discard
+cp_mgmt_disconnect_cloud_services:
+  - check_point.mgmt.cp_mgmt_disconnect_cloud_services
 cp_mgmt_dns_domain:
   - check_point.mgmt.cp_mgmt_dns_domain
 cp_mgmt_dns_domain_facts:
   - check_point.mgmt.cp_mgmt_dns_domain_facts
 cp_mgmt_domain_facts:
   - check_point.mgmt.cp_mgmt_domain_facts
+cp_mgmt_domain_permissions_profile:
+  - check_point.mgmt.cp_mgmt_domain_permissions_profile
+cp_mgmt_domain_permissions_profile_facts:
+  - check_point.mgmt.cp_mgmt_domain_permissions_profile_facts
 cp_mgmt_dynamic_object:
   - check_point.mgmt.cp_mgmt_dynamic_object
 cp_mgmt_dynamic_object_facts:
@@ -2489,6 +2534,8 @@ cp_mgmt_exception_group:
   - check_point.mgmt.cp_mgmt_exception_group
 cp_mgmt_exception_group_facts:
   - check_point.mgmt.cp_mgmt_exception_group_facts
+cp_mgmt_get_platform:
+  - check_point.mgmt.cp_mgmt_get_platform
 cp_mgmt_global_assignment:
   - check_point.mgmt.cp_mgmt_global_assignment
 cp_mgmt_global_assignment_facts:
@@ -2511,20 +2558,44 @@ cp_mgmt_identity_tag:
   - check_point.mgmt.cp_mgmt_identity_tag
 cp_mgmt_identity_tag_facts:
   - check_point.mgmt.cp_mgmt_identity_tag_facts
+cp_mgmt_idp_administrator_group:
+  - check_point.mgmt.cp_mgmt_idp_administrator_group
+cp_mgmt_idp_administrator_group_facts:
+  - check_point.mgmt.cp_mgmt_idp_administrator_group_facts
+cp_mgmt_idp_to_domain_assignment_facts:
+  - check_point.mgmt.cp_mgmt_idp_to_domain_assignment_facts
 cp_mgmt_install_database:
   - check_point.mgmt.cp_mgmt_install_database
+cp_mgmt_install_lsm_policy:
+  - check_point.mgmt.cp_mgmt_install_lsm_policy
+cp_mgmt_install_lsm_settings:
+  - check_point.mgmt.cp_mgmt_install_lsm_settings
 cp_mgmt_install_policy:
   - check_point.mgmt.cp_mgmt_install_policy
 cp_mgmt_install_software_package:
   - check_point.mgmt.cp_mgmt_install_software_package
+cp_mgmt_interoperable_device:
+  - check_point.mgmt.cp_mgmt_interoperable_device
+cp_mgmt_interoperable_device_facts:
+  - check_point.mgmt.cp_mgmt_interoperable_device_facts
 cp_mgmt_lsm_cluster:
   - check_point.mgmt.cp_mgmt_lsm_cluster
 cp_mgmt_lsm_cluster_facts:
   - check_point.mgmt.cp_mgmt_lsm_cluster_facts
+cp_mgmt_lsm_cluster_profile_facts:
+  - check_point.mgmt.cp_mgmt_lsm_cluster_profile_facts
 cp_mgmt_lsm_gateway:
   - check_point.mgmt.cp_mgmt_lsm_gateway
 cp_mgmt_lsm_gateway_facts:
   - check_point.mgmt.cp_mgmt_lsm_gateway_facts
+cp_mgmt_lsm_gateway_profile_facts:
+  - check_point.mgmt.cp_mgmt_lsm_gateway_profile_facts
+cp_mgmt_lsm_run_script:
+  - check_point.mgmt.cp_mgmt_lsm_run_script
+cp_mgmt_md_permissions_profile:
+  - check_point.mgmt.cp_mgmt_md_permissions_profile
+cp_mgmt_md_permissions_profile_facts:
+  - check_point.mgmt.cp_mgmt_md_permissions_profile_facts
 cp_mgmt_mds:
   - check_point.mgmt.cp_mgmt_mds
 cp_mgmt_mds_facts:
@@ -2541,14 +2612,30 @@ cp_mgmt_network:
   - check_point.mgmt.cp_mgmt_network
 cp_mgmt_network_facts:
   - check_point.mgmt.cp_mgmt_network_facts
+cp_mgmt_network_feed:
+  - check_point.mgmt.cp_mgmt_network_feed
+cp_mgmt_network_feed_facts:
+  - check_point.mgmt.cp_mgmt_network_feed_facts
+cp_mgmt_objects_facts:
+  - check_point.mgmt.cp_mgmt_objects_facts
 cp_mgmt_package:
   - check_point.mgmt.cp_mgmt_package
 cp_mgmt_package_facts:
   - check_point.mgmt.cp_mgmt_package_facts
+cp_mgmt_provisioning_profile_facts:
+  - check_point.mgmt.cp_mgmt_provisioning_profile_facts
 cp_mgmt_publish:
   - check_point.mgmt.cp_mgmt_publish
 cp_mgmt_put_file:
   - check_point.mgmt.cp_mgmt_put_file
+cp_mgmt_reject_session:
+  - check_point.mgmt.cp_mgmt_reject_session
+cp_mgmt_repository_script:
+  - check_point.mgmt.cp_mgmt_repository_script
+cp_mgmt_repository_script_facts:
+  - check_point.mgmt.cp_mgmt_repository_script_facts
+cp_mgmt_reset_sic:
+  - check_point.mgmt.cp_mgmt_reset_sic
 cp_mgmt_run_ips_update:
   - check_point.mgmt.cp_mgmt_run_ips_update
 cp_mgmt_run_script:
@@ -2597,32 +2684,62 @@ cp_mgmt_session_facts:
   - check_point.mgmt.cp_mgmt_session_facts
 cp_mgmt_set_domain:
   - check_point.mgmt.cp_mgmt_set_domain
+cp_mgmt_set_global_properties:
+  - check_point.mgmt.cp_mgmt_set_global_properties
+cp_mgmt_set_idp_default_assignment:
+  - check_point.mgmt.cp_mgmt_set_idp_default_assignment
+cp_mgmt_set_idp_to_domain_assignment:
+  - check_point.mgmt.cp_mgmt_set_idp_to_domain_assignment
 cp_mgmt_set_nat_rule:
   - check_point.mgmt.cp_mgmt_set_nat_rule
 cp_mgmt_set_session:
   - check_point.mgmt.cp_mgmt_set_session
+cp_mgmt_set_threat_advanced_settings:
+  - check_point.mgmt.cp_mgmt_set_threat_advanced_settings
 cp_mgmt_show_access_section:
   - check_point.mgmt.cp_mgmt_show_access_section
+cp_mgmt_show_cloud_services:
+  - check_point.mgmt.cp_mgmt_show_cloud_services
+cp_mgmt_show_global_properties:
+  - check_point.mgmt.cp_mgmt_show_global_properties
 cp_mgmt_show_https_section:
   - check_point.mgmt.cp_mgmt_show_https_section
+cp_mgmt_show_idp_default_assignment:
+  - check_point.mgmt.cp_mgmt_show_idp_default_assignment
 cp_mgmt_show_logs:
   - check_point.mgmt.cp_mgmt_show_logs
 cp_mgmt_show_nat_section:
   - check_point.mgmt.cp_mgmt_show_nat_section
+cp_mgmt_show_servers_and_processes:
+  - check_point.mgmt.cp_mgmt_show_servers_and_processes
 cp_mgmt_show_software_package_details:
   - check_point.mgmt.cp_mgmt_show_software_package_details
 cp_mgmt_show_task:
   - check_point.mgmt.cp_mgmt_show_task
 cp_mgmt_show_tasks:
   - check_point.mgmt.cp_mgmt_show_tasks
+cp_mgmt_show_threat_advanced_settings:
+  - check_point.mgmt.cp_mgmt_show_threat_advanced_settings
+cp_mgmt_simple_cluster:
+  - check_point.mgmt.cp_mgmt_simple_cluster
+cp_mgmt_simple_cluster_facts:
+  - check_point.mgmt.cp_mgmt_simple_cluster_facts
 cp_mgmt_simple_gateway:
   - check_point.mgmt.cp_mgmt_simple_gateway
 cp_mgmt_simple_gateway_facts:
   - check_point.mgmt.cp_mgmt_simple_gateway_facts
+cp_mgmt_smtp_server:
+  - check_point.mgmt.cp_mgmt_smtp_server
+cp_mgmt_smtp_server_facts:
+  - check_point.mgmt.cp_mgmt_smtp_server_facts
+cp_mgmt_submit_session:
+  - check_point.mgmt.cp_mgmt_submit_session
 cp_mgmt_tag:
   - check_point.mgmt.cp_mgmt_tag
 cp_mgmt_tag_facts:
   - check_point.mgmt.cp_mgmt_tag_facts
+cp_mgmt_test_sic_status:
+  - check_point.mgmt.cp_mgmt_test_sic_status
 cp_mgmt_threat_exception:
   - check_point.mgmt.cp_mgmt_threat_exception
 cp_mgmt_threat_exception_facts:
@@ -2655,6 +2772,8 @@ cp_mgmt_trusted_client_facts:
   - check_point.mgmt.cp_mgmt_trusted_client_facts
 cp_mgmt_uninstall_software_package:
   - check_point.mgmt.cp_mgmt_uninstall_software_package
+cp_mgmt_update_provisioned_satellites:
+  - check_point.mgmt.cp_mgmt_update_provisioned_satellites
 cp_mgmt_verify_policy:
   - check_point.mgmt.cp_mgmt_verify_policy
 cp_mgmt_verify_software_package:
@@ -2734,11 +2853,13 @@ cpm_time_info:
 cpm_user:
   - wti.remote.cpm_user
 cpu_info:
+  - inspur.ispim.cpu_info
   - inspur.sm.cpu_info
 cran:
   - debops.debops.cran
 credential:
   - awx.awx.credential
+  - lowlydba.sqlserver.credential
 credential_input_source:
   - awx.awx.credential_input_source
 credential_type:
@@ -2881,22 +3002,30 @@ cyberark_credential:
   - cyberark.pas.cyberark_credential
 cyberark_user:
   - cyberark.pas.cyberark_user
+dashboard:
+  - grafana.grafana.dashboard
 data_input_monitor:
   - splunk.es.data_input_monitor
 data_input_network:
   - splunk.es.data_input_network
 data_pipeline:
   - community.aws.data_pipeline
+database:
+  - lowlydba.sqlserver.database
 datadog_downtime:
   - community.general.datadog_downtime
 datadog_event:
   - community.general.datadog_event
 datadog_monitor:
   - community.general.datadog_monitor
+datasource:
+  - grafana.grafana.datasource
 datastore:
   - sensu.sensu_go.datastore
 datastore_info:
   - sensu.sensu_go.datastore_info
+dba_multitool:
+  - lowlydba.sqlserver.dba_multitool
 dconf:
   - community.general.dconf
 debconf:
@@ -2908,6 +3037,7 @@ del_ad_group:
 del_ldap_group:
   - inspur.sm.del_ldap_group
 del_session:
+  - inspur.ispim.del_session
   - inspur.sm.del_session
 del_user:
   - inspur.sm.del_user
@@ -2933,6 +3063,8 @@ deploy_helper:
   - community.general.deploy_helper
 deployment_info:
   - cisco.ise.deployment_info
+device:
+  - dellemc.powerflex.device
 device_administration_authentication_reset_hitcount:
   - cisco.ise.device_administration_authentication_reset_hitcount
 device_administration_authentication_rules:
@@ -3119,6 +3251,16 @@ dimensiondata_network:
   - community.general.dimensiondata_network
 dimensiondata_vlan:
   - community.general.dimensiondata_vlan
+directconnect_confirm_connection:
+  - community.aws.directconnect_confirm_connection
+directconnect_connection:
+  - community.aws.directconnect_connection
+directconnect_gateway:
+  - community.aws.directconnect_gateway
+directconnect_link_aggregation_group:
+  - community.aws.directconnect_link_aggregation_group
+directconnect_virtual_interface:
+  - community.aws.directconnect_virtual_interface
 disassociate_site_to_network_profile:
   - cisco.dnac.disassociate_site_to_network_profile
 disasterrecovery_system_operationstatus_info:
@@ -3145,6 +3287,8 @@ discovery_range_delete:
   - cisco.dnac.discovery_range_delete
 discovery_range_info:
   - cisco.dnac.discovery_range_info
+discovery_rule:
+  - theforeman.foreman.discovery_rule
 discovery_summary_info:
   - cisco.dnac.discovery_summary_info
 django_manage:
@@ -3171,8 +3315,15 @@ dnf:
   - ansible.builtin.dnf
 dnf_versionlock:
   - community.general.dnf_versionlock
+dns_domain:
+  - vultr.cloud.dns_domain
+dns_domain_info:
+  - vultr.cloud.dns_domain_info
 dns_info:
+  - inspur.ispim.dns_info
   - inspur.sm.dns_info
+dns_record:
+  - vultr.cloud.dns_record
 dns_zone:
   - openstack.cloud.dns_zone
 dns_zone_info:
@@ -3189,6 +3340,8 @@ docker_config:
   - community.docker.docker_config
 docker_container:
   - community.docker.docker_container
+docker_container_copy_into:
+  - community.docker.docker_container_copy_into
 docker_container_exec:
   - community.docker.docker_container_exec
 docker_container_info:
@@ -3240,8 +3393,10 @@ domain:
 domain_info:
   - theforeman.foreman.domain_info
 download_auto_screenshot:
+  - inspur.ispim.download_auto_screenshot
   - inspur.sm.download_auto_screenshot
 download_manual_screenshot:
+  - inspur.ispim.download_manual_screenshot
   - inspur.sm.download_manual_screenshot
 downloadable_acl:
   - cisco.ise.downloadable_acl
@@ -3258,42 +3413,24 @@ dynamodb_ttl:
   - community.aws.dynamodb_ttl
 easy_install:
   - community.general.easy_install
-ec2:
-  - amazon.aws.ec2
 ec2_ami:
   - amazon.aws.ec2_ami
 ec2_ami_copy:
   - community.aws.ec2_ami_copy
 ec2_ami_info:
   - amazon.aws.ec2_ami_info
-ec2_asg:
-  - community.aws.ec2_asg
-ec2_asg_info:
-  - community.aws.ec2_asg_info
-ec2_asg_instance_refresh:
-  - community.aws.ec2_asg_instance_refresh
-ec2_asg_instance_refresh_info:
-  - community.aws.ec2_asg_instance_refresh_info
-ec2_asg_lifecycle_hook:
-  - community.aws.ec2_asg_lifecycle_hook
-ec2_asg_scheduled_action:
-  - community.aws.ec2_asg_scheduled_action
 ec2_customer_gateway:
   - community.aws.ec2_customer_gateway
 ec2_customer_gateway_info:
   - community.aws.ec2_customer_gateway_info
 ec2_eip:
-  - community.aws.ec2_eip
+  - amazon.aws.ec2_eip
 ec2_eip_info:
-  - community.aws.ec2_eip_info
+  - amazon.aws.ec2_eip_info
 ec2_eni:
   - amazon.aws.ec2_eni
 ec2_eni_info:
   - amazon.aws.ec2_eni_info
-ec2_group:
-  - amazon.aws.ec2_group
-ec2_group_info:
-  - amazon.aws.ec2_group_info
 ec2_instance:
   - amazon.aws.ec2_instance
 ec2_instance_info:
@@ -3302,22 +3439,16 @@ ec2_key:
   - amazon.aws.ec2_key
 ec2_launch_template:
   - community.aws.ec2_launch_template
-ec2_lc:
-  - community.aws.ec2_lc
-ec2_lc_find:
-  - community.aws.ec2_lc_find
-ec2_lc_info:
-  - community.aws.ec2_lc_info
 ec2_metadata_facts:
   - amazon.aws.ec2_metadata_facts
-ec2_metric_alarm:
-  - community.aws.ec2_metric_alarm
 ec2_placement_group:
   - community.aws.ec2_placement_group
 ec2_placement_group_info:
   - community.aws.ec2_placement_group_info
-ec2_scaling_policy:
-  - community.aws.ec2_scaling_policy
+ec2_security_group:
+  - amazon.aws.ec2_security_group
+ec2_security_group_info:
+  - amazon.aws.ec2_security_group_info
 ec2_snapshot:
   - amazon.aws.ec2_snapshot
 ec2_snapshot_copy:
@@ -3336,6 +3467,10 @@ ec2_transit_gateway:
   - community.aws.ec2_transit_gateway
 ec2_transit_gateway_info:
   - community.aws.ec2_transit_gateway_info
+ec2_transit_gateway_vpc_attachment:
+  - community.aws.ec2_transit_gateway_vpc_attachment
+ec2_transit_gateway_vpc_attachment_info:
+  - community.aws.ec2_transit_gateway_vpc_attachment_info
 ec2_vol:
   - amazon.aws.ec2_vol
 ec2_vol_info:
@@ -3374,10 +3509,8 @@ ec2_vpc_peering_info:
   - community.aws.ec2_vpc_peering_info
 ec2_vpc_route_table:
   - amazon.aws.ec2_vpc_route_table
-  - community.aws.ec2_vpc_route_table
 ec2_vpc_route_table_info:
   - amazon.aws.ec2_vpc_route_table_info
-  - community.aws.ec2_vpc_route_table_info
 ec2_vpc_subnet:
   - amazon.aws.ec2_vpc_subnet
 ec2_vpc_subnet_info:
@@ -3425,98 +3558,142 @@ edgeswitch_facts:
 edgeswitch_vlan:
   - community.network.edgeswitch_vlan
 edit_ad:
+  - inspur.ispim.edit_ad
   - inspur.sm.edit_ad
 edit_ad_group:
   - inspur.sm.edit_ad_group
 edit_alert_policy:
+  - inspur.ispim.edit_alert_policy
   - inspur.sm.edit_alert_policy
 edit_auto_capture:
+  - inspur.ispim.edit_auto_capture
   - inspur.sm.edit_auto_capture
 edit_bios:
+  - inspur.ispim.edit_bios
   - inspur.sm.edit_bios
 edit_boot_image:
+  - inspur.ispim.edit_boot_image
   - inspur.sm.edit_boot_image
 edit_boot_option:
+  - inspur.ispim.edit_boot_option
   - inspur.sm.edit_boot_option
 edit_connect_media:
+  - inspur.ispim.edit_connect_media
   - inspur.sm.edit_connect_media
 edit_dns:
+  - inspur.ispim.edit_dns
   - inspur.sm.edit_dns
 edit_event_log_policy:
+  - inspur.ispim.edit_event_log_policy
   - inspur.sm.edit_event_log_policy
 edit_fan:
+  - inspur.ispim.edit_fan
   - inspur.sm.edit_fan
 edit_fru:
+  - inspur.ispim.edit_fru
   - inspur.sm.edit_fru
 edit_ipv4:
+  - inspur.ispim.edit_ipv4
   - inspur.sm.edit_ipv4
 edit_ipv6:
+  - inspur.ispim.edit_ipv6
   - inspur.sm.edit_ipv6
 edit_kvm:
+  - inspur.ispim.edit_kvm
   - inspur.sm.edit_kvm
 edit_ldap:
+  - inspur.ispim.edit_ldap
   - inspur.sm.edit_ldap
 edit_ldap_group:
   - inspur.sm.edit_ldap_group
 edit_ldisk:
+  - inspur.ispim.edit_ldisk
   - inspur.sm.edit_ldisk
 edit_log_setting:
+  - inspur.ispim.edit_log_setting
   - inspur.sm.edit_log_setting
+edit_m6_log_setting:
+  - inspur.ispim.edit_m6_log_setting
 edit_manual_capture:
+  - inspur.ispim.edit_manual_capture
   - inspur.sm.edit_manual_capture
 edit_media_instance:
+  - inspur.ispim.edit_media_instance
   - inspur.sm.edit_media_instance
 edit_ncsi:
+  - inspur.ispim.edit_ncsi
   - inspur.sm.edit_ncsi
 edit_network:
+  - inspur.ispim.edit_network
   - inspur.sm.edit_network
 edit_network_bond:
+  - inspur.ispim.edit_network_bond
   - inspur.sm.edit_network_bond
 edit_network_link:
+  - inspur.ispim.edit_network_link
   - inspur.sm.edit_network_link
 edit_ntp:
+  - inspur.ispim.edit_ntp
   - inspur.sm.edit_ntp
 edit_pass_user:
   - inspur.sm.edit_pass_user
 edit_pdisk:
+  - inspur.ispim.edit_pdisk
   - inspur.sm.edit_pdisk
 edit_power_budget:
+  - inspur.ispim.edit_power_budget
   - inspur.sm.edit_power_budget
 edit_power_restore:
+  - inspur.ispim.edit_power_restore
   - inspur.sm.edit_power_restore
 edit_power_status:
+  - inspur.ispim.edit_power_status
   - inspur.sm.edit_power_status
 edit_preserve_config:
+  - inspur.ispim.edit_preserve_config
   - inspur.sm.edit_preserve_config
 edit_priv_user:
   - inspur.sm.edit_priv_user
 edit_psu_config:
+  - inspur.ispim.edit_psu_config
   - inspur.sm.edit_psu_config
 edit_psu_peak:
+  - inspur.ispim.edit_psu_peak
   - inspur.sm.edit_psu_peak
 edit_restore_factory_default:
+  - inspur.ispim.edit_restore_factory_default
   - inspur.sm.edit_restore_factory_default
 edit_service:
+  - inspur.ispim.edit_service
   - inspur.sm.edit_service
 edit_smtp:
+  - inspur.ispim.edit_smtp
   - inspur.sm.edit_smtp
 edit_smtp_com:
+  - inspur.ispim.edit_smtp_com
   - inspur.sm.edit_smtp_com
 edit_smtp_dest:
+  - inspur.ispim.edit_smtp_dest
   - inspur.sm.edit_smtp_dest
 edit_snmp:
+  - inspur.ispim.edit_snmp
   - inspur.sm.edit_snmp
 edit_snmp_trap:
+  - inspur.ispim.edit_snmp_trap
   - inspur.sm.edit_snmp_trap
 edit_threshold:
+  - inspur.ispim.edit_threshold
   - inspur.sm.edit_threshold
 edit_uid:
+  - inspur.ispim.edit_uid
   - inspur.sm.edit_uid
 edit_user_group:
   - inspur.sm.edit_user_group
 edit_virtual_media:
+  - inspur.ispim.edit_virtual_media
   - inspur.sm.edit_virtual_media
 edit_vlan:
+  - inspur.ispim.edit_vlan
   - inspur.sm.edit_vlan
 efs:
   - community.aws.efs
@@ -3540,6 +3717,12 @@ egress_matrix_cell_set_all_status:
   - cisco.ise.egress_matrix_cell_set_all_status
 ejabberd_user:
   - community.general.ejabberd_user
+eks_cluster:
+  - community.aws.eks_cluster
+eks_fargate_profile:
+  - community.aws.eks_fargate_profile
+eks_nodegroup:
+  - community.aws.eks_nodegroup
 elasticache:
   - community.aws.elasticache
 elasticache_info:
@@ -3550,12 +3733,14 @@ elasticache_snapshot:
   - community.aws.elasticache_snapshot
 elasticache_subnet_group:
   - community.aws.elasticache_subnet_group
+elasticbeanstalk_app:
+  - community.aws.elasticbeanstalk_app
 elasticsearch_plugin:
   - community.general.elasticsearch_plugin
 elb_application_lb:
-  - community.aws.elb_application_lb
+  - amazon.aws.elb_application_lb
 elb_application_lb_info:
-  - community.aws.elb_application_lb_info
+  - amazon.aws.elb_application_lb_info
 elb_classic_lb:
   - amazon.aws.elb_classic_lb
 elb_classic_lb_info:
@@ -3633,16 +3818,10 @@ eos_facts:
   - arista.eos.eos_facts
 eos_hostname:
   - arista.eos.eos_hostname
-eos_interface:
-  - arista.eos.eos_interface
 eos_interfaces:
   - arista.eos.eos_interfaces
-eos_l2_interface:
-  - arista.eos.eos_l2_interface
 eos_l2_interfaces:
   - arista.eos.eos_l2_interfaces
-eos_l3_interface:
-  - arista.eos.eos_l3_interface
 eos_l3_interfaces:
   - arista.eos.eos_l3_interfaces
 eos_lacp:
@@ -3651,8 +3830,6 @@ eos_lacp_interfaces:
   - arista.eos.eos_lacp_interfaces
 eos_lag_interfaces:
   - arista.eos.eos_lag_interfaces
-eos_linkagg:
-  - arista.eos.eos_linkagg
 eos_lldp:
   - arista.eos.eos_lldp
 eos_lldp_global:
@@ -3677,16 +3854,12 @@ eos_route_maps:
   - arista.eos.eos_route_maps
 eos_snmp_server:
   - arista.eos.eos_snmp_server
-eos_static_route:
-  - arista.eos.eos_static_route
 eos_static_routes:
   - arista.eos.eos_static_routes
 eos_system:
   - arista.eos.eos_system
 eos_user:
   - arista.eos.eos_user
-eos_vlan:
-  - arista.eos.eos_vlan
 eos_vlans:
   - arista.eos.eos_vlans
 eos_vrf:
@@ -3719,8 +3892,10 @@ event_info:
   - cisco.dnac.event_info
   - sensu.sensu_go.event_info
 event_log_info:
+  - inspur.ispim.event_log_info
   - inspur.sm.event_log_info
 event_log_policy_info:
+  - inspur.ispim.event_log_policy_info
   - inspur.sm.event_log_policy_info
 event_series_audit_logs_info:
   - cisco.dnac.event_series_audit_logs_info
@@ -3760,8 +3935,6 @@ event_webhook_create:
   - cisco.dnac.event_webhook_create
 event_webhook_update:
   - cisco.dnac.event_webhook_update
-execute_lambda:
-  - community.aws.execute_lambda
 execution_environment:
   - awx.awx.execution_environment
 exo_dns_domain:
@@ -3806,6 +3979,7 @@ failover_ip:
 failover_ip_info:
   - community.hrobot.failover_ip_info
 fan_info:
+  - inspur.ispim.fan_info
   - inspur.sm.fan_info
 faz_device:
   - community.fortios.faz_device
@@ -3833,6 +4007,9 @@ filesize:
   - community.general.filesize
 filesystem:
   - community.general.filesystem
+  - dellemc.unity.filesystem
+filesystem_snapshot:
+  - dellemc.unity.filesystem_snapshot
 filter:
   - sensu.sensu_go.filter
 filter_info:
@@ -3845,12 +4022,22 @@ find:
   - ansible.builtin.find
 firewall:
   - community.hrobot.firewall
+firewall_group:
+  - vultr.cloud.firewall_group
+firewall_group_info:
+  - vultr.cloud.firewall_group_info
 firewall_info:
   - community.hrobot.firewall_info
+firewall_rule:
+  - vultr.cloud.firewall_rule
+firewall_rule_info:
+  - vultr.cloud.firewall_rule_info
 firewalld:
   - ansible.posix.firewalld
 firewalld_info:
   - ansible.posix.firewalld_info
+first_responder_kit:
+  - lowlydba.sqlserver.first_responder_kit
 flatpak:
   - community.general.flatpak
 flatpak_remote:
@@ -3922,6 +4109,8 @@ fmgr_application_list_entries_parameters:
   - fortinet.fortimanager.fmgr_application_list_entries_parameters
 fmgr_application_list_entries_parameters_members:
   - fortinet.fortimanager.fmgr_application_list_entries_parameters_members
+fmgr_arrpprofile:
+  - fortinet.fortimanager.fmgr_arrpprofile
 fmgr_authentication_scheme:
   - fortinet.fortimanager.fmgr_authentication_scheme
 fmgr_bleprofile:
@@ -4026,16 +4215,28 @@ fmgr_devprof_system_snmp_sysinfo:
   - fortinet.fortimanager.fmgr_devprof_system_snmp_sysinfo
 fmgr_devprof_system_snmp_user:
   - fortinet.fortimanager.fmgr_devprof_system_snmp_user
+fmgr_dlp_datatype:
+  - fortinet.fortimanager.fmgr_dlp_datatype
+fmgr_dlp_dictionary:
+  - fortinet.fortimanager.fmgr_dlp_dictionary
+fmgr_dlp_dictionary_entries:
+  - fortinet.fortimanager.fmgr_dlp_dictionary_entries
 fmgr_dlp_filepattern:
   - fortinet.fortimanager.fmgr_dlp_filepattern
 fmgr_dlp_filepattern_entries:
   - fortinet.fortimanager.fmgr_dlp_filepattern_entries
 fmgr_dlp_fpsensitivity:
   - fortinet.fortimanager.fmgr_dlp_fpsensitivity
+fmgr_dlp_profile:
+  - fortinet.fortimanager.fmgr_dlp_profile
+fmgr_dlp_profile_rule:
+  - fortinet.fortimanager.fmgr_dlp_profile_rule
 fmgr_dlp_sensitivity:
   - fortinet.fortimanager.fmgr_dlp_sensitivity
 fmgr_dlp_sensor:
   - fortinet.fortimanager.fmgr_dlp_sensor
+fmgr_dlp_sensor_entries:
+  - fortinet.fortimanager.fmgr_dlp_sensor_entries
 fmgr_dlp_sensor_filter:
   - fortinet.fortimanager.fmgr_dlp_sensor_filter
 fmgr_dnsfilter_domainfilter:
@@ -4238,12 +4439,38 @@ fmgr_emailfilter_profile_pop3:
   - fortinet.fortimanager.fmgr_emailfilter_profile_pop3
 fmgr_emailfilter_profile_smtp:
   - fortinet.fortimanager.fmgr_emailfilter_profile_smtp
+fmgr_endpointcontrol_fctems:
+  - fortinet.fortimanager.fmgr_endpointcontrol_fctems
 fmgr_exec_fgfm_reclaimdevtunnel:
   - fortinet.fortimanager.fmgr_exec_fgfm_reclaimdevtunnel
 fmgr_export_playbooks:
   - fortinet.fortimanager.fmgr_export_playbooks
 fmgr_extendercontroller_dataplan:
   - fortinet.fortimanager.fmgr_extendercontroller_dataplan
+fmgr_extendercontroller_extenderprofile:
+  - fortinet.fortimanager.fmgr_extendercontroller_extenderprofile
+fmgr_extendercontroller_extenderprofile_cellular:
+  - fortinet.fortimanager.fmgr_extendercontroller_extenderprofile_cellular
+fmgr_extendercontroller_extenderprofile_cellular_controllerreport:
+  - fortinet.fortimanager.fmgr_extendercontroller_extenderprofile_cellular_controllerreport
+fmgr_extendercontroller_extenderprofile_cellular_modem1:
+  - fortinet.fortimanager.fmgr_extendercontroller_extenderprofile_cellular_modem1
+fmgr_extendercontroller_extenderprofile_cellular_modem1_autoswitch:
+  - fortinet.fortimanager.fmgr_extendercontroller_extenderprofile_cellular_modem1_autoswitch
+fmgr_extendercontroller_extenderprofile_cellular_modem2:
+  - fortinet.fortimanager.fmgr_extendercontroller_extenderprofile_cellular_modem2
+fmgr_extendercontroller_extenderprofile_cellular_modem2_autoswitch:
+  - fortinet.fortimanager.fmgr_extendercontroller_extenderprofile_cellular_modem2_autoswitch
+fmgr_extendercontroller_extenderprofile_cellular_smsnotification:
+  - fortinet.fortimanager.fmgr_extendercontroller_extenderprofile_cellular_smsnotification
+fmgr_extendercontroller_extenderprofile_cellular_smsnotification_alert:
+  - fortinet.fortimanager.fmgr_extendercontroller_extenderprofile_cellular_smsnotification_alert
+fmgr_extendercontroller_extenderprofile_cellular_smsnotification_receiver:
+  - fortinet.fortimanager.fmgr_extendercontroller_extenderprofile_cellular_smsnotification_receiver
+fmgr_extendercontroller_extenderprofile_lanextension:
+  - fortinet.fortimanager.fmgr_extendercontroller_extenderprofile_lanextension
+fmgr_extendercontroller_extenderprofile_lanextension_backhaul:
+  - fortinet.fortimanager.fmgr_extendercontroller_extenderprofile_lanextension_backhaul
 fmgr_extendercontroller_simprofile:
   - fortinet.fortimanager.fmgr_extendercontroller_simprofile
 fmgr_extendercontroller_simprofile_autoswitchprofile:
@@ -4260,6 +4487,12 @@ fmgr_firewall_accessproxy:
   - fortinet.fortimanager.fmgr_firewall_accessproxy
 fmgr_firewall_accessproxy_apigateway:
   - fortinet.fortimanager.fmgr_firewall_accessproxy_apigateway
+fmgr_firewall_accessproxy_apigateway6:
+  - fortinet.fortimanager.fmgr_firewall_accessproxy_apigateway6
+fmgr_firewall_accessproxy_apigateway6_realservers:
+  - fortinet.fortimanager.fmgr_firewall_accessproxy_apigateway6_realservers
+fmgr_firewall_accessproxy_apigateway6_sslciphersuites:
+  - fortinet.fortimanager.fmgr_firewall_accessproxy_apigateway6_sslciphersuites
 fmgr_firewall_accessproxy_apigateway_realservers:
   - fortinet.fortimanager.fmgr_firewall_accessproxy_apigateway_realservers
 fmgr_firewall_accessproxy_apigateway_sslciphersuites:
@@ -4270,6 +4503,8 @@ fmgr_firewall_accessproxy_serverpubkeyauthsettings:
   - fortinet.fortimanager.fmgr_firewall_accessproxy_serverpubkeyauthsettings
 fmgr_firewall_accessproxy_serverpubkeyauthsettings_certextension:
   - fortinet.fortimanager.fmgr_firewall_accessproxy_serverpubkeyauthsettings_certextension
+fmgr_firewall_accessproxyvirtualhost:
+  - fortinet.fortimanager.fmgr_firewall_accessproxyvirtualhost
 fmgr_firewall_address:
   - fortinet.fortimanager.fmgr_firewall_address
 fmgr_firewall_address6:
@@ -4508,6 +4743,10 @@ fmgr_firewall_vip64_realservers:
   - fortinet.fortimanager.fmgr_firewall_vip64_realservers
 fmgr_firewall_vip6_dynamicmapping:
   - fortinet.fortimanager.fmgr_firewall_vip6_dynamicmapping
+fmgr_firewall_vip6_dynamicmapping_realservers:
+  - fortinet.fortimanager.fmgr_firewall_vip6_dynamicmapping_realservers
+fmgr_firewall_vip6_dynamicmapping_sslciphersuites:
+  - fortinet.fortimanager.fmgr_firewall_vip6_dynamicmapping_sslciphersuites
 fmgr_firewall_vip6_realservers:
   - fortinet.fortimanager.fmgr_firewall_vip6_realservers
 fmgr_firewall_vip6_sslciphersuites:
@@ -4540,6 +4779,12 @@ fmgr_firewall_wildcardfqdn_custom:
   - fortinet.fortimanager.fmgr_firewall_wildcardfqdn_custom
 fmgr_firewall_wildcardfqdn_group:
   - fortinet.fortimanager.fmgr_firewall_wildcardfqdn_group
+fmgr_fmg_device_blueprint:
+  - fortinet.fortimanager.fmgr_fmg_device_blueprint
+fmgr_fmg_variable:
+  - fortinet.fortimanager.fmgr_fmg_variable
+fmgr_fmg_variable_dynamicmapping:
+  - fortinet.fortimanager.fmgr_fmg_variable_dynamicmapping
 fmgr_fmupdate_analyzer_virusreport:
   - fortinet.fortimanager.fmgr_fmupdate_analyzer_virusreport
 fmgr_fmupdate_avips_advancedlog:
@@ -4698,6 +4943,16 @@ fmgr_hotspot20_anqpvenuename:
   - fortinet.fortimanager.fmgr_hotspot20_anqpvenuename
 fmgr_hotspot20_anqpvenuename_valuelist:
   - fortinet.fortimanager.fmgr_hotspot20_anqpvenuename_valuelist
+fmgr_hotspot20_anqpvenueurl:
+  - fortinet.fortimanager.fmgr_hotspot20_anqpvenueurl
+fmgr_hotspot20_anqpvenueurl_valuelist:
+  - fortinet.fortimanager.fmgr_hotspot20_anqpvenueurl_valuelist
+fmgr_hotspot20_h2qpadviceofcharge:
+  - fortinet.fortimanager.fmgr_hotspot20_h2qpadviceofcharge
+fmgr_hotspot20_h2qpadviceofcharge_aoclist:
+  - fortinet.fortimanager.fmgr_hotspot20_h2qpadviceofcharge_aoclist
+fmgr_hotspot20_h2qpadviceofcharge_aoclist_planinfo:
+  - fortinet.fortimanager.fmgr_hotspot20_h2qpadviceofcharge_aoclist_planinfo
 fmgr_hotspot20_h2qpconncapability:
   - fortinet.fortimanager.fmgr_hotspot20_h2qpconncapability
 fmgr_hotspot20_h2qpoperatorname:
@@ -4710,10 +4965,20 @@ fmgr_hotspot20_h2qposuprovider_friendlyname:
   - fortinet.fortimanager.fmgr_hotspot20_h2qposuprovider_friendlyname
 fmgr_hotspot20_h2qposuprovider_servicedescription:
   - fortinet.fortimanager.fmgr_hotspot20_h2qposuprovider_servicedescription
+fmgr_hotspot20_h2qposuprovidernai:
+  - fortinet.fortimanager.fmgr_hotspot20_h2qposuprovidernai
+fmgr_hotspot20_h2qposuprovidernai_nailist:
+  - fortinet.fortimanager.fmgr_hotspot20_h2qposuprovidernai_nailist
+fmgr_hotspot20_h2qptermsandconditions:
+  - fortinet.fortimanager.fmgr_hotspot20_h2qptermsandconditions
 fmgr_hotspot20_h2qpwanmetric:
   - fortinet.fortimanager.fmgr_hotspot20_h2qpwanmetric
 fmgr_hotspot20_hsprofile:
   - fortinet.fortimanager.fmgr_hotspot20_hsprofile
+fmgr_hotspot20_icon:
+  - fortinet.fortimanager.fmgr_hotspot20_icon
+fmgr_hotspot20_icon_iconlist:
+  - fortinet.fortimanager.fmgr_hotspot20_icon_iconlist
 fmgr_hotspot20_qosmap:
   - fortinet.fortimanager.fmgr_hotspot20_qosmap
 fmgr_hotspot20_qosmap_dscpexcept:
@@ -4750,6 +5015,8 @@ fmgr_mpskprofile_mpskgroup:
   - fortinet.fortimanager.fmgr_mpskprofile_mpskgroup
 fmgr_mpskprofile_mpskgroup_mpskkey:
   - fortinet.fortimanager.fmgr_mpskprofile_mpskgroup_mpskkey
+fmgr_nacprofile:
+  - fortinet.fortimanager.fmgr_nacprofile
 fmgr_pkg_authentication_rule:
   - fortinet.fortimanager.fmgr_pkg_authentication_rule
 fmgr_pkg_authentication_setting:
@@ -4758,6 +5025,10 @@ fmgr_pkg_central_dnat:
   - fortinet.fortimanager.fmgr_pkg_central_dnat
 fmgr_pkg_central_dnat6:
   - fortinet.fortimanager.fmgr_pkg_central_dnat6
+fmgr_pkg_firewall_acl:
+  - fortinet.fortimanager.fmgr_pkg_firewall_acl
+fmgr_pkg_firewall_acl6:
+  - fortinet.fortimanager.fmgr_pkg_firewall_acl6
 fmgr_pkg_firewall_centralsnatmap:
   - fortinet.fortimanager.fmgr_pkg_firewall_centralsnatmap
 fmgr_pkg_firewall_consolidated_policy:
@@ -4838,6 +5109,14 @@ fmgr_pm_config_metafields_firewall_service_custom:
   - fortinet.fortimanager.fmgr_pm_config_metafields_firewall_service_custom
 fmgr_pm_config_metafields_firewall_service_group:
   - fortinet.fortimanager.fmgr_pm_config_metafields_firewall_service_group
+fmgr_pm_config_pblock_firewall_policy:
+  - fortinet.fortimanager.fmgr_pm_config_pblock_firewall_policy
+fmgr_pm_config_pblock_firewall_policy_sectionvalue:
+  - fortinet.fortimanager.fmgr_pm_config_pblock_firewall_policy_sectionvalue
+fmgr_pm_config_pblock_firewall_securitypolicy:
+  - fortinet.fortimanager.fmgr_pm_config_pblock_firewall_securitypolicy
+fmgr_pm_config_pblock_firewall_securitypolicy_sectionvalue:
+  - fortinet.fortimanager.fmgr_pm_config_pblock_firewall_securitypolicy_sectionvalue
 fmgr_pm_config_reset_database:
   - fortinet.fortimanager.fmgr_pm_config_reset_database
 fmgr_pm_config_upgrade:
@@ -4852,6 +5131,10 @@ fmgr_pm_devprof_adom:
   - fortinet.fortimanager.fmgr_pm_devprof_adom
 fmgr_pm_devprof_pkg:
   - fortinet.fortimanager.fmgr_pm_devprof_pkg
+fmgr_pm_pblock_adom:
+  - fortinet.fortimanager.fmgr_pm_pblock_adom
+fmgr_pm_pblock_obj:
+  - fortinet.fortimanager.fmgr_pm_pblock_obj
 fmgr_pm_pkg:
   - fortinet.fortimanager.fmgr_pm_pkg
 fmgr_pm_pkg_adom:
@@ -4872,6 +5155,34 @@ fmgr_region:
   - fortinet.fortimanager.fmgr_region
 fmgr_rename:
   - fortinet.fortimanager.fmgr_rename
+fmgr_router_accesslist:
+  - fortinet.fortimanager.fmgr_router_accesslist
+fmgr_router_accesslist6:
+  - fortinet.fortimanager.fmgr_router_accesslist6
+fmgr_router_accesslist6_rule:
+  - fortinet.fortimanager.fmgr_router_accesslist6_rule
+fmgr_router_accesslist_rule:
+  - fortinet.fortimanager.fmgr_router_accesslist_rule
+fmgr_router_aspathlist:
+  - fortinet.fortimanager.fmgr_router_aspathlist
+fmgr_router_aspathlist_rule:
+  - fortinet.fortimanager.fmgr_router_aspathlist_rule
+fmgr_router_communitylist:
+  - fortinet.fortimanager.fmgr_router_communitylist
+fmgr_router_communitylist_rule:
+  - fortinet.fortimanager.fmgr_router_communitylist_rule
+fmgr_router_prefixlist:
+  - fortinet.fortimanager.fmgr_router_prefixlist
+fmgr_router_prefixlist6:
+  - fortinet.fortimanager.fmgr_router_prefixlist6
+fmgr_router_prefixlist6_rule:
+  - fortinet.fortimanager.fmgr_router_prefixlist6_rule
+fmgr_router_prefixlist_rule:
+  - fortinet.fortimanager.fmgr_router_prefixlist_rule
+fmgr_router_routemap:
+  - fortinet.fortimanager.fmgr_router_routemap
+fmgr_router_routemap_rule:
+  - fortinet.fortimanager.fmgr_router_routemap_rule
 fmgr_script:
   - community.fortios.fmgr_script
 fmgr_secprof_appctrl:
@@ -4902,6 +5213,8 @@ fmgr_securityconsole_abort:
   - fortinet.fortimanager.fmgr_securityconsole_abort
 fmgr_securityconsole_assign_package:
   - fortinet.fortimanager.fmgr_securityconsole_assign_package
+fmgr_securityconsole_cliprof_check:
+  - fortinet.fortimanager.fmgr_securityconsole_cliprof_check
 fmgr_securityconsole_import_dev_objs:
   - fortinet.fortimanager.fmgr_securityconsole_import_dev_objs
 fmgr_securityconsole_install_device:
@@ -4972,6 +5285,8 @@ fmgr_sshfilter_profile_shellcommands:
   - fortinet.fortimanager.fmgr_sshfilter_profile_shellcommands
 fmgr_switchcontroller_customcommand:
   - fortinet.fortimanager.fmgr_switchcontroller_customcommand
+fmgr_switchcontroller_dsl_policy:
+  - fortinet.fortimanager.fmgr_switchcontroller_dsl_policy
 fmgr_switchcontroller_lldpprofile:
   - fortinet.fortimanager.fmgr_switchcontroller_lldpprofile
 fmgr_switchcontroller_lldpprofile_customtlvs:
@@ -5036,6 +5351,8 @@ fmgr_sys_api_sdnconnector:
   - fortinet.fortimanager.fmgr_sys_api_sdnconnector
 fmgr_sys_generate_wsdl:
   - fortinet.fortimanager.fmgr_sys_generate_wsdl
+fmgr_sys_hitcount:
+  - fortinet.fortimanager.fmgr_sys_hitcount
 fmgr_sys_login_challenge:
   - fortinet.fortimanager.fmgr_sys_login_challenge
 fmgr_sys_login_user:
@@ -5046,6 +5363,8 @@ fmgr_sys_proxy_json:
   - fortinet.fortimanager.fmgr_sys_proxy_json
 fmgr_sys_reboot:
   - fortinet.fortimanager.fmgr_sys_reboot
+fmgr_sys_task_result:
+  - fortinet.fortimanager.fmgr_sys_task_result
 fmgr_system_admin_group:
   - fortinet.fortimanager.fmgr_system_admin_group
 fmgr_system_admin_group_member:
@@ -5162,12 +5481,24 @@ fmgr_system_guiact:
   - fortinet.fortimanager.fmgr_system_guiact
 fmgr_system_ha:
   - fortinet.fortimanager.fmgr_system_ha
+fmgr_system_ha_monitoredinterfaces:
+  - fortinet.fortimanager.fmgr_system_ha_monitoredinterfaces
+fmgr_system_ha_monitoredips:
+  - fortinet.fortimanager.fmgr_system_ha_monitoredips
 fmgr_system_ha_peer:
   - fortinet.fortimanager.fmgr_system_ha_peer
+fmgr_system_hascheduledcheck:
+  - fortinet.fortimanager.fmgr_system_hascheduledcheck
 fmgr_system_interface:
   - fortinet.fortimanager.fmgr_system_interface
 fmgr_system_interface_ipv6:
   - fortinet.fortimanager.fmgr_system_interface_ipv6
+fmgr_system_interface_member:
+  - fortinet.fortimanager.fmgr_system_interface_member
+fmgr_system_localinpolicy:
+  - fortinet.fortimanager.fmgr_system_localinpolicy
+fmgr_system_localinpolicy6:
+  - fortinet.fortimanager.fmgr_system_localinpolicy6
 fmgr_system_locallog_disk_filter:
   - fortinet.fortimanager.fmgr_system_locallog_disk_filter
 fmgr_system_locallog_disk_setting:
@@ -5206,6 +5537,8 @@ fmgr_system_log_alert:
   - fortinet.fortimanager.fmgr_system_log_alert
 fmgr_system_log_devicedisable:
   - fortinet.fortimanager.fmgr_system_log_devicedisable
+fmgr_system_log_fospolicystats:
+  - fortinet.fortimanager.fmgr_system_log_fospolicystats
 fmgr_system_log_interfacestats:
   - fortinet.fortimanager.fmgr_system_log_interfacestats
 fmgr_system_log_ioc:
@@ -5216,6 +5549,8 @@ fmgr_system_log_ratelimit:
   - fortinet.fortimanager.fmgr_system_log_ratelimit
 fmgr_system_log_ratelimit_device:
   - fortinet.fortimanager.fmgr_system_log_ratelimit_device
+fmgr_system_log_ratelimit_ratelimits:
+  - fortinet.fortimanager.fmgr_system_log_ratelimit_ratelimits
 fmgr_system_log_settings:
   - fortinet.fortimanager.fmgr_system_log_settings
 fmgr_system_log_settings_rollinganalyzer:
@@ -5224,6 +5559,8 @@ fmgr_system_log_settings_rollinglocal:
   - fortinet.fortimanager.fmgr_system_log_settings_rollinglocal
 fmgr_system_log_settings_rollingregular:
   - fortinet.fortimanager.fmgr_system_log_settings_rollingregular
+fmgr_system_log_topology:
+  - fortinet.fortimanager.fmgr_system_log_topology
 fmgr_system_logfetch_clientprofile:
   - fortinet.fortimanager.fmgr_system_logfetch_clientprofile
 fmgr_system_logfetch_clientprofile_devicefilter:
@@ -5242,6 +5579,20 @@ fmgr_system_meta_sysmetafields:
   - fortinet.fortimanager.fmgr_system_meta_sysmetafields
 fmgr_system_metadata_admins:
   - fortinet.fortimanager.fmgr_system_metadata_admins
+fmgr_system_npu:
+  - fortinet.fortimanager.fmgr_system_npu
+fmgr_system_npu_fpanomaly:
+  - fortinet.fortimanager.fmgr_system_npu_fpanomaly
+fmgr_system_npu_isfnpqueues:
+  - fortinet.fortimanager.fmgr_system_npu_isfnpqueues
+fmgr_system_npu_portcpumap:
+  - fortinet.fortimanager.fmgr_system_npu_portcpumap
+fmgr_system_npu_portnpumap:
+  - fortinet.fortimanager.fmgr_system_npu_portnpumap
+fmgr_system_npu_priorityprotocol:
+  - fortinet.fortimanager.fmgr_system_npu_priorityprotocol
+fmgr_system_npu_swehhash:
+  - fortinet.fortimanager.fmgr_system_npu_swehhash
 fmgr_system_ntp:
   - fortinet.fortimanager.fmgr_system_ntp
 fmgr_system_ntp_ntpserver:
@@ -5324,8 +5675,14 @@ fmgr_system_saml_fabricidp:
   - fortinet.fortimanager.fmgr_system_saml_fabricidp
 fmgr_system_sdnconnector:
   - fortinet.fortimanager.fmgr_system_sdnconnector
+fmgr_system_sdnconnector_externalaccountlist:
+  - fortinet.fortimanager.fmgr_system_sdnconnector_externalaccountlist
 fmgr_system_sdnconnector_externalip:
   - fortinet.fortimanager.fmgr_system_sdnconnector_externalip
+fmgr_system_sdnconnector_forwardingrule:
+  - fortinet.fortimanager.fmgr_system_sdnconnector_forwardingrule
+fmgr_system_sdnconnector_gcpprojectlist:
+  - fortinet.fortimanager.fmgr_system_sdnconnector_gcpprojectlist
 fmgr_system_sdnconnector_nic:
   - fortinet.fortimanager.fmgr_system_sdnconnector_nic
 fmgr_system_sdnconnector_nic_ip:
@@ -5360,10 +5717,14 @@ fmgr_system_sql_customskipidx:
   - fortinet.fortimanager.fmgr_system_sql_customskipidx
 fmgr_system_sql_tsindexfield:
   - fortinet.fortimanager.fmgr_system_sql_tsindexfield
+fmgr_system_sslciphersuites:
+  - fortinet.fortimanager.fmgr_system_sslciphersuites
 fmgr_system_syslog:
   - fortinet.fortimanager.fmgr_system_syslog
 fmgr_system_virtualwirepair:
   - fortinet.fortimanager.fmgr_system_virtualwirepair
+fmgr_system_webproxy:
+  - fortinet.fortimanager.fmgr_system_webproxy
 fmgr_system_workflow_approvalmatrix:
   - fortinet.fortimanager.fmgr_system_workflow_approvalmatrix
 fmgr_system_workflow_approvalmatrix_approver:
@@ -5376,6 +5737,8 @@ fmgr_user_adgrp:
   - fortinet.fortimanager.fmgr_user_adgrp
 fmgr_user_clearpass:
   - fortinet.fortimanager.fmgr_user_clearpass
+fmgr_user_connector:
+  - fortinet.fortimanager.fmgr_user_connector
 fmgr_user_device:
   - fortinet.fortimanager.fmgr_user_device
 fmgr_user_device_dynamicmapping:
@@ -5408,6 +5771,14 @@ fmgr_user_fssopolling_adgrp:
   - fortinet.fortimanager.fmgr_user_fssopolling_adgrp
 fmgr_user_group:
   - fortinet.fortimanager.fmgr_user_group
+fmgr_user_group_dynamicmapping:
+  - fortinet.fortimanager.fmgr_user_group_dynamicmapping
+fmgr_user_group_dynamicmapping_guest:
+  - fortinet.fortimanager.fmgr_user_group_dynamicmapping_guest
+fmgr_user_group_dynamicmapping_match:
+  - fortinet.fortimanager.fmgr_user_group_dynamicmapping_match
+fmgr_user_group_dynamicmapping_sslvpnoschecklist:
+  - fortinet.fortimanager.fmgr_user_group_dynamicmapping_sslvpnoschecklist
 fmgr_user_group_guest:
   - fortinet.fortimanager.fmgr_user_group_guest
 fmgr_user_group_match:
@@ -5422,6 +5793,8 @@ fmgr_user_local:
   - fortinet.fortimanager.fmgr_user_local
 fmgr_user_nsx:
   - fortinet.fortimanager.fmgr_user_nsx
+fmgr_user_nsx_service:
+  - fortinet.fortimanager.fmgr_user_nsx_service
 fmgr_user_passwordpolicy:
   - fortinet.fortimanager.fmgr_user_passwordpolicy
 fmgr_user_peer:
@@ -5466,6 +5839,8 @@ fmgr_vap_mpskkey:
   - fortinet.fortimanager.fmgr_vap_mpskkey
 fmgr_vap_portalmessageoverrides:
   - fortinet.fortimanager.fmgr_vap_portalmessageoverrides
+fmgr_vap_vlanname:
+  - fortinet.fortimanager.fmgr_vap_vlanname
 fmgr_vap_vlanpool:
   - fortinet.fortimanager.fmgr_vap_vlanpool
 fmgr_vapgroup:
@@ -5482,6 +5857,8 @@ fmgr_videofilter_youtubechannelfilter_entries:
   - fortinet.fortimanager.fmgr_videofilter_youtubechannelfilter_entries
 fmgr_voip_profile:
   - fortinet.fortimanager.fmgr_voip_profile
+fmgr_voip_profile_msrp:
+  - fortinet.fortimanager.fmgr_voip_profile_msrp
 fmgr_voip_profile_sccp:
   - fortinet.fortimanager.fmgr_voip_profile_sccp
 fmgr_voip_profile_sip:
@@ -5492,6 +5869,10 @@ fmgr_vpn_certificate_ocspserver:
   - fortinet.fortimanager.fmgr_vpn_certificate_ocspserver
 fmgr_vpn_certificate_remote:
   - fortinet.fortimanager.fmgr_vpn_certificate_remote
+fmgr_vpn_ipsec_fec:
+  - fortinet.fortimanager.fmgr_vpn_ipsec_fec
+fmgr_vpn_ipsec_fec_mappings:
+  - fortinet.fortimanager.fmgr_vpn_ipsec_fec_mappings
 fmgr_vpn_ssl_settings:
   - fortinet.fortimanager.fmgr_vpn_ssl_settings
 fmgr_vpn_ssl_settings_authenticationrule:
@@ -5694,6 +6075,8 @@ fmgr_wtpprofile:
   - fortinet.fortimanager.fmgr_wtpprofile
 fmgr_wtpprofile_denymaclist:
   - fortinet.fortimanager.fmgr_wtpprofile_denymaclist
+fmgr_wtpprofile_eslsesdongle:
+  - fortinet.fortimanager.fmgr_wtpprofile_eslsesdongle
 fmgr_wtpprofile_lan:
   - fortinet.fortimanager.fmgr_wtpprofile_lan
 fmgr_wtpprofile_lbs:
@@ -5710,6 +6093,8 @@ fmgr_wtpprofile_radio4:
   - fortinet.fortimanager.fmgr_wtpprofile_radio4
 fmgr_wtpprofile_splittunnelingacl:
   - fortinet.fortimanager.fmgr_wtpprofile_splittunnelingacl
+folder:
+  - grafana.grafana.folder
 fortios_alertemail_setting:
   - fortinet.fortios.fortios_alertemail_setting
 fortios_antivirus_heuristic:
@@ -5740,6 +6125,8 @@ fortios_authentication_scheme:
   - fortinet.fortios.fortios_authentication_scheme
 fortios_authentication_setting:
   - fortinet.fortios.fortios_authentication_setting
+fortios_automation_setting:
+  - fortinet.fortios.fortios_automation_setting
 fortios_certificate_ca:
   - fortinet.fortios.fortios_certificate_ca
 fortios_certificate_crl:
@@ -5756,12 +6143,18 @@ fortios_configuration_fact:
   - fortinet.fortios.fortios_configuration_fact
 fortios_credential_store_domain_controller:
   - fortinet.fortios.fortios_credential_store_domain_controller
+fortios_dlp_data_type:
+  - fortinet.fortios.fortios_dlp_data_type
+fortios_dlp_dictionary:
+  - fortinet.fortios.fortios_dlp_dictionary
 fortios_dlp_filepattern:
   - fortinet.fortios.fortios_dlp_filepattern
 fortios_dlp_fp_doc_source:
   - fortinet.fortios.fortios_dlp_fp_doc_source
 fortios_dlp_fp_sensitivity:
   - fortinet.fortios.fortios_dlp_fp_sensitivity
+fortios_dlp_profile:
+  - fortinet.fortios.fortios_dlp_profile
 fortios_dlp_sensitivity:
   - fortinet.fortios.fortios_dlp_sensitivity
 fortios_dlp_sensor:
@@ -5826,6 +6219,16 @@ fortios_extender_modem_status:
   - fortinet.fortios.fortios_extender_modem_status
 fortios_extender_sys_info:
   - fortinet.fortios.fortios_extender_sys_info
+fortios_extension_controller_dataplan:
+  - fortinet.fortios.fortios_extension_controller_dataplan
+fortios_extension_controller_extender:
+  - fortinet.fortios.fortios_extension_controller_extender
+fortios_extension_controller_extender_profile:
+  - fortinet.fortios.fortios_extension_controller_extender_profile
+fortios_extension_controller_fortigate:
+  - fortinet.fortios.fortios_extension_controller_fortigate
+fortios_extension_controller_fortigate_profile:
+  - fortinet.fortios.fortios_extension_controller_fortigate_profile
 fortios_file_filter_profile:
   - fortinet.fortios.fortios_file_filter_profile
 fortios_firewall_access_proxy:
@@ -5870,6 +6273,8 @@ fortios_firewall_dos_policy:
   - fortinet.fortios.fortios_firewall_dos_policy
 fortios_firewall_dos_policy6:
   - fortinet.fortios.fortios_firewall_dos_policy6
+fortios_firewall_global:
+  - fortinet.fortios.fortios_firewall_global
 fortios_firewall_gtp:
   - fortinet.fortios.fortios_firewall_gtp
 fortios_firewall_identity_based_route:
@@ -5940,6 +6345,8 @@ fortios_firewall_multicast_policy:
   - fortinet.fortios.fortios_firewall_multicast_policy
 fortios_firewall_multicast_policy6:
   - fortinet.fortios.fortios_firewall_multicast_policy6
+fortios_firewall_network_service_dynamic:
+  - fortinet.fortios.fortios_firewall_network_service_dynamic
 fortios_firewall_pfcp:
   - fortinet.fortios.fortios_firewall_pfcp
 fortios_firewall_policy:
@@ -6060,6 +6467,8 @@ fortios_icap_profile:
   - fortinet.fortios.fortios_icap_profile
 fortios_icap_server:
   - fortinet.fortios.fortios_icap_server
+fortios_icap_server_group:
+  - fortinet.fortios.fortios_icap_server_group
 fortios_ips_custom:
   - fortinet.fortios.fortios_ips_custom
 fortios_ips_decoder:
@@ -6476,6 +6885,8 @@ fortios_system_fortiguard:
   - fortinet.fortios.fortios_system_fortiguard
 fortios_system_fortimanager:
   - fortinet.fortios.fortios_system_fortimanager
+fortios_system_fortindr:
+  - fortinet.fortios.fortios_system_fortindr
 fortios_system_fortisandbox:
   - fortinet.fortios.fortios_system_fortisandbox
 fortios_system_fsso_polling:
@@ -6642,6 +7053,8 @@ fortios_system_sms_server:
   - fortinet.fortios.fortios_system_sms_server
 fortios_system_snmp_community:
   - fortinet.fortios.fortios_system_snmp_community
+fortios_system_snmp_mib_view:
+  - fortinet.fortios.fortios_system_snmp_mib_view
 fortios_system_snmp_sysinfo:
   - fortinet.fortios.fortios_system_snmp_sysinfo
 fortios_system_snmp_user:
@@ -6979,6 +7392,7 @@ frr_bgp:
 frr_facts:
   - frr.frr.frr_facts
 fru_info:
+  - inspur.ispim.fru_info
   - inspur.sm.fru_info
 ftd_configuration:
   - community.network.ftd_configuration
@@ -7000,6 +7414,8 @@ fusion_hw:
   - purestorage.fusion.fusion_hw
 fusion_info:
   - purestorage.fusion.fusion_info
+fusion_ni:
+  - purestorage.fusion.fusion_ni
 fusion_nig:
   - purestorage.fusion.fusion_nig
 fusion_pg:
@@ -7008,8 +7424,12 @@ fusion_pp:
   - purestorage.fusion.fusion_pp
 fusion_ra:
   - purestorage.fusion.fusion_ra
+fusion_region:
+  - purestorage.fusion.fusion_region
 fusion_sc:
   - purestorage.fusion.fusion_sc
+fusion_se:
+  - purestorage.fusion.fusion_se
 fusion_ss:
   - purestorage.fusion.fusion_ss
 fusion_tenant:
@@ -7021,6 +7441,7 @@ fusion_ts:
 fusion_volume:
   - purestorage.fusion.fusion_volume
 fw_version_info:
+  - inspur.ispim.fw_version_info
   - inspur.sm.fw_version_info
 gandi_livedns:
   - community.general.gandi_livedns
@@ -7460,6 +7881,12 @@ global_pool:
   - cisco.dnac.global_pool
 global_pool_info:
   - cisco.dnac.global_pool_info
+glue_connection:
+  - community.aws.glue_connection
+glue_crawler:
+  - community.aws.glue_crawler
+glue_job:
+  - community.aws.glue_job
 gluster_heal_info:
   - gluster.gluster.gluster_heal_info
 gluster_peer:
@@ -7473,6 +7900,7 @@ golden_tag_image_delete:
 golden_tag_image_details_info:
   - cisco.dnac.golden_tag_image_details_info
 gpu_info:
+  - inspur.ispim.gpu_info
   - inspur.sm.gpu_info
 grafana_dashboard:
   - community.grafana.grafana_dashboard
@@ -7543,10 +7971,11 @@ guest_user_suspend:
   - cisco.ise.guest_user_suspend
 gunicorn:
   - community.general.gunicorn
+hadr:
+  - lowlydba.sqlserver.hadr
 hana_query:
   - community.general.hana_query
   - community.sap.hana_query
-  - community.sap_libs.hana_query
 handler_info:
   - sensu.sensu_go.handler_info
 handler_set:
@@ -7554,6 +7983,7 @@ handler_set:
 haproxy:
   - community.general.haproxy
 hard_disk_info:
+  - inspur.ispim.hard_disk_info
   - inspur.sm.hard_disk_info
 hardware_model:
   - theforeman.foreman.hardware_model
@@ -7623,6 +8053,8 @@ helm_plugin:
   - kubernetes.core.helm_plugin
 helm_plugin_info:
   - kubernetes.core.helm_plugin_info
+helm_pull:
+  - kubernetes.core.helm_pull
 helm_repository:
   - kubernetes.core.helm_repository
 helm_template:
@@ -7661,6 +8093,7 @@ hook_info:
   - sensu.sensu_go.hook_info
 host:
   - awx.awx.host
+  - dellemc.unity.host
   - theforeman.foreman.host
 host_aggregate:
   - openstack.cloud.host_aggregate
@@ -7674,6 +8107,8 @@ host_power:
   - theforeman.foreman.host_power
 hostgroup:
   - theforeman.foreman.hostgroup
+hostgroup_info:
+  - theforeman.foreman.hostgroup_info
 hostname:
   - ansible.builtin.hostname
 hosttech_dns_record:
@@ -7793,9 +8228,9 @@ iam_mfa_device_info:
 iam_password_policy:
   - community.aws.iam_password_policy
 iam_policy:
-  - community.aws.iam_policy
+  - amazon.aws.iam_policy
 iam_policy_info:
-  - community.aws.iam_policy_info
+  - amazon.aws.iam_policy_info
 iam_role:
   - community.aws.iam_role
 iam_role_info:
@@ -7807,9 +8242,9 @@ iam_server_certificate:
 iam_server_certificate_info:
   - community.aws.iam_server_certificate_info
 iam_user:
-  - community.aws.iam_user
+  - amazon.aws.iam_user
 iam_user_info:
-  - community.aws.iam_user_info
+  - amazon.aws.iam_user_info
 iap_start_workflow:
   - community.network.iap_start_workflow
 iap_token:
@@ -7826,12 +8261,28 @@ ibm_sa_vol:
   - community.general.ibm_sa_vol
 ibm_sa_vol_map:
   - community.general.ibm_sa_vol_map
+ibm_sv_manage_awss3_cloudaccount:
+  - ibm.spectrum_virtualize.ibm_sv_manage_awss3_cloudaccount
+ibm_sv_manage_cloud_backups:
+  - ibm.spectrum_virtualize.ibm_sv_manage_cloud_backups
 ibm_sv_manage_ip_partnership:
   - ibm.spectrum_virtualize.ibm_sv_manage_ip_partnership
+ibm_sv_manage_provisioning_policy:
+  - ibm.spectrum_virtualize.ibm_sv_manage_provisioning_policy
+ibm_sv_manage_replication_policy:
+  - ibm.spectrum_virtualize.ibm_sv_manage_replication_policy
 ibm_sv_manage_snapshot:
   - ibm.spectrum_virtualize.ibm_sv_manage_snapshot
 ibm_sv_manage_snapshotpolicy:
   - ibm.spectrum_virtualize.ibm_sv_manage_snapshotpolicy
+ibm_sv_manage_ssl_certificate:
+  - ibm.spectrum_virtualize.ibm_sv_manage_ssl_certificate
+ibm_sv_manage_truststore_for_replication:
+  - ibm.spectrum_virtualize.ibm_sv_manage_truststore_for_replication
+ibm_sv_restore_cloud_backup:
+  - ibm.spectrum_virtualize.ibm_sv_restore_cloud_backup
+ibm_sv_switch_replication_direction:
+  - ibm.spectrum_virtualize.ibm_sv_switch_replication_direction
 ibm_svc_auth:
   - ibm.spectrum_virtualize.ibm_svc_auth
 ibm_svc_complete_initial_setup:
@@ -8026,8 +8477,12 @@ identity_user:
   - openstack.cloud.identity_user
 identity_user_info:
   - openstack.cloud.identity_user_info
+idrac_attributes:
+  - dellemc.openmanage.idrac_attributes
 idrac_bios:
   - dellemc.openmanage.idrac_bios
+idrac_boot:
+  - dellemc.openmanage.idrac_boot
 idrac_certificates:
   - dellemc.openmanage.idrac_certificates
 idrac_firmware:
@@ -8066,6 +8521,8 @@ idrac_timezone_ntp:
   - dellemc.openmanage.idrac_timezone_ntp
 idrac_user:
   - dellemc.openmanage.idrac_user
+idrac_virtual_media:
+  - dellemc.openmanage.idrac_virtual_media
 ig_config:
   - community.network.ig_config
 ig_unit_information:
@@ -8111,12 +8568,16 @@ infini_host:
   - infinidat.infinibox.infini_host
 infini_map:
   - infinidat.infinibox.infini_map
+infini_network_space:
+  - infinidat.infinibox.infini_network_space
 infini_pool:
   - infinidat.infinibox.infini_pool
 infini_port:
   - infinidat.infinibox.infini_port
 infini_user:
   - infinidat.infinibox.infini_user
+infini_vol:
+  - infinidat.infinibox.infini_vol
 infinity:
   - community.general.infinity
 influxdb_database:
@@ -8129,14 +8590,29 @@ influxdb_user:
   - community.general.influxdb_user
 influxdb_write:
   - community.general.influxdb_write
+info:
+  - dellemc.powerflex.info
+  - dellemc.unity.info
 ini_file:
   - community.general.ini_file
+inspector_target:
+  - community.aws.inspector_target
+install_script:
+  - lowlydba.sqlserver.install_script
 installation_medium:
   - theforeman.foreman.installation_medium
 installp:
   - community.general.installp
+instance:
+  - awx.awx.instance
+  - vultr.cloud.instance
 instance_group:
   - awx.awx.instance_group
+instance_info:
+  - lowlydba.sqlserver.instance_info
+  - vultr.cloud.instance_info
+interface:
+  - dellemc.unity.interface
 interface_info:
   - cisco.dnac.interface_info
 interface_network_device_detail_info:
@@ -8161,6 +8637,8 @@ intersight_imc_access_policy:
   - cisco.intersight.intersight_imc_access_policy
 intersight_info:
   - cisco.intersight.intersight_info
+intersight_local_user_policy:
+  - cisco.intersight.intersight_local_user_policy
 intersight_ntp_policy:
   - cisco.intersight.intersight_ntp_policy
 intersight_rest_api:
@@ -8197,16 +8675,10 @@ ios_facts:
   - cisco.ios.ios_facts
 ios_hostname:
   - cisco.ios.ios_hostname
-ios_interface:
-  - cisco.ios.ios_interface
 ios_interfaces:
   - cisco.ios.ios_interfaces
-ios_l2_interface:
-  - cisco.ios.ios_l2_interface
 ios_l2_interfaces:
   - cisco.ios.ios_l2_interfaces
-ios_l3_interface:
-  - cisco.ios.ios_l3_interface
 ios_l3_interfaces:
   - cisco.ios.ios_l3_interfaces
 ios_lacp:
@@ -8245,16 +8717,12 @@ ios_route_maps:
   - cisco.ios.ios_route_maps
 ios_snmp_server:
   - cisco.ios.ios_snmp_server
-ios_static_route:
-  - cisco.ios.ios_static_route
 ios_static_routes:
   - cisco.ios.ios_static_routes
 ios_system:
   - cisco.ios.ios_system
 ios_user:
   - cisco.ios.ios_user
-ios_vlan:
-  - cisco.ios.ios_vlan
 ios_vlans:
   - cisco.ios.ios_vlans
 ios_vrf:
@@ -8281,8 +8749,6 @@ iosxr_facts:
   - cisco.iosxr.iosxr_facts
 iosxr_hostname:
   - cisco.iosxr.iosxr_hostname
-iosxr_interface:
-  - cisco.iosxr.iosxr_interface
 iosxr_interfaces:
   - cisco.iosxr.iosxr_interfaces
 iosxr_l2_interfaces:
@@ -8462,16 +8928,10 @@ junos_facts:
   - junipernetworks.junos.junos_facts
 junos_hostname:
   - junipernetworks.junos.junos_hostname
-junos_interface:
-  - junipernetworks.junos.junos_interface
 junos_interfaces:
   - junipernetworks.junos.junos_interfaces
-junos_l2_interface:
-  - junipernetworks.junos.junos_l2_interface
 junos_l2_interfaces:
   - junipernetworks.junos.junos_l2_interfaces
-junos_l3_interface:
-  - junipernetworks.junos.junos_l3_interface
 junos_l3_interfaces:
   - junipernetworks.junos.junos_l3_interfaces
 junos_lacp:
@@ -8480,14 +8940,8 @@ junos_lacp_interfaces:
   - junipernetworks.junos.junos_lacp_interfaces
 junos_lag_interfaces:
   - junipernetworks.junos.junos_lag_interfaces
-junos_linkagg:
-  - junipernetworks.junos.junos_linkagg
-junos_lldp:
-  - junipernetworks.junos.junos_lldp
 junos_lldp_global:
   - junipernetworks.junos.junos_lldp_global
-junos_lldp_interface:
-  - junipernetworks.junos.junos_lldp_interface
 junos_lldp_interfaces:
   - junipernetworks.junos.junos_lldp_interfaces
 junos_logging:
@@ -8526,16 +8980,12 @@ junos_security_zones:
   - junipernetworks.junos.junos_security_zones
 junos_snmp_server:
   - junipernetworks.junos.junos_snmp_server
-junos_static_route:
-  - junipernetworks.junos.junos_static_route
 junos_static_routes:
   - junipernetworks.junos.junos_static_routes
 junos_system:
   - junipernetworks.junos.junos_system
 junos_user:
   - junipernetworks.junos.junos_user
-junos_vlan:
-  - junipernetworks.junos.junos_vlan
 junos_vlans:
   - junipernetworks.junos.junos_vlans
 junos_vrf:
@@ -8605,22 +9055,29 @@ kibana_plugin:
   - community.general.kibana_plugin
 kinesis_stream:
   - community.aws.kinesis_stream
+kms_key:
+  - amazon.aws.kms_key
+kms_key_info:
+  - amazon.aws.kms_key_info
 known_hosts:
   - ansible.builtin.known_hosts
 kvm_info:
+  - inspur.ispim.kvm_info
   - inspur.sm.kvm_info
 label:
   - awx.awx.label
 lambda:
-  - community.aws.lambda
+  - amazon.aws.lambda
 lambda_alias:
-  - community.aws.lambda_alias
+  - amazon.aws.lambda_alias
 lambda_event:
-  - community.aws.lambda_event
+  - amazon.aws.lambda_event
+lambda_execute:
+  - amazon.aws.lambda_execute
 lambda_info:
-  - community.aws.lambda_info
+  - amazon.aws.lambda_info
 lambda_policy:
-  - community.aws.lambda_policy
+  - amazon.aws.lambda_policy
 lan_automation_count_info:
   - cisco.dnac.lan_automation_count_info
 lan_automation_create:
@@ -8653,16 +9110,20 @@ ldap_auth_provider:
 ldap_entry:
   - community.general.ldap_entry
 ldap_group:
+  - inspur.ispim.ldap_group
   - inspur.sm.ldap_group
 ldap_group_info:
+  - inspur.ispim.ldap_group_info
   - inspur.sm.ldap_group_info
 ldap_info:
+  - inspur.ispim.ldap_info
   - inspur.sm.ldap_info
 ldap_passwd:
   - community.general.ldap_passwd
 ldap_search:
   - community.general.ldap_search
 ldisk_info:
+  - inspur.ispim.ldisk_info
   - inspur.sm.ldisk_info
 librato_annotation:
   - community.general.librato_annotation
@@ -8710,6 +9171,8 @@ lifecycle_environment:
   - theforeman.foreman.lifecycle_environment
 lightsail:
   - community.aws.lightsail
+lightsail_static_ip:
+  - community.aws.lightsail_static_ip
 lineinfile:
   - ansible.builtin.lineinfile
 linode:
@@ -8729,6 +9192,7 @@ locale_gen:
 location:
   - theforeman.foreman.location
 log_setting_info:
+  - inspur.ispim.log_setting_info
   - inspur.sm.log_setting_info
 log_source_management:
   - ibm.qradar.log_source_management
@@ -8736,6 +9200,8 @@ logentries:
   - community.general.logentries
 logentries_msg:
   - community.general.logentries_msg
+login:
+  - lowlydba.sqlserver.login
 logstash_plugin:
   - community.general.logstash_plugin
 luks_device:
@@ -8760,6 +9226,8 @@ macports:
   - community.general.macports
 mail:
   - community.general.mail
+maintenance_solution:
+  - lowlydba.sqlserver.maintenance_solution
 make:
   - community.general.make
 manageiq_alert_profiles:
@@ -8786,10 +9254,16 @@ mattermost:
   - community.general.mattermost
 maven_artifact:
   - community.general.maven_artifact
+mdm_cluster:
+  - dellemc.powerflex.mdm_cluster
 media_instance_info:
+  - inspur.ispim.media_instance_info
   - inspur.sm.media_instance_info
 mem_info:
+  - inspur.ispim.mem_info
   - inspur.sm.mem_info
+memory:
+  - lowlydba.sqlserver.memory
 memset_dns_reload:
   - community.general.memset_dns_reload
 memset_memstore_info:
@@ -8818,6 +9292,8 @@ meraki_management_interface:
   - cisco.meraki.meraki_management_interface
 meraki_mr_l3_firewall:
   - cisco.meraki.meraki_mr_l3_firewall
+meraki_mr_l7_firewall:
+  - cisco.meraki.meraki_mr_l7_firewall
 meraki_mr_radio:
   - cisco.meraki.meraki_mr_radio
 meraki_mr_rf_profile:
@@ -8828,6 +9304,8 @@ meraki_mr_ssid:
   - cisco.meraki.meraki_mr_ssid
 meraki_ms_access_list:
   - cisco.meraki.meraki_ms_access_list
+meraki_ms_access_policies:
+  - cisco.meraki.meraki_ms_access_policies
 meraki_ms_l3_interface:
   - cisco.meraki.meraki_ms_l3_interface
 meraki_ms_link_aggregation:
@@ -8872,6 +9350,8 @@ meraki_mx_vlan:
   - cisco.meraki.meraki_mx_vlan
 meraki_network:
   - cisco.meraki.meraki_network
+meraki_network_settings:
+  - cisco.meraki.meraki_network_settings
 meraki_organization:
   - cisco.meraki.meraki_organization
 meraki_snmp:
@@ -8880,6 +9360,8 @@ meraki_syslog:
   - cisco.meraki.meraki_syslog
 meraki_webhook:
   - cisco.meraki.meraki_webhook
+meraki_webhook_payload_template:
+  - cisco.meraki.meraki_webhook_payload_template
 meta:
   - ansible.builtin.meta
 mksysb:
@@ -8938,6 +9420,8 @@ mongodb_parameter:
   - community.mongodb.mongodb_parameter
 mongodb_replicaset:
   - community.mongodb.mongodb_replicaset
+mongodb_role:
+  - community.mongodb.mongodb_role
 mongodb_schema:
   - community.mongodb.mongodb_schema
 mongodb_shard:
@@ -8962,8 +9446,14 @@ mount:
   - ansible.posix.mount
 mqtt:
   - community.general.mqtt
+msk_cluster:
+  - community.aws.msk_cluster
+msk_config:
+  - community.aws.msk_config
 mso_backup:
   - cisco.mso.mso_backup
+mso_backup_schedule:
+  - cisco.mso.mso_backup_schedule
 mso_dhcp_option_policy:
   - cisco.mso.mso_dhcp_option_policy
 mso_dhcp_option_policy_option:
@@ -8974,6 +9464,8 @@ mso_dhcp_relay_policy_provider:
   - cisco.mso.mso_dhcp_relay_policy_provider
 mso_label:
   - cisco.mso.mso_label
+mso_remote_location:
+  - cisco.mso.mso_remote_location
 mso_rest:
   - cisco.mso.mso_rest
 mso_role:
@@ -9010,6 +9502,8 @@ mso_schema_site_external_epg_selector:
   - cisco.mso.mso_schema_site_external_epg_selector
 mso_schema_site_l3out:
   - cisco.mso.mso_schema_site_l3out
+mso_schema_site_service_graph:
+  - cisco.mso.mso_schema_site_service_graph
 mso_schema_site_vrf:
   - cisco.mso.mso_schema_site_vrf
 mso_schema_site_vrf_region:
@@ -9042,6 +9536,8 @@ mso_schema_template_clone:
   - cisco.mso.mso_schema_template_clone
 mso_schema_template_contract_filter:
   - cisco.mso.mso_schema_template_contract_filter
+mso_schema_template_contract_service_graph:
+  - cisco.mso.mso_schema_template_contract_service_graph
 mso_schema_template_deploy:
   - cisco.mso.mso_schema_template_deploy
 mso_schema_template_deploy_status:
@@ -9060,12 +9556,16 @@ mso_schema_template_l3out:
   - cisco.mso.mso_schema_template_l3out
 mso_schema_template_migrate:
   - cisco.mso.mso_schema_template_migrate
+mso_schema_template_service_graph:
+  - cisco.mso.mso_schema_template_service_graph
 mso_schema_template_vrf:
   - cisco.mso.mso_schema_template_vrf
 mso_schema_template_vrf_contract:
   - cisco.mso.mso_schema_template_vrf_contract
 mso_schema_validate:
   - cisco.mso.mso_schema_validate
+mso_service_node_type:
+  - cisco.mso.mso_service_node_type
 mso_site:
   - cisco.mso.mso_site
 mso_tenant:
@@ -9186,6 +9686,8 @@ na_ontap_autosupport:
   - netapp.ontap.na_ontap_autosupport
 na_ontap_autosupport_invoke:
   - netapp.ontap.na_ontap_autosupport_invoke
+na_ontap_bgp_peer_group:
+  - netapp.ontap.na_ontap_bgp_peer_group
 na_ontap_broadcast_domain:
   - netapp.ontap.na_ontap_broadcast_domain
 na_ontap_broadcast_domain_ports:
@@ -9196,8 +9698,12 @@ na_ontap_cifs:
   - netapp.ontap.na_ontap_cifs
 na_ontap_cifs_acl:
   - netapp.ontap.na_ontap_cifs_acl
+na_ontap_cifs_local_group:
+  - netapp.ontap.na_ontap_cifs_local_group
 na_ontap_cifs_local_group_member:
   - netapp.ontap.na_ontap_cifs_local_group_member
+na_ontap_cifs_local_user:
+  - netapp.ontap.na_ontap_cifs_local_user
 na_ontap_cifs_local_user_modify:
   - netapp.ontap.na_ontap_cifs_local_user_modify
 na_ontap_cifs_local_user_set_password:
@@ -9224,6 +9730,10 @@ na_ontap_domain_tunnel:
   - netapp.ontap.na_ontap_domain_tunnel
 na_ontap_efficiency_policy:
   - netapp.ontap.na_ontap_efficiency_policy
+na_ontap_ems_destination:
+  - netapp.ontap.na_ontap_ems_destination
+na_ontap_ems_filter:
+  - netapp.ontap.na_ontap_ems_filter
 na_ontap_export_policy:
   - netapp.ontap.na_ontap_export_policy
 na_ontap_export_policy_rule:
@@ -9240,6 +9750,10 @@ na_ontap_fdss:
   - netapp.ontap.na_ontap_fdss
 na_ontap_file_directory_policy:
   - netapp.ontap.na_ontap_file_directory_policy
+na_ontap_file_security_permissions:
+  - netapp.ontap.na_ontap_file_security_permissions
+na_ontap_file_security_permissions_acl:
+  - netapp.ontap.na_ontap_file_security_permissions_acl
 na_ontap_firewall_policy:
   - netapp.ontap.na_ontap_firewall_policy
 na_ontap_firmware_upgrade:
@@ -9280,6 +9794,8 @@ na_ontap_ldap_client:
   - netapp.ontap.na_ontap_ldap_client
 na_ontap_license:
   - netapp.ontap.na_ontap_license
+na_ontap_local_hosts:
+  - netapp.ontap.na_ontap_local_hosts
 na_ontap_log_forward:
   - netapp.ontap.na_ontap_log_forward
 na_ontap_login_messages:
@@ -9300,6 +9816,8 @@ na_ontap_metrocluster_dr_group:
   - netapp.ontap.na_ontap_metrocluster_dr_group
 na_ontap_motd:
   - netapp.ontap.na_ontap_motd
+na_ontap_name_mappings:
+  - netapp.ontap.na_ontap_name_mappings
 na_ontap_name_service_switch:
   - netapp.ontap.na_ontap_name_service_switch
 na_ontap_ndmp:
@@ -9372,8 +9890,16 @@ na_ontap_security_certificates:
   - netapp.ontap.na_ontap_security_certificates
 na_ontap_security_config:
   - netapp.ontap.na_ontap_security_config
+na_ontap_security_ipsec_ca_certificate:
+  - netapp.ontap.na_ontap_security_ipsec_ca_certificate
+na_ontap_security_ipsec_config:
+  - netapp.ontap.na_ontap_security_ipsec_config
+na_ontap_security_ipsec_policy:
+  - netapp.ontap.na_ontap_security_ipsec_policy
 na_ontap_security_key_manager:
   - netapp.ontap.na_ontap_security_key_manager
+na_ontap_security_ssh:
+  - netapp.ontap.na_ontap_security_ssh
 na_ontap_service_policy:
   - netapp.ontap.na_ontap_service_policy
 na_ontap_service_processor_network:
@@ -9432,10 +9958,14 @@ na_ontap_vscan_on_demand_task:
   - netapp.ontap.na_ontap_vscan_on_demand_task
 na_ontap_vscan_scanner_pool:
   - netapp.ontap.na_ontap_vscan_scanner_pool
+na_ontap_vserver_audit:
+  - netapp.ontap.na_ontap_vserver_audit
 na_ontap_vserver_cifs_security:
   - netapp.ontap.na_ontap_vserver_cifs_security
 na_ontap_vserver_peer:
   - netapp.ontap.na_ontap_vserver_peer
+na_ontap_vserver_peer_permissions:
+  - netapp.ontap.na_ontap_vserver_peer_permissions
 na_ontap_wait_for_condition:
   - netapp.ontap.na_ontap_wait_for_condition
 na_ontap_wwpn_alias:
@@ -9470,8 +10000,6 @@ na_santricity_hostgroup:
   - netapp_eseries.santricity.na_santricity_hostgroup
 na_santricity_ib_iser_interface:
   - netapp_eseries.santricity.na_santricity_ib_iser_interface
-na_santricity_iscsi_interface:
-  - netapp_eseries.santricity.na_santricity_iscsi_interface
 na_santricity_iscsi_target:
   - netapp_eseries.santricity.na_santricity_iscsi_target
 na_santricity_ldap:
@@ -9502,6 +10030,8 @@ na_sg_grid_account:
   - netapp.storagegrid.na_sg_grid_account
 na_sg_grid_certificate:
   - netapp.storagegrid.na_sg_grid_certificate
+na_sg_grid_client_certificate:
+  - netapp.storagegrid.na_sg_grid_client_certificate
 na_sg_grid_dns:
   - netapp.storagegrid.na_sg_grid_dns
 na_sg_grid_gateway:
@@ -9550,6 +10080,8 @@ namespace:
   - sensu.sensu_go.namespace
 namespace_info:
   - sensu.sensu_go.namespace_info
+nasserver:
+  - dellemc.unity.nasserver
 native_supplicant_profile:
   - cisco.ise.native_supplicant_profile
 native_supplicant_profile_info:
@@ -9557,7 +10089,10 @@ native_supplicant_profile_info:
 nclu:
   - community.network.nclu
 ncsi_info:
+  - inspur.ispim.ncsi_info
   - inspur.sm.ncsi_info
+ndo_schema_template_deploy:
+  - cisco.mso.ndo_schema_template_deploy
 net_banner:
   - ansible.netcommon.net_banner
 net_get:
@@ -9704,14 +10239,20 @@ netbox_front_port_template:
   - netbox.netbox.netbox_front_port_template
 netbox_inventory_item:
   - netbox.netbox.netbox_inventory_item
+netbox_inventory_item_role:
+  - netbox.netbox.netbox_inventory_item_role
 netbox_ip_address:
   - netbox.netbox.netbox_ip_address
 netbox_ipam_role:
   - netbox.netbox.netbox_ipam_role
+netbox_l2vpn:
+  - netbox.netbox.netbox_l2vpn
 netbox_location:
   - netbox.netbox.netbox_location
 netbox_manufacturer:
   - netbox.netbox.netbox_manufacturer
+netbox_module_type:
+  - netbox.netbox.netbox_module_type
 netbox_platform:
   - netbox.netbox.netbox_platform
 netbox_power_feed:
@@ -9750,6 +10291,8 @@ netbox_route_target:
   - netbox.netbox.netbox_route_target
 netbox_service:
   - netbox.netbox.netbox_service
+netbox_service_template:
+  - netbox.netbox.netbox_service_template
 netbox_site:
   - netbox.netbox.netbox_site
 netbox_site_group:
@@ -9892,6 +10435,7 @@ network_access_time_date_conditions:
 network_access_time_date_conditions_info:
   - cisco.ise.network_access_time_date_conditions_info
 network_bond_info:
+  - inspur.ispim.network_bond_info
   - inspur.sm.network_bond_info
 network_create:
   - cisco.dnac.network_create
@@ -9975,13 +10519,27 @@ network_device_with_snmp_v3_des_info:
   - cisco.dnac.network_device_with_snmp_v3_des_info
 network_info:
   - cisco.dnac.network_info
+  - inspur.ispim.network_info
   - inspur.sm.network_info
 network_link_info:
+  - inspur.ispim.network_link_info
   - inspur.sm.network_link_info
 network_resource:
   - ansible.netcommon.network_resource
 network_update:
   - cisco.dnac.network_update
+networkfirewall:
+  - community.aws.networkfirewall
+networkfirewall_info:
+  - community.aws.networkfirewall_info
+networkfirewall_policy:
+  - community.aws.networkfirewall_policy
+networkfirewall_policy_info:
+  - community.aws.networkfirewall_policy_info
+networkfirewall_rule_group:
+  - community.aws.networkfirewall_rule_group
+networkfirewall_rule_group_info:
+  - community.aws.networkfirewall_rule_group_info
 networks_info:
   - openstack.cloud.networks_info
 neutron_rbac_policies_info:
@@ -9992,6 +10550,10 @@ newrelic_deployment:
   - community.general.newrelic_deployment
 nexmo:
   - community.general.nexmo
+nfs:
+  - dellemc.unity.nfs
+nfsserver:
+  - dellemc.unity.nfsserver
 nfv_profile:
   - cisco.dnac.nfv_profile
 nfv_profile_info:
@@ -10092,6 +10654,8 @@ nomad_job:
   - community.general.nomad_job
 nomad_job_info:
   - community.general.nomad_job_info
+nonquery:
+  - lowlydba.sqlserver.nonquery
 nos_command:
   - community.network.nos_command
 nos_config:
@@ -10117,6 +10681,7 @@ nso_verify:
 nsupdate:
   - community.general.nsupdate
 ntp_info:
+  - inspur.ispim.ntp_info
   - inspur.sm.ntp_info
 nuage_vspk:
   - community.network.nuage_vspk
@@ -10124,10 +10689,6 @@ nxos_aaa_server:
   - cisco.nxos.nxos_aaa_server
 nxos_aaa_server_host:
   - cisco.nxos.nxos_aaa_server_host
-nxos_acl:
-  - cisco.nxos.nxos_acl
-nxos_acl_interface:
-  - cisco.nxos.nxos_acl_interface
 nxos_acl_interfaces:
   - cisco.nxos.nxos_acl_interfaces
 nxos_acls:
@@ -10186,18 +10747,10 @@ nxos_igmp_snooping:
   - cisco.nxos.nxos_igmp_snooping
 nxos_install_os:
   - cisco.nxos.nxos_install_os
-nxos_interface:
-  - cisco.nxos.nxos_interface
-nxos_interface_ospf:
-  - cisco.nxos.nxos_interface_ospf
 nxos_interfaces:
   - cisco.nxos.nxos_interfaces
-nxos_l2_interface:
-  - cisco.nxos.nxos_l2_interface
 nxos_l2_interfaces:
   - cisco.nxos.nxos_l2_interfaces
-nxos_l3_interface:
-  - cisco.nxos.nxos_l3_interface
 nxos_l3_interfaces:
   - cisco.nxos.nxos_l3_interfaces
 nxos_lacp:
@@ -10206,10 +10759,6 @@ nxos_lacp_interfaces:
   - cisco.nxos.nxos_lacp_interfaces
 nxos_lag_interfaces:
   - cisco.nxos.nxos_lag_interfaces
-nxos_linkagg:
-  - cisco.nxos.nxos_linkagg
-nxos_lldp:
-  - cisco.nxos.nxos_lldp
 nxos_lldp_global:
   - cisco.nxos.nxos_lldp_global
 nxos_lldp_interfaces:
@@ -10228,12 +10777,8 @@ nxos_ntp_options:
   - cisco.nxos.nxos_ntp_options
 nxos_nxapi:
   - cisco.nxos.nxos_nxapi
-nxos_ospf:
-  - cisco.nxos.nxos_ospf
 nxos_ospf_interfaces:
   - cisco.nxos.nxos_ospf_interfaces
-nxos_ospf_vrf:
-  - cisco.nxos.nxos_ospf_vrf
 nxos_ospfv2:
   - cisco.nxos.nxos_ospfv2
 nxos_ospfv3:
@@ -10258,8 +10803,6 @@ nxos_route_maps:
   - cisco.nxos.nxos_route_maps
 nxos_rpm:
   - cisco.nxos.nxos_rpm
-nxos_smu:
-  - cisco.nxos.nxos_smu
 nxos_snapshot:
   - cisco.nxos.nxos_snapshot
 nxos_snmp_community:
@@ -10276,8 +10819,6 @@ nxos_snmp_traps:
   - cisco.nxos.nxos_snmp_traps
 nxos_snmp_user:
   - cisco.nxos.nxos_snmp_user
-nxos_static_route:
-  - cisco.nxos.nxos_static_route
 nxos_static_routes:
   - cisco.nxos.nxos_static_routes
 nxos_system:
@@ -10290,8 +10831,6 @@ nxos_udld_interface:
   - cisco.nxos.nxos_udld_interface
 nxos_user:
   - cisco.nxos.nxos_user
-nxos_vlan:
-  - cisco.nxos.nxos_vlan
 nxos_vlans:
   - cisco.nxos.nxos_vlans
 nxos_vpc:
@@ -10344,6 +10883,8 @@ oidc_auth_provider:
   - sensu.sensu_go.oidc_auth_provider
 omapi_host:
   - community.general.omapi_host
+ome_active_directory:
+  - dellemc.openmanage.ome_active_directory
 ome_application_alerts_smtp:
   - dellemc.openmanage.ome_application_alerts_smtp
 ome_application_alerts_syslog:
@@ -10386,6 +10927,8 @@ ome_device_power_settings:
   - dellemc.openmanage.ome_device_power_settings
 ome_device_quick_deploy:
   - dellemc.openmanage.ome_device_quick_deploy
+ome_devices:
+  - dellemc.openmanage.ome_devices
 ome_diagnostics:
   - dellemc.openmanage.ome_diagnostics
 ome_discovery:
@@ -10439,6 +10982,7 @@ ome_user:
 ome_user_info:
   - dellemc.openmanage.ome_user_info
 onboard_disk_info:
+  - inspur.ispim.onboard_disk_info
   - inspur.sm.onboard_disk_info
 one_host:
   - community.general.one_host
@@ -10578,18 +11122,26 @@ openbsd_pkg:
   - community.general.openbsd_pkg
 opendj_backendprop:
   - community.general.opendj_backendprop
+opensearch:
+  - community.aws.opensearch
+opensearch_info:
+  - community.aws.opensearch_info
 openshift_adm_groups_sync:
   - community.okd.openshift_adm_groups_sync
 openshift_adm_migrate_template_instances:
   - community.okd.openshift_adm_migrate_template_instances
 openshift_adm_prune_auth:
   - community.okd.openshift_adm_prune_auth
+openshift_adm_prune_builds:
+  - community.okd.openshift_adm_prune_builds
 openshift_adm_prune_deployments:
   - community.okd.openshift_adm_prune_deployments
 openshift_adm_prune_images:
   - community.okd.openshift_adm_prune_images
 openshift_auth:
   - community.okd.openshift_auth
+openshift_build:
+  - community.okd.openshift_build
 openshift_import_image:
   - community.okd.openshift_import_image
 openshift_process:
@@ -10673,6 +11225,8 @@ os9_facts:
   - dellemc.os9.os9_facts
 os_default_template:
   - theforeman.foreman.os_default_template
+os_info:
+  - vultr.cloud.os_info
 osx_defaults:
   - community.general.osx_defaults
 ovh_ip_failover:
@@ -10856,8 +11410,10 @@ path_trace_info:
 pause:
   - ansible.builtin.pause
 pcie_info:
+  - inspur.ispim.pcie_info
   - inspur.sm.pcie_info
 pdisk_info:
+  - inspur.ispim.pdisk_info
   - inspur.sm.pdisk_info
 pear:
   - community.general.pear
@@ -10897,6 +11453,10 @@ pkgng:
   - community.general.pkgng
 pkgutil:
   - community.general.pkgutil
+plan_info:
+  - vultr.cloud.plan_info
+plan_metal_info:
+  - vultr.cloud.plan_metal_info
 planned_access_points_info:
   - cisco.dnac.planned_access_points_info
 platform_nodes_configuration_summary_info:
@@ -11011,6 +11571,8 @@ pnp_global_settings:
   - cisco.dnac.pnp_global_settings
 pnp_global_settings_info:
   - cisco.dnac.pnp_global_settings_info
+pnp_intent:
+  - cisco.dnac.pnp_intent
 pnp_server_profile_update:
   - cisco.dnac.pnp_server_profile_update
 pnp_smart_account_domains_info:
@@ -11039,6 +11601,8 @@ podman_containers:
   - containers.podman.podman_containers
 podman_export:
   - containers.podman.podman_export
+podman_generate_systemd:
+  - containers.podman.podman_generate_systemd
 podman_image:
   - containers.podman.podman_image
 podman_image_info:
@@ -11138,14 +11702,19 @@ postgresql_user:
 postgresql_user_obj_stat_info:
   - community.postgresql.postgresql_user_obj_stat_info
 power_budget_info:
+  - inspur.ispim.power_budget_info
   - inspur.sm.power_budget_info
 power_consumption_info:
+  - inspur.ispim.power_consumption_info
   - inspur.sm.power_consumption_info
 power_restore_info:
+  - inspur.ispim.power_restore_info
   - inspur.sm.power_restore_info
 power_status_info:
+  - inspur.ispim.power_status_info
   - inspur.sm.power_status_info
 preserve_config_info:
+  - inspur.ispim.preserve_config_info
   - inspur.sm.preserve_config_info
 pritunl_org:
   - community.general.pritunl_org
@@ -11184,6 +11753,8 @@ project_update:
   - awx.awx.project_update
 projects_details_info:
   - cisco.dnac.projects_details_info
+protection_domain:
+  - dellemc.powerflex.protection_domain
 provisioning_template:
   - theforeman.foreman.provisioning_template
 proxmox:
@@ -11231,10 +11802,13 @@ proxysql_scheduler:
 psexec:
   - community.windows.psexec
 psu_config_info:
+  - inspur.ispim.psu_config_info
   - inspur.sm.psu_config_info
 psu_info:
+  - inspur.ispim.psu_info
   - inspur.sm.psu_info
 psu_peak_info:
+  - inspur.ispim.psu_peak_info
   - inspur.sm.psu_peak_info
 pubnub_blocks:
   - community.general.pubnub_blocks
@@ -11264,6 +11838,8 @@ purefa_connect:
   - purestorage.flasharray.purefa_connect
 purefa_console:
   - purestorage.flasharray.purefa_console
+purefa_default_protection:
+  - purestorage.flasharray.purefa_default_protection
 purefa_directory:
   - purestorage.flasharray.purefa_directory
 purefa_dirsnap:
@@ -11296,6 +11872,8 @@ purefa_kmip:
   - purestorage.flasharray.purefa_kmip
 purefa_maintenance:
   - purestorage.flasharray.purefa_maintenance
+purefa_messages:
+  - purestorage.flasharray.purefa_messages
 purefa_network:
   - purestorage.flasharray.purefa_network
 purefa_ntp:
@@ -11330,6 +11908,8 @@ purefa_snap:
   - purestorage.flasharray.purefa_snap
 purefa_snmp:
   - purestorage.flasharray.purefa_snmp
+purefa_snmp_agent:
+  - purestorage.flasharray.purefa_snmp_agent
 purefa_sso:
   - purestorage.flasharray.purefa_sso
 purefa_subnet:
@@ -11398,6 +11978,8 @@ purefb_lag:
   - purestorage.flashblade.purefb_lag
 purefb_lifecycle:
   - purestorage.flashblade.purefb_lifecycle
+purefb_messages:
+  - purestorage.flashblade.purefb_messages
 purefb_network:
   - purestorage.flashblade.purefb_network
 purefb_ntp:
@@ -11432,6 +12014,8 @@ purefb_target:
   - purestorage.flashblade.purefb_target
 purefb_timeout:
   - purestorage.flashblade.purefb_timeout
+purefb_tz:
+  - purestorage.flashblade.purefb_tz
 purefb_user:
   - purestorage.flashblade.purefb_user
 purefb_userpolicy:
@@ -11522,6 +12106,10 @@ qos_device_interface_info:
   - cisco.dnac.qos_device_interface_info
 qos_device_interface_info_count_info:
   - cisco.dnac.qos_device_interface_info_count_info
+qradar_analytics_rules:
+  - ibm.qradar.qradar_analytics_rules
+qradar_log_sources_management:
+  - ibm.qradar.qradar_log_sources_management
 quota:
   - openstack.cloud.quota
 rabbitmq_binding:
@@ -11557,6 +12145,7 @@ radius_server_sequence:
 radius_server_sequence_info:
   - cisco.ise.radius_server_sequence_info
 raid_info:
+  - inspur.ispim.raid_info
   - inspur.sm.raid_info
 raw:
   - ansible.builtin.raw
@@ -11613,25 +12202,27 @@ rax_scaling_group:
 rax_scaling_policy:
   - community.general.rax_scaling_policy
 rds_cluster:
-  - community.aws.rds_cluster
+  - amazon.aws.rds_cluster
 rds_cluster_info:
-  - community.aws.rds_cluster_info
+  - amazon.aws.rds_cluster_info
+rds_cluster_snapshot:
+  - amazon.aws.rds_cluster_snapshot
 rds_instance:
-  - community.aws.rds_instance
+  - amazon.aws.rds_instance
 rds_instance_info:
-  - community.aws.rds_instance_info
+  - amazon.aws.rds_instance_info
 rds_instance_snapshot:
-  - community.aws.rds_instance_snapshot
+  - amazon.aws.rds_instance_snapshot
 rds_option_group:
-  - community.aws.rds_option_group
+  - amazon.aws.rds_option_group
 rds_option_group_info:
-  - community.aws.rds_option_group_info
+  - amazon.aws.rds_option_group_info
 rds_param_group:
-  - community.aws.rds_param_group
+  - amazon.aws.rds_param_group
 rds_snapshot_info:
-  - community.aws.rds_snapshot_info
+  - amazon.aws.rds_snapshot_info
 rds_subnet_group:
-  - community.aws.rds_subnet_group
+  - amazon.aws.rds_subnet_group
 read_csv:
   - community.general.read_csv
 realm:
@@ -11676,10 +12267,14 @@ redshift_info:
   - community.aws.redshift_info
 redshift_subnet_group:
   - community.aws.redshift_subnet_group
+region_info:
+  - vultr.cloud.region_info
 renew_certificate:
   - cisco.ise.renew_certificate
 replace:
   - ansible.builtin.replace
+replication_consistency_group:
+  - dellemc.powerflex.replication_consistency_group
 reports:
   - cisco.dnac.reports
 reports_executions_info:
@@ -11714,12 +12309,18 @@ reserve_ip_subpool_info:
   - cisco.dnac.reserve_ip_subpool_info
 reserve_ip_subpool_update:
   - cisco.dnac.reserve_ip_subpool_update
+reserved_ip:
+  - vultr.cloud.reserved_ip
 reset:
   - community.hrobot.reset
 reset_bmc:
+  - inspur.ispim.reset_bmc
   - inspur.sm.reset_bmc
 reset_kvm:
+  - inspur.ispim.reset_kvm
   - inspur.sm.reset_kvm
+resource_governor:
+  - lowlydba.sqlserver.resource_governor
 resource_info:
   - theforeman.foreman.resource_info
 resource_version_info:
@@ -11733,9 +12334,15 @@ restconf_config:
 restconf_get:
   - ansible.netcommon.restconf_get
 restore:
+  - inspur.ispim.restore
   - inspur.sm.restore
+  - lowlydba.sqlserver.restore
 reverse_dns:
   - community.hrobot.reverse_dns
+rg_resource_pool:
+  - lowlydba.sqlserver.rg_resource_pool
+rg_workload_group:
+  - lowlydba.sqlserver.rg_workload_group
 rhevm:
   - community.general.rhevm
 rhn_channel:
@@ -11765,13 +12372,13 @@ role_info:
 rollbar_deployment:
   - community.general.rollbar_deployment
 route53:
-  - community.aws.route53
+  - amazon.aws.route53
 route53_health_check:
-  - community.aws.route53_health_check
+  - amazon.aws.route53_health_check
 route53_info:
-  - community.aws.route53_info
+  - amazon.aws.route53_info
 route53_zone:
-  - community.aws.route53_zone
+  - amazon.aws.route53_zone
 router:
   - openstack.cloud.router
 routers_info:
@@ -11796,21 +12403,35 @@ runit:
   - community.general.runit
 s3_bucket:
   - amazon.aws.s3_bucket
+s3_bucket_info:
+  - community.aws.s3_bucket_info
 s3_bucket_notification:
   - community.aws.s3_bucket_notification
+s3_cors:
+  - community.aws.s3_cors
 s3_lifecycle:
   - community.aws.s3_lifecycle
 s3_logging:
   - community.aws.s3_logging
 s3_metrics_configuration:
   - community.aws.s3_metrics_configuration
+s3_object:
+  - amazon.aws.s3_object
+s3_object_info:
+  - amazon.aws.s3_object_info
 s3_sync:
   - community.aws.s3_sync
 s3_website:
   - community.aws.s3_website
+sa:
+  - lowlydba.sqlserver.sa
 sap_company:
   - community.sap.sap_company
   - community.sap_libs.sap_company
+sap_control_exec:
+  - community.sap_libs.sap_control_exec
+sap_hdbsql:
+  - community.sap_libs.sap_hdbsql
 sap_pyrfc:
   - community.sap_libs.sap_pyrfc
 sap_snote:
@@ -11830,8 +12451,6 @@ sapcar_extract:
   - community.general.sapcar_extract
   - community.sap.sapcar_extract
   - community.sap_libs.sapcar_extract
-sapcontrol:
-  - community.sap_libs.sapcontrol
 say:
   - community.general.say
 scaleway_compute:
@@ -11940,6 +12559,10 @@ sda_virtual_network_v2:
   - cisco.dnac.sda_virtual_network_v2
 sda_virtual_network_v2_info:
   - cisco.dnac.sda_virtual_network_v2_info
+sdc:
+  - dellemc.powerflex.sdc
+sds:
+  - dellemc.powerflex.sds
 seboolean:
   - ansible.posix.seboolean
 secret:
@@ -11952,6 +12575,8 @@ secrets_provider_info:
   - sensu.sensu_go.secrets_provider_info
 secrets_provider_vault:
   - sensu.sensu_go.secrets_provider_vault
+secretsmanager_secret:
+  - community.aws.secretsmanager_secret
 security_advisories_devices_info:
   - cisco.dnac.security_advisories_devices_info
 security_advisories_ids_per_device_info:
@@ -11977,6 +12602,7 @@ self_registered_portal:
 self_registered_portal_info:
   - cisco.ise.self_registered_portal_info
 self_test_info:
+  - inspur.ispim.self_test_info
   - inspur.sm.self_test_info
 selfsigned_certificate_generate:
   - cisco.ise.selfsigned_certificate_generate
@@ -11992,6 +12618,7 @@ sensor:
   - cisco.dnac.sensor
 sensor_info:
   - cisco.dnac.sensor_info
+  - inspur.ispim.sensor_info
   - inspur.sm.sensor_info
 sensor_test_run:
   - cisco.dnac.sensor_test_run
@@ -12022,6 +12649,7 @@ server_group:
   - openstack.cloud.server_group
 server_info:
   - community.hrobot.server_info
+  - inspur.ispim.server_info
   - inspur.sm.server_info
   - openstack.cloud.server_info
 server_metadata:
@@ -12035,6 +12663,7 @@ service:
 service_facts:
   - ansible.builtin.service_facts
 service_info:
+  - inspur.ispim.service_info
   - inspur.sm.service_info
 service_provider_create:
   - cisco.dnac.service_provider_create
@@ -12044,7 +12673,14 @@ service_provider_profile_delete:
   - cisco.dnac.service_provider_profile_delete
 service_provider_update:
   - cisco.dnac.service_provider_update
+ses_identity:
+  - community.aws.ses_identity
+ses_identity_policy:
+  - community.aws.ses_identity_policy
+ses_rule_set:
+  - community.aws.ses_rule_set
 session_info:
+  - inspur.ispim.session_info
   - inspur.sm.session_info
 session_service_node_info:
   - cisco.ise.session_service_node_info
@@ -12059,6 +12695,7 @@ setting_info:
 settings:
   - awx.awx.settings
 setup:
+  - ansible.windows.setup
   - ansible.builtin.setup
 sg_acl:
   - cisco.ise.sg_acl
@@ -12140,6 +12777,8 @@ site_health_info:
   - cisco.dnac.site_health_info
 site_info:
   - cisco.dnac.site_info
+site_intent:
+  - cisco.dnac.site_intent
 site_membership_info:
   - cisco.dnac.site_membership_info
 site_update:
@@ -12157,6 +12796,7 @@ slack:
 slackpkg:
   - community.general.slackpkg
 slurp:
+  - ansible.windows.slurp
   - ansible.builtin.slurp
 slxos_command:
   - community.network.slxos_command
@@ -12182,25 +12822,38 @@ smart_proxy:
   - theforeman.foreman.smart_proxy
 smartos_image_info:
   - community.general.smartos_image_info
+smbshare:
+  - dellemc.unity.smbshare
 sms_provider_info:
   - cisco.ise.sms_provider_info
 smtp_info:
+  - inspur.ispim.smtp_info
   - inspur.sm.smtp_info
 snap:
   - community.general.snap
 snap_alias:
   - community.general.snap_alias
 snapshot:
+  - dellemc.powerflex.snapshot
+  - dellemc.unity.snapshot
   - theforeman.foreman.snapshot
+  - vultr.cloud.snapshot
+snapshot_info:
+  - theforeman.foreman.snapshot_info
+  - vultr.cloud.snapshot_info
+snapshotschedule:
+  - dellemc.unity.snapshotschedule
 snmp_facts:
   - community.general.snmp_facts
 snmp_info:
+  - inspur.ispim.snmp_info
   - inspur.sm.snmp_info
 snmp_properties:
   - cisco.dnac.snmp_properties
 snmp_properties_info:
   - cisco.dnac.snmp_properties_info
 snmp_trap_info:
+  - inspur.ispim.snmp_trap_info
   - inspur.sm.snmp_trap_info
 snmpv2_read_community_credential:
   - cisco.dnac.snmpv2_read_community_credential
@@ -12208,10 +12861,6 @@ snmpv2_write_community_credential:
   - cisco.dnac.snmpv2_write_community_credential
 snmpv3_credential:
   - cisco.dnac.snmpv3_credential
-snow_record:
-  - servicenow.servicenow.snow_record
-snow_record_find:
-  - servicenow.servicenow.snow_record_find
 sns:
   - community.aws.sns
 sns_topic:
@@ -12256,10 +12905,16 @@ sonic_lag_interfaces:
   - dellemc.enterprise_sonic.sonic_lag_interfaces
 sonic_mclag:
   - dellemc.enterprise_sonic.sonic_mclag
+sonic_ntp:
+  - dellemc.enterprise_sonic.sonic_ntp
 sonic_port_breakout:
   - dellemc.enterprise_sonic.sonic_port_breakout
+sonic_prefix_lists:
+  - dellemc.enterprise_sonic.sonic_prefix_lists
 sonic_radius_server:
   - dellemc.enterprise_sonic.sonic_radius_server
+sonic_static_routes:
+  - dellemc.enterprise_sonic.sonic_static_routes
 sonic_system:
   - dellemc.enterprise_sonic.sonic_system
 sonic_tacacs_server:
@@ -12276,10 +12931,24 @@ sops_encrypt:
   - community.sops.sops_encrypt
 sorcery:
   - community.general.sorcery
+sp_configure:
+  - lowlydba.sqlserver.sp_configure
+sp_whoisactive:
+  - lowlydba.sqlserver.sp_whoisactive
 spectrum_device:
   - community.general.spectrum_device
 spectrum_model_attrs:
   - community.general.spectrum_model_attrs
+splunk_adaptive_response_notable_events:
+  - splunk.es.splunk_adaptive_response_notable_events
+splunk_correlation_searches:
+  - splunk.es.splunk_correlation_searches
+splunk_data_inputs_monitor:
+  - splunk.es.splunk_data_inputs_monitor
+splunk_data_inputs_network:
+  - splunk.es.splunk_data_inputs_network
+spn:
+  - lowlydba.sqlserver.spn
 sponsor_group:
   - cisco.ise.sponsor_group
 sponsor_group_info:
@@ -12310,8 +12979,12 @@ ssh_config:
   - community.general.ssh_config
 ssh_key:
   - community.hrobot.ssh_key
+  - vultr.cloud.ssh_key
 ssh_key_info:
   - community.hrobot.ssh_key_info
+  - vultr.cloud.ssh_key_info
+ssm_parameter:
+  - community.aws.ssm_parameter
 stack:
   - openstack.cloud.stack
 stack_info:
@@ -12320,6 +12993,10 @@ stackdriver:
   - community.general.stackdriver
 stacki_host:
   - community.general.stacki_host
+startup_script:
+  - vultr.cloud.startup_script
+startup_script_info:
+  - vultr.cloud.startup_script_info
 stat:
   - ansible.builtin.stat
 statsd:
@@ -12328,6 +13005,15 @@ status_info:
   - theforeman.foreman.status_info
 statusio_maintenance:
   - community.general.statusio_maintenance
+stepfunctions_state_machine:
+  - community.aws.stepfunctions_state_machine
+stepfunctions_state_machine_execution:
+  - community.aws.stepfunctions_state_machine_execution
+storagegateway_info:
+  - community.aws.storagegateway_info
+storagepool:
+  - dellemc.powerflex.storagepool
+  - dellemc.unity.storagepool
 sts_assume_role:
   - community.aws.sts_assume_role
 sts_session_token:
@@ -12360,6 +13046,8 @@ support_bundle_download:
   - cisco.ise.support_bundle_download
 support_bundle_status_info:
   - cisco.ise.support_bundle_status_info
+support_info:
+  - inspur.ispim.support_info
 svc:
   - community.general.svc
 svr4pkg:
@@ -12372,6 +13060,8 @@ swim_import_local:
   - cisco.dnac.swim_import_local
 swim_import_via_url:
   - cisco.dnac.swim_import_via_url
+swim_intent:
+  - cisco.dnac.swim_intent
 swim_trigger_activation:
   - cisco.dnac.swim_trigger_activation
 swim_trigger_distribution:
@@ -12435,13 +13125,14 @@ system_health_count_info:
 system_health_info:
   - cisco.dnac.system_health_info
 system_log_info:
+  - inspur.ispim.system_log_info
   - inspur.sm.system_log_info
 system_performance_historical_info:
   - cisco.dnac.system_performance_historical_info
 system_performance_info:
   - cisco.dnac.system_performance_info
-systemd:
-  - ansible.builtin.systemd
+systemd_service:
+  - ansible.builtin.systemd_service
 sysupgrade:
   - community.general.sysupgrade
 sysvinit:
@@ -12490,6 +13181,8 @@ task_tree_info:
   - cisco.dnac.task_tree_info
 tasks_info:
   - cisco.ise.tasks_info
+tcp_port:
+  - lowlydba.sqlserver.tcp_port
 team:
   - awx.awx.team
 telegram:
@@ -12499,11 +13192,14 @@ telemetry_info:
 telnet:
   - ansible.netcommon.telnet
 temp_info:
+  - inspur.ispim.temp_info
   - inspur.sm.temp_info
 tempfile:
   - ansible.builtin.tempfile
 template:
   - ansible.builtin.template
+template_intent:
+  - cisco.dnac.template_intent
 template_preview:
   - cisco.dnac.template_preview
 templates_details_info:
@@ -12523,6 +13219,7 @@ threat_summary:
 threat_vulnerabilities_clear:
   - cisco.ise.threat_vulnerabilities_clear
 threshold_info:
+  - inspur.ispim.threshold_info
   - inspur.sm.threshold_info
 timezone:
   - community.general.timezone
@@ -12540,6 +13237,8 @@ topology_site_info:
   - cisco.dnac.topology_site_info
 topology_vlan_details_info:
   - cisco.dnac.topology_vlan_details_info
+traceflag:
+  - lowlydba.sqlserver.traceflag
 transit_peer_network:
   - cisco.dnac.transit_peer_network
 transit_peer_network_info:
@@ -12548,6 +13247,8 @@ transport_gateway_settings:
   - cisco.ise.transport_gateway_settings
 transport_gateway_settings_info:
   - cisco.ise.transport_gateway_settings_info
+tree_quota:
+  - dellemc.unity.tree_quota
 trusted_certificate:
   - cisco.ise.trusted_certificate
 trusted_certificate_export_info:
@@ -12671,14 +13372,17 @@ udm_user:
 ufw:
   - community.general.ufw
 uid_info:
+  - inspur.ispim.uid_info
   - inspur.sm.uid_info
 unarchive:
   - ansible.builtin.unarchive
 update_cpld:
+  - inspur.ispim.update_cpld
   - inspur.sm.update_cpld
 update_fact:
   - ansible.utils.update_fact
 update_fw:
+  - inspur.ispim.update_fw
   - inspur.sm.update_fw
 uptimerobot:
   - community.general.uptimerobot
@@ -12689,18 +13393,27 @@ urpmi:
 user:
   - ansible.builtin.user
   - awx.awx.user
+  - inspur.ispim.user
   - inspur.sm.user
+  - lowlydba.sqlserver.user
   - sensu.sensu_go.user
   - theforeman.foreman.user
+  - vultr.cloud.user
 user_enrichment_details_info:
   - cisco.dnac.user_enrichment_details_info
 user_group:
+  - inspur.ispim.user_group
   - inspur.sm.user_group
 user_group_info:
+  - inspur.ispim.user_group_info
   - inspur.sm.user_group_info
 user_info:
+  - inspur.ispim.user_info
   - inspur.sm.user_info
   - sensu.sensu_go.user_info
+  - vultr.cloud.user_info
+user_quota:
+  - dellemc.unity.user_quota
 usergroup:
   - theforeman.foreman.usergroup
 utm_aaa_group:
@@ -12729,14 +13442,22 @@ utm_proxy_location:
   - community.general.utm_proxy_location
 utm_proxy_location_info:
   - community.general.utm_proxy_location_info
+v_switch:
+  - community.hrobot.v_switch
 validate:
   - ansible.utils.validate
 validate_argument_spec:
   - ansible.builtin.validate_argument_spec
 vault_kv1_get:
   - community.hashi_vault.vault_kv1_get
+vault_kv2_delete:
+  - community.hashi_vault.vault_kv2_delete
 vault_kv2_get:
   - community.hashi_vault.vault_kv2_get
+vault_kv2_write:
+  - community.hashi_vault.vault_kv2_write
+vault_list:
+  - community.hashi_vault.vault_list
 vault_login:
   - community.hashi_vault.vault_login
 vault_pki_generate_certificate:
@@ -12747,12 +13468,6 @@ vault_token_create:
   - community.hashi_vault.vault_token_create
 vault_write:
   - community.hashi_vault.vault_write
-vca_fw:
-  - community.vmware.vca_fw
-vca_nat:
-  - community.vmware.vca_nat
-vca_vapp:
-  - community.vmware.vca_vapp
 vcenter_cluster_info:
   - vmware.vmware_rest.vcenter_cluster_info
 vcenter_datacenter:
@@ -12920,6 +13635,7 @@ virt_net:
 virt_pool:
   - community.libvirt.virt_pool
 virtual_media_info:
+  - inspur.ispim.virtual_media_info
   - inspur.sm.virtual_media_info
 vlt_validate:
   - dellemc.os10.vlt_validate
@@ -12955,10 +13671,16 @@ vmware_content_library_info:
   - community.vmware.vmware_content_library_info
 vmware_content_library_manager:
   - community.vmware.vmware_content_library_manager
+vmware_custom_attribute:
+  - community.vmware.vmware_custom_attribute
+vmware_custom_attribute_manager:
+  - community.vmware.vmware_custom_attribute_manager
 vmware_datacenter:
   - community.vmware.vmware_datacenter
 vmware_datacenter_info:
   - community.vmware.vmware_datacenter_info
+vmware_datastore:
+  - community.vmware.vmware_datastore
 vmware_datastore_cluster:
   - community.vmware.vmware_datastore_cluster
 vmware_datastore_cluster_manager:
@@ -12969,8 +13691,6 @@ vmware_datastore_maintenancemode:
   - community.vmware.vmware_datastore_maintenancemode
 vmware_deploy_ovf:
   - community.vmware.vmware_deploy_ovf
-vmware_dns_config:
-  - community.vmware.vmware_dns_config
 vmware_drs_group:
   - community.vmware.vmware_drs_group
 vmware_drs_group_info:
@@ -13065,10 +13785,10 @@ vmware_guest_tpm:
   - community.vmware.vmware_guest_tpm
 vmware_guest_vgpu:
   - community.vmware.vmware_guest_vgpu
+vmware_guest_vgpu_info:
+  - community.vmware.vmware_guest_vgpu_info
 vmware_guest_video:
   - community.vmware.vmware_guest_video
-vmware_guest_vnc:
-  - community.vmware.vmware_guest_vnc
 vmware_host:
   - community.vmware.vmware_host
 vmware_host_acceptance:
@@ -13113,6 +13833,8 @@ vmware_host_kernel_manager:
   - community.vmware.vmware_host_kernel_manager
 vmware_host_lockdown:
   - community.vmware.vmware_host_lockdown
+vmware_host_lockdown_exceptions:
+  - community.vmware.vmware_host_lockdown_exceptions
 vmware_host_logbundle:
   - community.vmware.vmware_host_logbundle
 vmware_host_logbundle_info:
@@ -13221,6 +13943,8 @@ vmware_vmotion:
   - community.vmware.vmware_vmotion
 vmware_vsan_cluster:
   - community.vmware.vmware_vsan_cluster
+vmware_vsan_hcl_db:
+  - community.vmware.vmware_vsan_hcl_db
 vmware_vsan_health_info:
   - community.vmware.vmware_vsan_health_info
 vmware_vspan_session:
@@ -13230,9 +13954,12 @@ vmware_vswitch:
 vmware_vswitch_info:
   - community.vmware.vmware_vswitch_info
 volt_info:
+  - inspur.ispim.volt_info
   - inspur.sm.volt_info
 volume:
   - cloudscale_ch.cloud.volume
+  - dellemc.powerflex.volume
+  - dellemc.unity.volume
   - openstack.cloud.volume
 volume_backup:
   - openstack.cloud.volume_backup
@@ -13250,6 +13977,10 @@ voss_config:
   - community.network.voss_config
 voss_facts:
   - community.network.voss_facts
+vpc:
+  - vultr.cloud.vpc
+vpc_info:
+  - vultr.cloud.vpc_info
 vsphere_copy:
   - community.vmware.vsphere_copy
 vsphere_file:
@@ -13322,24 +14053,14 @@ vyos_firewall_rules:
   - vyos.vyos.vyos_firewall_rules
 vyos_hostname:
   - vyos.vyos.vyos_hostname
-vyos_interface:
-  - vyos.vyos.vyos_interface
 vyos_interfaces:
   - vyos.vyos.vyos_interfaces
-vyos_l3_interface:
-  - vyos.vyos.vyos_l3_interface
 vyos_l3_interfaces:
   - vyos.vyos.vyos_l3_interfaces
 vyos_lag_interfaces:
   - vyos.vyos.vyos_lag_interfaces
-vyos_linkagg:
-  - vyos.vyos.vyos_linkagg
-vyos_lldp:
-  - vyos.vyos.vyos_lldp
 vyos_lldp_global:
   - vyos.vyos.vyos_lldp_global
-vyos_lldp_interface:
-  - vyos.vyos.vyos_lldp_interface
 vyos_lldp_interfaces:
   - vyos.vyos.vyos_lldp_interfaces
 vyos_logging:
@@ -13362,8 +14083,6 @@ vyos_route_maps:
   - vyos.vyos.vyos_route_maps
 vyos_snmp_server:
   - vyos.vyos.vyos_snmp_server
-vyos_static_route:
-  - vyos.vyos.vyos_static_route
 vyos_static_routes:
   - vyos.vyos.vyos_static_routes
 vyos_system:
@@ -13372,6 +14091,14 @@ vyos_user:
   - vyos.vyos.vyos_user
 vyos_vlan:
   - vyos.vyos.vyos_vlan
+waf_condition:
+  - community.aws.waf_condition
+waf_info:
+  - community.aws.waf_info
+waf_rule:
+  - community.aws.waf_rule
+waf_web_acl:
+  - community.aws.waf_web_acl
 wafv2_ip_set:
   - community.aws.wafv2_ip_set
 wafv2_ip_set_info:
@@ -13796,8 +14523,12 @@ zabbix_template_info:
   - community.zabbix.zabbix_template_info
 zabbix_user:
   - community.zabbix.zabbix_user
+zabbix_user_directory:
+  - community.zabbix.zabbix_user_directory
 zabbix_user_info:
   - community.zabbix.zabbix_user_info
+zabbix_user_role:
+  - community.zabbix.zabbix_user_role
 zabbix_usergroup:
   - community.zabbix.zabbix_usergroup
 zabbix_valuemap:
