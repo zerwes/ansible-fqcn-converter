@@ -241,7 +241,7 @@ if not fqcnmapfile or args.updatefqcnmapfile:
         moddict = modjson[modname]
         if 'doc' in moddict and 'collection' in moddict['doc'] and 'module' in moddict['doc']:
             fqcn = '%s.%s' % (moddict['doc']['collection'], moddict['doc']['module'])
-            nonfqcn = fqcn.split('.')[-1]
+            nonfqcn = modname.split('.')[-1]
             if nonfqcn not in fqcndict.keys():
                 fqcndict[nonfqcn] = []
             if fqcn not in fqcndict[nonfqcn]:
