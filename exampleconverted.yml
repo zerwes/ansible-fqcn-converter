@@ -130,3 +130,16 @@
     - app:disable dashboard
     - config:system:set a b
     - no:such:xxx
+
+- name: test issue 22 - systemd
+  ansible.builtin.systemd_service:
+    name: systemd-timesyncd
+    enabled: false
+    state: stopped
+    masked: true
+- name: test issue 22 - systemd_service
+  ansible.builtin.systemd_service:
+    name: systemd-timesyncd
+    enabled: false
+    state: stopped
+    masked: true
