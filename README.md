@@ -6,7 +6,7 @@
 Update ansible tasks, playbooks, handlers etc. to use fully qualified module names (even for ansible buildins) by searching for all known modules that are not in fqcn notation and replacing them with the fqcn name.
 
 In some cases the replacement might be ambiguous, so a warning will be issued (and by default added as a comment to the changed files; see `-W` arg).
-On ambiguous module names the first matching FQCN in alphabetical order will be used, but ansible native modules (`ansible.builtin`, `ansible.posix `ansible.utils`, ...) will have precedence on ambiguous module names.
+On ambiguous module names the first matching FQCN in alphabetical order will be used, but ansible native modules (`ansible.builtin`, `ansible.posix`, `ansible.utils`, ...) will have precedence on ambiguous module names.
 Example diff:
 ```diff
  - name: test user ... expect buildin
