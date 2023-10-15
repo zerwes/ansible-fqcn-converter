@@ -449,6 +449,8 @@ address_scope:
   - openstack.cloud.address_scope
 admin_user_info:
   - cisco.ise.admin_user_info
+administered_identities_me_info:
+  - cisco.meraki.administered_identities_me_info
 aerospike_migrations:
   - community.general.aerospike_migrations
 ag_listener:
@@ -1032,6 +1034,8 @@ azure_rm_bastionhost_info:
   - azure.azcollection.azure_rm_bastionhost_info
 azure_rm_batchaccount:
   - azure.azcollection.azure_rm_batchaccount
+azure_rm_batchaccount_info:
+  - azure.azcollection.azure_rm_batchaccount_info
 azure_rm_cdnendpoint:
   - azure.azcollection.azure_rm_cdnendpoint
 azure_rm_cdnendpoint_info:
@@ -1551,6 +1555,8 @@ backup_vault:
   - amazon.aws.backup_vault
 backup_vault_info:
   - amazon.aws.backup_vault_info
+bare_metal:
+  - vultr.cloud.bare_metal
 baremetal_deploy_template:
   - openstack.cloud.baremetal_deploy_template
 baremetal_inspect:
@@ -3415,6 +3421,114 @@ device_replacement_deploy:
   - cisco.dnac.device_replacement_deploy
 device_replacement_info:
   - cisco.dnac.device_replacement_info
+devices:
+  - cisco.meraki.devices
+devices_appliance_performance_info:
+  - cisco.meraki.devices_appliance_performance_info
+devices_appliance_uplinks_settings:
+  - cisco.meraki.devices_appliance_uplinks_settings
+devices_appliance_uplinks_settings_info:
+  - cisco.meraki.devices_appliance_uplinks_settings_info
+devices_appliance_vmx_authentication_token:
+  - cisco.meraki.devices_appliance_vmx_authentication_token
+devices_blink_leds:
+  - cisco.meraki.devices_blink_leds
+devices_camera_analytics_live_info:
+  - cisco.meraki.devices_camera_analytics_live_info
+devices_camera_custom_analytics:
+  - cisco.meraki.devices_camera_custom_analytics
+devices_camera_custom_analytics_info:
+  - cisco.meraki.devices_camera_custom_analytics_info
+devices_camera_generate_snapshot:
+  - cisco.meraki.devices_camera_generate_snapshot
+devices_camera_quality_and_retention:
+  - cisco.meraki.devices_camera_quality_and_retention
+devices_camera_quality_and_retention_info:
+  - cisco.meraki.devices_camera_quality_and_retention_info
+devices_camera_sense:
+  - cisco.meraki.devices_camera_sense
+devices_camera_sense_info:
+  - cisco.meraki.devices_camera_sense_info
+devices_camera_video_link_info:
+  - cisco.meraki.devices_camera_video_link_info
+devices_camera_video_settings:
+  - cisco.meraki.devices_camera_video_settings
+devices_camera_video_settings_info:
+  - cisco.meraki.devices_camera_video_settings_info
+devices_camera_wireless_profiles:
+  - cisco.meraki.devices_camera_wireless_profiles
+devices_camera_wireless_profiles_info:
+  - cisco.meraki.devices_camera_wireless_profiles_info
+devices_cellular_gateway_lan:
+  - cisco.meraki.devices_cellular_gateway_lan
+devices_cellular_gateway_lan_info:
+  - cisco.meraki.devices_cellular_gateway_lan_info
+devices_cellular_gateway_port_forwarding_rules:
+  - cisco.meraki.devices_cellular_gateway_port_forwarding_rules
+devices_cellular_gateway_port_forwarding_rules_info:
+  - cisco.meraki.devices_cellular_gateway_port_forwarding_rules_info
+devices_cellular_sims:
+  - cisco.meraki.devices_cellular_sims
+devices_cellular_sims_info:
+  - cisco.meraki.devices_cellular_sims_info
+devices_info:
+  - cisco.meraki.devices_info
+devices_live_tools_ping:
+  - cisco.meraki.devices_live_tools_ping
+devices_live_tools_ping_device:
+  - cisco.meraki.devices_live_tools_ping_device
+devices_live_tools_ping_device_info:
+  - cisco.meraki.devices_live_tools_ping_device_info
+devices_live_tools_ping_info:
+  - cisco.meraki.devices_live_tools_ping_info
+devices_lldp_cdp_info:
+  - cisco.meraki.devices_lldp_cdp_info
+devices_management_interface:
+  - cisco.meraki.devices_management_interface
+devices_management_interface_info:
+  - cisco.meraki.devices_management_interface_info
+devices_sensor_relationships:
+  - cisco.meraki.devices_sensor_relationships
+devices_sensor_relationships_info:
+  - cisco.meraki.devices_sensor_relationships_info
+devices_switch_ports:
+  - cisco.meraki.devices_switch_ports
+devices_switch_ports_cycle:
+  - cisco.meraki.devices_switch_ports_cycle
+devices_switch_ports_info:
+  - cisco.meraki.devices_switch_ports_info
+devices_switch_ports_statuses_info:
+  - cisco.meraki.devices_switch_ports_statuses_info
+devices_switch_routing_interfaces:
+  - cisco.meraki.devices_switch_routing_interfaces
+devices_switch_routing_interfaces_dhcp:
+  - cisco.meraki.devices_switch_routing_interfaces_dhcp
+devices_switch_routing_interfaces_dhcp_info:
+  - cisco.meraki.devices_switch_routing_interfaces_dhcp_info
+devices_switch_routing_interfaces_info:
+  - cisco.meraki.devices_switch_routing_interfaces_info
+devices_switch_routing_static_routes:
+  - cisco.meraki.devices_switch_routing_static_routes
+devices_switch_routing_static_routes_info:
+  - cisco.meraki.devices_switch_routing_static_routes_info
+devices_switch_warm_spare:
+  - cisco.meraki.devices_switch_warm_spare
+devices_switch_warm_spare_info:
+  - cisco.meraki.devices_switch_warm_spare_info
+devices_wireless_bluetooth_settings:
+  - cisco.meraki.devices_wireless_bluetooth_settings
+devices_wireless_bluetooth_settings_info:
+  - cisco.meraki.devices_wireless_bluetooth_settings_info
+devices_wireless_connection_stats_info:
+  - cisco.meraki.devices_wireless_connection_stats_info
+devices_wireless_latency_stats_info:
+  - cisco.meraki.devices_wireless_latency_stats_info
+devices_wireless_radio_settings:
+  - cisco.meraki.devices_wireless_radio_settings
+devices_wireless_radio_settings_info:
+  - cisco.meraki.devices_wireless_radio_settings_info
+devices_wireless_status_info:
+  - cisco.meraki.devices_wireless_status_info
 digital_ocean:
   - community.digitalocean.digital_ocean
 digital_ocean_account_info:
@@ -3700,6 +3814,8 @@ ec2_instance_info:
   - amazon.aws.ec2_instance_info
 ec2_key:
   - amazon.aws.ec2_key
+ec2_key_info:
+  - amazon.aws.ec2_key_info
 ec2_launch_template:
   - community.aws.ec2_launch_template
 ec2_metadata_facts:
@@ -9255,6 +9371,8 @@ instance_group:
 instance_info:
   - lowlydba.sqlserver.instance_info
   - vultr.cloud.instance_info
+instance_rdns_record:
+  - ngine_io.exoscale.instance_rdns_record
 integration_settings_instances_itsm:
   - cisco.dnac.integration_settings_instances_itsm
 integration_settings_instances_itsm_info:
@@ -9948,90 +10066,30 @@ memset_zone_record:
   - community.general.memset_zone_record
 meraki_action_batch:
   - cisco.meraki.meraki_action_batch
-meraki_admin:
-  - cisco.meraki.meraki_admin
-meraki_alert:
-  - cisco.meraki.meraki_alert
 meraki_config_template:
   - cisco.meraki.meraki_config_template
 meraki_device:
   - cisco.meraki.meraki_device
 meraki_firewalled_services:
   - cisco.meraki.meraki_firewalled_services
-meraki_management_interface:
-  - cisco.meraki.meraki_management_interface
-meraki_mr_l3_firewall:
-  - cisco.meraki.meraki_mr_l3_firewall
-meraki_mr_l7_firewall:
-  - cisco.meraki.meraki_mr_l7_firewall
-meraki_mr_radio:
-  - cisco.meraki.meraki_mr_radio
-meraki_mr_rf_profile:
-  - cisco.meraki.meraki_mr_rf_profile
 meraki_mr_settings:
   - cisco.meraki.meraki_mr_settings
-meraki_mr_ssid:
-  - cisco.meraki.meraki_mr_ssid
-meraki_ms_access_list:
-  - cisco.meraki.meraki_ms_access_list
-meraki_ms_access_policies:
-  - cisco.meraki.meraki_ms_access_policies
-meraki_ms_l3_interface:
-  - cisco.meraki.meraki_ms_l3_interface
-meraki_ms_link_aggregation:
-  - cisco.meraki.meraki_ms_link_aggregation
-meraki_ms_ospf:
-  - cisco.meraki.meraki_ms_ospf
 meraki_ms_stack:
   - cisco.meraki.meraki_ms_stack
-meraki_ms_stack_l3_interface:
-  - cisco.meraki.meraki_ms_stack_l3_interface
 meraki_ms_storm_control:
   - cisco.meraki.meraki_ms_storm_control
-meraki_ms_switchport:
-  - cisco.meraki.meraki_ms_switchport
 meraki_mx_content_filtering:
   - cisco.meraki.meraki_mx_content_filtering
-meraki_mx_intrusion_prevention:
-  - cisco.meraki.meraki_mx_intrusion_prevention
 meraki_mx_l2_interface:
   - cisco.meraki.meraki_mx_l2_interface
-meraki_mx_l3_firewall:
-  - cisco.meraki.meraki_mx_l3_firewall
-meraki_mx_l7_firewall:
-  - cisco.meraki.meraki_mx_l7_firewall
-meraki_mx_malware:
-  - cisco.meraki.meraki_mx_malware
-meraki_mx_nat:
-  - cisco.meraki.meraki_mx_nat
 meraki_mx_network_vlan_settings:
   - cisco.meraki.meraki_mx_network_vlan_settings
-meraki_mx_site_to_site_firewall:
-  - cisco.meraki.meraki_mx_site_to_site_firewall
-meraki_mx_site_to_site_vpn:
-  - cisco.meraki.meraki_mx_site_to_site_vpn
-meraki_mx_static_route:
-  - cisco.meraki.meraki_mx_static_route
-meraki_mx_third_party_vpn_peers:
-  - cisco.meraki.meraki_mx_third_party_vpn_peers
-meraki_mx_uplink_bandwidth:
-  - cisco.meraki.meraki_mx_uplink_bandwidth
-meraki_mx_vlan:
-  - cisco.meraki.meraki_mx_vlan
 meraki_network:
   - cisco.meraki.meraki_network
-meraki_network_settings:
-  - cisco.meraki.meraki_network_settings
 meraki_organization:
   - cisco.meraki.meraki_organization
-meraki_snmp:
-  - cisco.meraki.meraki_snmp
-meraki_syslog:
-  - cisco.meraki.meraki_syslog
 meraki_webhook:
   - cisco.meraki.meraki_webhook
-meraki_webhook_payload_template:
-  - cisco.meraki.meraki_webhook_payload_template
 meta:
   - ansible.builtin.meta
 mksysb:
@@ -11252,8 +11310,537 @@ networkfirewall_rule_group:
   - community.aws.networkfirewall_rule_group
 networkfirewall_rule_group_info:
   - community.aws.networkfirewall_rule_group_info
+networks:
+  - cisco.meraki.networks
+networks_alerts_history_info:
+  - cisco.meraki.networks_alerts_history_info
+networks_alerts_settings:
+  - cisco.meraki.networks_alerts_settings
+networks_alerts_settings_info:
+  - cisco.meraki.networks_alerts_settings_info
+networks_appliance_connectivity_monitoring_destinations:
+  - cisco.meraki.networks_appliance_connectivity_monitoring_destinations
+networks_appliance_connectivity_monitoring_destinations_info:
+  - cisco.meraki.networks_appliance_connectivity_monitoring_destinations_info
+networks_appliance_content_filtering:
+  - cisco.meraki.networks_appliance_content_filtering
+networks_appliance_content_filtering_categories_info:
+  - cisco.meraki.networks_appliance_content_filtering_categories_info
+networks_appliance_content_filtering_info:
+  - cisco.meraki.networks_appliance_content_filtering_info
+networks_appliance_firewall_cellular_firewall_rules:
+  - cisco.meraki.networks_appliance_firewall_cellular_firewall_rules
+networks_appliance_firewall_cellular_firewall_rules_info:
+  - cisco.meraki.networks_appliance_firewall_cellular_firewall_rules_info
+networks_appliance_firewall_firewalled_services:
+  - cisco.meraki.networks_appliance_firewall_firewalled_services
+networks_appliance_firewall_firewalled_services_info:
+  - cisco.meraki.networks_appliance_firewall_firewalled_services_info
+networks_appliance_firewall_inbound_firewall_rules:
+  - cisco.meraki.networks_appliance_firewall_inbound_firewall_rules
+networks_appliance_firewall_inbound_firewall_rules_info:
+  - cisco.meraki.networks_appliance_firewall_inbound_firewall_rules_info
+networks_appliance_firewall_l3_firewall_rules:
+  - cisco.meraki.networks_appliance_firewall_l3_firewall_rules
+networks_appliance_firewall_l3_firewall_rules_info:
+  - cisco.meraki.networks_appliance_firewall_l3_firewall_rules_info
+networks_appliance_firewall_l7_firewall_rules:
+  - cisco.meraki.networks_appliance_firewall_l7_firewall_rules
+networks_appliance_firewall_l7_firewall_rules_application_categories_info:
+  - cisco.meraki.networks_appliance_firewall_l7_firewall_rules_application_categories_info
+networks_appliance_firewall_l7_firewall_rules_info:
+  - cisco.meraki.networks_appliance_firewall_l7_firewall_rules_info
+networks_appliance_firewall_one_to_many_nat_rules:
+  - cisco.meraki.networks_appliance_firewall_one_to_many_nat_rules
+networks_appliance_firewall_one_to_many_nat_rules_info:
+  - cisco.meraki.networks_appliance_firewall_one_to_many_nat_rules_info
+networks_appliance_firewall_one_to_one_nat_rules:
+  - cisco.meraki.networks_appliance_firewall_one_to_one_nat_rules
+networks_appliance_firewall_one_to_one_nat_rules_info:
+  - cisco.meraki.networks_appliance_firewall_one_to_one_nat_rules_info
+networks_appliance_firewall_port_forwarding_rules:
+  - cisco.meraki.networks_appliance_firewall_port_forwarding_rules
+networks_appliance_firewall_port_forwarding_rules_info:
+  - cisco.meraki.networks_appliance_firewall_port_forwarding_rules_info
+networks_appliance_firewall_settings:
+  - cisco.meraki.networks_appliance_firewall_settings
+networks_appliance_firewall_settings_info:
+  - cisco.meraki.networks_appliance_firewall_settings_info
+networks_appliance_ports:
+  - cisco.meraki.networks_appliance_ports
+networks_appliance_ports_info:
+  - cisco.meraki.networks_appliance_ports_info
+networks_appliance_prefixes_delegated_statics:
+  - cisco.meraki.networks_appliance_prefixes_delegated_statics
+networks_appliance_prefixes_delegated_statics_info:
+  - cisco.meraki.networks_appliance_prefixes_delegated_statics_info
+networks_appliance_security_intrusion:
+  - cisco.meraki.networks_appliance_security_intrusion
+networks_appliance_security_intrusion_info:
+  - cisco.meraki.networks_appliance_security_intrusion_info
+networks_appliance_security_malware:
+  - cisco.meraki.networks_appliance_security_malware
+networks_appliance_security_malware_info:
+  - cisco.meraki.networks_appliance_security_malware_info
+networks_appliance_settings:
+  - cisco.meraki.networks_appliance_settings
+networks_appliance_settings_info:
+  - cisco.meraki.networks_appliance_settings_info
+networks_appliance_single_lan:
+  - cisco.meraki.networks_appliance_single_lan
+networks_appliance_single_lan_info:
+  - cisco.meraki.networks_appliance_single_lan_info
+networks_appliance_ssids:
+  - cisco.meraki.networks_appliance_ssids
+networks_appliance_ssids_info:
+  - cisco.meraki.networks_appliance_ssids_info
+networks_appliance_static_routes:
+  - cisco.meraki.networks_appliance_static_routes
+networks_appliance_static_routes_info:
+  - cisco.meraki.networks_appliance_static_routes_info
+networks_appliance_traffic_shaping:
+  - cisco.meraki.networks_appliance_traffic_shaping
+networks_appliance_traffic_shaping_custom_performance_classes:
+  - cisco.meraki.networks_appliance_traffic_shaping_custom_performance_classes
+networks_appliance_traffic_shaping_info:
+  - cisco.meraki.networks_appliance_traffic_shaping_info
+networks_appliance_traffic_shaping_rules:
+  - cisco.meraki.networks_appliance_traffic_shaping_rules
+networks_appliance_traffic_shaping_rules_info:
+  - cisco.meraki.networks_appliance_traffic_shaping_rules_info
+networks_appliance_traffic_shaping_uplink_bandwidth:
+  - cisco.meraki.networks_appliance_traffic_shaping_uplink_bandwidth
+networks_appliance_traffic_shaping_uplink_bandwidth_info:
+  - cisco.meraki.networks_appliance_traffic_shaping_uplink_bandwidth_info
+networks_appliance_traffic_shaping_uplink_selection:
+  - cisco.meraki.networks_appliance_traffic_shaping_uplink_selection
+networks_appliance_traffic_shaping_uplink_selection_info:
+  - cisco.meraki.networks_appliance_traffic_shaping_uplink_selection_info
+networks_appliance_vlans:
+  - cisco.meraki.networks_appliance_vlans
+networks_appliance_vlans_info:
+  - cisco.meraki.networks_appliance_vlans_info
+networks_appliance_vlans_settings:
+  - cisco.meraki.networks_appliance_vlans_settings
+networks_appliance_vlans_settings_info:
+  - cisco.meraki.networks_appliance_vlans_settings_info
+networks_appliance_vpn_bgp:
+  - cisco.meraki.networks_appliance_vpn_bgp
+networks_appliance_vpn_bgp_info:
+  - cisco.meraki.networks_appliance_vpn_bgp_info
+networks_appliance_vpn_site_to_site_vpn:
+  - cisco.meraki.networks_appliance_vpn_site_to_site_vpn
+networks_appliance_vpn_site_to_site_vpn_info:
+  - cisco.meraki.networks_appliance_vpn_site_to_site_vpn_info
+networks_appliance_warm_spare:
+  - cisco.meraki.networks_appliance_warm_spare
+networks_appliance_warm_spare_info:
+  - cisco.meraki.networks_appliance_warm_spare_info
+networks_appliance_warm_spare_swap:
+  - cisco.meraki.networks_appliance_warm_spare_swap
+networks_bind:
+  - cisco.meraki.networks_bind
+networks_bluetooth_clients_info:
+  - cisco.meraki.networks_bluetooth_clients_info
+networks_camera_quality_retention_profiles:
+  - cisco.meraki.networks_camera_quality_retention_profiles
+networks_camera_quality_retention_profiles_info:
+  - cisco.meraki.networks_camera_quality_retention_profiles_info
+networks_camera_wireless_profiles:
+  - cisco.meraki.networks_camera_wireless_profiles
+networks_camera_wireless_profiles_info:
+  - cisco.meraki.networks_camera_wireless_profiles_info
+networks_cellular_gateway_connectivity_monitoring_destinations:
+  - cisco.meraki.networks_cellular_gateway_connectivity_monitoring_destinations
+networks_cellular_gateway_connectivity_monitoring_destinations_info:
+  - cisco.meraki.networks_cellular_gateway_connectivity_monitoring_destinations_info
+networks_cellular_gateway_dhcp:
+  - cisco.meraki.networks_cellular_gateway_dhcp
+networks_cellular_gateway_dhcp_info:
+  - cisco.meraki.networks_cellular_gateway_dhcp_info
+networks_cellular_gateway_subnet_pool:
+  - cisco.meraki.networks_cellular_gateway_subnet_pool
+networks_cellular_gateway_subnet_pool_info:
+  - cisco.meraki.networks_cellular_gateway_subnet_pool_info
+networks_cellular_gateway_uplink:
+  - cisco.meraki.networks_cellular_gateway_uplink
+networks_cellular_gateway_uplink_info:
+  - cisco.meraki.networks_cellular_gateway_uplink_info
+networks_clients_info:
+  - cisco.meraki.networks_clients_info
+networks_clients_overview_info:
+  - cisco.meraki.networks_clients_overview_info
+networks_clients_policy:
+  - cisco.meraki.networks_clients_policy
+networks_clients_policy_info:
+  - cisco.meraki.networks_clients_policy_info
+networks_clients_provision:
+  - cisco.meraki.networks_clients_provision
+networks_clients_splash_authorization_status:
+  - cisco.meraki.networks_clients_splash_authorization_status
+networks_clients_splash_authorization_status_info:
+  - cisco.meraki.networks_clients_splash_authorization_status_info
+networks_devices_claim:
+  - cisco.meraki.networks_devices_claim
+networks_devices_claim_vmx:
+  - cisco.meraki.networks_devices_claim_vmx
+networks_devices_remove:
+  - cisco.meraki.networks_devices_remove
+networks_events_event_types_info:
+  - cisco.meraki.networks_events_event_types_info
+networks_events_info:
+  - cisco.meraki.networks_events_info
+networks_firmware_upgrades:
+  - cisco.meraki.networks_firmware_upgrades
+networks_firmware_upgrades_info:
+  - cisco.meraki.networks_firmware_upgrades_info
+networks_firmware_upgrades_rollbacks:
+  - cisco.meraki.networks_firmware_upgrades_rollbacks
+networks_firmware_upgrades_staged_events:
+  - cisco.meraki.networks_firmware_upgrades_staged_events
+networks_firmware_upgrades_staged_events_defer:
+  - cisco.meraki.networks_firmware_upgrades_staged_events_defer
+networks_firmware_upgrades_staged_events_info:
+  - cisco.meraki.networks_firmware_upgrades_staged_events_info
+networks_firmware_upgrades_staged_events_rollbacks:
+  - cisco.meraki.networks_firmware_upgrades_staged_events_rollbacks
+networks_firmware_upgrades_staged_groups:
+  - cisco.meraki.networks_firmware_upgrades_staged_groups
+networks_firmware_upgrades_staged_groups_info:
+  - cisco.meraki.networks_firmware_upgrades_staged_groups_info
+networks_firmware_upgrades_staged_stages:
+  - cisco.meraki.networks_firmware_upgrades_staged_stages
+networks_firmware_upgrades_staged_stages_info:
+  - cisco.meraki.networks_firmware_upgrades_staged_stages_info
+networks_floor_plans:
+  - cisco.meraki.networks_floor_plans
+networks_floor_plans_info:
+  - cisco.meraki.networks_floor_plans_info
+networks_group_policies:
+  - cisco.meraki.networks_group_policies
+networks_group_policies_info:
+  - cisco.meraki.networks_group_policies_info
+networks_health_alerts_info:
+  - cisco.meraki.networks_health_alerts_info
 networks_info:
+  - cisco.meraki.networks_info
   - openstack.cloud.networks_info
+networks_insight_applications_health_by_time_info:
+  - cisco.meraki.networks_insight_applications_health_by_time_info
+networks_meraki_auth_users:
+  - cisco.meraki.networks_meraki_auth_users
+networks_meraki_auth_users_info:
+  - cisco.meraki.networks_meraki_auth_users_info
+networks_mqtt_brokers:
+  - cisco.meraki.networks_mqtt_brokers
+networks_netflow:
+  - cisco.meraki.networks_netflow
+networks_netflow_info:
+  - cisco.meraki.networks_netflow_info
+networks_pii_pii_keys_info:
+  - cisco.meraki.networks_pii_pii_keys_info
+networks_pii_requests_delete:
+  - cisco.meraki.networks_pii_requests_delete
+networks_pii_requests_info:
+  - cisco.meraki.networks_pii_requests_info
+networks_pii_sm_devices_for_key_info:
+  - cisco.meraki.networks_pii_sm_devices_for_key_info
+networks_pii_sm_owners_for_key_info:
+  - cisco.meraki.networks_pii_sm_owners_for_key_info
+networks_policies_by_client_info:
+  - cisco.meraki.networks_policies_by_client_info
+networks_sensor_alerts_current_overview_by_metric_info:
+  - cisco.meraki.networks_sensor_alerts_current_overview_by_metric_info
+networks_sensor_alerts_overview_by_metric_info:
+  - cisco.meraki.networks_sensor_alerts_overview_by_metric_info
+networks_sensor_alerts_profiles:
+  - cisco.meraki.networks_sensor_alerts_profiles
+networks_sensor_alerts_profiles_info:
+  - cisco.meraki.networks_sensor_alerts_profiles_info
+networks_sensor_mqtt_brokers:
+  - cisco.meraki.networks_sensor_mqtt_brokers
+networks_sensor_mqtt_brokers_info:
+  - cisco.meraki.networks_sensor_mqtt_brokers_info
+networks_sensor_relationships_info:
+  - cisco.meraki.networks_sensor_relationships_info
+networks_settings:
+  - cisco.meraki.networks_settings
+networks_settings_info:
+  - cisco.meraki.networks_settings_info
+networks_sm_bypass_activation_lock_attempts:
+  - cisco.meraki.networks_sm_bypass_activation_lock_attempts
+networks_sm_bypass_activation_lock_attempts_info:
+  - cisco.meraki.networks_sm_bypass_activation_lock_attempts_info
+networks_sm_devices_cellular_usage_history_info:
+  - cisco.meraki.networks_sm_devices_cellular_usage_history_info
+networks_sm_devices_certs_info:
+  - cisco.meraki.networks_sm_devices_certs_info
+networks_sm_devices_checkin:
+  - cisco.meraki.networks_sm_devices_checkin
+networks_sm_devices_connectivity_info:
+  - cisco.meraki.networks_sm_devices_connectivity_info
+networks_sm_devices_desktop_logs_info:
+  - cisco.meraki.networks_sm_devices_desktop_logs_info
+networks_sm_devices_device_command_logs_info:
+  - cisco.meraki.networks_sm_devices_device_command_logs_info
+networks_sm_devices_device_profiles_info:
+  - cisco.meraki.networks_sm_devices_device_profiles_info
+networks_sm_devices_fields:
+  - cisco.meraki.networks_sm_devices_fields
+networks_sm_devices_info:
+  - cisco.meraki.networks_sm_devices_info
+networks_sm_devices_lock:
+  - cisco.meraki.networks_sm_devices_lock
+networks_sm_devices_modify_tags:
+  - cisco.meraki.networks_sm_devices_modify_tags
+networks_sm_devices_move:
+  - cisco.meraki.networks_sm_devices_move
+networks_sm_devices_network_adapters_info:
+  - cisco.meraki.networks_sm_devices_network_adapters_info
+networks_sm_devices_performance_history_info:
+  - cisco.meraki.networks_sm_devices_performance_history_info
+networks_sm_devices_refresh_details:
+  - cisco.meraki.networks_sm_devices_refresh_details
+networks_sm_devices_security_centers_info:
+  - cisco.meraki.networks_sm_devices_security_centers_info
+networks_sm_devices_unenroll:
+  - cisco.meraki.networks_sm_devices_unenroll
+networks_sm_devices_wipe:
+  - cisco.meraki.networks_sm_devices_wipe
+networks_sm_devices_wlan_lists_info:
+  - cisco.meraki.networks_sm_devices_wlan_lists_info
+networks_sm_profiles_info:
+  - cisco.meraki.networks_sm_profiles_info
+networks_sm_target_groups:
+  - cisco.meraki.networks_sm_target_groups
+networks_sm_target_groups_info:
+  - cisco.meraki.networks_sm_target_groups_info
+networks_sm_trusted_access_configs_info:
+  - cisco.meraki.networks_sm_trusted_access_configs_info
+networks_sm_user_access_devices_delete:
+  - cisco.meraki.networks_sm_user_access_devices_delete
+networks_sm_user_access_devices_info:
+  - cisco.meraki.networks_sm_user_access_devices_info
+networks_sm_users_device_profiles_info:
+  - cisco.meraki.networks_sm_users_device_profiles_info
+networks_sm_users_info:
+  - cisco.meraki.networks_sm_users_info
+networks_sm_users_softwares_info:
+  - cisco.meraki.networks_sm_users_softwares_info
+networks_snmp:
+  - cisco.meraki.networks_snmp
+networks_snmp_info:
+  - cisco.meraki.networks_snmp_info
+networks_split:
+  - cisco.meraki.networks_split
+networks_switch_access_control_lists:
+  - cisco.meraki.networks_switch_access_control_lists
+networks_switch_access_control_lists_info:
+  - cisco.meraki.networks_switch_access_control_lists_info
+networks_switch_access_policies:
+  - cisco.meraki.networks_switch_access_policies
+networks_switch_access_policies_info:
+  - cisco.meraki.networks_switch_access_policies_info
+networks_switch_alternate_management_interface:
+  - cisco.meraki.networks_switch_alternate_management_interface
+networks_switch_alternate_management_interface_info:
+  - cisco.meraki.networks_switch_alternate_management_interface_info
+networks_switch_dhcp_server_policy:
+  - cisco.meraki.networks_switch_dhcp_server_policy
+networks_switch_dhcp_server_policy_arp_inspection_trusted_servers:
+  - cisco.meraki.networks_switch_dhcp_server_policy_arp_inspection_trusted_servers
+networks_switch_dhcp_server_policy_arp_inspection_trusted_servers_info:
+  - cisco.meraki.networks_switch_dhcp_server_policy_arp_inspection_trusted_servers_info
+networks_switch_dhcp_server_policy_arp_inspection_warnings_by_device_info:
+  - cisco.meraki.networks_switch_dhcp_server_policy_arp_inspection_warnings_by_device_info
+networks_switch_dhcp_server_policy_info:
+  - cisco.meraki.networks_switch_dhcp_server_policy_info
+networks_switch_dhcp_v4_servers_seen_info:
+  - cisco.meraki.networks_switch_dhcp_v4_servers_seen_info
+networks_switch_dscp_to_cos_mappings:
+  - cisco.meraki.networks_switch_dscp_to_cos_mappings
+networks_switch_dscp_to_cos_mappings_info:
+  - cisco.meraki.networks_switch_dscp_to_cos_mappings_info
+networks_switch_link_aggregations:
+  - cisco.meraki.networks_switch_link_aggregations
+networks_switch_link_aggregations_info:
+  - cisco.meraki.networks_switch_link_aggregations_info
+networks_switch_mtu:
+  - cisco.meraki.networks_switch_mtu
+networks_switch_mtu_info:
+  - cisco.meraki.networks_switch_mtu_info
+networks_switch_port_schedules:
+  - cisco.meraki.networks_switch_port_schedules
+networks_switch_port_schedules_info:
+  - cisco.meraki.networks_switch_port_schedules_info
+networks_switch_qos_rules_order:
+  - cisco.meraki.networks_switch_qos_rules_order
+networks_switch_qos_rules_order_info:
+  - cisco.meraki.networks_switch_qos_rules_order_info
+networks_switch_routing_multicast:
+  - cisco.meraki.networks_switch_routing_multicast
+networks_switch_routing_multicast_info:
+  - cisco.meraki.networks_switch_routing_multicast_info
+networks_switch_routing_multicast_rendezvous_points:
+  - cisco.meraki.networks_switch_routing_multicast_rendezvous_points
+networks_switch_routing_multicast_rendezvous_points_info:
+  - cisco.meraki.networks_switch_routing_multicast_rendezvous_points_info
+networks_switch_routing_ospf:
+  - cisco.meraki.networks_switch_routing_ospf
+networks_switch_routing_ospf_info:
+  - cisco.meraki.networks_switch_routing_ospf_info
+networks_switch_settings:
+  - cisco.meraki.networks_switch_settings
+networks_switch_settings_info:
+  - cisco.meraki.networks_switch_settings_info
+networks_switch_stacks:
+  - cisco.meraki.networks_switch_stacks
+networks_switch_stacks_add:
+  - cisco.meraki.networks_switch_stacks_add
+networks_switch_stacks_info:
+  - cisco.meraki.networks_switch_stacks_info
+networks_switch_stacks_remove:
+  - cisco.meraki.networks_switch_stacks_remove
+networks_switch_stacks_routing_interfaces:
+  - cisco.meraki.networks_switch_stacks_routing_interfaces
+networks_switch_stacks_routing_interfaces_dhcp:
+  - cisco.meraki.networks_switch_stacks_routing_interfaces_dhcp
+networks_switch_stacks_routing_interfaces_dhcp_info:
+  - cisco.meraki.networks_switch_stacks_routing_interfaces_dhcp_info
+networks_switch_stacks_routing_interfaces_info:
+  - cisco.meraki.networks_switch_stacks_routing_interfaces_info
+networks_switch_stacks_routing_static_routes:
+  - cisco.meraki.networks_switch_stacks_routing_static_routes
+networks_switch_stacks_routing_static_routes_info:
+  - cisco.meraki.networks_switch_stacks_routing_static_routes_info
+networks_switch_storm_control:
+  - cisco.meraki.networks_switch_storm_control
+networks_switch_storm_control_info:
+  - cisco.meraki.networks_switch_storm_control_info
+networks_switch_stp:
+  - cisco.meraki.networks_switch_stp
+networks_switch_stp_info:
+  - cisco.meraki.networks_switch_stp_info
+networks_syslog_servers:
+  - cisco.meraki.networks_syslog_servers
+networks_syslog_servers_info:
+  - cisco.meraki.networks_syslog_servers_info
+networks_topology_link_layer_info:
+  - cisco.meraki.networks_topology_link_layer_info
+networks_traffic_analysis:
+  - cisco.meraki.networks_traffic_analysis
+networks_traffic_analysis_info:
+  - cisco.meraki.networks_traffic_analysis_info
+networks_traffic_shaping_application_categories_info:
+  - cisco.meraki.networks_traffic_shaping_application_categories_info
+networks_traffic_shaping_dscp_tagging_options_info:
+  - cisco.meraki.networks_traffic_shaping_dscp_tagging_options_info
+networks_unbind:
+  - cisco.meraki.networks_unbind
+networks_webhooks_http_servers:
+  - cisco.meraki.networks_webhooks_http_servers
+networks_webhooks_http_servers_info:
+  - cisco.meraki.networks_webhooks_http_servers_info
+networks_webhooks_payload_templates:
+  - cisco.meraki.networks_webhooks_payload_templates
+networks_webhooks_payload_templates_info:
+  - cisco.meraki.networks_webhooks_payload_templates_info
+networks_webhooks_webhook_tests_info:
+  - cisco.meraki.networks_webhooks_webhook_tests_info
+networks_wireless_alternate_management_interface:
+  - cisco.meraki.networks_wireless_alternate_management_interface
+networks_wireless_alternate_management_interface_info:
+  - cisco.meraki.networks_wireless_alternate_management_interface_info
+networks_wireless_billing:
+  - cisco.meraki.networks_wireless_billing
+networks_wireless_billing_info:
+  - cisco.meraki.networks_wireless_billing_info
+networks_wireless_bluetooth_settings:
+  - cisco.meraki.networks_wireless_bluetooth_settings
+networks_wireless_bluetooth_settings_info:
+  - cisco.meraki.networks_wireless_bluetooth_settings_info
+networks_wireless_channel_utilization_history_info:
+  - cisco.meraki.networks_wireless_channel_utilization_history_info
+networks_wireless_client_count_history_info:
+  - cisco.meraki.networks_wireless_client_count_history_info
+networks_wireless_clients_connection_stats_info:
+  - cisco.meraki.networks_wireless_clients_connection_stats_info
+networks_wireless_clients_latency_stats_info:
+  - cisco.meraki.networks_wireless_clients_latency_stats_info
+networks_wireless_connection_stats_info:
+  - cisco.meraki.networks_wireless_connection_stats_info
+networks_wireless_data_rate_history_info:
+  - cisco.meraki.networks_wireless_data_rate_history_info
+networks_wireless_devices_connection_stats_info:
+  - cisco.meraki.networks_wireless_devices_connection_stats_info
+networks_wireless_failed_connections_info:
+  - cisco.meraki.networks_wireless_failed_connections_info
+networks_wireless_latency_history_info:
+  - cisco.meraki.networks_wireless_latency_history_info
+networks_wireless_latency_stats_info:
+  - cisco.meraki.networks_wireless_latency_stats_info
+networks_wireless_mesh_statuses_info:
+  - cisco.meraki.networks_wireless_mesh_statuses_info
+networks_wireless_rf_profiles:
+  - cisco.meraki.networks_wireless_rf_profiles
+networks_wireless_rf_profiles_info:
+  - cisco.meraki.networks_wireless_rf_profiles_info
+networks_wireless_settings:
+  - cisco.meraki.networks_wireless_settings
+networks_wireless_settings_info:
+  - cisco.meraki.networks_wireless_settings_info
+networks_wireless_signal_quality_history_info:
+  - cisco.meraki.networks_wireless_signal_quality_history_info
+networks_wireless_ssids:
+  - cisco.meraki.networks_wireless_ssids
+networks_wireless_ssids_bonjour_forwarding:
+  - cisco.meraki.networks_wireless_ssids_bonjour_forwarding
+networks_wireless_ssids_bonjour_forwarding_info:
+  - cisco.meraki.networks_wireless_ssids_bonjour_forwarding_info
+networks_wireless_ssids_device_type_group_policies:
+  - cisco.meraki.networks_wireless_ssids_device_type_group_policies
+networks_wireless_ssids_device_type_group_policies_info:
+  - cisco.meraki.networks_wireless_ssids_device_type_group_policies_info
+networks_wireless_ssids_eap_override:
+  - cisco.meraki.networks_wireless_ssids_eap_override
+networks_wireless_ssids_eap_override_info:
+  - cisco.meraki.networks_wireless_ssids_eap_override_info
+networks_wireless_ssids_firewall_l3_firewall_rules:
+  - cisco.meraki.networks_wireless_ssids_firewall_l3_firewall_rules
+networks_wireless_ssids_firewall_l3_firewall_rules_info:
+  - cisco.meraki.networks_wireless_ssids_firewall_l3_firewall_rules_info
+networks_wireless_ssids_firewall_l7_firewall_rules:
+  - cisco.meraki.networks_wireless_ssids_firewall_l7_firewall_rules
+networks_wireless_ssids_firewall_l7_firewall_rules_info:
+  - cisco.meraki.networks_wireless_ssids_firewall_l7_firewall_rules_info
+networks_wireless_ssids_hotspot20:
+  - cisco.meraki.networks_wireless_ssids_hotspot20
+networks_wireless_ssids_hotspot20_info:
+  - cisco.meraki.networks_wireless_ssids_hotspot20_info
+networks_wireless_ssids_identity_psks:
+  - cisco.meraki.networks_wireless_ssids_identity_psks
+networks_wireless_ssids_identity_psks_info:
+  - cisco.meraki.networks_wireless_ssids_identity_psks_info
+networks_wireless_ssids_info:
+  - cisco.meraki.networks_wireless_ssids_info
+networks_wireless_ssids_schedules:
+  - cisco.meraki.networks_wireless_ssids_schedules
+networks_wireless_ssids_schedules_info:
+  - cisco.meraki.networks_wireless_ssids_schedules_info
+networks_wireless_ssids_splash_settings:
+  - cisco.meraki.networks_wireless_ssids_splash_settings
+networks_wireless_ssids_splash_settings_info:
+  - cisco.meraki.networks_wireless_ssids_splash_settings_info
+networks_wireless_ssids_traffic_shaping_rules:
+  - cisco.meraki.networks_wireless_ssids_traffic_shaping_rules
+networks_wireless_ssids_traffic_shaping_rules_info:
+  - cisco.meraki.networks_wireless_ssids_traffic_shaping_rules_info
+networks_wireless_ssids_vpn:
+  - cisco.meraki.networks_wireless_ssids_vpn
+networks_wireless_ssids_vpn_info:
+  - cisco.meraki.networks_wireless_ssids_vpn_info
+networks_wireless_usage_history_info:
+  - cisco.meraki.networks_wireless_usage_history_info
 neutron_rbac_policies_info:
   - openstack.cloud.neutron_rbac_policies_info
 neutron_rbac_policy:
@@ -11858,6 +12445,222 @@ organization:
   - theforeman.foreman.organization
 organization_info:
   - theforeman.foreman.organization_info
+organizations:
+  - cisco.meraki.organizations
+organizations_action_batches:
+  - cisco.meraki.organizations_action_batches
+organizations_action_batches_info:
+  - cisco.meraki.organizations_action_batches_info
+organizations_adaptive_policy_acls:
+  - cisco.meraki.organizations_adaptive_policy_acls
+organizations_adaptive_policy_acls_info:
+  - cisco.meraki.organizations_adaptive_policy_acls_info
+organizations_adaptive_policy_groups:
+  - cisco.meraki.organizations_adaptive_policy_groups
+organizations_adaptive_policy_groups_info:
+  - cisco.meraki.organizations_adaptive_policy_groups_info
+organizations_adaptive_policy_overview_info:
+  - cisco.meraki.organizations_adaptive_policy_overview_info
+organizations_adaptive_policy_policies:
+  - cisco.meraki.organizations_adaptive_policy_policies
+organizations_adaptive_policy_policies_info:
+  - cisco.meraki.organizations_adaptive_policy_policies_info
+organizations_adaptive_policy_settings:
+  - cisco.meraki.organizations_adaptive_policy_settings
+organizations_adaptive_policy_settings_info:
+  - cisco.meraki.organizations_adaptive_policy_settings_info
+organizations_admins:
+  - cisco.meraki.organizations_admins
+organizations_admins_info:
+  - cisco.meraki.organizations_admins_info
+organizations_alerts_profiles:
+  - cisco.meraki.organizations_alerts_profiles
+organizations_api_requests_info:
+  - cisco.meraki.organizations_api_requests_info
+organizations_api_requests_overview_info:
+  - cisco.meraki.organizations_api_requests_overview_info
+organizations_api_requests_overview_response_codes_by_interval_info:
+  - cisco.meraki.organizations_api_requests_overview_response_codes_by_interval_info
+organizations_appliance_security_intrusion:
+  - cisco.meraki.organizations_appliance_security_intrusion
+organizations_appliance_security_intrusion_info:
+  - cisco.meraki.organizations_appliance_security_intrusion_info
+organizations_appliance_vpn_third_party_vpnpeers:
+  - cisco.meraki.organizations_appliance_vpn_third_party_vpnpeers
+organizations_appliance_vpn_third_party_vpnpeers_info:
+  - cisco.meraki.organizations_appliance_vpn_third_party_vpnpeers_info
+organizations_appliance_vpn_vpn_firewall_rules:
+  - cisco.meraki.organizations_appliance_vpn_vpn_firewall_rules
+organizations_appliance_vpn_vpn_firewall_rules_info:
+  - cisco.meraki.organizations_appliance_vpn_vpn_firewall_rules_info
+organizations_branding_policies:
+  - cisco.meraki.organizations_branding_policies
+organizations_branding_policies_info:
+  - cisco.meraki.organizations_branding_policies_info
+organizations_branding_policies_priorities:
+  - cisco.meraki.organizations_branding_policies_priorities
+organizations_branding_policies_priorities_info:
+  - cisco.meraki.organizations_branding_policies_priorities_info
+organizations_camera_custom_analytics_artifacts:
+  - cisco.meraki.organizations_camera_custom_analytics_artifacts
+organizations_camera_custom_analytics_artifacts_info:
+  - cisco.meraki.organizations_camera_custom_analytics_artifacts_info
+organizations_cellular_gateway_uplink_statuses_info:
+  - cisco.meraki.organizations_cellular_gateway_uplink_statuses_info
+organizations_claim:
+  - cisco.meraki.organizations_claim
+organizations_clients_bandwidth_usage_history_info:
+  - cisco.meraki.organizations_clients_bandwidth_usage_history_info
+organizations_clients_overview_info:
+  - cisco.meraki.organizations_clients_overview_info
+organizations_clients_search_info:
+  - cisco.meraki.organizations_clients_search_info
+organizations_clone:
+  - cisco.meraki.organizations_clone
+organizations_config_templates:
+  - cisco.meraki.organizations_config_templates
+organizations_config_templates_info:
+  - cisco.meraki.organizations_config_templates_info
+organizations_config_templates_switch_profiles_info:
+  - cisco.meraki.organizations_config_templates_switch_profiles_info
+organizations_config_templates_switch_profiles_ports:
+  - cisco.meraki.organizations_config_templates_switch_profiles_ports
+organizations_config_templates_switch_profiles_ports_info:
+  - cisco.meraki.organizations_config_templates_switch_profiles_ports_info
+organizations_devices_availabilities_info:
+  - cisco.meraki.organizations_devices_availabilities_info
+organizations_devices_info:
+  - cisco.meraki.organizations_devices_info
+organizations_devices_power_modules_statuses_by_device_info:
+  - cisco.meraki.organizations_devices_power_modules_statuses_by_device_info
+organizations_devices_provisioning_statuses_info:
+  - cisco.meraki.organizations_devices_provisioning_statuses_info
+organizations_devices_statuses_info:
+  - cisco.meraki.organizations_devices_statuses_info
+organizations_devices_statuses_overview_info:
+  - cisco.meraki.organizations_devices_statuses_overview_info
+organizations_devices_uplinks_addresses_by_device_info:
+  - cisco.meraki.organizations_devices_uplinks_addresses_by_device_info
+organizations_devices_uplinks_loss_and_latency_info:
+  - cisco.meraki.organizations_devices_uplinks_loss_and_latency_info
+organizations_early_access_features_info:
+  - cisco.meraki.organizations_early_access_features_info
+organizations_early_access_features_opt_ins:
+  - cisco.meraki.organizations_early_access_features_opt_ins
+organizations_early_access_features_opt_ins_info:
+  - cisco.meraki.organizations_early_access_features_opt_ins_info
+organizations_firmware_upgrades_by_device_info:
+  - cisco.meraki.organizations_firmware_upgrades_by_device_info
+organizations_firmware_upgrades_info:
+  - cisco.meraki.organizations_firmware_upgrades_info
+organizations_info:
+  - cisco.meraki.organizations_info
+organizations_insight_applications_info:
+  - cisco.meraki.organizations_insight_applications_info
+organizations_insight_monitored_media_servers:
+  - cisco.meraki.organizations_insight_monitored_media_servers
+organizations_insight_monitored_media_servers_info:
+  - cisco.meraki.organizations_insight_monitored_media_servers_info
+organizations_inventory_claim:
+  - cisco.meraki.organizations_inventory_claim
+organizations_inventory_devices_info:
+  - cisco.meraki.organizations_inventory_devices_info
+organizations_inventory_onboarding_cloud_monitoring_export_events:
+  - cisco.meraki.organizations_inventory_onboarding_cloud_monitoring_export_events
+organizations_inventory_onboarding_cloud_monitoring_imports:
+  - cisco.meraki.organizations_inventory_onboarding_cloud_monitoring_imports
+organizations_inventory_onboarding_cloud_monitoring_imports_info:
+  - cisco.meraki.organizations_inventory_onboarding_cloud_monitoring_imports_info
+organizations_inventory_onboarding_cloud_monitoring_networks_info:
+  - cisco.meraki.organizations_inventory_onboarding_cloud_monitoring_networks_info
+organizations_inventory_onboarding_cloud_monitoring_prepare:
+  - cisco.meraki.organizations_inventory_onboarding_cloud_monitoring_prepare
+organizations_inventory_release:
+  - cisco.meraki.organizations_inventory_release
+organizations_licenses:
+  - cisco.meraki.organizations_licenses
+organizations_licenses_assign_seats:
+  - cisco.meraki.organizations_licenses_assign_seats
+organizations_licenses_info:
+  - cisco.meraki.organizations_licenses_info
+organizations_licenses_move:
+  - cisco.meraki.organizations_licenses_move
+organizations_licenses_move_seats:
+  - cisco.meraki.organizations_licenses_move_seats
+organizations_licenses_overview_info:
+  - cisco.meraki.organizations_licenses_overview_info
+organizations_licenses_renew_seats:
+  - cisco.meraki.organizations_licenses_renew_seats
+organizations_licensing_coterm_licenses_info:
+  - cisco.meraki.organizations_licensing_coterm_licenses_info
+organizations_licensing_coterm_licenses_move:
+  - cisco.meraki.organizations_licensing_coterm_licenses_move
+organizations_login_security:
+  - cisco.meraki.organizations_login_security
+organizations_login_security_info:
+  - cisco.meraki.organizations_login_security_info
+organizations_networks_combine:
+  - cisco.meraki.organizations_networks_combine
+organizations_openapi_spec_info:
+  - cisco.meraki.organizations_openapi_spec_info
+organizations_policy_objects:
+  - cisco.meraki.organizations_policy_objects
+organizations_policy_objects_groups:
+  - cisco.meraki.organizations_policy_objects_groups
+organizations_policy_objects_groups_info:
+  - cisco.meraki.organizations_policy_objects_groups_info
+organizations_policy_objects_info:
+  - cisco.meraki.organizations_policy_objects_info
+organizations_saml:
+  - cisco.meraki.organizations_saml
+organizations_saml_idps:
+  - cisco.meraki.organizations_saml_idps
+organizations_saml_idps_info:
+  - cisco.meraki.organizations_saml_idps_info
+organizations_saml_info:
+  - cisco.meraki.organizations_saml_info
+organizations_saml_roles:
+  - cisco.meraki.organizations_saml_roles
+organizations_saml_roles_info:
+  - cisco.meraki.organizations_saml_roles_info
+organizations_sensor_readings_history_info:
+  - cisco.meraki.organizations_sensor_readings_history_info
+organizations_sensor_readings_latest_info:
+  - cisco.meraki.organizations_sensor_readings_latest_info
+organizations_sm_apns_cert_info:
+  - cisco.meraki.organizations_sm_apns_cert_info
+organizations_sm_vpp_accounts_info:
+  - cisco.meraki.organizations_sm_vpp_accounts_info
+organizations_snmp:
+  - cisco.meraki.organizations_snmp
+organizations_snmp_info:
+  - cisco.meraki.organizations_snmp_info
+organizations_summary_top_appliances_by_utilization_info:
+  - cisco.meraki.organizations_summary_top_appliances_by_utilization_info
+organizations_summary_top_clients_by_usage_info:
+  - cisco.meraki.organizations_summary_top_clients_by_usage_info
+organizations_summary_top_clients_manufacturers_by_usage_info:
+  - cisco.meraki.organizations_summary_top_clients_manufacturers_by_usage_info
+organizations_summary_top_devices_by_usage_info:
+  - cisco.meraki.organizations_summary_top_devices_by_usage_info
+organizations_summary_top_devices_models_by_usage_info:
+  - cisco.meraki.organizations_summary_top_devices_models_by_usage_info
+organizations_summary_top_ssids_by_usage_info:
+  - cisco.meraki.organizations_summary_top_ssids_by_usage_info
+organizations_summary_top_switches_by_energy_usage_info:
+  - cisco.meraki.organizations_summary_top_switches_by_energy_usage_info
+organizations_switch_devices_clone:
+  - cisco.meraki.organizations_switch_devices_clone
+organizations_switch_ports_by_switch_info:
+  - cisco.meraki.organizations_switch_ports_by_switch_info
+organizations_uplinks_statuses_info:
+  - cisco.meraki.organizations_uplinks_statuses_info
+organizations_users:
+  - cisco.meraki.organizations_users
+organizations_webhooks_logs_info:
+  - cisco.meraki.organizations_webhooks_logs_info
+organizations_wireless_devices_ethernet_statuses_info:
+  - cisco.meraki.organizations_wireless_devices_ethernet_statuses_info
 os10_command:
   - dellemc.os10.os10_command
 os10_config:
@@ -13048,6 +13851,8 @@ route53_health_check:
   - amazon.aws.route53_health_check
 route53_info:
   - amazon.aws.route53_info
+route53_wait:
+  - community.aws.route53_wait
 route53_zone:
   - amazon.aws.route53_zone
 router:
@@ -13493,6 +14298,8 @@ slxos_vlan:
   - community.network.slxos_vlan
 smart_class_parameter:
   - theforeman.foreman.smart_class_parameter
+smart_class_parameter_override_value:
+  - theforeman.foreman.smart_class_parameter_override_value
 smart_proxy:
   - theforeman.foreman.smart_proxy
 smartos_image_info:
@@ -14705,6 +15512,10 @@ voss_facts:
   - community.network.voss_facts
 vpc:
   - vultr.cloud.vpc
+vpc2:
+  - vultr.cloud.vpc2
+vpc2_info:
+  - vultr.cloud.vpc2_info
 vpc_info:
   - vultr.cloud.vpc_info
 vsan_health_silent_checks:
@@ -14847,6 +15658,8 @@ wait_for:
   - ansible.builtin.wait_for
 wait_for_connection:
   - ansible.builtin.wait_for_connection
+wait_for_task:
+  - theforeman.foreman.wait_for_task
 wait_for_txt:
   - community.dns.wait_for_txt
 wakeonlan:
