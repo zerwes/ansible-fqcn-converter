@@ -1,5 +1,7 @@
 ---
 __fqcnconverter_file_version__: 0.1.2
+_include:
+  - ansible.builtin.include
 a10_server:
   - community.network.a10_server
 a10_server_axapi3:
@@ -3531,6 +3533,8 @@ devices_wireless_status_info:
   - cisco.meraki.devices_wireless_status_info
 digital_ocean:
   - community.digitalocean.digital_ocean
+digital_ocean_account_facts:
+  - community.digitalocean.digital_ocean_account_info
 digital_ocean_account_info:
   - community.digitalocean.digital_ocean_account_info
 digital_ocean_balance_info:
@@ -3543,6 +3547,8 @@ digital_ocean_cdn_endpoints_info:
   - community.digitalocean.digital_ocean_cdn_endpoints_info
 digital_ocean_certificate:
   - community.digitalocean.digital_ocean_certificate
+digital_ocean_certificate_facts:
+  - community.digitalocean.digital_ocean_certificate_info
 digital_ocean_certificate_info:
   - community.digitalocean.digital_ocean_certificate_info
 digital_ocean_database:
@@ -3551,6 +3557,8 @@ digital_ocean_database_info:
   - community.digitalocean.digital_ocean_database_info
 digital_ocean_domain:
   - community.digitalocean.digital_ocean_domain
+digital_ocean_domain_facts:
+  - community.digitalocean.digital_ocean_domain_info
 digital_ocean_domain_info:
   - community.digitalocean.digital_ocean_domain_info
 digital_ocean_domain_record:
@@ -3563,12 +3571,18 @@ digital_ocean_droplet_info:
   - community.digitalocean.digital_ocean_droplet_info
 digital_ocean_firewall:
   - community.digitalocean.digital_ocean_firewall
+digital_ocean_firewall_facts:
+  - community.digitalocean.digital_ocean_firewall_info
 digital_ocean_firewall_info:
   - community.digitalocean.digital_ocean_firewall_info
 digital_ocean_floating_ip:
   - community.digitalocean.digital_ocean_floating_ip
+digital_ocean_floating_ip_facts:
+  - community.digitalocean.digital_ocean_floating_ip_info
 digital_ocean_floating_ip_info:
   - community.digitalocean.digital_ocean_floating_ip_info
+digital_ocean_image_facts:
+  - community.digitalocean.digital_ocean_image_info
 digital_ocean_image_info:
   - community.digitalocean.digital_ocean_image_info
 digital_ocean_kubernetes:
@@ -3577,6 +3591,8 @@ digital_ocean_kubernetes_info:
   - community.digitalocean.digital_ocean_kubernetes_info
 digital_ocean_load_balancer:
   - community.digitalocean.digital_ocean_load_balancer
+digital_ocean_load_balancer_facts:
+  - community.digitalocean.digital_ocean_load_balancer_info
 digital_ocean_load_balancer_info:
   - community.digitalocean.digital_ocean_load_balancer_info
 digital_ocean_monitoring_alerts:
@@ -3587,12 +3603,18 @@ digital_ocean_project:
   - community.digitalocean.digital_ocean_project
 digital_ocean_project_info:
   - community.digitalocean.digital_ocean_project_info
+digital_ocean_region_facts:
+  - community.digitalocean.digital_ocean_region_info
 digital_ocean_region_info:
   - community.digitalocean.digital_ocean_region_info
+digital_ocean_size_facts:
+  - community.digitalocean.digital_ocean_size_info
 digital_ocean_size_info:
   - community.digitalocean.digital_ocean_size_info
 digital_ocean_snapshot:
   - community.digitalocean.digital_ocean_snapshot
+digital_ocean_snapshot_facts:
+  - community.digitalocean.digital_ocean_snapshot_info
 digital_ocean_snapshot_info:
   - community.digitalocean.digital_ocean_snapshot_info
 digital_ocean_spaces:
@@ -3601,12 +3623,18 @@ digital_ocean_spaces_info:
   - community.digitalocean.digital_ocean_spaces_info
 digital_ocean_sshkey:
   - community.digitalocean.digital_ocean_sshkey
+digital_ocean_sshkey_facts:
+  - community.digitalocean.digital_ocean_sshkey_info
 digital_ocean_sshkey_info:
   - community.digitalocean.digital_ocean_sshkey_info
 digital_ocean_tag:
   - community.digitalocean.digital_ocean_tag
+digital_ocean_tag_facts:
+  - community.digitalocean.digital_ocean_tag_info
 digital_ocean_tag_info:
   - community.digitalocean.digital_ocean_tag_info
+digital_ocean_volume_facts:
+  - community.digitalocean.digital_ocean_volume_info
 digital_ocean_volume_info:
   - community.digitalocean.digital_ocean_volume_info
 digital_ocean_vpc:
@@ -8693,14 +8721,20 @@ hcloud_certificate:
   - hetzner.hcloud.hcloud_certificate
 hcloud_certificate_info:
   - hetzner.hcloud.hcloud_certificate_info
+hcloud_datacenter_facts:
+  - hetzner.hcloud.hcloud_datacenter_info
 hcloud_datacenter_info:
   - hetzner.hcloud.hcloud_datacenter_info
 hcloud_firewall:
   - hetzner.hcloud.hcloud_firewall
 hcloud_floating_ip:
   - hetzner.hcloud.hcloud_floating_ip
+hcloud_floating_ip_facts:
+  - hetzner.hcloud.hcloud_floating_ip_info
 hcloud_floating_ip_info:
   - hetzner.hcloud.hcloud_floating_ip_info
+hcloud_image_facts:
+  - hetzner.hcloud.hcloud_image_info
 hcloud_image_info:
   - hetzner.hcloud.hcloud_image_info
 hcloud_iso_info:
@@ -8717,6 +8751,8 @@ hcloud_load_balancer_target:
   - hetzner.hcloud.hcloud_load_balancer_target
 hcloud_load_balancer_type_info:
   - hetzner.hcloud.hcloud_load_balancer_type_info
+hcloud_location_facts:
+  - hetzner.hcloud.hcloud_location_info
 hcloud_location_info:
   - hetzner.hcloud.hcloud_location_info
 hcloud_network:
@@ -8735,20 +8771,28 @@ hcloud_route:
   - hetzner.hcloud.hcloud_route
 hcloud_server:
   - hetzner.hcloud.hcloud_server
+hcloud_server_facts:
+  - hetzner.hcloud.hcloud_server_info
 hcloud_server_info:
   - hetzner.hcloud.hcloud_server_info
 hcloud_server_network:
   - hetzner.hcloud.hcloud_server_network
+hcloud_server_type_facts:
+  - hetzner.hcloud.hcloud_server_type_info
 hcloud_server_type_info:
   - hetzner.hcloud.hcloud_server_type_info
 hcloud_ssh_key:
   - hetzner.hcloud.hcloud_ssh_key
+hcloud_ssh_key_facts:
+  - hetzner.hcloud.hcloud_ssh_key_info
 hcloud_ssh_key_info:
   - hetzner.hcloud.hcloud_ssh_key_info
 hcloud_subnetwork:
   - hetzner.hcloud.hcloud_subnetwork
 hcloud_volume:
   - hetzner.hcloud.hcloud_volume
+hcloud_volume_facts:
+  - hetzner.hcloud.hcloud_volume_info
 hcloud_volume_info:
   - hetzner.hcloud.hcloud_volume_info
 helm:
@@ -8826,6 +8870,8 @@ hosttech_dns_record_set:
 hosttech_dns_record_set_info:
   - community.dns.hosttech_dns_record_set_info
 hosttech_dns_record_sets:
+  - community.dns.hosttech_dns_record_sets
+hosttech_dns_records:
   - community.dns.hosttech_dns_record_sets
 hosttech_dns_zone_info:
   - community.dns.hosttech_dns_zone_info
@@ -9308,8 +9354,6 @@ import_role:
   - ansible.builtin.import_role
 import_tasks:
   - ansible.builtin.import_tasks
-include:
-  - ansible.builtin.include
 include_role:
   - ansible.builtin.include_role
 include_tasks:
@@ -10294,6 +10338,8 @@ mso_schema_template_external_epg_selector:
   - cisco.mso.mso_schema_template_external_epg_selector
 mso_schema_template_external_epg_subnet:
   - cisco.mso.mso_schema_template_external_epg_subnet
+mso_schema_template_externalepg:
+  - cisco.mso.mso_schema_template_external_epg
 mso_schema_template_filter_entry:
   - cisco.mso.mso_schema_template_filter_entry
 mso_schema_template_l3out:
@@ -10816,6 +10862,16 @@ na_um_aggregates_info:
   - netapp.um_info.na_um_aggregates_info
 na_um_clusters_info:
   - netapp.um_info.na_um_clusters_info
+na_um_list_aggregates:
+  - netapp.um_info.na_um_aggregates_info
+na_um_list_clusters:
+  - netapp.um_info.na_um_clusters_info
+na_um_list_nodes:
+  - netapp.um_info.na_um_nodes_info
+na_um_list_svms:
+  - netapp.um_info.na_um_svms_info
+na_um_list_volumes:
+  - netapp.um_info.na_um_volumes_info
 na_um_nodes_info:
   - netapp.um_info.na_um_nodes_info
 na_um_svms_info:
@@ -13570,8 +13626,22 @@ qos_device_interface_info_count_info:
   - cisco.dnac.qos_device_interface_info_count_info
 qradar_analytics_rules:
   - ibm.qradar.qradar_analytics_rules
+qradar_deploy:
+  - ibm.qradar.deploy
+qradar_log_source_management:
+  - ibm.qradar.log_source_management
 qradar_log_sources_management:
   - ibm.qradar.qradar_log_sources_management
+qradar_offense_action:
+  - ibm.qradar.offense_action
+qradar_offense_info:
+  - ibm.qradar.offense_info
+qradar_offense_note:
+  - ibm.qradar.offense_note
+qradar_rule:
+  - ibm.qradar.rule
+qradar_rule_info:
+  - ibm.qradar.rule_info
 quota:
   - openstack.cloud.quota
 rabbitmq_binding:
@@ -14455,10 +14525,20 @@ spectrum_device:
   - community.general.spectrum_device
 spectrum_model_attrs:
   - community.general.spectrum_model_attrs
+splunk_adaptive_response_notable_event:
+  - splunk.es.adaptive_response_notable_event
 splunk_adaptive_response_notable_events:
   - splunk.es.splunk_adaptive_response_notable_events
+splunk_correlation_search:
+  - splunk.es.correlation_search
+splunk_correlation_search_info:
+  - splunk.es.correlation_search_info
 splunk_correlation_searches:
   - splunk.es.splunk_correlation_searches
+splunk_data_input_monitor:
+  - splunk.es.data_input_monitor
+splunk_data_input_network:
+  - splunk.es.data_input_network
 splunk_data_inputs_monitor:
   - splunk.es.splunk_data_inputs_monitor
 splunk_data_inputs_network:
@@ -14649,6 +14729,8 @@ system_performance_historical_info:
   - cisco.dnac.system_performance_historical_info
 system_performance_info:
   - cisco.dnac.system_performance_info
+systemd:
+  - ansible.builtin.systemd_service
 systemd_service:
   - ansible.builtin.systemd_service
 sysupgrade:
