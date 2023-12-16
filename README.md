@@ -50,7 +50,7 @@ The ansible files should be linted and valid yaml files! Esp. the following ansi
 
  6. If the diff displayed seems OK to you, let the script modify your files:
 
-    (:exclamation: it is **your job and responsability** to inspect the diff vigilant and alerted; use at your own risk :exclamation:)
+    ( :exclamation: it is **your job and responsability** to inspect the diff vigilant and alerted; use at your own risk :exclamation:)
 
     `$PATH_TO_ansible-fqcn-converter/fqcn-fixer.py -w`
 
