@@ -30,7 +30,7 @@ The ansible files should be linted and valid yaml files! Esp. the following ansi
 
     `chmod 755 ansible-fqcn-converter/fqcn-fixer.py`
 
- 3. Optional: install collections you miss in the `fqcn.yml` file and re-create the `fqcn-map-file` (:warning: takes about 40 minutes :warning:):
+ 3. Optional: install collections you miss in the `fqcn.yml` file and re-create the `fqcn-map-file` ( :warning: takes about 40 minutes :warning: ):
 
   ```
   cd ansible-fqcn-converter
