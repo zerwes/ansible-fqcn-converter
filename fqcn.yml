@@ -560,6 +560,84 @@ anc_policy_info:
   - cisco.ise.anc_policy_info
 ansible_galaxy_install:
   - community.general.ansible_galaxy_install
+aoscx_acl:
+  - arubanetworks.aoscx.aoscx_acl
+aoscx_acl_interface:
+  - arubanetworks.aoscx.aoscx_acl_interface
+aoscx_acl_vlan:
+  - arubanetworks.aoscx.aoscx_acl_vlan
+aoscx_backup_config:
+  - arubanetworks.aoscx.aoscx_backup_config
+aoscx_banner:
+  - arubanetworks.aoscx.aoscx_banner
+aoscx_boot_firmware:
+  - arubanetworks.aoscx.aoscx_boot_firmware
+aoscx_checkpoint:
+  - arubanetworks.aoscx.aoscx_checkpoint
+aoscx_command:
+  - arubanetworks.aoscx.aoscx_command
+aoscx_config:
+  - arubanetworks.aoscx.aoscx_config
+aoscx_dns:
+  - arubanetworks.aoscx.aoscx_dns
+aoscx_facts:
+  - arubanetworks.aoscx.aoscx_facts
+aoscx_interface:
+  - arubanetworks.aoscx.aoscx_interface
+aoscx_l2_interface:
+  - arubanetworks.aoscx.aoscx_l2_interface
+aoscx_l3_interface:
+  - arubanetworks.aoscx.aoscx_l3_interface
+aoscx_lag_interface:
+  - arubanetworks.aoscx.aoscx_lag_interface
+aoscx_mac:
+  - arubanetworks.aoscx.aoscx_mac
+aoscx_ospf_area:
+  - arubanetworks.aoscx.aoscx_ospf_area
+aoscx_ospf_interface:
+  - arubanetworks.aoscx.aoscx_ospf_interface
+aoscx_ospf_router:
+  - arubanetworks.aoscx.aoscx_ospf_router
+aoscx_ospf_vlink:
+  - arubanetworks.aoscx.aoscx_ospf_vlink
+aoscx_ospfv3_area:
+  - arubanetworks.aoscx.aoscx_ospfv3_area
+aoscx_ospfv3_router:
+  - arubanetworks.aoscx.aoscx_ospfv3_router
+aoscx_ospfv3_vlink:
+  - arubanetworks.aoscx.aoscx_ospfv3_vlink
+aoscx_poe:
+  - arubanetworks.aoscx.aoscx_poe
+aoscx_qos:
+  - arubanetworks.aoscx.aoscx_qos
+aoscx_qos_cos:
+  - arubanetworks.aoscx.aoscx_qos_cos
+aoscx_qos_dscp:
+  - arubanetworks.aoscx.aoscx_qos_dscp
+aoscx_queue:
+  - arubanetworks.aoscx.aoscx_queue
+aoscx_queue_profile:
+  - arubanetworks.aoscx.aoscx_queue_profile
+aoscx_queue_profile_entry:
+  - arubanetworks.aoscx.aoscx_queue_profile_entry
+aoscx_static_mac:
+  - arubanetworks.aoscx.aoscx_static_mac
+aoscx_static_route:
+  - arubanetworks.aoscx.aoscx_static_route
+aoscx_system:
+  - arubanetworks.aoscx.aoscx_system
+aoscx_upload_config:
+  - arubanetworks.aoscx.aoscx_upload_config
+aoscx_upload_firmware:
+  - arubanetworks.aoscx.aoscx_upload_firmware
+aoscx_vlan:
+  - arubanetworks.aoscx.aoscx_vlan
+aoscx_vlan_interface:
+  - arubanetworks.aoscx.aoscx_vlan_interface
+aoscx_vrf:
+  - arubanetworks.aoscx.aoscx_vrf
+aoscx_vsx:
+  - arubanetworks.aoscx.aoscx_vsx
 apache2_mod_proxy:
   - community.general.apache2_mod_proxy
 apache2_module:
@@ -756,6 +834,78 @@ aruba_command:
   - community.network.aruba_command
 aruba_config:
   - community.network.aruba_config
+arubaoss_aaa_accounting:
+  - arubanetworks.aos_switch.arubaoss_aaa_accounting
+arubaoss_aaa_authentication:
+  - arubanetworks.aos_switch.arubaoss_aaa_authentication
+arubaoss_aaa_authorization:
+  - arubanetworks.aos_switch.arubaoss_aaa_authorization
+arubaoss_acl_policy:
+  - arubanetworks.aos_switch.arubaoss_acl_policy
+arubaoss_anycli:
+  - arubanetworks.aos_switch.arubaoss_anycli
+arubaoss_captive_portal:
+  - arubanetworks.aos_switch.arubaoss_captive_portal
+arubaoss_command:
+  - arubanetworks.aos_switch.arubaoss_command
+arubaoss_config:
+  - arubanetworks.aos_switch.arubaoss_config
+arubaoss_config_bkup:
+  - arubanetworks.aos_switch.arubaoss_config_bkup
+arubaoss_dns:
+  - arubanetworks.aos_switch.arubaoss_dns
+arubaoss_dot1x:
+  - arubanetworks.aos_switch.arubaoss_dot1x
+arubaoss_dsnoop:
+  - arubanetworks.aos_switch.arubaoss_dsnoop
+arubaoss_facts:
+  - arubanetworks.aos_switch.arubaoss_facts
+arubaoss_file_transfer:
+  - arubanetworks.aos_switch.arubaoss_file_transfer
+arubaoss_interface:
+  - arubanetworks.aos_switch.arubaoss_interface
+arubaoss_ip_auth:
+  - arubanetworks.aos_switch.arubaoss_ip_auth
+arubaoss_ip_route:
+  - arubanetworks.aos_switch.arubaoss_ip_route
+arubaoss_loop_protect:
+  - arubanetworks.aos_switch.arubaoss_loop_protect
+arubaoss_mac_authentication:
+  - arubanetworks.aos_switch.arubaoss_mac_authentication
+arubaoss_ntp:
+  - arubanetworks.aos_switch.arubaoss_ntp
+arubaoss_poe:
+  - arubanetworks.aos_switch.arubaoss_poe
+arubaoss_port_rate_limit:
+  - arubanetworks.aos_switch.arubaoss_port_rate_limit
+arubaoss_qos_policy:
+  - arubanetworks.aos_switch.arubaoss_qos_policy
+arubaoss_radius_profile:
+  - arubanetworks.aos_switch.arubaoss_radius_profile
+arubaoss_reboot:
+  - arubanetworks.aos_switch.arubaoss_reboot
+arubaoss_routing:
+  - arubanetworks.aos_switch.arubaoss_routing
+arubaoss_snmp:
+  - arubanetworks.aos_switch.arubaoss_snmp
+arubaoss_snmp_trap:
+  - arubanetworks.aos_switch.arubaoss_snmp_trap
+arubaoss_sntp:
+  - arubanetworks.aos_switch.arubaoss_sntp
+arubaoss_stp:
+  - arubanetworks.aos_switch.arubaoss_stp
+arubaoss_syslog:
+  - arubanetworks.aos_switch.arubaoss_syslog
+arubaoss_system_attributes:
+  - arubanetworks.aos_switch.arubaoss_system_attributes
+arubaoss_tacacs_profile:
+  - arubanetworks.aos_switch.arubaoss_tacacs_profile
+arubaoss_traffic_class:
+  - arubanetworks.aos_switch.arubaoss_interfaces
+arubaoss_user:
+  - arubanetworks.aos_switch.arubaoss_user
+arubaoss_vlan:
+  - arubanetworks.aos_switch.arubaoss_vlan
 asa_acls:
   - cisco.asa.asa_acls
 asa_command:
@@ -1610,6 +1760,8 @@ baremetal_port:
   - openstack.cloud.baremetal_port
 baremetal_port_info:
   - openstack.cloud.baremetal_port_info
+base_xml_to_dict:
+  - dellemc.os10.base_xml_to_dict
 batch_compute_environment:
   - community.aws.batch_compute_environment
 batch_job_definition:
@@ -1622,6 +1774,8 @@ beadm:
   - community.general.beadm
 bearychat:
   - community.general.bearychat
+bgp_validate:
+  - dellemc.os10.bgp_validate
 bigip_apm_acl:
   - f5networks.f5_modules.bigip_apm_acl
 bigip_apm_network_access:
@@ -2271,8 +2425,6 @@ clear_event_log:
 clear_system_log:
   - inspur.ispim.clear_system_log
   - inspur.sm.clear_system_log
-cli_backup:
-  - ansible.netcommon.cli_backup
 cli_command:
   - ansible.netcommon.cli_command
 cli_config:
@@ -10509,6 +10661,8 @@ mssql_db:
   - community.general.mssql_db
 mssql_script:
   - community.general.mssql_script
+mtu_validate:
+  - dellemc.os10.mtu_validate
 mutator:
   - sensu.sensu_go.mutator
 mutator_info:
@@ -12840,6 +12994,20 @@ organizations_webhooks_logs_info:
   - cisco.meraki.organizations_webhooks_logs_info
 organizations_wireless_devices_ethernet_statuses_info:
   - cisco.meraki.organizations_wireless_devices_ethernet_statuses_info
+os10:
+  - dellemc.os10.os10
+os10_command:
+  - dellemc.os10.os10_command
+os10_config:
+  - dellemc.os10.os10_config
+os10_facts:
+  - dellemc.os10.os10_facts
+os6_command:
+  - dellemc.os6.os6_command
+os6_config:
+  - dellemc.os6.os6_config
+os6_facts:
+  - dellemc.os6.os6_facts
 os_default_template:
   - theforeman.foreman.os_default_template
 os_info:
@@ -14468,6 +14636,8 @@ sgt_info:
   - cisco.ise.sgt_info
 shell:
   - ansible.builtin.shell
+show_system_network_summary:
+  - dellemc.os10.show_system_network_summary
 shutdown:
   - community.general.shutdown
 silence:
@@ -14981,6 +15151,8 @@ tessen:
   - sensu.sensu_go.tessen
 test_connector:
   - cisco.ise.test_connector
+textfsm_parser:
+  - dellemc.os10.textfsm_parser
 threat_detail:
   - cisco.dnac.threat_detail
 threat_detail_count:
@@ -15383,6 +15555,8 @@ virt_pool:
 virtual_media_info:
   - inspur.ispim.virtual_media_info
   - inspur.sm.virtual_media_info
+vlt_validate:
+  - dellemc.os10.vlt_validate
 vmadm:
   - community.general.vmadm
 vmware_about_info:
@@ -16155,6 +16329,8 @@ wireless_rf_profile_info:
   - cisco.dnac.wireless_rf_profile_info
 wireless_sensor_test_results_info:
   - cisco.dnac.wireless_sensor_test_results_info
+wiring_validate:
+  - dellemc.os10.wiring_validate
 workflow_approval:
   - awx.awx.workflow_approval
 workflow_job_template:
