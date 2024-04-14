@@ -2190,6 +2190,8 @@ buildings_planned_access_points_info:
   - cisco.dnac.buildings_planned_access_points_info
 bulk_host_create:
   - awx.awx.bulk_host_create
+bulk_host_delete:
+  - awx.awx.bulk_host_delete
 bulk_job_launch:
   - awx.awx.bulk_job_launch
 bundler:
@@ -2668,6 +2670,12 @@ consul:
   - community.general.consul
 consul_acl:
   - community.general.consul_acl
+consul_acl_bootstrap:
+  - community.general.consul_acl_bootstrap
+consul_auth_method:
+  - community.general.consul_auth_method
+consul_binding_rule:
+  - community.general.consul_binding_rule
 consul_kv:
   - community.general.consul_kv
 consul_policy:
@@ -2676,6 +2684,8 @@ consul_role:
   - community.general.consul_role
 consul_session:
   - community.general.consul_session
+consul_token:
+  - community.general.consul_token
 content_configuration:
   - vmware.vmware_rest.content_configuration
 content_configuration_info:
@@ -2754,6 +2764,8 @@ cp_mgmt_access_section:
   - check_point.mgmt.cp_mgmt_access_section
 cp_mgmt_add_api_key:
   - check_point.mgmt.cp_mgmt_add_api_key
+cp_mgmt_add_central_license:
+  - check_point.mgmt.cp_mgmt_add_central_license
 cp_mgmt_add_data_center_object:
   - check_point.mgmt.cp_mgmt_add_data_center_object
 cp_mgmt_add_domain:
@@ -2790,6 +2802,8 @@ cp_mgmt_approve_session:
   - check_point.mgmt.cp_mgmt_approve_session
 cp_mgmt_assign_global_assignment:
   - check_point.mgmt.cp_mgmt_assign_global_assignment
+cp_mgmt_central_license_facts:
+  - check_point.mgmt.cp_mgmt_central_license_facts
 cp_mgmt_check_network_feed:
   - check_point.mgmt.cp_mgmt_check_network_feed
 cp_mgmt_check_threat_ioc_feed:
@@ -2806,6 +2820,8 @@ cp_mgmt_data_center_object_facts:
   - check_point.mgmt.cp_mgmt_data_center_object_facts
 cp_mgmt_delete_api_key:
   - check_point.mgmt.cp_mgmt_delete_api_key
+cp_mgmt_delete_central_license:
+  - check_point.mgmt.cp_mgmt_delete_central_license
 cp_mgmt_delete_data_center_object:
   - check_point.mgmt.cp_mgmt_delete_data_center_object
 cp_mgmt_delete_domain:
@@ -2822,6 +2838,8 @@ cp_mgmt_discard:
   - check_point.mgmt.cp_mgmt_discard
 cp_mgmt_disconnect_cloud_services:
   - check_point.mgmt.cp_mgmt_disconnect_cloud_services
+cp_mgmt_distribute_cloud_licenses:
+  - check_point.mgmt.cp_mgmt_distribute_cloud_licenses
 cp_mgmt_dns_domain:
   - check_point.mgmt.cp_mgmt_dns_domain
 cp_mgmt_dns_domain_facts:
@@ -3084,6 +3102,8 @@ cp_mgmt_show_azure_ad_content:
   - check_point.mgmt.cp_mgmt_show_azure_ad_content
 cp_mgmt_show_changes:
   - check_point.mgmt.cp_mgmt_show_changes
+cp_mgmt_show_cloud_licenses_usage:
+  - check_point.mgmt.cp_mgmt_show_cloud_licenses_usage
 cp_mgmt_show_cloud_services:
   - check_point.mgmt.cp_mgmt_show_cloud_services
 cp_mgmt_show_commands:
@@ -3096,6 +3116,8 @@ cp_mgmt_show_global_properties:
   - check_point.mgmt.cp_mgmt_show_global_properties
 cp_mgmt_show_ha_state:
   - check_point.mgmt.cp_mgmt_show_ha_state
+cp_mgmt_show_ha_status:
+  - check_point.mgmt.cp_mgmt_show_ha_status
 cp_mgmt_show_https_section:
   - check_point.mgmt.cp_mgmt_show_https_section
 cp_mgmt_show_idp_default_assignment:
@@ -3194,8 +3216,6 @@ cp_mgmt_threat_rule:
   - check_point.mgmt.cp_mgmt_threat_rule
 cp_mgmt_threat_rule_facts:
   - check_point.mgmt.cp_mgmt_threat_rule_facts
-cp_mgmt_threat_rules:
-  - check_point.mgmt.cp_mgmt_threat_rules
 cp_mgmt_time:
   - check_point.mgmt.cp_mgmt_time
 cp_mgmt_time_facts:
@@ -3607,6 +3627,8 @@ device_credential_intent:
   - cisco.dnac.device_credential_intent
 device_credential_update:
   - cisco.dnac.device_credential_update
+device_credential_workflow_manager:
+  - cisco.dnac.device_credential_workflow_manager
 device_details_info:
   - cisco.dnac.device_details_info
 device_enrichment_details_info:
@@ -3819,6 +3841,8 @@ digital_ocean_project:
   - community.digitalocean.digital_ocean_project
 digital_ocean_project_info:
   - community.digitalocean.digital_ocean_project_info
+digital_ocean_project_resource_info:
+  - community.digitalocean.digital_ocean_project_resource_info
 digital_ocean_region_facts:
   - community.digitalocean.digital_ocean_region_info
 digital_ocean_region_info:
@@ -3891,6 +3915,8 @@ discovery_device_range_info:
   - cisco.dnac.discovery_device_range_info
 discovery_info:
   - cisco.dnac.discovery_info
+discovery_intent:
+  - cisco.dnac.discovery_intent
 discovery_job_info:
   - cisco.dnac.discovery_job_info
 discovery_range_delete:
@@ -3901,6 +3927,8 @@ discovery_rule:
   - theforeman.foreman.discovery_rule
 discovery_summary_info:
   - cisco.dnac.discovery_summary_info
+discovery_workflow_manager:
+  - cisco.dnac.discovery_workflow_manager
 django_manage:
   - community.general.django_manage
 dladm_etherstub:
@@ -3927,6 +3955,8 @@ dnf:
   - ansible.builtin.dnf
 dnf5:
   - ansible.builtin.dnf5
+dnf_config_manager:
+  - community.general.dnf_config_manager
 dnf_versionlock:
   - community.general.dnf_versionlock
 dns_domain:
@@ -3950,6 +3980,10 @@ dnsmadeeasy:
   - community.general.dnsmadeeasy
 docker_compose:
   - community.docker.docker_compose
+docker_compose_v2:
+  - community.docker.docker_compose_v2
+docker_compose_v2_pull:
+  - community.docker.docker_compose_v2_pull
 docker_config:
   - community.docker.docker_config
 docker_container:
@@ -3964,10 +3998,22 @@ docker_host_info:
   - community.docker.docker_host_info
 docker_image:
   - community.docker.docker_image
+docker_image_build:
+  - community.docker.docker_image_build
+docker_image_export:
+  - community.docker.docker_image_export
 docker_image_info:
   - community.docker.docker_image_info
 docker_image_load:
   - community.docker.docker_image_load
+docker_image_pull:
+  - community.docker.docker_image_pull
+docker_image_push:
+  - community.docker.docker_image_push
+docker_image_remove:
+  - community.docker.docker_image_remove
+docker_image_tag:
+  - community.docker.docker_image_tag
 docker_login:
   - community.docker.docker_login
 docker_network:
@@ -4625,6 +4671,8 @@ failover_ip_info:
 fan_info:
   - inspur.ispim.fan_info
   - inspur.sm.fan_info
+fault_set:
+  - dellemc.powerflex.fault_set
 federation_idp:
   - openstack.cloud.federation_idp
 federation_idp_info:
@@ -4671,6 +4719,9 @@ firewall_group_info:
   - vultr.cloud.firewall_group_info
 firewall_info:
   - community.hrobot.firewall_info
+  - hetzner.hcloud.firewall_info
+firewall_resource:
+  - hetzner.hcloud.firewall_resource
 firewall_rule:
   - vultr.cloud.firewall_rule
 firewall_rule_info:
@@ -4912,6 +4963,8 @@ fmgr_devprof_system_snmp_sysinfo:
   - fortinet.fortimanager.fmgr_devprof_system_snmp_sysinfo
 fmgr_devprof_system_snmp_user:
   - fortinet.fortimanager.fmgr_devprof_system_snmp_user
+fmgr_diameterfilter_profile:
+  - fortinet.fortimanager.fmgr_diameterfilter_profile
 fmgr_dlp_datatype:
   - fortinet.fortimanager.fmgr_dlp_datatype
 fmgr_dlp_dictionary:
@@ -5258,6 +5311,10 @@ fmgr_firewall_accessproxy_serverpubkeyauthsettings:
   - fortinet.fortimanager.fmgr_firewall_accessproxy_serverpubkeyauthsettings
 fmgr_firewall_accessproxy_serverpubkeyauthsettings_certextension:
   - fortinet.fortimanager.fmgr_firewall_accessproxy_serverpubkeyauthsettings_certextension
+fmgr_firewall_accessproxysshclientcert:
+  - fortinet.fortimanager.fmgr_firewall_accessproxysshclientcert
+fmgr_firewall_accessproxysshclientcert_certextension:
+  - fortinet.fortimanager.fmgr_firewall_accessproxysshclientcert_certextension
 fmgr_firewall_accessproxyvirtualhost:
   - fortinet.fortimanager.fmgr_firewall_accessproxyvirtualhost
 fmgr_firewall_address:
@@ -5530,6 +5587,8 @@ fmgr_firewall_vip6_dynamicmapping_realservers:
   - fortinet.fortimanager.fmgr_firewall_vip6_dynamicmapping_realservers
 fmgr_firewall_vip6_dynamicmapping_sslciphersuites:
   - fortinet.fortimanager.fmgr_firewall_vip6_dynamicmapping_sslciphersuites
+fmgr_firewall_vip6_quic:
+  - fortinet.fortimanager.fmgr_firewall_vip6_quic
 fmgr_firewall_vip6_realservers:
   - fortinet.fortimanager.fmgr_firewall_vip6_realservers
 fmgr_firewall_vip6_sslciphersuites:
@@ -5542,6 +5601,8 @@ fmgr_firewall_vip_dynamicmapping_realservers:
   - fortinet.fortimanager.fmgr_firewall_vip_dynamicmapping_realservers
 fmgr_firewall_vip_dynamicmapping_sslciphersuites:
   - fortinet.fortimanager.fmgr_firewall_vip_dynamicmapping_sslciphersuites
+fmgr_firewall_vip_gslbpublicips:
+  - fortinet.fortimanager.fmgr_firewall_vip_gslbpublicips
 fmgr_firewall_vip_quic:
   - fortinet.fortimanager.fmgr_firewall_vip_quic
 fmgr_firewall_vip_realservers:
@@ -6010,6 +6071,10 @@ fmgr_router_routemap:
   - fortinet.fortimanager.fmgr_router_routemap
 fmgr_router_routemap_rule:
   - fortinet.fortimanager.fmgr_router_routemap_rule
+fmgr_sctpfilter_profile:
+  - fortinet.fortimanager.fmgr_sctpfilter_profile
+fmgr_sctpfilter_profile_ppidfilters:
+  - fortinet.fortimanager.fmgr_sctpfilter_profile_ppidfilters
 fmgr_securityconsole_abort:
   - fortinet.fortimanager.fmgr_securityconsole_abort
 fmgr_securityconsole_assign_package:
@@ -6164,6 +6229,8 @@ fmgr_switchcontroller_managedswitch_switchlog:
   - fortinet.fortimanager.fmgr_switchcontroller_managedswitch_switchlog
 fmgr_switchcontroller_managedswitch_switchstpsettings:
   - fortinet.fortimanager.fmgr_switchcontroller_managedswitch_switchstpsettings
+fmgr_switchcontroller_managedswitch_vlan:
+  - fortinet.fortimanager.fmgr_switchcontroller_managedswitch_vlan
 fmgr_switchcontroller_ptp_profile:
   - fortinet.fortimanager.fmgr_switchcontroller_ptp_profile
 fmgr_switchcontroller_qos_dot1pmap:
@@ -6220,6 +6287,10 @@ fmgr_system_admin_profile:
   - fortinet.fortimanager.fmgr_system_admin_profile
 fmgr_system_admin_profile_datamaskcustomfields:
   - fortinet.fortimanager.fmgr_system_admin_profile_datamaskcustomfields
+fmgr_system_admin_profile_writepasswdprofiles:
+  - fortinet.fortimanager.fmgr_system_admin_profile_writepasswdprofiles
+fmgr_system_admin_profile_writepasswduserlist:
+  - fortinet.fortimanager.fmgr_system_admin_profile_writepasswduserlist
 fmgr_system_admin_radius:
   - fortinet.fortimanager.fmgr_system_admin_radius
 fmgr_system_admin_setting:
@@ -6458,6 +6529,20 @@ fmgr_system_npu_npqueues_profile:
   - fortinet.fortimanager.fmgr_system_npu_npqueues_profile
 fmgr_system_npu_npqueues_scheduler:
   - fortinet.fortimanager.fmgr_system_npu_npqueues_scheduler
+fmgr_system_npu_nputcam:
+  - fortinet.fortimanager.fmgr_system_npu_nputcam
+fmgr_system_npu_nputcam_data:
+  - fortinet.fortimanager.fmgr_system_npu_nputcam_data
+fmgr_system_npu_nputcam_mask:
+  - fortinet.fortimanager.fmgr_system_npu_nputcam_mask
+fmgr_system_npu_nputcam_miract:
+  - fortinet.fortimanager.fmgr_system_npu_nputcam_miract
+fmgr_system_npu_nputcam_priact:
+  - fortinet.fortimanager.fmgr_system_npu_nputcam_priact
+fmgr_system_npu_nputcam_sact:
+  - fortinet.fortimanager.fmgr_system_npu_nputcam_sact
+fmgr_system_npu_nputcam_tact:
+  - fortinet.fortimanager.fmgr_system_npu_nputcam_tact
 fmgr_system_npu_portcpumap:
   - fortinet.fortimanager.fmgr_system_npu_portcpumap
 fmgr_system_npu_portnpumap:
@@ -6754,8 +6839,14 @@ fmgr_vap_vlanpool:
   - fortinet.fortimanager.fmgr_vap_vlanpool
 fmgr_vapgroup:
   - fortinet.fortimanager.fmgr_vapgroup
+fmgr_videofilter_keyword:
+  - fortinet.fortimanager.fmgr_videofilter_keyword
+fmgr_videofilter_keyword_word:
+  - fortinet.fortimanager.fmgr_videofilter_keyword_word
 fmgr_videofilter_profile:
   - fortinet.fortimanager.fmgr_videofilter_profile
+fmgr_videofilter_profile_filters:
+  - fortinet.fortimanager.fmgr_videofilter_profile_filters
 fmgr_videofilter_profile_fortiguardcategory:
   - fortinet.fortimanager.fmgr_videofilter_profile_fortiguardcategory
 fmgr_videofilter_profile_fortiguardcategory_filters:
@@ -6764,6 +6855,8 @@ fmgr_videofilter_youtubechannelfilter:
   - fortinet.fortimanager.fmgr_videofilter_youtubechannelfilter
 fmgr_videofilter_youtubechannelfilter_entries:
   - fortinet.fortimanager.fmgr_videofilter_youtubechannelfilter_entries
+fmgr_videofilter_youtubekey:
+  - fortinet.fortimanager.fmgr_videofilter_youtubekey
 fmgr_virtualpatch_profile:
   - fortinet.fortimanager.fmgr_virtualpatch_profile
 fmgr_virtualpatch_profile_exemption:
@@ -8804,6 +8897,8 @@ gitlab_deploy_key:
   - community.general.gitlab_deploy_key
 gitlab_group:
   - community.general.gitlab_group
+gitlab_group_access_token:
+  - community.general.gitlab_group_access_token
 gitlab_group_members:
   - community.general.gitlab_group_members
 gitlab_group_variable:
@@ -8814,10 +8909,16 @@ gitlab_instance_variable:
   - community.general.gitlab_instance_variable
 gitlab_issue:
   - community.general.gitlab_issue
+gitlab_label:
+  - community.general.gitlab_label
 gitlab_merge_request:
   - community.general.gitlab_merge_request
+gitlab_milestone:
+  - community.general.gitlab_milestone
 gitlab_project:
   - community.general.gitlab_project
+gitlab_project_access_token:
+  - community.general.gitlab_project_access_token
 gitlab_project_badge:
   - community.general.gitlab_project_badge
 gitlab_project_members:
@@ -9463,6 +9564,8 @@ idrac_firmware:
   - dellemc.openmanage.idrac_firmware
 idrac_firmware_info:
   - dellemc.openmanage.idrac_firmware_info
+idrac_license:
+  - dellemc.openmanage.idrac_license
 idrac_lifecycle_controller_job_status_info:
   - dellemc.openmanage.idrac_lifecycle_controller_job_status_info
 idrac_lifecycle_controller_jobs:
@@ -9535,26 +9638,44 @@ include_tasks:
   - ansible.builtin.include_tasks
 include_vars:
   - ansible.builtin.include_vars
+infini_certificate:
+  - infinidat.infinibox.infini_certificate
 infini_cluster:
   - infinidat.infinibox.infini_cluster
+infini_config:
+  - infinidat.infinibox.infini_config
+infini_event:
+  - infinidat.infinibox.infini_event
 infini_export:
   - infinidat.infinibox.infini_export
 infini_export_client:
   - infinidat.infinibox.infini_export_client
+infini_fibre_channel_switch:
+  - infinidat.infinibox.infini_fibre_channel_switch
 infini_fs:
   - infinidat.infinibox.infini_fs
 infini_host:
   - infinidat.infinibox.infini_host
 infini_map:
   - infinidat.infinibox.infini_map
+infini_metadata:
+  - infinidat.infinibox.infini_metadata
 infini_network_space:
   - infinidat.infinibox.infini_network_space
+infini_notification_rule:
+  - infinidat.infinibox.infini_notification_rule
+infini_notification_target:
+  - infinidat.infinibox.infini_notification_target
 infini_pool:
   - infinidat.infinibox.infini_pool
 infini_port:
   - infinidat.infinibox.infini_port
+infini_sso:
+  - infinidat.infinibox.infini_sso
 infini_user:
   - infinidat.infinibox.infini_user
+infini_users_repository:
+  - infinidat.infinibox.infini_users_repository
 infini_vol:
   - infinidat.infinibox.infini_vol
 infinity:
@@ -9644,6 +9765,8 @@ inventory_source:
   - awx.awx.inventory_source
 inventory_source_update:
   - awx.awx.inventory_source_update
+inventory_workflow_manager:
+  - cisco.dnac.inventory_workflow_manager
 ios_acl_interfaces:
   - cisco.ios.ios_acl_interfaces
 ios_acls:
@@ -10048,6 +10171,8 @@ keycloak_clientsecret_regenerate:
   - community.general.keycloak_clientsecret_regenerate
 keycloak_clienttemplate:
   - community.general.keycloak_clienttemplate
+keycloak_component_info:
+  - community.general.keycloak_component_info
 keycloak_group:
   - community.general.keycloak_group
 keycloak_identity_provider:
@@ -10058,6 +10183,8 @@ keycloak_realm_info:
   - community.general.keycloak_realm_info
 keycloak_realm_key:
   - community.general.keycloak_realm_key
+keycloak_realm_rolemapping:
+  - community.general.keycloak_realm_rolemapping
 keycloak_role:
   - community.general.keycloak_role
 keycloak_user:
@@ -10469,6 +10596,14 @@ mnt_version_info:
   - cisco.ise.mnt_version_info
 modprobe:
   - community.general.modprobe
+mongodb_atlas_cluster:
+  - community.mongodb.mongodb_atlas_cluster
+mongodb_atlas_ldap_user:
+  - community.mongodb.mongodb_atlas_ldap_user
+mongodb_atlas_user:
+  - community.mongodb.mongodb_atlas_user
+mongodb_atlas_whitelist:
+  - community.mongodb.mongodb_atlas_whitelist
 mongodb_balancer:
   - community.mongodb.mongodb_balancer
 mongodb_index:
@@ -10793,6 +10928,10 @@ na_ontap_cifs_local_user_set_password:
   - netapp.ontap.na_ontap_cifs_local_user_set_password
 na_ontap_cifs_server:
   - netapp.ontap.na_ontap_cifs_server
+na_ontap_cifs_unix_symlink_mapping:
+  - netapp.ontap.na_ontap_cifs_unix_symlink_mapping
+na_ontap_cli_timeout:
+  - netapp.ontap.na_ontap_cli_timeout
 na_ontap_cluster:
   - netapp.ontap.na_ontap_cluster
 na_ontap_cluster_ha:
@@ -11003,6 +11142,8 @@ na_ontap_snapshot_policy:
   - netapp.ontap.na_ontap_snapshot_policy
 na_ontap_snmp:
   - netapp.ontap.na_ontap_snmp
+na_ontap_snmp_config:
+  - netapp.ontap.na_ontap_snmp_config
 na_ontap_snmp_traphosts:
   - netapp.ontap.na_ontap_snmp_traphosts
 na_ontap_software_update:
@@ -11392,6 +11533,8 @@ netbox_tenant_group:
   - netbox.netbox.netbox_tenant_group
 netbox_virtual_chassis:
   - netbox.netbox.netbox_virtual_chassis
+netbox_virtual_disk:
+  - netbox.netbox.netbox_virtual_disk
 netbox_virtual_machine:
   - netbox.netbox.netbox_virtual_machine
 netbox_vlan:
@@ -11621,6 +11764,8 @@ network_resource:
   - ansible.netcommon.network_resource
 network_settings_intent:
   - cisco.dnac.network_settings_intent
+network_settings_workflow_manager:
+  - cisco.dnac.network_settings_workflow_manager
 network_update:
   - cisco.dnac.network_update
 network_v2:
@@ -12208,10 +12353,24 @@ nios_dns_view:
   - infoblox.nios_modules.nios_dns_view
 nios_dtc_lbdn:
   - infoblox.nios_modules.nios_dtc_lbdn
+nios_dtc_monitor_http:
+  - infoblox.nios_modules.nios_dtc_monitor_http
+nios_dtc_monitor_icmp:
+  - infoblox.nios_modules.nios_dtc_monitor_icmp
+nios_dtc_monitor_pdp:
+  - infoblox.nios_modules.nios_dtc_monitor_pdp
+nios_dtc_monitor_sip:
+  - infoblox.nios_modules.nios_dtc_monitor_sip
+nios_dtc_monitor_snmp:
+  - infoblox.nios_modules.nios_dtc_monitor_snmp
+nios_dtc_monitor_tcp:
+  - infoblox.nios_modules.nios_dtc_monitor_tcp
 nios_dtc_pool:
   - infoblox.nios_modules.nios_dtc_pool
 nios_dtc_server:
   - infoblox.nios_modules.nios_dtc_server
+nios_dtc_topology:
+  - infoblox.nios_modules.nios_dtc_topology
 nios_fixed_address:
   - infoblox.nios_modules.nios_fixed_address
 nios_host_record:
@@ -12486,6 +12645,8 @@ object_container:
   - openstack.cloud.object_container
 object_info:
   - microsoft.ad.object_info
+object_storage:
+  - vultr.cloud.object_storage
 objects_user:
   - cloudscale_ch.cloud.objects_user
 ocapi_command:
@@ -13386,6 +13547,8 @@ pnp_workflow_count_info:
   - cisco.dnac.pnp_workflow_count_info
 pnp_workflow_info:
   - cisco.dnac.pnp_workflow_info
+pnp_workflow_manager:
+  - cisco.dnac.pnp_workflow_manager
 pnpm:
   - community.general.pnpm
 podman_container:
@@ -13432,6 +13595,8 @@ podman_save:
   - containers.podman.podman_save
 podman_secret:
   - containers.podman.podman_secret
+podman_secret_info:
+  - containers.podman.podman_secret_info
 podman_tag:
   - containers.podman.podman_tag
 podman_volume:
@@ -13558,6 +13723,10 @@ projects_details_info:
   - cisco.dnac.projects_details_info
 protection_domain:
   - dellemc.powerflex.protection_domain
+provision_intent:
+  - cisco.dnac.provision_intent
+provision_workflow_manager:
+  - cisco.dnac.provision_workflow_manager
 provisioning_template:
   - theforeman.foreman.provisioning_template
 proxmox:
@@ -13572,12 +13741,16 @@ proxmox_kvm:
   - community.general.proxmox_kvm
 proxmox_nic:
   - community.general.proxmox_nic
+proxmox_node_info:
+  - community.general.proxmox_node_info
 proxmox_pool:
   - community.general.proxmox_pool
 proxmox_pool_member:
   - community.general.proxmox_pool_member
 proxmox_snap:
   - community.general.proxmox_snap
+proxmox_storage_contents_info:
+  - community.general.proxmox_storage_contents_info
 proxmox_storage_info:
   - community.general.proxmox_storage_info
 proxmox_tasks_info:
@@ -13643,6 +13816,8 @@ purefa_arrayname:
   - purestorage.flasharray.purefa_arrayname
 purefa_banner:
   - purestorage.flasharray.purefa_banner
+purefa_cbsexpand:
+  - purestorage.flasharray.purefa_cbsexpand
 purefa_certs:
   - purestorage.flasharray.purefa_certs
 purefa_connect:
@@ -13787,6 +13962,8 @@ purefb_fs_replica:
   - purestorage.flashblade.purefb_fs_replica
 purefb_groupquota:
   - purestorage.flashblade.purefb_groupquota
+purefb_hardware:
+  - purestorage.flashblade.purefb_hardware
 purefb_info:
   - purestorage.flashblade.purefb_info
 purefb_inventory:
@@ -14670,6 +14847,8 @@ site_membership_info:
   - cisco.dnac.site_membership_info
 site_update:
   - cisco.dnac.site_update
+site_workflow_manager:
+  - cisco.dnac.site_workflow_manager
 sl_vm:
   - community.general.sl_vm
 slack:
@@ -14786,6 +14965,8 @@ sonic_copp:
   - dellemc.enterprise_sonic.sonic_copp
 sonic_dhcp_relay:
   - dellemc.enterprise_sonic.sonic_dhcp_relay
+sonic_dhcp_snooping:
+  - dellemc.enterprise_sonic.sonic_dhcp_snooping
 sonic_facts:
   - dellemc.enterprise_sonic.sonic_facts
 sonic_interfaces:
@@ -14812,6 +14993,8 @@ sonic_mclag:
   - dellemc.enterprise_sonic.sonic_mclag
 sonic_ntp:
   - dellemc.enterprise_sonic.sonic_ntp
+sonic_pki:
+  - dellemc.enterprise_sonic.sonic_pki
 sonic_port_breakout:
   - dellemc.enterprise_sonic.sonic_port_breakout
 sonic_port_group:
@@ -14824,6 +15007,8 @@ sonic_route_maps:
   - dellemc.enterprise_sonic.sonic_route_maps
 sonic_static_routes:
   - dellemc.enterprise_sonic.sonic_static_routes
+sonic_stp:
+  - dellemc.enterprise_sonic.sonic_stp
 sonic_system:
   - dellemc.enterprise_sonic.sonic_system
 sonic_tacacs_server:
@@ -15003,6 +15188,8 @@ swim_trigger_activation:
   - cisco.dnac.swim_trigger_activation
 swim_trigger_distribution:
   - cisco.dnac.swim_trigger_distribution
+swim_workflow_manager:
+  - cisco.dnac.swim_workflow_manager
 swupd:
   - community.general.swupd
 sxp_connections:
@@ -15141,6 +15328,8 @@ template_intent:
   - cisco.dnac.template_intent
 template_preview:
   - cisco.dnac.template_preview
+template_workflow_manager:
+  - cisco.dnac.template_workflow_manager
 templates_details_info:
   - cisco.dnac.templates_details_info
 templates_import:
@@ -15301,6 +15490,8 @@ uri:
   - ansible.builtin.uri
 urpmi:
   - community.general.urpmi
+usb_facts:
+  - community.general.usb_facts
 user:
   - ansible.builtin.user
   - awx.awx.user
@@ -15364,6 +15555,36 @@ validate:
   - ansible.utils.validate
 validate_argument_spec:
   - ansible.builtin.validate_argument_spec
+vault_database_connection_configure:
+  - community.hashi_vault.vault_database_connection_configure
+vault_database_connection_delete:
+  - community.hashi_vault.vault_database_connection_delete
+vault_database_connection_read:
+  - community.hashi_vault.vault_database_connection_read
+vault_database_connection_reset:
+  - community.hashi_vault.vault_database_connection_reset
+vault_database_connections_list:
+  - community.hashi_vault.vault_database_connections_list
+vault_database_role_create:
+  - community.hashi_vault.vault_database_role_create
+vault_database_role_delete:
+  - community.hashi_vault.vault_database_role_delete
+vault_database_role_read:
+  - community.hashi_vault.vault_database_role_read
+vault_database_roles_list:
+  - community.hashi_vault.vault_database_roles_list
+vault_database_rotate_root_credentials:
+  - community.hashi_vault.vault_database_rotate_root_credentials
+vault_database_static_role_create:
+  - community.hashi_vault.vault_database_static_role_create
+vault_database_static_role_get_credentials:
+  - community.hashi_vault.vault_database_static_role_get_credentials
+vault_database_static_role_read:
+  - community.hashi_vault.vault_database_static_role_read
+vault_database_static_role_rotate_credentials:
+  - community.hashi_vault.vault_database_static_role_rotate_credentials
+vault_database_static_roles_list:
+  - community.hashi_vault.vault_database_static_roles_list
 vault_kv1_get:
   - community.hashi_vault.vault_kv1_get
 vault_kv2_delete:
@@ -15645,6 +15866,8 @@ vmware_export_ovf:
   - community.vmware.vmware_export_ovf
 vmware_first_class_disk:
   - community.vmware.vmware_first_class_disk
+vmware_first_class_disk_info:
+  - community.vmware.vmware_first_class_disk_info
 vmware_folder_info:
   - community.vmware.vmware_folder_info
 vmware_guest:
@@ -16431,6 +16654,8 @@ zabbix_template:
   - community.zabbix.zabbix_template
 zabbix_template_info:
   - community.zabbix.zabbix_template_info
+zabbix_templategroup:
+  - community.zabbix.zabbix_templategroup
 zabbix_token:
   - community.zabbix.zabbix_token
 zabbix_user:
