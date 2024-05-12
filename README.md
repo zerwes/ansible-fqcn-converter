@@ -1,6 +1,7 @@
 [![pylint](https://github.com/zerwes/ansible-fqcn-converter/actions/workflows/pylint.yml/badge.svg)](https://github.com/zerwes/ansible-fqcn-converter/actions/workflows/pylint.yml)
 [![test](https://github.com/zerwes/ansible-fqcn-converter/actions/workflows/test.yml/badge.svg)](https://github.com/zerwes/ansible-fqcn-converter/actions/workflows/test.yml)
 [![test rebuild map](https://github.com/zerwes/ansible-fqcn-converter/actions/workflows/testupdatemap.yml/badge.svg)](https://github.com/zerwes/ansible-fqcn-converter/actions/workflows/testupdatemap.yml)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 
 # Ansible FQCN converter
 Update ansible tasks, playbooks, handlers etc. to use fully qualified module names (even for ansible builtins) by searching for all known modules that are not in fqcn notation and replacing them with the fqcn name.
