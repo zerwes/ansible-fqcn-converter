@@ -35,7 +35,8 @@ The ansible files should be linted and valid yaml files! Esp. the following ansi
 
   ```
   cd ansible-fqcn-converter
-  ansible-galaxy collection install ...
+  # edit requirements.yml
+  make # or ansible-galaxy collection install -p .collections/ -r requirements.yml
   ./fqcn-fixer.py --update-fqcn-map-file
   ```
 
