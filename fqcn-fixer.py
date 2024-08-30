@@ -93,6 +93,7 @@ _general_exclude_regex = [
 # list of starting regex to exclude complete subsequent blocks
 _general_exclude_blocks_regex = [
     re.compile(r'\s*-*\s*vars:$'),
+    re.compile(r'\s*-*\s*roles:$'),
 ]
 
 required_fqcnconverter_file_version = '0.1.2'
