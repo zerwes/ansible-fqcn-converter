@@ -12,14 +12,22 @@ accessanalyzer_validate_policy_info:
   - community.aws.accessanalyzer_validate_policy_info
 accesspoint_configuration_details_by_task_id_info:
   - cisco.dnac.accesspoint_configuration_details_by_task_id_info
+accesspoint_workflow_manager:
+  - cisco.dnac.accesspoint_workflow_manager
 account_info:
   - vultr.cloud.account_info
+aci_aaa_certificate_authority:
+  - cisco.aci.aci_aaa_certificate_authority
 aci_aaa_custom_privilege:
   - cisco.aci.aci_aaa_custom_privilege
 aci_aaa_domain:
   - cisco.aci.aci_aaa_domain
+aci_aaa_key_ring:
+  - cisco.aci.aci_aaa_key_ring
 aci_aaa_role:
   - cisco.aci.aci_aaa_role
+aci_aaa_security_default_settings:
+  - cisco.aci.aci_aaa_security_default_settings
 aci_aaa_ssh_auth:
   - cisco.aci.aci_aaa_ssh_auth
 aci_aaa_user:
@@ -46,8 +54,26 @@ aci_access_span_src_group_src:
   - cisco.aci.aci_access_span_src_group_src
 aci_access_span_src_group_src_path:
   - cisco.aci.aci_access_span_src_group_src_path
+aci_access_spine_interface_profile:
+  - cisco.aci.aci_access_spine_interface_profile
+aci_access_spine_interface_profile_to_spine_switch_profile:
+  - cisco.aci.aci_access_spine_interface_profile_to_spine_switch_profile
+aci_access_spine_interface_selector:
+  - cisco.aci.aci_access_spine_interface_selector
+aci_access_spine_switch_profile:
+  - cisco.aci.aci_access_spine_switch_profile
+aci_access_spine_switch_selector:
+  - cisco.aci.aci_access_spine_switch_selector
 aci_access_sub_port_block_to_access_port:
   - cisco.aci.aci_access_sub_port_block_to_access_port
+aci_access_switch_policy_group:
+  - cisco.aci.aci_access_switch_policy_group
+aci_action_rule_additional_communities:
+  - cisco.aci.aci_action_rule_additional_communities
+aci_action_rule_set_as_path:
+  - cisco.aci.aci_action_rule_set_as_path
+aci_action_rule_set_as_path_asn:
+  - cisco.aci.aci_action_rule_set_as_path_asn
 aci_aep:
   - cisco.aci.aci_aep
 aci_aep_to_domain:
@@ -60,12 +86,24 @@ aci_bd:
   - cisco.aci.aci_bd
 aci_bd_dhcp_label:
   - cisco.aci.aci_bd_dhcp_label
+aci_bd_rogue_exception_mac:
+  - cisco.aci.aci_bd_rogue_exception_mac
 aci_bd_subnet:
   - cisco.aci.aci_bd_subnet
 aci_bd_to_l3out:
   - cisco.aci.aci_bd_to_l3out
+aci_bd_to_netflow_monitor_policy:
+  - cisco.aci.aci_bd_to_netflow_monitor_policy
+aci_bfd_multihop_node_policy:
+  - cisco.aci.aci_bfd_multihop_node_policy
+aci_bgp_address_family_context_policy:
+  - cisco.aci.aci_bgp_address_family_context_policy
 aci_bgp_best_path_policy:
   - cisco.aci.aci_bgp_best_path_policy
+aci_bgp_peer_prefix_policy:
+  - cisco.aci.aci_bgp_peer_prefix_policy
+aci_bgp_route_summarization_policy:
+  - cisco.aci.aci_bgp_route_summarization_policy
 aci_bgp_rr_asn:
   - cisco.aci.aci_bgp_rr_asn
 aci_bgp_rr_node:
@@ -120,6 +158,10 @@ aci_contract_subject_to_filter:
   - cisco.aci.aci_contract_subject_to_filter
 aci_contract_subject_to_service_graph:
   - cisco.aci.aci_contract_subject_to_service_graph
+aci_dhcp_option:
+  - cisco.aci.aci_dhcp_option
+aci_dhcp_option_policy:
+  - cisco.aci.aci_dhcp_option_policy
 aci_dhcp_relay:
   - cisco.aci.aci_dhcp_relay
 aci_dhcp_relay_provider:
@@ -154,6 +196,10 @@ aci_epg_to_contract_master:
   - cisco.aci.aci_epg_to_contract_master
 aci_epg_to_domain:
   - cisco.aci.aci_epg_to_domain
+aci_epg_useg_attribute_block_statement:
+  - cisco.aci.aci_epg_useg_attribute_block_statement
+aci_epg_useg_attribute_simple_statement:
+  - cisco.aci.aci_epg_useg_attribute_simple_statement
 aci_esg:
   - cisco.aci.aci_esg
 aci_esg_contract_master:
@@ -164,18 +210,38 @@ aci_esg_ip_subnet_selector:
   - cisco.aci.aci_esg_ip_subnet_selector
 aci_esg_tag_selector:
   - cisco.aci.aci_esg_tag_selector
+aci_esg_to_contract:
+  - cisco.aci.aci_esg_to_contract
+aci_fabric_external_connection_profile:
+  - cisco.aci.aci_fabric_external_connection_profile
+aci_fabric_external_routing_profile:
+  - cisco.aci.aci_fabric_external_routing_profile
 aci_fabric_interface_policy_group:
   - cisco.aci.aci_fabric_interface_policy_group
 aci_fabric_leaf_profile:
   - cisco.aci.aci_fabric_leaf_profile
 aci_fabric_leaf_switch_assoc:
   - cisco.aci.aci_fabric_leaf_switch_assoc
+aci_fabric_management_access:
+  - cisco.aci.aci_fabric_management_access
+aci_fabric_management_access_https_cipher:
+  - cisco.aci.aci_fabric_management_access_https_cipher
 aci_fabric_node:
   - cisco.aci.aci_fabric_node
 aci_fabric_node_control:
   - cisco.aci.aci_fabric_node_control
+aci_fabric_pod:
+  - cisco.aci.aci_fabric_pod
+aci_fabric_pod_connectivity_profile:
+  - cisco.aci.aci_fabric_pod_connectivity_profile
+aci_fabric_pod_external_tep:
+  - cisco.aci.aci_fabric_pod_external_tep
 aci_fabric_pod_policy_group:
   - cisco.aci.aci_fabric_pod_policy_group
+aci_fabric_pod_profile:
+  - cisco.aci.aci_fabric_pod_profile
+aci_fabric_pod_remote_pool:
+  - cisco.aci.aci_fabric_pod_remote_pool
 aci_fabric_pod_selector:
   - cisco.aci.aci_fabric_pod_selector
 aci_fabric_scheduler:
@@ -222,10 +288,18 @@ aci_interface_config:
   - cisco.aci.aci_interface_config
 aci_interface_description:
   - cisco.aci.aci_interface_description
+aci_interface_policy_bfd:
+  - cisco.aci.aci_interface_policy_bfd
+aci_interface_policy_bfd_multihop:
+  - cisco.aci.aci_interface_policy_bfd_multihop
 aci_interface_policy_cdp:
   - cisco.aci.aci_interface_policy_cdp
+aci_interface_policy_eigrp:
+  - cisco.aci.aci_interface_policy_eigrp
 aci_interface_policy_fc:
   - cisco.aci.aci_interface_policy_fc
+aci_interface_policy_hsrp:
+  - cisco.aci.aci_interface_policy_hsrp
 aci_interface_policy_l2:
   - cisco.aci.aci_interface_policy_l2
 aci_interface_policy_leaf_breakout_port_group:
@@ -246,6 +320,8 @@ aci_interface_policy_mcp:
   - cisco.aci.aci_interface_policy_mcp
 aci_interface_policy_ospf:
   - cisco.aci.aci_interface_policy_ospf
+aci_interface_policy_pim:
+  - cisco.aci.aci_interface_policy_pim
 aci_interface_policy_port_channel:
   - cisco.aci.aci_interface_policy_port_channel
 aci_interface_policy_port_security:
@@ -254,8 +330,14 @@ aci_interface_policy_spanning_tree:
   - cisco.aci.aci_interface_policy_spanning_tree
 aci_interface_policy_spine_policy_group:
   - cisco.aci.aci_interface_policy_spine_policy_group
+aci_interface_policy_storm_control:
+  - cisco.aci.aci_interface_policy_storm_control
 aci_interface_selector_to_switch_policy_leaf_profile:
   - cisco.aci.aci_interface_selector_to_switch_policy_leaf_profile
+aci_key_policy:
+  - cisco.aci.aci_key_policy
+aci_keychain_policy:
+  - cisco.aci.aci_keychain_policy
 aci_l2out:
   - cisco.aci.aci_l2out
 aci_l2out_extepg:
@@ -270,16 +352,38 @@ aci_l2out_logical_node_profile:
   - cisco.aci.aci_l2out_logical_node_profile
 aci_l3out:
   - cisco.aci.aci_l3out
+aci_l3out_bfd_interface_profile:
+  - cisco.aci.aci_l3out_bfd_interface_profile
+aci_l3out_bfd_multihop_interface_profile:
+  - cisco.aci.aci_l3out_bfd_multihop_interface_profile
 aci_l3out_bgp_peer:
   - cisco.aci.aci_l3out_bgp_peer
 aci_l3out_bgp_protocol_profile:
   - cisco.aci.aci_l3out_bgp_protocol_profile
+aci_l3out_dhcp_relay_label:
+  - cisco.aci.aci_l3out_dhcp_relay_label
+aci_l3out_eigrp_interface_profile:
+  - cisco.aci.aci_l3out_eigrp_interface_profile
 aci_l3out_extepg:
   - cisco.aci.aci_l3out_extepg
 aci_l3out_extepg_to_contract:
   - cisco.aci.aci_l3out_extepg_to_contract
 aci_l3out_extsubnet:
   - cisco.aci.aci_l3out_extsubnet
+aci_l3out_floating_svi:
+  - cisco.aci.aci_l3out_floating_svi
+aci_l3out_floating_svi_path:
+  - cisco.aci.aci_l3out_floating_svi_path
+aci_l3out_floating_svi_path_secondary_ip:
+  - cisco.aci.aci_l3out_floating_svi_path_secondary_ip
+aci_l3out_floating_svi_secondary_ip:
+  - cisco.aci.aci_l3out_floating_svi_secondary_ip
+aci_l3out_hsrp_group:
+  - cisco.aci.aci_l3out_hsrp_group
+aci_l3out_hsrp_interface_profile:
+  - cisco.aci.aci_l3out_hsrp_interface_profile
+aci_l3out_hsrp_secondary_vip:
+  - cisco.aci.aci_l3out_hsrp_secondary_vip
 aci_l3out_interface:
   - cisco.aci.aci_l3out_interface
 aci_l3out_interface_secondary_ip:
@@ -300,6 +404,8 @@ aci_l3out_static_routes:
   - cisco.aci.aci_l3out_static_routes
 aci_l3out_static_routes_nexthop:
   - cisco.aci.aci_l3out_static_routes_nexthop
+aci_l3out_to_sr_mpls_infra_l3out:
+  - cisco.aci.aci_l3out_to_sr_mpls_infra_l3out
 aci_maintenance_group:
   - cisco.aci.aci_maintenance_group
 aci_maintenance_group_node:
@@ -318,12 +424,32 @@ aci_match_route_destination:
   - cisco.aci.aci_match_route_destination
 aci_match_rule:
   - cisco.aci.aci_match_rule
+aci_netflow_exporter_policy:
+  - cisco.aci.aci_netflow_exporter_policy
+aci_netflow_monitor_policy:
+  - cisco.aci.aci_netflow_monitor_policy
+aci_netflow_monitor_to_exporter:
+  - cisco.aci.aci_netflow_monitor_to_exporter
+aci_netflow_record_policy:
+  - cisco.aci.aci_netflow_record_policy
+aci_node_block:
+  - cisco.aci.aci_node_block
 aci_node_mgmt_epg:
   - cisco.aci.aci_node_mgmt_epg
 aci_ntp_policy:
   - cisco.aci.aci_ntp_policy
 aci_ntp_server:
   - cisco.aci.aci_ntp_server
+aci_pim_route_map_entry:
+  - cisco.aci.aci_pim_route_map_entry
+aci_pim_route_map_policy:
+  - cisco.aci.aci_pim_route_map_policy
+aci_qos_custom_policy:
+  - cisco.aci.aci_qos_custom_policy
+aci_qos_dot1p_class:
+  - cisco.aci.aci_qos_dot1p_class
+aci_qos_dscp_class:
+  - cisco.aci.aci_qos_dscp_class
 aci_rest:
   - cisco.aci.aci_rest
 aci_route_control_context:
@@ -348,6 +474,8 @@ aci_static_binding_to_epg:
   - cisco.aci.aci_static_binding_to_epg
 aci_static_node_mgmt_address:
   - cisco.aci.aci_static_node_mgmt_address
+aci_subject_label:
+  - cisco.aci.aci_subject_label
 aci_switch_leaf_selector:
   - cisco.aci.aci_switch_leaf_selector
 aci_switch_policy_leaf_profile:
@@ -364,6 +492,8 @@ aci_system:
   - cisco.aci.aci_system
 aci_system_banner:
   - cisco.aci.aci_system_banner
+aci_system_connectivity_preference:
+  - cisco.aci.aci_system_connectivity_preference
 aci_system_endpoint_controls:
   - cisco.aci.aci_system_endpoint_controls
 aci_system_global_aes_passphrase_encryption:
@@ -406,6 +536,8 @@ aci_vrf:
   - cisco.aci.aci_vrf
 aci_vrf_leak_internal_subnet:
   - cisco.aci.aci_vrf_leak_internal_subnet
+aci_vrf_multicast:
+  - cisco.aci.aci_vrf_multicast
 aci_vzany_to_contract:
   - cisco.aci.aci_vzany_to_contract
 acl:
@@ -428,6 +560,8 @@ acme_inspect:
   - community.crypto.acme_inspect
 activation_key:
   - theforeman.foreman.activation_key
+active_directories_info:
+  - cisco.ise.active_directories_info
 active_directory:
   - cisco.ise.active_directory
 active_directory_add_groups:
@@ -453,11 +587,17 @@ active_directory_user_groups_info:
 ad_auth_provider:
   - sensu.sensu_go.ad_auth_provider
 ad_group:
+  - ieisystem.inmanage.ad_group
   - inspur.ispim.ad_group
   - inspur.sm.ad_group
+  - kaytus.ksmanage.ad_group
 ad_group_info:
+  - ieisystem.inmanage.ad_group_info
   - inspur.ispim.ad_group_info
   - inspur.sm.ad_group_info
+  - kaytus.ksmanage.ad_group_info
+ad_groups_info:
+  - cisco.ise.ad_groups_info
 ad_hoc_command:
   - awx.awx.ad_hoc_command
 ad_hoc_command_cancel:
@@ -465,11 +605,15 @@ ad_hoc_command_cancel:
 ad_hoc_command_wait:
   - awx.awx.ad_hoc_command_wait
 ad_info:
+  - ieisystem.inmanage.ad_info
   - inspur.ispim.ad_info
   - inspur.sm.ad_info
+  - kaytus.ksmanage.ad_info
 adapter_info:
+  - ieisystem.inmanage.adapter_info
   - inspur.ispim.adapter_info
   - inspur.sm.adapter_info
+  - kaytus.ksmanage.adapter_info
 adaptive_response_notable_event:
   - splunk.es.adaptive_response_notable_event
 add_ad_group:
@@ -479,8 +623,10 @@ add_host:
 add_ldap_group:
   - inspur.sm.add_ldap_group
 add_ldisk:
+  - ieisystem.inmanage.add_ldisk
   - inspur.ispim.add_ldisk
   - inspur.sm.add_ldisk
+  - kaytus.ksmanage.add_ldisk
 add_user:
   - inspur.sm.add_user
 add_user_group:
@@ -491,6 +637,18 @@ admin_user_info:
   - cisco.ise.admin_user_info
 administered_identities_me_info:
   - cisco.meraki.administered_identities_me_info
+administered_licensing_subscription_entitlements_info:
+  - cisco.meraki.administered_licensing_subscription_entitlements_info
+administered_licensing_subscription_subscriptions_bind:
+  - cisco.meraki.administered_licensing_subscription_subscriptions_bind
+administered_licensing_subscription_subscriptions_claim:
+  - cisco.meraki.administered_licensing_subscription_subscriptions_claim
+administered_licensing_subscription_subscriptions_claim_key_validate:
+  - cisco.meraki.administered_licensing_subscription_subscriptions_claim_key_validate
+administered_licensing_subscription_subscriptions_compliance_statuses_info:
+  - cisco.meraki.administered_licensing_subscription_subscriptions_compliance_statuses_info
+administered_licensing_subscription_subscriptions_info:
+  - cisco.meraki.administered_licensing_subscription_subscriptions_info
 aerospike_migrations:
   - community.general.aerospike_migrations
 ag_listener:
@@ -526,8 +684,10 @@ alert_contact_point:
 alert_notification_policy:
   - grafana.grafana.alert_notification_policy
 alert_policy_info:
+  - ieisystem.inmanage.alert_policy_info
   - inspur.ispim.alert_policy_info
   - inspur.sm.alert_policy_info
+  - kaytus.ksmanage.alert_policy_info
 alerta_customer:
   - community.general.alerta_customer
 ali_instance:
@@ -592,6 +752,8 @@ aoscx_lag_interface:
   - arubanetworks.aoscx.aoscx_lag_interface
 aoscx_mac:
   - arubanetworks.aoscx.aoscx_mac
+aoscx_object_group:
+  - arubanetworks.aoscx.aoscx_object_group
 aoscx_ospf_area:
   - arubanetworks.aoscx.aoscx_ospf_area
 aoscx_ospf_interface:
@@ -642,6 +804,7 @@ apache2_mod_proxy:
   - community.general.apache2_mod_proxy
 apache2_module:
   - community.general.apache2_module
+  - debops.debops.apache2_module
 apconos_command:
   - community.network.apconos_command
 api:
@@ -708,6 +871,8 @@ appliance_health_swap_info:
   - vmware.vmware_rest.appliance_health_swap_info
 appliance_health_system_info:
   - vmware.vmware_rest.appliance_health_system_info
+appliance_info:
+  - vmware.vmware.appliance_info
 appliance_infraprofile_configs:
   - vmware.vmware_rest.appliance_infraprofile_configs
 appliance_infraprofile_configs_info:
@@ -802,6 +967,12 @@ application:
   - awx.awx.application
 application_autoscaling_policy:
   - community.aws.application_autoscaling_policy
+application_policy_application_set:
+  - cisco.dnac.application_policy_application_set
+application_policy_application_set_count_info:
+  - cisco.dnac.application_policy_application_set_count_info
+application_policy_application_set_info:
+  - cisco.dnac.application_policy_application_set_info
 application_sets:
   - cisco.dnac.application_sets
 application_sets_count_info:
@@ -812,10 +983,16 @@ applications:
   - cisco.dnac.applications
 applications_count_info:
   - cisco.dnac.applications_count_info
+applications_count_v2_info:
+  - cisco.dnac.applications_count_v2_info
 applications_health_info:
   - cisco.dnac.applications_health_info
 applications_info:
   - cisco.dnac.applications_info
+applications_v2:
+  - cisco.dnac.applications_v2
+applications_v2_info:
+  - cisco.dnac.applications_v2_info
 apt:
   - ansible.builtin.apt
 apt_key:
@@ -940,18 +1117,24 @@ atomic_host:
 atomic_image:
   - community.general.atomic_image
 audit_log_info:
+  - ieisystem.inmanage.audit_log_info
   - inspur.ispim.audit_log_info
   - inspur.sm.audit_log_info
+  - kaytus.ksmanage.audit_log_info
 auth:
   - openstack.cloud.auth
 auth_provider_info:
   - sensu.sensu_go.auth_provider_info
 auth_source_ldap:
   - theforeman.foreman.auth_source_ldap
+auth_token_create:
+  - cisco.dnac.auth_token_create
 authentication_import_certificate:
   - cisco.dnac.authentication_import_certificate
 authentication_import_certificate_p12:
   - cisco.dnac.authentication_import_certificate_p12
+authentication_policy_servers:
+  - cisco.dnac.authentication_policy_servers
 authentication_policy_servers_info:
   - cisco.dnac.authentication_policy_servers_info
 authorization_profile:
@@ -961,8 +1144,10 @@ authorization_profile_info:
 authorized_key:
   - ansible.posix.authorized_key
 auto_capture_info:
+  - ieisystem.inmanage.auto_capture_info
   - inspur.ispim.auto_capture_info
   - inspur.sm.auto_capture_info
+  - kaytus.ksmanage.auto_capture_info
 autoscaling_complete_lifecycle_action:
   - community.aws.autoscaling_complete_lifecycle_action
 autoscaling_group:
@@ -1123,16 +1308,10 @@ aws_az_info:
   - amazon.aws.aws_az_info
 aws_caller_info:
   - amazon.aws.aws_caller_info
-aws_netapp_cvs_active_directory:
-  - netapp.aws.aws_netapp_cvs_active_directory
-aws_netapp_cvs_filesystems:
-  - netapp.aws.aws_netapp_cvs_filesystems
-aws_netapp_cvs_pool:
-  - netapp.aws.aws_netapp_cvs_pool
-aws_netapp_cvs_snapshots:
-  - netapp.aws.aws_netapp_cvs_snapshots
 aws_region_info:
   - amazon.aws.aws_region_info
+azure_rm_accesstoken_info:
+  - azure.azcollection.azure_rm_accesstoken_info
 azure_rm_account_info:
   - azure.azcollection.azure_rm_account_info
 azure_rm_adapplication:
@@ -1165,6 +1344,8 @@ azure_rm_aksagentpool_info:
   - azure.azcollection.azure_rm_aksagentpool_info
 azure_rm_aksagentpoolversion_info:
   - azure.azcollection.azure_rm_aksagentpoolversion_info
+azure_rm_akscredentials_info:
+  - azure.azcollection.azure_rm_akscredentials_info
 azure_rm_aksupgrade_info:
   - azure.azcollection.azure_rm_aksupgrade_info
 azure_rm_aksversion_info:
@@ -1225,6 +1406,10 @@ azure_rm_batchaccount:
   - azure.azcollection.azure_rm_batchaccount
 azure_rm_batchaccount_info:
   - azure.azcollection.azure_rm_batchaccount_info
+azure_rm_capacityreservationgroup:
+  - azure.azcollection.azure_rm_capacityreservationgroup
+azure_rm_capacityreservationgroup_info:
+  - azure.azcollection.azure_rm_capacityreservationgroup_info
 azure_rm_cdnendpoint:
   - azure.azcollection.azure_rm_cdnendpoint
 azure_rm_cdnendpoint_info:
@@ -1265,10 +1450,6 @@ azure_rm_datafactory:
   - azure.azcollection.azure_rm_datafactory
 azure_rm_datafactory_info:
   - azure.azcollection.azure_rm_datafactory_info
-azure_rm_datalakestore:
-  - azure.azcollection.azure_rm_datalakestore
-azure_rm_datalakestore_info:
-  - azure.azcollection.azure_rm_datalakestore_info
 azure_rm_ddosprotectionplan:
   - azure.azcollection.azure_rm_ddosprotectionplan
 azure_rm_ddosprotectionplan_info:
@@ -1397,6 +1578,10 @@ azure_rm_loadbalancer:
   - azure.azcollection.azure_rm_loadbalancer
 azure_rm_loadbalancer_info:
   - azure.azcollection.azure_rm_loadbalancer_info
+azure_rm_localnetworkgateway:
+  - azure.azcollection.azure_rm_localnetworkgateway
+azure_rm_localnetworkgateway_info:
+  - azure.azcollection.azure_rm_localnetworkgateway_info
 azure_rm_lock:
   - azure.azcollection.azure_rm_lock
 azure_rm_lock_info:
@@ -1457,18 +1642,18 @@ azure_rm_natgateway:
   - azure.azcollection.azure_rm_natgateway
 azure_rm_natgateway_info:
   - azure.azcollection.azure_rm_natgateway_info
-azure_rm_netapp_account:
-  - netapp.azure.azure_rm_netapp_account
-azure_rm_netapp_capacity_pool:
-  - netapp.azure.azure_rm_netapp_capacity_pool
-azure_rm_netapp_snapshot:
-  - netapp.azure.azure_rm_netapp_snapshot
-azure_rm_netapp_volume:
-  - netapp.azure.azure_rm_netapp_volume
+azure_rm_networkflowlog:
+  - azure.azcollection.azure_rm_networkflowlog
+azure_rm_networkflowlog_info:
+  - azure.azcollection.azure_rm_networkflowlog_info
 azure_rm_networkinterface:
   - azure.azcollection.azure_rm_networkinterface
 azure_rm_networkinterface_info:
   - azure.azcollection.azure_rm_networkinterface_info
+azure_rm_networkwatcher:
+  - azure.azcollection.azure_rm_networkwatcher
+azure_rm_networkwatcher_info:
+  - azure.azcollection.azure_rm_networkwatcher_info
 azure_rm_notificationhub:
   - azure.azcollection.azure_rm_notificationhub
 azure_rm_notificationhub_info:
@@ -1477,6 +1662,8 @@ azure_rm_openshiftmanagedcluster:
   - azure.azcollection.azure_rm_openshiftmanagedcluster
 azure_rm_openshiftmanagedcluster_info:
   - azure.azcollection.azure_rm_openshiftmanagedcluster_info
+azure_rm_openshiftmanagedclusterkubeconfig_info:
+  - azure.azcollection.azure_rm_openshiftmanagedclusterkubeconfig_info
 azure_rm_postgresqlconfiguration:
   - azure.azcollection.azure_rm_postgresqlconfiguration
 azure_rm_postgresqlconfiguration_info:
@@ -1489,6 +1676,20 @@ azure_rm_postgresqlfirewallrule:
   - azure.azcollection.azure_rm_postgresqlfirewallrule
 azure_rm_postgresqlfirewallrule_info:
   - azure.azcollection.azure_rm_postgresqlfirewallrule_info
+azure_rm_postgresqlflexibleconfiguration_info:
+  - azure.azcollection.azure_rm_postgresqlflexibleconfiguration_info
+azure_rm_postgresqlflexibledatabase:
+  - azure.azcollection.azure_rm_postgresqlflexibledatabase
+azure_rm_postgresqlflexibledatabase_info:
+  - azure.azcollection.azure_rm_postgresqlflexibledatabase_info
+azure_rm_postgresqlflexiblefirewallrule:
+  - azure.azcollection.azure_rm_postgresqlflexiblefirewallrule
+azure_rm_postgresqlflexiblefirewallrule_info:
+  - azure.azcollection.azure_rm_postgresqlflexiblefirewallrule_info
+azure_rm_postgresqlflexibleserver:
+  - azure.azcollection.azure_rm_postgresqlflexibleserver
+azure_rm_postgresqlflexibleserver_info:
+  - azure.azcollection.azure_rm_postgresqlflexibleserver_info
 azure_rm_postgresqlserver:
   - azure.azcollection.azure_rm_postgresqlserver
 azure_rm_postgresqlserver_info:
@@ -1529,6 +1730,10 @@ azure_rm_publicipaddress:
   - azure.azcollection.azure_rm_publicipaddress
 azure_rm_publicipaddress_info:
   - azure.azcollection.azure_rm_publicipaddress_info
+azure_rm_publicipprefix:
+  - azure.azcollection.azure_rm_publicipprefix
+azure_rm_publicipprefix_info:
+  - azure.azcollection.azure_rm_publicipprefix_info
 azure_rm_recoveryservicesvault:
   - azure.azcollection.azure_rm_recoveryservicesvault
 azure_rm_recoveryservicesvault_info:
@@ -1605,14 +1810,34 @@ azure_rm_sqlmanagedinstance:
   - azure.azcollection.azure_rm_sqlmanagedinstance
 azure_rm_sqlmanagedinstance_info:
   - azure.azcollection.azure_rm_sqlmanagedinstance_info
+azure_rm_sqlmidatabase:
+  - azure.azcollection.azure_rm_sqlmidatabase
+azure_rm_sqlmidatabase_info:
+  - azure.azcollection.azure_rm_sqlmidatabase_info
+azure_rm_sqlmidblongtermretentionpolicy:
+  - azure.azcollection.azure_rm_sqlmidblongtermretentionpolicy
+azure_rm_sqlmidblongtermretentionpolicy_info:
+  - azure.azcollection.azure_rm_sqlmidblongtermretentionpolicy_info
+azure_rm_sqlmidbshorttermretentionpolicy:
+  - azure.azcollection.azure_rm_sqlmidbshorttermretentionpolicy
+azure_rm_sqlmidbshorttermretentionpolicy_info:
+  - azure.azcollection.azure_rm_sqlmidbshorttermretentionpolicy_info
 azure_rm_sqlserver:
   - azure.azcollection.azure_rm_sqlserver
 azure_rm_sqlserver_info:
   - azure.azcollection.azure_rm_sqlserver_info
+azure_rm_sshpublickey:
+  - azure.azcollection.azure_rm_sshpublickey
+azure_rm_sshpublickey_info:
+  - azure.azcollection.azure_rm_sshpublickey_info
 azure_rm_storageaccount:
   - azure.azcollection.azure_rm_storageaccount
 azure_rm_storageaccount_info:
   - azure.azcollection.azure_rm_storageaccount_info
+azure_rm_storageaccountmanagementpolicy:
+  - azure.azcollection.azure_rm_storageaccountmanagementpolicy
+azure_rm_storageaccountmanagementpolicy_info:
+  - azure.azcollection.azure_rm_storageaccountmanagementpolicy_info
 azure_rm_storageblob:
   - azure.azcollection.azure_rm_storageblob
 azure_rm_storageshare:
@@ -1673,6 +1898,10 @@ azure_rm_virtualnetwork_info:
   - azure.azcollection.azure_rm_virtualnetwork_info
 azure_rm_virtualnetworkgateway:
   - azure.azcollection.azure_rm_virtualnetworkgateway
+azure_rm_virtualnetworkgatewaynatrule:
+  - azure.azcollection.azure_rm_virtualnetworkgatewaynatrule
+azure_rm_virtualnetworkgatewaynatrule_info:
+  - azure.azcollection.azure_rm_virtualnetworkgatewaynatrule_info
 azure_rm_virtualnetworkpeering:
   - azure.azcollection.azure_rm_virtualnetworkpeering
 azure_rm_virtualnetworkpeering_info:
@@ -1685,6 +1914,8 @@ azure_rm_vmbackuppolicy:
   - azure.azcollection.azure_rm_vmbackuppolicy
 azure_rm_vmbackuppolicy_info:
   - azure.azcollection.azure_rm_vmbackuppolicy_info
+azure_rm_vmsku_info:
+  - azure.azcollection.azure_rm_vmsku_info
 azure_rm_vmssnetworkinterface_info:
   - azure.azcollection.azure_rm_vmssnetworkinterface_info
 azure_rm_vpnsite:
@@ -1708,11 +1939,15 @@ azure_rm_webappvnetconnection:
 azure_rm_webappvnetconnection_info:
   - azure.azcollection.azure_rm_webappvnetconnection_info
 backplane_info:
+  - ieisystem.inmanage.backplane_info
   - inspur.ispim.backplane_info
   - inspur.sm.backplane_info
+  - kaytus.ksmanage.backplane_info
 backup:
+  - ieisystem.inmanage.backup
   - inspur.ispim.backup
   - inspur.sm.backup
+  - kaytus.ksmanage.backup
   - lowlydba.sqlserver.backup
 backup_cancel:
   - cisco.ise.backup_cancel
@@ -2143,14 +2378,20 @@ bigpanda:
 bind_signed_certificate:
   - cisco.ise.bind_signed_certificate
 bios_export:
+  - ieisystem.inmanage.bios_export
   - inspur.ispim.bios_export
   - inspur.sm.bios_export
+  - kaytus.ksmanage.bios_export
 bios_import:
+  - ieisystem.inmanage.bios_import
   - inspur.ispim.bios_import
   - inspur.sm.bios_import
+  - kaytus.ksmanage.bios_import
 bios_info:
+  - ieisystem.inmanage.bios_info
   - inspur.ispim.bios_info
   - inspur.sm.bios_info
+  - kaytus.ksmanage.bios_info
 bitbucket_access_key:
   - community.general.bitbucket_access_key
 bitbucket_pipeline_key_pair:
@@ -2166,8 +2407,10 @@ block_storage_info:
 blockinfile:
   - ansible.builtin.blockinfile
 bmc_info:
+  - ieisystem.inmanage.bmc_info
   - inspur.ispim.bmc_info
   - inspur.sm.bmc_info
+  - kaytus.ksmanage.bmc_info
 bonsai_asset:
   - sensu.sensu_go.bonsai_asset
 bookmark:
@@ -2175,17 +2418,17 @@ bookmark:
 boot:
   - community.hrobot.boot
 boot_image_info:
+  - ieisystem.inmanage.boot_image_info
   - inspur.ispim.boot_image_info
   - inspur.sm.boot_image_info
+  - kaytus.ksmanage.boot_image_info
 boot_option_info:
+  - ieisystem.inmanage.boot_option_info
   - inspur.ispim.boot_option_info
   - inspur.sm.boot_option_info
+  - kaytus.ksmanage.boot_option_info
 bower:
   - community.general.bower
-btrfs_info:
-  - community.general.btrfs_info
-btrfs_subvolume:
-  - community.general.btrfs_subvolume
 buildings_planned_access_points_info:
   - cisco.dnac.buildings_planned_access_points_info
 bulk_host_create:
@@ -2419,14 +2662,22 @@ clc_server:
 clc_server_snapshot:
   - community.general.clc_server_snapshot
 clear_audit_log:
+  - ieisystem.inmanage.clear_audit_log
   - inspur.ispim.clear_audit_log
   - inspur.sm.clear_audit_log
+  - kaytus.ksmanage.clear_audit_log
 clear_event_log:
+  - ieisystem.inmanage.clear_event_log
   - inspur.ispim.clear_event_log
   - inspur.sm.clear_event_log
+  - kaytus.ksmanage.clear_event_log
 clear_system_log:
+  - ieisystem.inmanage.clear_system_log
   - inspur.ispim.clear_system_log
   - inspur.sm.clear_system_log
+  - kaytus.ksmanage.clear_system_log
+cli_backup:
+  - ansible.netcommon.cli_backup
 cli_command:
   - ansible.netcommon.cli_command
 cli_config:
@@ -2435,6 +2686,8 @@ cli_credential:
   - cisco.dnac.cli_credential
 cli_parse:
   - ansible.utils.cli_parse
+cli_restore:
+  - ansible.netcommon.cli_restore
 client_detail_info:
   - cisco.dnac.client_detail_info
 client_enrichment_details_info:
@@ -2489,6 +2742,8 @@ cloudwatchlogs_log_group_metric_filter:
   - amazon.aws.cloudwatchlogs_log_group_metric_filter
 cluster:
   - sensu.sensu_go.cluster
+cluster_drs:
+  - vmware.vmware.cluster_drs
 cluster_info:
   - sensu.sensu_go.cluster_info
 cluster_role:
@@ -2568,11 +2823,15 @@ coe_cluster:
 coe_cluster_template:
   - openstack.cloud.coe_cluster_template
 collect_blackbox:
+  - ieisystem.inmanage.collect_blackbox
   - inspur.ispim.collect_blackbox
   - inspur.sm.collect_blackbox
+  - kaytus.ksmanage.collect_blackbox
 collect_log:
+  - ieisystem.inmanage.collect_log
   - inspur.ispim.collect_log
   - inspur.sm.collect_log
+  - kaytus.ksmanage.collect_log
 command:
   - ansible.builtin.command
   - community.ciscosmb.command
@@ -2625,6 +2884,8 @@ config_rule:
   - community.aws.config_rule
 configuration:
   - cisco.ise.configuration
+configuration_archive_details_info:
+  - cisco.dnac.configuration_archive_details_info
 configuration_info:
   - cisco.ise.configuration_info
 configuration_template:
@@ -2658,34 +2919,20 @@ configuration_template_version_create:
 configuration_template_version_info:
   - cisco.dnac.configuration_template_version_info
 connect_media_info:
+  - ieisystem.inmanage.connect_media_info
   - inspur.ispim.connect_media_info
   - inspur.sm.connect_media_info
-connector_config:
-  - cisco.ise.connector_config
-connector_config_info:
-  - cisco.ise.connector_config_info
+  - kaytus.ksmanage.connect_media_info
 consistencygroup:
   - dellemc.unity.consistencygroup
 consul:
   - community.general.consul
 consul_acl:
   - community.general.consul_acl
-consul_acl_bootstrap:
-  - community.general.consul_acl_bootstrap
-consul_auth_method:
-  - community.general.consul_auth_method
-consul_binding_rule:
-  - community.general.consul_binding_rule
 consul_kv:
   - community.general.consul_kv
-consul_policy:
-  - community.general.consul_policy
-consul_role:
-  - community.general.consul_role
 consul_session:
   - community.general.consul_session
-consul_token:
-  - community.general.consul_token
 content_configuration:
   - vmware.vmware_rest.content_configuration
 content_configuration_info:
@@ -2700,6 +2947,14 @@ content_export_repository:
   - theforeman.foreman.content_export_repository
 content_export_version:
   - theforeman.foreman.content_export_version
+content_import_info:
+  - theforeman.foreman.content_import_info
+content_import_library:
+  - theforeman.foreman.content_import_library
+content_import_repository:
+  - theforeman.foreman.content_import_repository
+content_import_version:
+  - theforeman.foreman.content_import_version
 content_library_item_info:
   - vmware.vmware_rest.content_library_item_info
 content_locallibrary:
@@ -2710,6 +2965,8 @@ content_subscribedlibrary:
   - vmware.vmware_rest.content_subscribedlibrary
 content_subscribedlibrary_info:
   - vmware.vmware_rest.content_subscribedlibrary_info
+content_template:
+  - vmware.vmware.content_template
 content_upload:
   - theforeman.foreman.content_upload
 content_view:
@@ -3329,8 +3586,12 @@ cpm_time_info:
 cpm_user:
   - wti.remote.cpm_user
 cpu_info:
+  - ieisystem.inmanage.cpu_info
   - inspur.ispim.cpu_info
   - inspur.sm.cpu_info
+  - kaytus.ksmanage.cpu_info
+cran:
+  - debops.debops.cran
 credential:
   - awx.awx.credential
   - lowlydba.sqlserver.credential
@@ -3466,6 +3727,12 @@ csr_info:
   - cisco.ise.csr_info
 current_container_facts:
   - community.docker.current_container_facts
+custom_attributes:
+  - cisco.ise.custom_attributes
+custom_attributes_info:
+  - cisco.ise.custom_attributes_info
+custom_attributes_rename:
+  - cisco.ise.custom_attributes_rename
 custom_image:
   - cloudscale_ch.cloud.custom_image
 cv_server_provision:
@@ -3529,8 +3796,10 @@ del_ad_group:
 del_ldap_group:
   - inspur.sm.del_ldap_group
 del_session:
+  - ieisystem.inmanage.del_session
   - inspur.ispim.del_session
   - inspur.sm.del_session
+  - kaytus.ksmanage.del_session
 del_user:
   - inspur.sm.del_user
 del_user_group:
@@ -3542,7 +3811,7 @@ dellemc_configure_idrac_services:
 dellemc_idrac_lc_attributes:
   - dellemc.openmanage.dellemc_idrac_lc_attributes
 dellemc_idrac_storage_volume:
-  - dellemc.openmanage.dellemc_idrac_storage_volume
+  - dellemc.openmanage.idrac_storage_volume
 dellemc_system_lockdown_mode:
   - dellemc.openmanage.dellemc_system_lockdown_mode
 deploy:
@@ -3615,6 +3884,8 @@ device_administration_time_date_conditions:
   - cisco.ise.device_administration_time_date_conditions
 device_administration_time_date_conditions_info:
   - cisco.ise.device_administration_time_date_conditions_info
+device_configs_backup_workflow_manager:
+  - cisco.dnac.device_configs_backup_workflow_manager
 device_configurations_export:
   - cisco.dnac.device_configurations_export
 device_credential_create:
@@ -3663,6 +3934,10 @@ devices:
   - cisco.meraki.devices
 devices_appliance_performance_info:
   - cisco.meraki.devices_appliance_performance_info
+devices_appliance_radio_settings:
+  - cisco.meraki.devices_appliance_radio_settings
+devices_appliance_radio_settings_info:
+  - cisco.meraki.devices_appliance_radio_settings_info
 devices_appliance_uplinks_settings:
   - cisco.meraki.devices_appliance_uplinks_settings
 devices_appliance_uplinks_settings_info:
@@ -3711,6 +3986,14 @@ devices_cellular_sims_info:
   - cisco.meraki.devices_cellular_sims_info
 devices_info:
   - cisco.meraki.devices_info
+devices_live_tools_arp_table:
+  - cisco.meraki.devices_live_tools_arp_table
+devices_live_tools_arp_table_info:
+  - cisco.meraki.devices_live_tools_arp_table_info
+devices_live_tools_cable_test:
+  - cisco.meraki.devices_live_tools_cable_test
+devices_live_tools_cable_test_info:
+  - cisco.meraki.devices_live_tools_cable_test_info
 devices_live_tools_ping:
   - cisco.meraki.devices_live_tools_ping
 devices_live_tools_ping_device:
@@ -3719,6 +4002,14 @@ devices_live_tools_ping_device_info:
   - cisco.meraki.devices_live_tools_ping_device_info
 devices_live_tools_ping_info:
   - cisco.meraki.devices_live_tools_ping_info
+devices_live_tools_throughput_test:
+  - cisco.meraki.devices_live_tools_throughput_test
+devices_live_tools_throughput_test_info:
+  - cisco.meraki.devices_live_tools_throughput_test_info
+devices_live_tools_wake_on_lan:
+  - cisco.meraki.devices_live_tools_wake_on_lan
+devices_live_tools_wake_on_lan_info:
+  - cisco.meraki.devices_live_tools_wake_on_lan_info
 devices_lldp_cdp_info:
   - cisco.meraki.devices_lldp_cdp_info
 devices_management_interface:
@@ -3753,6 +4044,8 @@ devices_switch_warm_spare:
   - cisco.meraki.devices_switch_warm_spare
 devices_switch_warm_spare_info:
   - cisco.meraki.devices_switch_warm_spare_info
+devices_wireless_alternate_management_interface_ipv6:
+  - cisco.meraki.devices_wireless_alternate_management_interface_ipv6
 devices_wireless_bluetooth_settings:
   - cisco.meraki.devices_wireless_bluetooth_settings
 devices_wireless_bluetooth_settings_info:
@@ -3767,8 +4060,6 @@ devices_wireless_radio_settings_info:
   - cisco.meraki.devices_wireless_radio_settings_info
 devices_wireless_status_info:
   - cisco.meraki.devices_wireless_status_info
-dictionary_references_info:
-  - cisco.ise.dictionary_references_info
 digital_ocean:
   - community.digitalocean.digital_ocean
 digital_ocean_account_facts:
@@ -3947,6 +4238,8 @@ dms_replication_subnet_group:
   - community.aws.dms_replication_subnet_group
 dna_command_runner_keywords_info:
   - cisco.dnac.dna_command_runner_keywords_info
+dna_event_snmp_config_info:
+  - cisco.dnac.dna_event_snmp_config_info
 dnac_packages_info:
   - cisco.dnac.dnac_packages_info
 dnacaap_management_execution_status_info:
@@ -3955,8 +4248,6 @@ dnf:
   - ansible.builtin.dnf
 dnf5:
   - ansible.builtin.dnf5
-dnf_config_manager:
-  - community.general.dnf_config_manager
 dnf_versionlock:
   - community.general.dnf_versionlock
 dns_domain:
@@ -3964,8 +4255,10 @@ dns_domain:
 dns_domain_info:
   - vultr.cloud.dns_domain_info
 dns_info:
+  - ieisystem.inmanage.dns_info
   - inspur.ispim.dns_info
   - inspur.sm.dns_info
+  - kaytus.ksmanage.dns_info
 dns_record:
   - vultr.cloud.dns_record
 dns_zone:
@@ -4051,26 +4344,51 @@ docker_volume_info:
 domain:
   - microsoft.ad.domain
   - theforeman.foreman.domain
+domain_child:
+  - microsoft.ad.domain_child
 domain_controller:
   - microsoft.ad.domain_controller
 domain_info:
   - theforeman.foreman.domain_info
 download_auto_screenshot:
+  - ieisystem.inmanage.download_auto_screenshot
   - inspur.ispim.download_auto_screenshot
   - inspur.sm.download_auto_screenshot
+  - kaytus.ksmanage.download_auto_screenshot
 download_manual_screenshot:
+  - ieisystem.inmanage.download_manual_screenshot
   - inspur.ispim.download_manual_screenshot
   - inspur.sm.download_manual_screenshot
+  - kaytus.ksmanage.download_manual_screenshot
 downloadable_acl:
   - cisco.ise.downloadable_acl
 downloadable_acl_info:
   - cisco.ise.downloadable_acl_info
 dpkg_divert:
   - community.general.dpkg_divert
+  - debops.debops.dpkg_divert
 dpkg_selections:
   - ansible.builtin.dpkg_selections
+duo_identity_sync:
+  - cisco.ise.duo_identity_sync
+duo_identity_sync_cancel_info:
+  - cisco.ise.duo_identity_sync_cancel_info
+duo_identity_sync_info:
+  - cisco.ise.duo_identity_sync_info
+duo_identity_sync_status:
+  - cisco.ise.duo_identity_sync_status
+duo_identitysync_sync_info:
+  - cisco.ise.duo_identitysync_sync_info
+duo_mfa:
+  - cisco.ise.duo_mfa
+duo_mfa_info:
+  - cisco.ise.duo_mfa_info
+duo_mfa_testconnection:
+  - cisco.ise.duo_mfa_testconnection
 dynamodb_table:
   - community.aws.dynamodb_table
+dynamodb_table_info:
+  - community.aws.dynamodb_table_info
 dynamodb_ttl:
   - community.aws.dynamodb_ttl
 easy_install:
@@ -4230,143 +4548,229 @@ edgeswitch_facts:
 edgeswitch_vlan:
   - community.network.edgeswitch_vlan
 edit_ad:
+  - ieisystem.inmanage.edit_ad
   - inspur.ispim.edit_ad
   - inspur.sm.edit_ad
+  - kaytus.ksmanage.edit_ad
 edit_ad_group:
   - inspur.sm.edit_ad_group
 edit_alert_policy:
+  - ieisystem.inmanage.edit_alert_policy
   - inspur.ispim.edit_alert_policy
   - inspur.sm.edit_alert_policy
+  - kaytus.ksmanage.edit_alert_policy
 edit_auto_capture:
+  - ieisystem.inmanage.edit_auto_capture
   - inspur.ispim.edit_auto_capture
   - inspur.sm.edit_auto_capture
+  - kaytus.ksmanage.edit_auto_capture
 edit_bios:
+  - ieisystem.inmanage.edit_bios
   - inspur.ispim.edit_bios
   - inspur.sm.edit_bios
+  - kaytus.ksmanage.edit_bios
 edit_boot_image:
+  - ieisystem.inmanage.edit_boot_image
   - inspur.ispim.edit_boot_image
   - inspur.sm.edit_boot_image
+  - kaytus.ksmanage.edit_boot_image
 edit_boot_option:
+  - ieisystem.inmanage.edit_boot_option
   - inspur.ispim.edit_boot_option
   - inspur.sm.edit_boot_option
+  - kaytus.ksmanage.edit_boot_option
 edit_connect_media:
+  - ieisystem.inmanage.edit_connect_media
   - inspur.ispim.edit_connect_media
   - inspur.sm.edit_connect_media
+  - kaytus.ksmanage.edit_connect_media
 edit_dns:
+  - ieisystem.inmanage.edit_dns
   - inspur.ispim.edit_dns
   - inspur.sm.edit_dns
+  - kaytus.ksmanage.edit_dns
 edit_event_log_policy:
+  - ieisystem.inmanage.edit_event_log_policy
   - inspur.ispim.edit_event_log_policy
   - inspur.sm.edit_event_log_policy
+  - kaytus.ksmanage.edit_event_log_policy
 edit_fan:
+  - ieisystem.inmanage.edit_fan
   - inspur.ispim.edit_fan
   - inspur.sm.edit_fan
+  - kaytus.ksmanage.edit_fan
 edit_fru:
+  - ieisystem.inmanage.edit_fru
   - inspur.ispim.edit_fru
   - inspur.sm.edit_fru
+  - kaytus.ksmanage.edit_fru
 edit_ipv4:
+  - ieisystem.inmanage.edit_ipv4
   - inspur.ispim.edit_ipv4
   - inspur.sm.edit_ipv4
+  - kaytus.ksmanage.edit_ipv4
 edit_ipv6:
+  - ieisystem.inmanage.edit_ipv6
   - inspur.ispim.edit_ipv6
   - inspur.sm.edit_ipv6
+  - kaytus.ksmanage.edit_ipv6
 edit_kvm:
+  - ieisystem.inmanage.edit_kvm
   - inspur.ispim.edit_kvm
   - inspur.sm.edit_kvm
+  - kaytus.ksmanage.edit_kvm
 edit_ldap:
+  - ieisystem.inmanage.edit_ldap
   - inspur.ispim.edit_ldap
   - inspur.sm.edit_ldap
+  - kaytus.ksmanage.edit_ldap
 edit_ldap_group:
   - inspur.sm.edit_ldap_group
 edit_ldisk:
+  - ieisystem.inmanage.edit_ldisk
   - inspur.ispim.edit_ldisk
   - inspur.sm.edit_ldisk
+  - kaytus.ksmanage.edit_ldisk
 edit_log_setting:
+  - ieisystem.inmanage.edit_log_setting
   - inspur.ispim.edit_log_setting
   - inspur.sm.edit_log_setting
+  - kaytus.ksmanage.edit_log_setting
 edit_m6_log_setting:
+  - ieisystem.inmanage.edit_m6_log_setting
   - inspur.ispim.edit_m6_log_setting
+  - kaytus.ksmanage.edit_m6_log_setting
 edit_manual_capture:
+  - ieisystem.inmanage.edit_manual_capture
   - inspur.ispim.edit_manual_capture
   - inspur.sm.edit_manual_capture
+  - kaytus.ksmanage.edit_manual_capture
 edit_media_instance:
+  - ieisystem.inmanage.edit_media_instance
   - inspur.ispim.edit_media_instance
   - inspur.sm.edit_media_instance
+  - kaytus.ksmanage.edit_media_instance
 edit_ncsi:
+  - ieisystem.inmanage.edit_ncsi
   - inspur.ispim.edit_ncsi
   - inspur.sm.edit_ncsi
+  - kaytus.ksmanage.edit_ncsi
 edit_network:
+  - ieisystem.inmanage.edit_network
   - inspur.ispim.edit_network
   - inspur.sm.edit_network
+  - kaytus.ksmanage.edit_network
 edit_network_bond:
+  - ieisystem.inmanage.edit_network_bond
   - inspur.ispim.edit_network_bond
   - inspur.sm.edit_network_bond
+  - kaytus.ksmanage.edit_network_bond
 edit_network_link:
+  - ieisystem.inmanage.edit_network_link
   - inspur.ispim.edit_network_link
   - inspur.sm.edit_network_link
+  - kaytus.ksmanage.edit_network_link
 edit_ntp:
+  - ieisystem.inmanage.edit_ntp
   - inspur.ispim.edit_ntp
   - inspur.sm.edit_ntp
+  - kaytus.ksmanage.edit_ntp
 edit_pass_user:
   - inspur.sm.edit_pass_user
 edit_pdisk:
+  - ieisystem.inmanage.edit_pdisk
   - inspur.ispim.edit_pdisk
   - inspur.sm.edit_pdisk
+  - kaytus.ksmanage.edit_pdisk
 edit_power_budget:
+  - ieisystem.inmanage.edit_power_budget
   - inspur.ispim.edit_power_budget
   - inspur.sm.edit_power_budget
+  - kaytus.ksmanage.edit_power_budget
 edit_power_restore:
+  - ieisystem.inmanage.edit_power_restore
   - inspur.ispim.edit_power_restore
   - inspur.sm.edit_power_restore
+  - kaytus.ksmanage.edit_power_restore
 edit_power_status:
+  - ieisystem.inmanage.edit_power_status
   - inspur.ispim.edit_power_status
   - inspur.sm.edit_power_status
+  - kaytus.ksmanage.edit_power_status
 edit_preserve_config:
+  - ieisystem.inmanage.edit_preserve_config
   - inspur.ispim.edit_preserve_config
   - inspur.sm.edit_preserve_config
+  - kaytus.ksmanage.edit_preserve_config
 edit_priv_user:
   - inspur.sm.edit_priv_user
 edit_psu_config:
+  - ieisystem.inmanage.edit_psu_config
   - inspur.ispim.edit_psu_config
   - inspur.sm.edit_psu_config
+  - kaytus.ksmanage.edit_psu_config
 edit_psu_peak:
+  - ieisystem.inmanage.edit_psu_peak
   - inspur.ispim.edit_psu_peak
   - inspur.sm.edit_psu_peak
+  - kaytus.ksmanage.edit_psu_peak
 edit_restore_factory_default:
+  - ieisystem.inmanage.edit_restore_factory_default
   - inspur.ispim.edit_restore_factory_default
   - inspur.sm.edit_restore_factory_default
+  - kaytus.ksmanage.edit_restore_factory_default
 edit_service:
+  - ieisystem.inmanage.edit_service
   - inspur.ispim.edit_service
   - inspur.sm.edit_service
+  - kaytus.ksmanage.edit_service
 edit_smtp:
+  - ieisystem.inmanage.edit_smtp
   - inspur.ispim.edit_smtp
   - inspur.sm.edit_smtp
+  - kaytus.ksmanage.edit_smtp
 edit_smtp_com:
+  - ieisystem.inmanage.edit_smtp_com
   - inspur.ispim.edit_smtp_com
   - inspur.sm.edit_smtp_com
+  - kaytus.ksmanage.edit_smtp_com
 edit_smtp_dest:
+  - ieisystem.inmanage.edit_smtp_dest
   - inspur.ispim.edit_smtp_dest
   - inspur.sm.edit_smtp_dest
+  - kaytus.ksmanage.edit_smtp_dest
 edit_snmp:
+  - ieisystem.inmanage.edit_snmp
   - inspur.ispim.edit_snmp
   - inspur.sm.edit_snmp
+  - kaytus.ksmanage.edit_snmp
 edit_snmp_trap:
+  - ieisystem.inmanage.edit_snmp_trap
   - inspur.ispim.edit_snmp_trap
   - inspur.sm.edit_snmp_trap
+  - kaytus.ksmanage.edit_snmp_trap
 edit_threshold:
+  - ieisystem.inmanage.edit_threshold
   - inspur.ispim.edit_threshold
   - inspur.sm.edit_threshold
+  - kaytus.ksmanage.edit_threshold
 edit_uid:
+  - ieisystem.inmanage.edit_uid
   - inspur.ispim.edit_uid
   - inspur.sm.edit_uid
+  - kaytus.ksmanage.edit_uid
 edit_user_group:
   - inspur.sm.edit_user_group
 edit_virtual_media:
+  - ieisystem.inmanage.edit_virtual_media
   - inspur.ispim.edit_virtual_media
   - inspur.sm.edit_virtual_media
+  - kaytus.ksmanage.edit_virtual_media
 edit_vlan:
+  - ieisystem.inmanage.edit_vlan
   - inspur.ispim.edit_vlan
   - inspur.sm.edit_vlan
+  - kaytus.ksmanage.edit_vlan
 efs:
   - community.aws.efs
 efs_info:
@@ -4458,6 +4862,18 @@ endpoint_register:
   - cisco.ise.endpoint_register
 endpoint_release_rejected_endpoint:
   - cisco.ise.endpoint_release_rejected_endpoint
+endpoints:
+  - cisco.ise.endpoints
+endpoints_bulk:
+  - cisco.ise.endpoints_bulk
+endpoints_bulk_info:
+  - cisco.ise.endpoints_bulk_info
+endpoints_device_type_info:
+  - cisco.ise.endpoints_device_type_info
+endpoints_info:
+  - cisco.ise.endpoints_info
+endpoints_task:
+  - cisco.ise.endpoints_task
 enos_command:
   - community.network.enos_command
 enos_config:
@@ -4474,8 +4890,6 @@ eos_acls:
   - arista.eos.eos_acls
 eos_banner:
   - arista.eos.eos_banner
-eos_bgp:
-  - arista.eos.eos_bgp
 eos_bgp_address_family:
   - arista.eos.eos_bgp_address_family
 eos_bgp_global:
@@ -4508,8 +4922,6 @@ eos_lldp_global:
   - arista.eos.eos_lldp_global
 eos_lldp_interfaces:
   - arista.eos.eos_lldp_interfaces
-eos_logging:
-  - arista.eos.eos_logging
 eos_logging_global:
   - arista.eos.eos_logging_global
 eos_ntp_global:
@@ -4572,11 +4984,15 @@ event_info:
   - cisco.dnac.event_info
   - sensu.sensu_go.event_info
 event_log_info:
+  - ieisystem.inmanage.event_log_info
   - inspur.ispim.event_log_info
   - inspur.sm.event_log_info
+  - kaytus.ksmanage.event_log_info
 event_log_policy_info:
+  - ieisystem.inmanage.event_log_policy_info
   - inspur.ispim.event_log_policy_info
   - inspur.sm.event_log_policy_info
+  - kaytus.ksmanage.event_log_policy_info
 event_series_audit_logs_info:
   - cisco.dnac.event_series_audit_logs_info
 event_series_audit_logs_parent_records_info:
@@ -4587,6 +5003,8 @@ event_series_count_info:
   - cisco.dnac.event_series_count_info
 event_series_info:
   - cisco.dnac.event_series_info
+event_snmp_config:
+  - cisco.dnac.event_snmp_config
 event_snmp_config_info:
   - cisco.dnac.event_snmp_config_info
 event_subscription:
@@ -4619,8 +5037,12 @@ event_syslog_config_info:
   - cisco.dnac.event_syslog_config_info
 event_webhook_create:
   - cisco.dnac.event_webhook_create
+event_webhook_read_info:
+  - cisco.dnac.event_webhook_read_info
 event_webhook_update:
   - cisco.dnac.event_webhook_update
+events_and_notifications_workflow_manager:
+  - cisco.dnac.events_and_notifications_workflow_manager
 execute_suggested_actions_commands:
   - cisco.dnac.execute_suggested_actions_commands
 execution_environment:
@@ -4657,8 +5079,6 @@ fact_diff:
   - ansible.utils.fact_diff
 facter:
   - community.general.facter
-facter_facts:
-  - community.general.facter_facts
 facts:
   - community.ciscosmb.facts
   - community.routeros.facts
@@ -4669,8 +5089,10 @@ failover_ip:
 failover_ip_info:
   - community.hrobot.failover_ip_info
 fan_info:
+  - ieisystem.inmanage.fan_info
   - inspur.ispim.fan_info
   - inspur.sm.fan_info
+  - kaytus.ksmanage.fan_info
 fault_set:
   - dellemc.powerflex.fault_set
 federation_idp:
@@ -4736,6 +5158,18 @@ flatpak:
   - community.general.flatpak
 flatpak_remote:
   - community.general.flatpak_remote
+flexible_report_content_info:
+  - cisco.dnac.flexible_report_content_info
+flexible_report_execute:
+  - cisco.dnac.flexible_report_execute
+flexible_report_executions_info:
+  - cisco.dnac.flexible_report_executions_info
+flexible_report_schedule:
+  - cisco.dnac.flexible_report_schedule
+flexible_report_schedule_info:
+  - cisco.dnac.flexible_report_schedule_info
+flexible_report_schedules_info:
+  - cisco.dnac.flexible_report_schedules_info
 floating_ip:
   - cloudscale_ch.cloud.floating_ip
   - hetzner.hcloud.floating_ip
@@ -5263,6 +5697,12 @@ fmgr_extensioncontroller_extenderprofile_lanextension:
   - fortinet.fortimanager.fmgr_extensioncontroller_extenderprofile_lanextension
 fmgr_extensioncontroller_extenderprofile_lanextension_backhaul:
   - fortinet.fortimanager.fmgr_extensioncontroller_extenderprofile_lanextension_backhaul
+fmgr_extensioncontroller_extenderprofile_wifi:
+  - fortinet.fortimanager.fmgr_extensioncontroller_extenderprofile_wifi
+fmgr_extensioncontroller_extenderprofile_wifi_radio1:
+  - fortinet.fortimanager.fmgr_extensioncontroller_extenderprofile_wifi_radio1
+fmgr_extensioncontroller_extenderprofile_wifi_radio2:
+  - fortinet.fortimanager.fmgr_extensioncontroller_extenderprofile_wifi_radio2
 fmgr_fact:
   - fortinet.fortimanager.fmgr_fact
 fmgr_filefilter_profile:
@@ -5543,6 +5983,8 @@ fmgr_firewall_sslsshprofile:
   - fortinet.fortimanager.fmgr_firewall_sslsshprofile
 fmgr_firewall_sslsshprofile_dot:
   - fortinet.fortimanager.fmgr_firewall_sslsshprofile_dot
+fmgr_firewall_sslsshprofile_echoutersni:
+  - fortinet.fortimanager.fmgr_firewall_sslsshprofile_echoutersni
 fmgr_firewall_sslsshprofile_ftps:
   - fortinet.fortimanager.fmgr_firewall_sslsshprofile_ftps
 fmgr_firewall_sslsshprofile_https:
@@ -6185,20 +6627,14 @@ fmgr_switchcontroller_macpolicy:
   - fortinet.fortimanager.fmgr_switchcontroller_macpolicy
 fmgr_switchcontroller_managedswitch:
   - fortinet.fortimanager.fmgr_switchcontroller_managedswitch
-fmgr_switchcontroller_managedswitch_8021xsettings:
-  - fortinet.fortimanager.fmgr_switchcontroller_managedswitch_8021xsettings
 fmgr_switchcontroller_managedswitch_customcommand:
   - fortinet.fortimanager.fmgr_switchcontroller_managedswitch_customcommand
 fmgr_switchcontroller_managedswitch_dhcpsnoopingstaticclient:
   - fortinet.fortimanager.fmgr_switchcontroller_managedswitch_dhcpsnoopingstaticclient
-fmgr_switchcontroller_managedswitch_igmpsnooping:
-  - fortinet.fortimanager.fmgr_switchcontroller_managedswitch_igmpsnooping
 fmgr_switchcontroller_managedswitch_ipsourceguard:
   - fortinet.fortimanager.fmgr_switchcontroller_managedswitch_ipsourceguard
 fmgr_switchcontroller_managedswitch_ipsourceguard_bindingentry:
   - fortinet.fortimanager.fmgr_switchcontroller_managedswitch_ipsourceguard_bindingentry
-fmgr_switchcontroller_managedswitch_mirror:
-  - fortinet.fortimanager.fmgr_switchcontroller_managedswitch_mirror
 fmgr_switchcontroller_managedswitch_ports:
   - fortinet.fortimanager.fmgr_switchcontroller_managedswitch_ports
 fmgr_switchcontroller_managedswitch_ports_dhcpsnoopoption82override:
@@ -6217,18 +6653,6 @@ fmgr_switchcontroller_managedswitch_snmptrapthreshold:
   - fortinet.fortimanager.fmgr_switchcontroller_managedswitch_snmptrapthreshold
 fmgr_switchcontroller_managedswitch_snmpuser:
   - fortinet.fortimanager.fmgr_switchcontroller_managedswitch_snmpuser
-fmgr_switchcontroller_managedswitch_staticmac:
-  - fortinet.fortimanager.fmgr_switchcontroller_managedswitch_staticmac
-fmgr_switchcontroller_managedswitch_stormcontrol:
-  - fortinet.fortimanager.fmgr_switchcontroller_managedswitch_stormcontrol
-fmgr_switchcontroller_managedswitch_stpinstance:
-  - fortinet.fortimanager.fmgr_switchcontroller_managedswitch_stpinstance
-fmgr_switchcontroller_managedswitch_stpsettings:
-  - fortinet.fortimanager.fmgr_switchcontroller_managedswitch_stpsettings
-fmgr_switchcontroller_managedswitch_switchlog:
-  - fortinet.fortimanager.fmgr_switchcontroller_managedswitch_switchlog
-fmgr_switchcontroller_managedswitch_switchstpsettings:
-  - fortinet.fortimanager.fmgr_switchcontroller_managedswitch_switchstpsettings
 fmgr_switchcontroller_managedswitch_vlan:
   - fortinet.fortimanager.fmgr_switchcontroller_managedswitch_vlan
 fmgr_switchcontroller_ptp_profile:
@@ -6481,6 +6905,8 @@ fmgr_system_log_settings_rollingregular:
   - fortinet.fortimanager.fmgr_system_log_settings_rollingregular
 fmgr_system_log_topology:
   - fortinet.fortimanager.fmgr_system_log_topology
+fmgr_system_log_ueba:
+  - fortinet.fortimanager.fmgr_system_log_ueba
 fmgr_system_logfetch_clientprofile:
   - fortinet.fortimanager.fmgr_system_logfetch_clientprofile
 fmgr_system_logfetch_clientprofile_devicefilter:
@@ -6513,6 +6939,8 @@ fmgr_system_npu_fpanomaly:
   - fortinet.fortimanager.fmgr_system_npu_fpanomaly
 fmgr_system_npu_hpe:
   - fortinet.fortimanager.fmgr_system_npu_hpe
+fmgr_system_npu_icmpratectrl:
+  - fortinet.fortimanager.fmgr_system_npu_icmpratectrl
 fmgr_system_npu_ipreassembly:
   - fortinet.fortimanager.fmgr_system_npu_ipreassembly
 fmgr_system_npu_isfnpqueues:
@@ -6747,6 +7175,8 @@ fmgr_user_domaincontroller_extraserver:
   - fortinet.fortimanager.fmgr_user_domaincontroller_extraserver
 fmgr_user_exchange:
   - fortinet.fortimanager.fmgr_user_exchange
+fmgr_user_externalidentityprovider:
+  - fortinet.fortimanager.fmgr_user_externalidentityprovider
 fmgr_user_flexvm:
   - fortinet.fortimanager.fmgr_user_flexvm
 fmgr_user_fortitoken:
@@ -7123,6 +7553,8 @@ fmgr_wtpprofile_splittunnelingacl:
   - fortinet.fortimanager.fmgr_wtpprofile_splittunnelingacl
 folder:
   - grafana.grafana.folder
+folder_template_from_vm:
+  - vmware.vmware.folder_template_from_vm
 fortios_alertemail_setting:
   - fortinet.fortios.fortios_alertemail_setting
 fortios_antivirus_exempt_list:
@@ -7179,10 +7611,14 @@ fortios_configuration_fact:
   - fortinet.fortios.fortios_configuration_fact
 fortios_credential_store_domain_controller:
   - fortinet.fortios.fortios_credential_store_domain_controller
+fortios_diameter_filter_profile:
+  - fortinet.fortios.fortios_diameter_filter_profile
 fortios_dlp_data_type:
   - fortinet.fortios.fortios_dlp_data_type
 fortios_dlp_dictionary:
   - fortinet.fortios.fortios_dlp_dictionary
+fortios_dlp_exact_data_match:
+  - fortinet.fortios.fortios_dlp_exact_data_match
 fortios_dlp_filepattern:
   - fortinet.fortios.fortios_dlp_filepattern
 fortios_dlp_fp_doc_source:
@@ -7263,6 +7699,8 @@ fortios_extension_controller_extender:
   - fortinet.fortios.fortios_extension_controller_extender
 fortios_extension_controller_extender_profile:
   - fortinet.fortios.fortios_extension_controller_extender_profile
+fortios_extension_controller_extender_vap:
+  - fortinet.fortios.fortios_extension_controller_extender_vap
 fortios_extension_controller_fortigate:
   - fortinet.fortios.fortios_extension_controller_fortigate
 fortios_extension_controller_fortigate_profile:
@@ -7385,6 +7823,8 @@ fortios_firewall_multicast_policy6:
   - fortinet.fortios.fortios_firewall_multicast_policy6
 fortios_firewall_network_service_dynamic:
   - fortinet.fortios.fortios_firewall_network_service_dynamic
+fortios_firewall_on_demand_sniffer:
+  - fortinet.fortios.fortios_firewall_on_demand_sniffer
 fortios_firewall_pfcp:
   - fortinet.fortios.fortios_firewall_pfcp
 fortios_firewall_policy:
@@ -8013,6 +8453,8 @@ fortios_system_np6:
   - fortinet.fortios.fortios_system_np6
 fortios_system_npu:
   - fortinet.fortios.fortios_system_npu
+fortios_system_npu_vlink:
+  - fortinet.fortios.fortios_system_npu_vlink
 fortios_system_ntp:
   - fortinet.fortios.fortios_system_ntp
 fortios_system_object_tagging:
@@ -8123,6 +8565,8 @@ fortios_system_speed_test_server:
   - fortinet.fortios.fortios_system_speed_test_server
 fortios_system_speed_test_setting:
   - fortinet.fortios.fortios_system_speed_test_setting
+fortios_system_ssh_config:
+  - fortinet.fortios.fortios_system_ssh_config
 fortios_system_sso_admin:
   - fortinet.fortios.fortios_system_sso_admin
 fortios_system_sso_forticloud_admin:
@@ -8185,6 +8629,8 @@ fortios_user_domain_controller:
   - fortinet.fortios.fortios_user_domain_controller
 fortios_user_exchange:
   - fortinet.fortios.fortios_user_exchange
+fortios_user_external_identity_provider:
+  - fortinet.fortios.fortios_user_external_identity_provider
 fortios_user_fortitoken:
   - fortinet.fortios.fortios_user_fortitoken
 fortios_user_fsso:
@@ -8221,6 +8667,8 @@ fortios_user_setting:
   - fortinet.fortios.fortios_user_setting
 fortios_user_tacacsplus:
   - fortinet.fortios.fortios_user_tacacsplus
+fortios_videofilter_keyword:
+  - fortinet.fortios.fortios_videofilter_keyword
 fortios_videofilter_profile:
   - fortinet.fortios.fortios_videofilter_profile
 fortios_videofilter_youtube_channel_filter:
@@ -8271,6 +8719,8 @@ fortios_vpn_ocvpn:
   - fortinet.fortios.fortios_vpn_ocvpn
 fortios_vpn_pptp:
   - fortinet.fortios.fortios_vpn_pptp
+fortios_vpn_qkd:
+  - fortinet.fortios.fortios_vpn_qkd
 fortios_vpn_ssl_client:
   - fortinet.fortios.fortios_vpn_ssl_client
 fortios_vpn_ssl_settings:
@@ -8460,8 +8910,10 @@ frr_bgp:
 frr_facts:
   - frr.frr.frr_facts
 fru_info:
+  - ieisystem.inmanage.fru_info
   - inspur.ispim.fru_info
   - inspur.sm.fru_info
+  - kaytus.ksmanage.fru_info
 ftd_configuration:
   - community.network.ftd_configuration
 ftd_file_download:
@@ -8470,47 +8922,11 @@ ftd_file_upload:
   - community.network.ftd_file_upload
 ftd_install:
   - community.network.ftd_install
-fusion_api_client:
-  - purestorage.fusion.fusion_api_client
-fusion_array:
-  - purestorage.fusion.fusion_array
-fusion_az:
-  - purestorage.fusion.fusion_az
-fusion_hap:
-  - purestorage.fusion.fusion_hap
-fusion_hw:
-  - purestorage.fusion.fusion_hw
-fusion_info:
-  - purestorage.fusion.fusion_info
-fusion_ni:
-  - purestorage.fusion.fusion_ni
-fusion_nig:
-  - purestorage.fusion.fusion_nig
-fusion_pg:
-  - purestorage.fusion.fusion_pg
-fusion_pp:
-  - purestorage.fusion.fusion_pp
-fusion_ra:
-  - purestorage.fusion.fusion_ra
-fusion_region:
-  - purestorage.fusion.fusion_region
-fusion_sc:
-  - purestorage.fusion.fusion_sc
-fusion_se:
-  - purestorage.fusion.fusion_se
-fusion_ss:
-  - purestorage.fusion.fusion_ss
-fusion_tenant:
-  - purestorage.fusion.fusion_tenant
-fusion_tn:
-  - purestorage.fusion.fusion_tn
-fusion_ts:
-  - purestorage.fusion.fusion_ts
-fusion_volume:
-  - purestorage.fusion.fusion_volume
 fw_version_info:
+  - ieisystem.inmanage.fw_version_info
   - inspur.ispim.fw_version_info
   - inspur.sm.fw_version_info
+  - kaytus.ksmanage.fw_version_info
 gandi_livedns:
   - community.general.gandi_livedns
 gather_facts:
@@ -8861,22 +9277,16 @@ gcp_tpu_node_info:
   - google.cloud.gcp_tpu_node_info
 gem:
   - community.general.gem
-geo_rep:
-  - gluster.gluster.geo_rep
 get_certificate:
   - community.crypto.get_certificate
 get_url:
   - ansible.builtin.get_url
 getent:
   - ansible.builtin.getent
-gio_mime:
-  - community.general.gio_mime
 git:
   - ansible.builtin.git
 git_config:
   - community.general.git_config
-git_config_info:
-  - community.general.git_config_info
 github_deploy_key:
   - community.general.github_deploy_key
 github_issue:
@@ -8897,30 +9307,14 @@ gitlab_deploy_key:
   - community.general.gitlab_deploy_key
 gitlab_group:
   - community.general.gitlab_group
-gitlab_group_access_token:
-  - community.general.gitlab_group_access_token
 gitlab_group_members:
   - community.general.gitlab_group_members
 gitlab_group_variable:
   - community.general.gitlab_group_variable
 gitlab_hook:
   - community.general.gitlab_hook
-gitlab_instance_variable:
-  - community.general.gitlab_instance_variable
-gitlab_issue:
-  - community.general.gitlab_issue
-gitlab_label:
-  - community.general.gitlab_label
-gitlab_merge_request:
-  - community.general.gitlab_merge_request
-gitlab_milestone:
-  - community.general.gitlab_milestone
 gitlab_project:
   - community.general.gitlab_project
-gitlab_project_access_token:
-  - community.general.gitlab_project_access_token
-gitlab_project_badge:
-  - community.general.gitlab_project_badge
 gitlab_project_members:
   - community.general.gitlab_project_members
 gitlab_project_variable:
@@ -8953,12 +9347,6 @@ glue_crawler:
   - community.aws.glue_crawler
 glue_job:
   - community.aws.glue_job
-gluster_heal_info:
-  - gluster.gluster.gluster_heal_info
-gluster_peer:
-  - gluster.gluster.gluster_peer
-gluster_volume:
-  - gluster.gluster.gluster_volume
 golden_image_create:
   - cisco.dnac.golden_image_create
 golden_tag_image_delete:
@@ -8966,8 +9354,10 @@ golden_tag_image_delete:
 golden_tag_image_details_info:
   - cisco.dnac.golden_tag_image_details_info
 gpu_info:
+  - ieisystem.inmanage.gpu_info
   - inspur.ispim.gpu_info
   - inspur.sm.gpu_info
+  - kaytus.ksmanage.gpu_info
 grafana_dashboard:
   - community.grafana.grafana_dashboard
 grafana_datasource:
@@ -8982,6 +9372,8 @@ grafana_organization_user:
   - community.grafana.grafana_organization_user
 grafana_plugin:
   - community.grafana.grafana_plugin
+grafana_silence:
+  - community.grafana.grafana_silence
 grafana_team:
   - community.grafana.grafana_team
 grafana_user:
@@ -9000,6 +9392,8 @@ grpc_config:
   - ansible.netcommon.grpc_config
 grpc_get:
   - ansible.netcommon.grpc_get
+guest_info:
+  - vmware.vmware.guest_info
 guest_location_info:
   - cisco.ise.guest_location_info
 guest_smtp_notification_settings:
@@ -9046,6 +9440,8 @@ gunicorn:
   - community.general.gunicorn
 hadr:
   - lowlydba.sqlserver.hadr
+hana_query:
+  - community.general.hana_query
 handler_info:
   - sensu.sensu_go.handler_info
 handler_set:
@@ -9053,12 +9449,16 @@ handler_set:
 haproxy:
   - community.general.haproxy
 hard_disk_info:
+  - ieisystem.inmanage.hard_disk_info
   - inspur.ispim.hard_disk_info
   - inspur.sm.hard_disk_info
+  - kaytus.ksmanage.hard_disk_info
 hardware_model:
   - theforeman.foreman.hardware_model
 hba_info:
+  - ieisystem.inmanage.hba_info
   - inspur.ispim.hba_info
+  - kaytus.ksmanage.hba_info
 helm:
   - kubernetes.core.helm
 helm_info:
@@ -9135,8 +9535,6 @@ hosttech_dns_record_set_info:
   - community.dns.hosttech_dns_record_set_info
 hosttech_dns_record_sets:
   - community.dns.hosttech_dns_record_sets
-hosttech_dns_records:
-  - community.dns.hosttech_dns_record_sets
 hosttech_dns_zone_info:
   - community.dns.hosttech_dns_zone_info
 hotpatch_info:
@@ -9149,50 +9547,6 @@ hotspot_portal:
   - cisco.ise.hotspot_portal
 hotspot_portal_info:
   - cisco.ise.hotspot_portal_info
-hpe_nimble_access_control_record:
-  - hpe.nimble.hpe_nimble_access_control_record
-hpe_nimble_array:
-  - hpe.nimble.hpe_nimble_array
-hpe_nimble_chap_user:
-  - hpe.nimble.hpe_nimble_chap_user
-hpe_nimble_disk:
-  - hpe.nimble.hpe_nimble_disk
-hpe_nimble_encryption:
-  - hpe.nimble.hpe_nimble_encryption
-hpe_nimble_fc:
-  - hpe.nimble.hpe_nimble_fc
-hpe_nimble_group:
-  - hpe.nimble.hpe_nimble_group
-hpe_nimble_info:
-  - hpe.nimble.hpe_nimble_info
-hpe_nimble_initiator_group:
-  - hpe.nimble.hpe_nimble_initiator_group
-hpe_nimble_network:
-  - hpe.nimble.hpe_nimble_network
-hpe_nimble_partner:
-  - hpe.nimble.hpe_nimble_partner
-hpe_nimble_performance_policy:
-  - hpe.nimble.hpe_nimble_performance_policy
-hpe_nimble_pool:
-  - hpe.nimble.hpe_nimble_pool
-hpe_nimble_protection_schedule:
-  - hpe.nimble.hpe_nimble_protection_schedule
-hpe_nimble_protection_template:
-  - hpe.nimble.hpe_nimble_protection_template
-hpe_nimble_shelf:
-  - hpe.nimble.hpe_nimble_shelf
-hpe_nimble_snapshot:
-  - hpe.nimble.hpe_nimble_snapshot
-hpe_nimble_snapshot_collection:
-  - hpe.nimble.hpe_nimble_snapshot_collection
-hpe_nimble_user:
-  - hpe.nimble.hpe_nimble_user
-hpe_nimble_user_policy:
-  - hpe.nimble.hpe_nimble_user_policy
-hpe_nimble_volume:
-  - hpe.nimble.hpe_nimble_volume
-hpe_nimble_volume_collection:
-  - hpe.nimble.hpe_nimble_volume_collection
 hpilo_boot:
   - community.general.hpilo_boot
 hpilo_info:
@@ -9287,6 +9641,8 @@ ibm_sv_manage_awss3_cloudaccount:
 ibm_sv_manage_cloud_backups:
   - ibm.spectrum_virtualize.ibm_sv_manage_cloud_backups
   - ibm.storage_virtualize.ibm_sv_manage_cloud_backups
+ibm_sv_manage_drive:
+  - ibm.storage_virtualize.ibm_sv_manage_drive
 ibm_sv_manage_fc_partnership:
   - ibm.spectrum_virtualize.ibm_sv_manage_fc_partnership
   - ibm.storage_virtualize.ibm_sv_manage_fc_partnership
@@ -9560,6 +9916,8 @@ idrac_boot:
   - dellemc.openmanage.idrac_boot
 idrac_certificates:
   - dellemc.openmanage.idrac_certificates
+idrac_diagnostics:
+  - dellemc.openmanage.idrac_diagnostics
 idrac_firmware:
   - dellemc.openmanage.idrac_firmware
 idrac_firmware_info:
@@ -9592,6 +9950,10 @@ idrac_reset:
   - dellemc.openmanage.idrac_reset
 idrac_server_config_profile:
   - dellemc.openmanage.idrac_server_config_profile
+idrac_session:
+  - dellemc.openmanage.idrac_session
+idrac_storage_volume:
+  - dellemc.openmanage.idrac_storage_volume
 idrac_syslog:
   - dellemc.openmanage.idrac_syslog
 idrac_system_info:
@@ -9608,8 +9970,6 @@ ig_config:
   - community.network.ig_config
 ig_unit_information:
   - community.network.ig_unit_information
-ilo_redfish_command:
-  - community.general.ilo_redfish_command
 ilo_redfish_config:
   - community.general.ilo_redfish_config
 ilo_redfish_info:
@@ -9656,6 +10016,8 @@ infini_fs:
   - infinidat.infinibox.infini_fs
 infini_host:
   - infinidat.infinibox.infini_host
+infini_infinimetrics:
+  - infinidat.infinibox.infini_infinimetrics
 infini_map:
   - infinidat.infinibox.infini_map
 infini_metadata:
@@ -9717,6 +10079,10 @@ integration_settings_instances_itsm:
   - cisco.dnac.integration_settings_instances_itsm
 integration_settings_instances_itsm_info:
   - cisco.dnac.integration_settings_instances_itsm_info
+integration_settings_itsm_instances_info:
+  - cisco.dnac.integration_settings_itsm_instances_info
+integration_settings_status_info:
+  - cisco.dnac.integration_settings_status_info
 interface:
   - dellemc.unity.interface
 interface_info:
@@ -9773,8 +10139,6 @@ ios_acls:
   - cisco.ios.ios_acls
 ios_banner:
   - cisco.ios.ios_banner
-ios_bgp:
-  - cisco.ios.ios_bgp
 ios_bgp_address_family:
   - cisco.ios.ios_bgp_address_family
 ios_bgp_global:
@@ -9813,8 +10177,6 @@ ios_lldp_interfaces:
   - cisco.ios.ios_lldp_interfaces
 ios_logging_global:
   - cisco.ios.ios_logging_global
-ios_ntp:
-  - cisco.ios.ios_ntp
 ios_ntp_global:
   - cisco.ios.ios_ntp_global
 ios_ospf_interfaces:
@@ -9883,8 +10245,6 @@ iosxr_lldp_global:
   - cisco.iosxr.iosxr_lldp_global
 iosxr_lldp_interfaces:
   - cisco.iosxr.iosxr_lldp_interfaces
-iosxr_logging:
-  - cisco.iosxr.iosxr_logging
 iosxr_logging_global:
   - cisco.iosxr.iosxr_logging_global
 iosxr_netconf:
@@ -9957,8 +10317,6 @@ ipadm_ifprop:
   - community.network.ipadm_ifprop
 ipadm_prop:
   - community.network.ipadm_prop
-ipbase_info:
-  - community.general.ipbase_info
 ipify_facts:
   - community.general.ipify_facts
 ipinfoio_facts:
@@ -9967,6 +10325,26 @@ ipmi_boot:
   - community.general.ipmi_boot
 ipmi_power:
   - community.general.ipmi_power
+ipsec:
+  - cisco.ise.ipsec
+ipsec_bulk:
+  - cisco.ise.ipsec_bulk
+ipsec_certificates_info:
+  - cisco.ise.ipsec_certificates_info
+ipsec_delete:
+  - cisco.ise.ipsec_delete
+ipsec_delete_info:
+  - cisco.ise.ipsec_delete_info
+ipsec_disable:
+  - cisco.ise.ipsec_disable
+ipsec_disable_info:
+  - cisco.ise.ipsec_disable_info
+ipsec_enable:
+  - cisco.ise.ipsec_enable
+ipsec_enable_info:
+  - cisco.ise.ipsec_enable_info
+ipsec_info:
+  - cisco.ise.ipsec_info
 iptables:
   - ansible.builtin.iptables
 iptables_state:
@@ -9981,12 +10359,14 @@ ironware_config:
   - community.network.ironware_config
 ironware_facts:
   - community.network.ironware_facts
+ise_integration_status_info:
+  - cisco.dnac.ise_integration_status_info
+ise_radius_integration_workflow_manager:
+  - cisco.dnac.ise_radius_integration_workflow_manager
 ise_root_ca_regenerate:
   - cisco.ise.ise_root_ca_regenerate
 iso_create:
   - community.general.iso_create
-iso_customize:
-  - community.general.iso_customize
 iso_extract:
   - community.general.iso_extract
 iso_info:
@@ -10011,8 +10391,6 @@ jboss:
   - community.general.jboss
 jenkins_build:
   - community.general.jenkins_build
-jenkins_build_info:
-  - community.general.jenkins_build_info
 jenkins_job:
   - community.general.jenkins_job
 jenkins_job_info:
@@ -10070,8 +10448,6 @@ junos_lldp_global:
   - junipernetworks.junos.junos_lldp_global
 junos_lldp_interfaces:
   - junipernetworks.junos.junos_lldp_interfaces
-junos_logging:
-  - junipernetworks.junos.junos_logging
 junos_logging_global:
   - junipernetworks.junos.junos_logging_global
 junos_netconf:
@@ -10141,38 +10517,18 @@ k8s_service:
   - kubernetes.core.k8s_service
 k8s_taint:
   - kubernetes.core.k8s_taint
-kdeconfig:
-  - community.general.kdeconfig
 kernel_blacklist:
   - community.general.kernel_blacklist
 keycloak_authentication:
   - community.general.keycloak_authentication
-keycloak_authentication_required_actions:
-  - community.general.keycloak_authentication_required_actions
-keycloak_authz_authorization_scope:
-  - community.general.keycloak_authz_authorization_scope
-keycloak_authz_custom_policy:
-  - community.general.keycloak_authz_custom_policy
-keycloak_authz_permission:
-  - community.general.keycloak_authz_permission
-keycloak_authz_permission_info:
-  - community.general.keycloak_authz_permission_info
 keycloak_client:
   - community.general.keycloak_client
 keycloak_client_rolemapping:
   - community.general.keycloak_client_rolemapping
 keycloak_clientscope:
   - community.general.keycloak_clientscope
-keycloak_clientscope_type:
-  - community.general.keycloak_clientscope_type
-keycloak_clientsecret_info:
-  - community.general.keycloak_clientsecret_info
-keycloak_clientsecret_regenerate:
-  - community.general.keycloak_clientsecret_regenerate
 keycloak_clienttemplate:
   - community.general.keycloak_clienttemplate
-keycloak_component_info:
-  - community.general.keycloak_component_info
 keycloak_group:
   - community.general.keycloak_group
 keycloak_identity_provider:
@@ -10181,18 +10537,10 @@ keycloak_realm:
   - community.general.keycloak_realm
 keycloak_realm_info:
   - community.general.keycloak_realm_info
-keycloak_realm_key:
-  - community.general.keycloak_realm_key
-keycloak_realm_rolemapping:
-  - community.general.keycloak_realm_rolemapping
 keycloak_role:
   - community.general.keycloak_role
-keycloak_user:
-  - community.general.keycloak_user
 keycloak_user_federation:
   - community.general.keycloak_user_federation
-keycloak_user_rolemapping:
-  - community.general.keycloak_user_rolemapping
 keypair:
   - openstack.cloud.keypair
 keypair_info:
@@ -10215,9 +10563,15 @@ kms_key_info:
   - amazon.aws.kms_key_info
 known_hosts:
   - ansible.builtin.known_hosts
+kubevirt_vm:
+  - kubevirt.core.kubevirt_vm
+kubevirt_vm_info:
+  - kubevirt.core.kubevirt_vm_info
 kvm_info:
+  - ieisystem.inmanage.kvm_info
   - inspur.ispim.kvm_info
   - inspur.sm.kvm_info
+  - kaytus.ksmanage.kvm_info
 label:
   - awx.awx.label
 lambda:
@@ -10246,8 +10600,18 @@ lan_automation_log_by_serial_number_info:
   - cisco.dnac.lan_automation_log_by_serial_number_info
 lan_automation_log_info:
   - cisco.dnac.lan_automation_log_info
+lan_automation_sessions_info:
+  - cisco.dnac.lan_automation_sessions_info
 lan_automation_status_info:
   - cisco.dnac.lan_automation_status_info
+lan_automation_update:
+  - cisco.dnac.lan_automation_update
+lan_automation_update_device:
+  - cisco.dnac.lan_automation_update_device
+lan_automation_update_v2:
+  - cisco.dnac.lan_automation_update_v2
+lan_automation_v2:
+  - cisco.dnac.lan_automation_v2
 launchd:
   - community.general.launchd
 layman:
@@ -10264,26 +10628,35 @@ lbu:
   - community.general.lbu
 ldap_attrs:
   - community.general.ldap_attrs
+  - debops.debops.ldap_attrs
 ldap_auth_provider:
   - sensu.sensu_go.ldap_auth_provider
 ldap_entry:
   - community.general.ldap_entry
 ldap_group:
+  - ieisystem.inmanage.ldap_group
   - inspur.ispim.ldap_group
   - inspur.sm.ldap_group
+  - kaytus.ksmanage.ldap_group
 ldap_group_info:
+  - ieisystem.inmanage.ldap_group_info
   - inspur.ispim.ldap_group_info
   - inspur.sm.ldap_group_info
+  - kaytus.ksmanage.ldap_group_info
 ldap_info:
+  - ieisystem.inmanage.ldap_info
   - inspur.ispim.ldap_info
   - inspur.sm.ldap_info
+  - kaytus.ksmanage.ldap_info
 ldap_passwd:
   - community.general.ldap_passwd
 ldap_search:
   - community.general.ldap_search
 ldisk_info:
+  - ieisystem.inmanage.ldisk_info
   - inspur.ispim.ldisk_info
   - inspur.sm.ldisk_info
+  - kaytus.ksmanage.ldisk_info
 librato_annotation:
   - community.general.librato_annotation
 license:
@@ -10298,6 +10671,8 @@ license_device_license_summary_info:
   - cisco.dnac.license_device_license_summary_info
 license_device_registration:
   - cisco.dnac.license_device_registration
+license_info:
+  - vmware.vmware.license_info
 license_smart_account_details_info:
   - cisco.dnac.license_smart_account_details_info
 license_term_details_info:
@@ -10376,8 +10751,10 @@ location:
 location_info:
   - hetzner.hcloud.location_info
 log_setting_info:
+  - ieisystem.inmanage.log_setting_info
   - inspur.ispim.log_setting_info
   - inspur.sm.log_setting_info
+  - kaytus.ksmanage.log_setting_info
 log_source_management:
   - ibm.qradar.log_source_management
 logentries:
@@ -10392,8 +10769,6 @@ luks_device:
   - community.crypto.luks_device
 lvg:
   - community.general.lvg
-lvg_rename:
-  - community.general.lvg_rename
 lvol:
   - community.general.lvol
 lxc_container:
@@ -10424,18 +10799,26 @@ manageiq_group:
   - community.general.manageiq_group
 manageiq_policies:
   - community.general.manageiq_policies
-manageiq_policies_info:
-  - community.general.manageiq_policies_info
 manageiq_provider:
   - community.general.manageiq_provider
 manageiq_tags:
   - community.general.manageiq_tags
-manageiq_tags_info:
-  - community.general.manageiq_tags_info
 manageiq_tenant:
   - community.general.manageiq_tenant
 manageiq_user:
   - community.general.manageiq_user
+maps_export:
+  - cisco.dnac.maps_export
+maps_import:
+  - cisco.dnac.maps_import
+maps_import_perform:
+  - cisco.dnac.maps_import_perform
+maps_import_start:
+  - cisco.dnac.maps_import_start
+maps_import_status_info:
+  - cisco.dnac.maps_import_status_info
+maps_supported_access_points_info:
+  - cisco.dnac.maps_supported_access_points_info
 mas:
   - community.general.mas
 matrix:
@@ -10447,11 +10830,15 @@ maven_artifact:
 mdm_cluster:
   - dellemc.powerflex.mdm_cluster
 media_instance_info:
+  - ieisystem.inmanage.media_instance_info
   - inspur.ispim.media_instance_info
   - inspur.sm.media_instance_info
+  - kaytus.ksmanage.media_instance_info
 mem_info:
+  - ieisystem.inmanage.mem_info
   - inspur.ispim.mem_info
   - inspur.sm.mem_info
+  - kaytus.ksmanage.mem_info
 membership:
   - microsoft.ad.membership
 memory:
@@ -10708,6 +11095,10 @@ mso_schema_site_bd_l3out:
   - cisco.mso.mso_schema_site_bd_l3out
 mso_schema_site_bd_subnet:
   - cisco.mso.mso_schema_site_bd_subnet
+mso_schema_site_contract_service_graph:
+  - cisco.mso.mso_schema_site_contract_service_graph
+mso_schema_site_contract_service_graph_listener:
+  - cisco.mso.mso_schema_site_contract_service_graph_listener
 mso_schema_site_external_epg:
   - cisco.mso.mso_schema_site_external_epg
 mso_schema_site_external_epg_selector:
@@ -10778,6 +11169,8 @@ mso_schema_template_vrf:
   - cisco.mso.mso_schema_template_vrf
 mso_schema_template_vrf_contract:
   - cisco.mso.mso_schema_template_vrf_contract
+mso_schema_template_vrf_rp:
+  - cisco.mso.mso_schema_template_vrf_rp
 mso_schema_validate:
   - cisco.mso.mso_schema_validate
 mso_service_node_type:
@@ -10846,54 +11239,6 @@ na_cloudmanager_snapmirror:
   - netapp.cloudmanager.na_cloudmanager_snapmirror
 na_cloudmanager_volume:
   - netapp.cloudmanager.na_cloudmanager_volume
-na_elementsw_access_group:
-  - netapp.elementsw.na_elementsw_access_group
-na_elementsw_access_group_volumes:
-  - netapp.elementsw.na_elementsw_access_group_volumes
-na_elementsw_account:
-  - netapp.elementsw.na_elementsw_account
-na_elementsw_admin_users:
-  - netapp.elementsw.na_elementsw_admin_users
-na_elementsw_backup:
-  - netapp.elementsw.na_elementsw_backup
-na_elementsw_check_connections:
-  - netapp.elementsw.na_elementsw_check_connections
-na_elementsw_cluster:
-  - netapp.elementsw.na_elementsw_cluster
-na_elementsw_cluster_config:
-  - netapp.elementsw.na_elementsw_cluster_config
-na_elementsw_cluster_pair:
-  - netapp.elementsw.na_elementsw_cluster_pair
-na_elementsw_cluster_snmp:
-  - netapp.elementsw.na_elementsw_cluster_snmp
-na_elementsw_drive:
-  - netapp.elementsw.na_elementsw_drive
-na_elementsw_info:
-  - netapp.elementsw.na_elementsw_info
-na_elementsw_initiators:
-  - netapp.elementsw.na_elementsw_initiators
-na_elementsw_ldap:
-  - netapp.elementsw.na_elementsw_ldap
-na_elementsw_network_interfaces:
-  - netapp.elementsw.na_elementsw_network_interfaces
-na_elementsw_node:
-  - netapp.elementsw.na_elementsw_node
-na_elementsw_qos_policy:
-  - netapp.elementsw.na_elementsw_qos_policy
-na_elementsw_snapshot:
-  - netapp.elementsw.na_elementsw_snapshot
-na_elementsw_snapshot_restore:
-  - netapp.elementsw.na_elementsw_snapshot_restore
-na_elementsw_snapshot_schedule:
-  - netapp.elementsw.na_elementsw_snapshot_schedule
-na_elementsw_vlan:
-  - netapp.elementsw.na_elementsw_vlan
-na_elementsw_volume:
-  - netapp.elementsw.na_elementsw_volume
-na_elementsw_volume_clone:
-  - netapp.elementsw.na_elementsw_volume_clone
-na_elementsw_volume_pair:
-  - netapp.elementsw.na_elementsw_volume_pair
 na_ontap_active_directory:
   - netapp.ontap.na_ontap_active_directory
 na_ontap_active_directory_domain_controllers:
@@ -11292,26 +11637,6 @@ na_sg_org_user:
   - netapp.storagegrid.na_sg_org_user
 na_sg_org_user_s3_key:
   - netapp.storagegrid.na_sg_org_user_s3_key
-na_um_aggregates_info:
-  - netapp.um_info.na_um_aggregates_info
-na_um_clusters_info:
-  - netapp.um_info.na_um_clusters_info
-na_um_list_aggregates:
-  - netapp.um_info.na_um_aggregates_info
-na_um_list_clusters:
-  - netapp.um_info.na_um_clusters_info
-na_um_list_nodes:
-  - netapp.um_info.na_um_nodes_info
-na_um_list_svms:
-  - netapp.um_info.na_um_svms_info
-na_um_list_volumes:
-  - netapp.um_info.na_um_volumes_info
-na_um_nodes_info:
-  - netapp.um_info.na_um_nodes_info
-na_um_svms_info:
-  - netapp.um_info.na_um_svms_info
-na_um_volumes_info:
-  - netapp.um_info.na_um_volumes_info
 nagios:
   - community.general.nagios
 nameserver_info:
@@ -11331,10 +11656,28 @@ native_supplicant_profile_info:
 nclu:
   - community.network.nclu
 ncsi_info:
+  - ieisystem.inmanage.ncsi_info
   - inspur.ispim.ncsi_info
   - inspur.sm.ncsi_info
+  - kaytus.ksmanage.ncsi_info
+ndo_dhcp_option_policy:
+  - cisco.mso.ndo_dhcp_option_policy
+ndo_dhcp_relay_policy:
+  - cisco.mso.ndo_dhcp_relay_policy
+ndo_l3_domain:
+  - cisco.mso.ndo_l3_domain
+ndo_physical_domain:
+  - cisco.mso.ndo_physical_domain
+ndo_route_map_policy_multicast:
+  - cisco.mso.ndo_route_map_policy_multicast
+ndo_schema_template_bd_dhcp_policy:
+  - cisco.mso.ndo_schema_template_bd_dhcp_policy
 ndo_schema_template_deploy:
   - cisco.mso.ndo_schema_template_deploy
+ndo_template:
+  - cisco.mso.ndo_template
+ndo_vlan_pool:
+  - cisco.mso.ndo_vlan_pool
 net_get:
   - ansible.netcommon.net_get
 net_ping:
@@ -11435,6 +11778,8 @@ netbox_contact_role:
   - netbox.netbox.netbox_contact_role
 netbox_custom_field:
   - netbox.netbox.netbox_custom_field
+netbox_custom_field_choice_set:
+  - netbox.netbox.netbox_custom_field_choice_set
 netbox_custom_link:
   - netbox.netbox.netbox_custom_link
 netbox_device:
@@ -11479,6 +11824,10 @@ netbox_location:
   - netbox.netbox.netbox_location
 netbox_manufacturer:
   - netbox.netbox.netbox_manufacturer
+netbox_module:
+  - netbox.netbox.netbox_module
+netbox_module_bay:
+  - netbox.netbox.netbox_module_bay
 netbox_module_type:
   - netbox.netbox.netbox_module_type
 netbox_platform:
@@ -11666,8 +12015,12 @@ network_access_time_date_conditions:
 network_access_time_date_conditions_info:
   - cisco.ise.network_access_time_date_conditions_info
 network_bond_info:
+  - ieisystem.inmanage.network_bond_info
   - inspur.ispim.network_bond_info
   - inspur.sm.network_bond_info
+  - kaytus.ksmanage.network_bond_info
+network_compliance_workflow_manager:
+  - cisco.dnac.network_compliance_workflow_manager
 network_create:
   - cisco.dnac.network_create
 network_device:
@@ -11687,6 +12040,10 @@ network_device_config_count_info:
   - cisco.dnac.network_device_config_count_info
 network_device_config_info:
   - cisco.dnac.network_device_config_info
+network_device_config_task_info:
+  - cisco.dnac.network_device_config_task_info
+network_device_config_write_memory:
+  - cisco.dnac.network_device_config_write_memory
 network_device_count_info:
   - cisco.dnac.network_device_count_info
 network_device_custom_prompt:
@@ -11708,16 +12065,22 @@ network_device_group_info:
 network_device_info:
   - cisco.dnac.network_device_info
   - cisco.ise.network_device_info
+network_device_insight_device_link_info:
+  - cisco.dnac.network_device_insight_device_link_info
 network_device_interface_neighbor_info:
   - cisco.dnac.network_device_interface_neighbor_info
 network_device_interface_poe_info:
   - cisco.dnac.network_device_interface_poe_info
 network_device_inventory_insight_link_mismatch_info:
   - cisco.dnac.network_device_inventory_insight_link_mismatch_info
+network_device_ip_address_info:
+  - cisco.dnac.network_device_ip_address_info
 network_device_lexicographically_sorted_info:
   - cisco.dnac.network_device_lexicographically_sorted_info
 network_device_linecard_details_info:
   - cisco.dnac.network_device_linecard_details_info
+network_device_management_address_update:
+  - cisco.dnac.network_device_management_address_update
 network_device_meraki_organization_info:
   - cisco.dnac.network_device_meraki_organization_info
 network_device_module_count_info:
@@ -11744,8 +12107,12 @@ network_device_update_role:
   - cisco.dnac.network_device_update_role
 network_device_user_defined_field:
   - cisco.dnac.network_device_user_defined_field
+network_device_user_defined_field_delete:
+  - cisco.dnac.network_device_user_defined_field_delete
 network_device_user_defined_field_info:
   - cisco.dnac.network_device_user_defined_field_info
+network_device_user_defined_field_update:
+  - cisco.dnac.network_device_user_defined_field_update
 network_device_vlan_info:
   - cisco.dnac.network_device_vlan_info
 network_device_wireless_lan_info:
@@ -11755,11 +12122,15 @@ network_device_with_snmp_v3_des_info:
 network_info:
   - cisco.dnac.network_info
   - hetzner.hcloud.network_info
+  - ieisystem.inmanage.network_info
   - inspur.ispim.network_info
   - inspur.sm.network_info
+  - kaytus.ksmanage.network_info
 network_link_info:
+  - ieisystem.inmanage.network_link_info
   - inspur.ispim.network_link_info
   - inspur.sm.network_link_info
+  - kaytus.ksmanage.network_link_info
 network_resource:
   - ansible.netcommon.network_resource
 network_settings_intent:
@@ -11848,6 +12219,10 @@ networks_appliance_prefixes_delegated_statics:
   - cisco.meraki.networks_appliance_prefixes_delegated_statics
 networks_appliance_prefixes_delegated_statics_info:
   - cisco.meraki.networks_appliance_prefixes_delegated_statics_info
+networks_appliance_rf_profiles:
+  - cisco.meraki.networks_appliance_rf_profiles
+networks_appliance_rf_profiles_info:
+  - cisco.meraki.networks_appliance_rf_profiles_info
 networks_appliance_security_intrusion:
   - cisco.meraki.networks_appliance_security_intrusion
 networks_appliance_security_intrusion_info:
@@ -11890,6 +12265,8 @@ networks_appliance_traffic_shaping_uplink_selection:
   - cisco.meraki.networks_appliance_traffic_shaping_uplink_selection
 networks_appliance_traffic_shaping_uplink_selection_info:
   - cisco.meraki.networks_appliance_traffic_shaping_uplink_selection_info
+networks_appliance_traffic_shaping_vpn_exclusions:
+  - cisco.meraki.networks_appliance_traffic_shaping_vpn_exclusions
 networks_appliance_vlans:
   - cisco.meraki.networks_appliance_vlans
 networks_appliance_vlans_info:
@@ -12065,6 +12442,8 @@ networks_sm_devices_fields:
   - cisco.meraki.networks_sm_devices_fields
 networks_sm_devices_info:
   - cisco.meraki.networks_sm_devices_info
+networks_sm_devices_install_apps:
+  - cisco.meraki.networks_sm_devices_install_apps
 networks_sm_devices_lock:
   - cisco.meraki.networks_sm_devices_lock
 networks_sm_devices_modify_tags:
@@ -12075,12 +12454,18 @@ networks_sm_devices_network_adapters_info:
   - cisco.meraki.networks_sm_devices_network_adapters_info
 networks_sm_devices_performance_history_info:
   - cisco.meraki.networks_sm_devices_performance_history_info
+networks_sm_devices_reboot:
+  - cisco.meraki.networks_sm_devices_reboot
 networks_sm_devices_refresh_details:
   - cisco.meraki.networks_sm_devices_refresh_details
 networks_sm_devices_security_centers_info:
   - cisco.meraki.networks_sm_devices_security_centers_info
+networks_sm_devices_shutdown:
+  - cisco.meraki.networks_sm_devices_shutdown
 networks_sm_devices_unenroll:
   - cisco.meraki.networks_sm_devices_unenroll
+networks_sm_devices_uninstall_apps:
+  - cisco.meraki.networks_sm_devices_uninstall_apps
 networks_sm_devices_wipe:
   - cisco.meraki.networks_sm_devices_wipe
 networks_sm_devices_wlan_lists_info:
@@ -12213,6 +12598,14 @@ networks_traffic_shaping_dscp_tagging_options_info:
   - cisco.meraki.networks_traffic_shaping_dscp_tagging_options_info
 networks_unbind:
   - cisco.meraki.networks_unbind
+networks_vlan_profiles:
+  - cisco.meraki.networks_vlan_profiles
+networks_vlan_profiles_assignments_by_device_info:
+  - cisco.meraki.networks_vlan_profiles_assignments_by_device_info
+networks_vlan_profiles_assignments_reassign:
+  - cisco.meraki.networks_vlan_profiles_assignments_reassign
+networks_vlan_profiles_info:
+  - cisco.meraki.networks_vlan_profiles_info
 networks_webhooks_http_servers:
   - cisco.meraki.networks_webhooks_http_servers
 networks_webhooks_http_servers_info:
@@ -12249,6 +12642,14 @@ networks_wireless_data_rate_history_info:
   - cisco.meraki.networks_wireless_data_rate_history_info
 networks_wireless_devices_connection_stats_info:
   - cisco.meraki.networks_wireless_devices_connection_stats_info
+networks_wireless_ethernet_ports_profiles:
+  - cisco.meraki.networks_wireless_ethernet_ports_profiles
+networks_wireless_ethernet_ports_profiles_assign:
+  - cisco.meraki.networks_wireless_ethernet_ports_profiles_assign
+networks_wireless_ethernet_ports_profiles_info:
+  - cisco.meraki.networks_wireless_ethernet_ports_profiles_info
+networks_wireless_ethernet_ports_profiles_set_default:
+  - cisco.meraki.networks_wireless_ethernet_ports_profiles_set_default
 networks_wireless_failed_connections_info:
   - cisco.meraki.networks_wireless_failed_connections_info
 networks_wireless_latency_history_info:
@@ -12445,8 +12846,6 @@ nomad_job:
   - community.general.nomad_job
 nomad_job_info:
   - community.general.nomad_job_info
-nomad_token:
-  - community.general.nomad_token
 nonquery:
   - lowlydba.sqlserver.nonquery
 nos_command:
@@ -12464,8 +12863,10 @@ npm:
 nsupdate:
   - community.general.nsupdate
 ntp_info:
+  - ieisystem.inmanage.ntp_info
   - inspur.ispim.ntp_info
   - inspur.sm.ntp_info
+  - kaytus.ksmanage.ntp_info
 nuage_vspk:
   - community.network.nuage_vspk
 nxos_aaa_server:
@@ -12542,18 +12943,10 @@ nxos_lldp_global:
   - cisco.nxos.nxos_lldp_global
 nxos_lldp_interfaces:
   - cisco.nxos.nxos_lldp_interfaces
-nxos_logging:
-  - cisco.nxos.nxos_logging
 nxos_logging_global:
   - cisco.nxos.nxos_logging_global
-nxos_ntp:
-  - cisco.nxos.nxos_ntp
-nxos_ntp_auth:
-  - cisco.nxos.nxos_ntp_auth
 nxos_ntp_global:
   - cisco.nxos.nxos_ntp_global
-nxos_ntp_options:
-  - cisco.nxos.nxos_ntp_options
 nxos_nxapi:
   - cisco.nxos.nxos_nxapi
 nxos_ospf_interfaces:
@@ -12649,10 +13042,6 @@ object_storage:
   - vultr.cloud.object_storage
 objects_user:
   - cloudscale_ch.cloud.objects_user
-ocapi_command:
-  - community.general.ocapi_command
-ocapi_info:
-  - community.general.ocapi_info
 oci_vcn:
   - community.general.oci_vcn
 odbc:
@@ -12767,6 +13156,8 @@ ome_server_interface_profile_info:
   - dellemc.openmanage.ome_server_interface_profile_info
 ome_server_interface_profiles:
   - dellemc.openmanage.ome_server_interface_profiles
+ome_session:
+  - dellemc.openmanage.ome_session
 ome_smart_fabric:
   - dellemc.openmanage.ome_smart_fabric
 ome_smart_fabric_info:
@@ -12790,8 +13181,10 @@ ome_user:
 ome_user_info:
   - dellemc.openmanage.ome_user_info
 onboard_disk_info:
+  - ieisystem.inmanage.onboard_disk_info
   - inspur.ispim.onboard_disk_info
   - inspur.sm.onboard_disk_info
+  - kaytus.ksmanage.onboard_disk_info
 one_host:
   - community.general.one_host
 one_image:
@@ -12979,6 +13372,12 @@ organizations_appliance_security_intrusion:
   - cisco.meraki.organizations_appliance_security_intrusion
 organizations_appliance_security_intrusion_info:
   - cisco.meraki.organizations_appliance_security_intrusion_info
+organizations_appliance_traffic_shaping_vpn_exclusions_by_network_info:
+  - cisco.meraki.organizations_appliance_traffic_shaping_vpn_exclusions_by_network_info
+organizations_appliance_uplinks_statuses_overview_info:
+  - cisco.meraki.organizations_appliance_uplinks_statuses_overview_info
+organizations_appliance_uplinks_usage_by_network_info:
+  - cisco.meraki.organizations_appliance_uplinks_usage_by_network_info
 organizations_appliance_vpn_third_party_vpnpeers:
   - cisco.meraki.organizations_appliance_vpn_third_party_vpnpeers
 organizations_appliance_vpn_third_party_vpnpeers_info:
@@ -12995,10 +13394,22 @@ organizations_branding_policies_priorities:
   - cisco.meraki.organizations_branding_policies_priorities
 organizations_branding_policies_priorities_info:
   - cisco.meraki.organizations_branding_policies_priorities_info
+organizations_camera_boundaries_areas_by_device_info:
+  - cisco.meraki.organizations_camera_boundaries_areas_by_device_info
+organizations_camera_boundaries_lines_by_device_info:
+  - cisco.meraki.organizations_camera_boundaries_lines_by_device_info
 organizations_camera_custom_analytics_artifacts:
   - cisco.meraki.organizations_camera_custom_analytics_artifacts
 organizations_camera_custom_analytics_artifacts_info:
   - cisco.meraki.organizations_camera_custom_analytics_artifacts_info
+organizations_camera_detections_history_by_boundary_by_interval_info:
+  - cisco.meraki.organizations_camera_detections_history_by_boundary_by_interval_info
+organizations_camera_permissions_info:
+  - cisco.meraki.organizations_camera_permissions_info
+organizations_camera_roles:
+  - cisco.meraki.organizations_camera_roles
+organizations_camera_roles_info:
+  - cisco.meraki.organizations_camera_roles_info
 organizations_cellular_gateway_uplink_statuses_info:
   - cisco.meraki.organizations_cellular_gateway_uplink_statuses_info
 organizations_claim:
@@ -13021,8 +13432,12 @@ organizations_config_templates_switch_profiles_ports:
   - cisco.meraki.organizations_config_templates_switch_profiles_ports
 organizations_config_templates_switch_profiles_ports_info:
   - cisco.meraki.organizations_config_templates_switch_profiles_ports_info
+organizations_devices_availabilities_change_history_info:
+  - cisco.meraki.organizations_devices_availabilities_change_history_info
 organizations_devices_availabilities_info:
   - cisco.meraki.organizations_devices_availabilities_info
+organizations_devices_boots_history_info:
+  - cisco.meraki.organizations_devices_boots_history_info
 organizations_devices_info:
   - cisco.meraki.organizations_devices_info
 organizations_devices_power_modules_statuses_by_device_info:
@@ -13121,8 +13536,16 @@ organizations_sensor_readings_history_info:
   - cisco.meraki.organizations_sensor_readings_history_info
 organizations_sensor_readings_latest_info:
   - cisco.meraki.organizations_sensor_readings_latest_info
+organizations_sm_admins_roles:
+  - cisco.meraki.organizations_sm_admins_roles
+organizations_sm_admins_roles_info:
+  - cisco.meraki.organizations_sm_admins_roles_info
 organizations_sm_apns_cert_info:
   - cisco.meraki.organizations_sm_apns_cert_info
+organizations_sm_sentry_policies_assignments:
+  - cisco.meraki.organizations_sm_sentry_policies_assignments
+organizations_sm_sentry_policies_assignments_by_network_info:
+  - cisco.meraki.organizations_sm_sentry_policies_assignments_by_network_info
 organizations_sm_vpp_accounts_info:
   - cisco.meraki.organizations_sm_vpp_accounts_info
 organizations_snmp:
@@ -13139,6 +13562,8 @@ organizations_summary_top_devices_by_usage_info:
   - cisco.meraki.organizations_summary_top_devices_by_usage_info
 organizations_summary_top_devices_models_by_usage_info:
   - cisco.meraki.organizations_summary_top_devices_models_by_usage_info
+organizations_summary_top_networks_by_status_info:
+  - cisco.meraki.organizations_summary_top_networks_by_status_info
 organizations_summary_top_ssids_by_usage_info:
   - cisco.meraki.organizations_summary_top_ssids_by_usage_info
 organizations_summary_top_switches_by_energy_usage_info:
@@ -13151,10 +13576,26 @@ organizations_uplinks_statuses_info:
   - cisco.meraki.organizations_uplinks_statuses_info
 organizations_users:
   - cisco.meraki.organizations_users
+organizations_webhooks_callbacks_statuses_info:
+  - cisco.meraki.organizations_webhooks_callbacks_statuses_info
 organizations_webhooks_logs_info:
   - cisco.meraki.organizations_webhooks_logs_info
+organizations_wireless_devices_channel_utilization_by_device_info:
+  - cisco.meraki.organizations_wireless_devices_channel_utilization_by_device_info
+organizations_wireless_devices_channel_utilization_by_network_info:
+  - cisco.meraki.organizations_wireless_devices_channel_utilization_by_network_info
+organizations_wireless_devices_channel_utilization_history_by_device_by_interval_info:
+  - cisco.meraki.organizations_wireless_devices_channel_utilization_history_by_device_by_interval_info
+organizations_wireless_devices_channel_utilization_history_by_network_by_interval_info:
+  - cisco.meraki.organizations_wireless_devices_channel_utilization_history_by_network_by_interval_info
 organizations_wireless_devices_ethernet_statuses_info:
   - cisco.meraki.organizations_wireless_devices_ethernet_statuses_info
+organizations_wireless_devices_packet_loss_by_client_info:
+  - cisco.meraki.organizations_wireless_devices_packet_loss_by_client_info
+organizations_wireless_devices_packet_loss_by_device_info:
+  - cisco.meraki.organizations_wireless_devices_packet_loss_by_device_info
+organizations_wireless_devices_packet_loss_by_network_info:
+  - cisco.meraki.organizations_wireless_devices_packet_loss_by_network_info
 os10:
   - dellemc.os10.os10
 os10_command:
@@ -13358,11 +13799,15 @@ path_trace_info:
 pause:
   - ansible.builtin.pause
 pcie_info:
+  - ieisystem.inmanage.pcie_info
   - inspur.ispim.pcie_info
   - inspur.sm.pcie_info
+  - kaytus.ksmanage.pcie_info
 pdisk_info:
+  - ieisystem.inmanage.pdisk_info
   - inspur.ispim.pdisk_info
   - inspur.sm.pdisk_info
+  - kaytus.ksmanage.pdisk_info
 pear:
   - community.general.pear
 personas_check_standalone:
@@ -13411,6 +13856,8 @@ plan_info:
   - vultr.cloud.plan_info
 plan_metal_info:
   - vultr.cloud.plan_metal_info
+planned_access_points:
+  - cisco.dnac.planned_access_points
 planned_access_points_info:
   - cisco.dnac.planned_access_points_info
 platform_nodes_configuration_summary_info:
@@ -13549,8 +13996,6 @@ pnp_workflow_info:
   - cisco.dnac.pnp_workflow_info
 pnp_workflow_manager:
   - cisco.dnac.pnp_workflow_manager
-pnpm:
-  - community.general.pnpm
 podman_container:
   - containers.podman.podman_container
 podman_container_exec:
@@ -13593,6 +14038,8 @@ podman_runlabel:
   - containers.podman.podman_runlabel
 podman_save:
   - containers.podman.podman_save
+podman_search:
+  - containers.podman.podman_search
 podman_secret:
   - containers.podman.podman_secret
 podman_secret_info:
@@ -13668,20 +14115,30 @@ postgresql_user:
 postgresql_user_obj_stat_info:
   - community.postgresql.postgresql_user_obj_stat_info
 power_budget_info:
+  - ieisystem.inmanage.power_budget_info
   - inspur.ispim.power_budget_info
   - inspur.sm.power_budget_info
+  - kaytus.ksmanage.power_budget_info
 power_consumption_info:
+  - ieisystem.inmanage.power_consumption_info
   - inspur.ispim.power_consumption_info
   - inspur.sm.power_consumption_info
+  - kaytus.ksmanage.power_consumption_info
 power_restore_info:
+  - ieisystem.inmanage.power_restore_info
   - inspur.ispim.power_restore_info
   - inspur.sm.power_restore_info
+  - kaytus.ksmanage.power_restore_info
 power_status_info:
+  - ieisystem.inmanage.power_status_info
   - inspur.ispim.power_status_info
   - inspur.sm.power_status_info
+  - kaytus.ksmanage.power_status_info
 preserve_config_info:
+  - ieisystem.inmanage.preserve_config_info
   - inspur.ispim.preserve_config_info
   - inspur.sm.preserve_config_info
+  - kaytus.ksmanage.preserve_config_info
 primary_ip:
   - hetzner.hcloud.primary_ip
 primary_ip_info:
@@ -13731,8 +14188,6 @@ provisioning_template:
   - theforeman.foreman.provisioning_template
 proxmox:
   - community.general.proxmox
-proxmox_disk:
-  - community.general.proxmox_disk
 proxmox_domain_info:
   - community.general.proxmox_domain_info
 proxmox_group_info:
@@ -13741,16 +14196,8 @@ proxmox_kvm:
   - community.general.proxmox_kvm
 proxmox_nic:
   - community.general.proxmox_nic
-proxmox_node_info:
-  - community.general.proxmox_node_info
-proxmox_pool:
-  - community.general.proxmox_pool
-proxmox_pool_member:
-  - community.general.proxmox_pool_member
 proxmox_snap:
   - community.general.proxmox_snap
-proxmox_storage_contents_info:
-  - community.general.proxmox_storage_contents_info
 proxmox_storage_info:
   - community.general.proxmox_storage_info
 proxmox_tasks_info:
@@ -13759,14 +14206,14 @@ proxmox_template:
   - community.general.proxmox_template
 proxmox_user_info:
   - community.general.proxmox_user_info
-proxmox_vm_info:
-  - community.general.proxmox_vm_info
 proxy_connection_settings:
   - cisco.ise.proxy_connection_settings
 proxy_connection_settings_info:
   - cisco.ise.proxy_connection_settings_info
 proxysql_backend_servers:
   - community.proxysql.proxysql_backend_servers
+proxysql_galera_hostgroups:
+  - community.proxysql.proxysql_galera_hostgroups
 proxysql_global_variables:
   - community.proxysql.proxysql_global_variables
 proxysql_info:
@@ -13786,14 +14233,20 @@ proxysql_scheduler:
 psexec:
   - community.windows.psexec
 psu_config_info:
+  - ieisystem.inmanage.psu_config_info
   - inspur.ispim.psu_config_info
   - inspur.sm.psu_config_info
+  - kaytus.ksmanage.psu_config_info
 psu_info:
+  - ieisystem.inmanage.psu_info
   - inspur.ispim.psu_info
   - inspur.sm.psu_info
+  - kaytus.ksmanage.psu_info
 psu_peak_info:
+  - ieisystem.inmanage.psu_peak_info
   - inspur.ispim.psu_peak_info
   - inspur.sm.psu_peak_info
+  - kaytus.ksmanage.psu_peak_info
 pubnub_blocks:
   - community.general.pubnub_blocks
 pulp_repo:
@@ -13814,6 +14267,8 @@ purefa_apiclient:
   - purestorage.flasharray.purefa_apiclient
 purefa_arrayname:
   - purestorage.flasharray.purefa_arrayname
+purefa_audits:
+  - purestorage.flasharray.purefa_audits
 purefa_banner:
   - purestorage.flasharray.purefa_banner
 purefa_cbsexpand:
@@ -13892,6 +14347,8 @@ purefa_ra:
   - purestorage.flasharray.purefa_ra
 purefa_saml:
   - purestorage.flasharray.purefa_saml
+purefa_sessions:
+  - purestorage.flasharray.purefa_sessions
 purefa_smis:
   - purestorage.flasharray.purefa_smis
 purefa_smtp:
@@ -14026,6 +14483,18 @@ pushbullet:
   - community.general.pushbullet
 pushover:
   - community.general.pushover
+px_grid_direct:
+  - cisco.ise.px_grid_direct
+px_grid_direct_dictionary_info:
+  - cisco.ise.px_grid_direct_dictionary_info
+px_grid_direct_info:
+  - cisco.ise.px_grid_direct_info
+px_grid_direct_sync:
+  - cisco.ise.px_grid_direct_sync
+px_grid_direct_sync_info:
+  - cisco.ise.px_grid_direct_sync_info
+px_grid_direct_test_connector:
+  - cisco.ise.px_grid_direct_test_connector
 px_grid_node_approve:
   - cisco.ise.px_grid_node_approve
 px_grid_node_delete:
@@ -14157,8 +14626,10 @@ radius_server_sequence:
 radius_server_sequence_info:
   - cisco.ise.radius_server_sequence_info
 raid_info:
+  - ieisystem.inmanage.raid_info
   - inspur.ispim.raid_info
   - inspur.sm.raid_info
+  - kaytus.ksmanage.raid_info
 raw:
   - ansible.builtin.raw
 rax:
@@ -14219,22 +14690,28 @@ rds_cluster:
   - amazon.aws.rds_cluster
 rds_cluster_info:
   - amazon.aws.rds_cluster_info
+rds_cluster_param_group:
+  - amazon.aws.rds_cluster_param_group
+rds_cluster_param_group_info:
+  - amazon.aws.rds_cluster_param_group_info
 rds_cluster_snapshot:
   - amazon.aws.rds_cluster_snapshot
+rds_engine_versions_info:
+  - amazon.aws.rds_engine_versions_info
 rds_global_cluster_info:
   - amazon.aws.rds_global_cluster_info
 rds_instance:
   - amazon.aws.rds_instance
 rds_instance_info:
   - amazon.aws.rds_instance_info
+rds_instance_param_group:
+  - amazon.aws.rds_instance_param_group
 rds_instance_snapshot:
   - amazon.aws.rds_instance_snapshot
 rds_option_group:
   - amazon.aws.rds_option_group
 rds_option_group_info:
   - amazon.aws.rds_option_group_info
-rds_param_group:
-  - amazon.aws.rds_param_group
 rds_snapshot_info:
   - amazon.aws.rds_snapshot_info
 rds_subnet_group:
@@ -14287,6 +14764,8 @@ redshift_subnet_group:
   - community.aws.redshift_subnet_group
 region_info:
   - vultr.cloud.region_info
+registration_command:
+  - theforeman.foreman.registration_command
 renew_certificate:
   - cisco.ise.renew_certificate
 replace:
@@ -14321,6 +14800,10 @@ repository_set_info:
   - theforeman.foreman.repository_set_info
 repository_sync:
   - theforeman.foreman.repository_sync
+reservation:
+  - cisco.ise.reservation
+reservation_info:
+  - cisco.ise.reservation_info
 reserve_ip_subpool:
   - cisco.dnac.reserve_ip_subpool
 reserve_ip_subpool_create:
@@ -14336,15 +14819,21 @@ reserved_ip:
 reset:
   - community.hrobot.reset
 reset_bmc:
+  - ieisystem.inmanage.reset_bmc
   - inspur.ispim.reset_bmc
   - inspur.sm.reset_bmc
+  - kaytus.ksmanage.reset_bmc
 reset_kvm:
+  - ieisystem.inmanage.reset_kvm
   - inspur.ispim.reset_kvm
   - inspur.sm.reset_kvm
+  - kaytus.ksmanage.reset_kvm
 resource:
   - openstack.cloud.resource
 resource_governor:
   - lowlydba.sqlserver.resource_governor
+resource_group:
+  - dellemc.powerflex.resource_group
 resource_info:
   - theforeman.foreman.resource_info
 resource_version_info:
@@ -14360,8 +14849,10 @@ restconf_config:
 restconf_get:
   - ansible.netcommon.restconf_get
 restore:
+  - ieisystem.inmanage.restore
   - inspur.ispim.restore
   - inspur.sm.restore
+  - kaytus.ksmanage.restore
   - lowlydba.sqlserver.restore
 reverse_dns:
   - community.hrobot.reverse_dns
@@ -14369,10 +14860,6 @@ rg_resource_pool:
   - lowlydba.sqlserver.rg_resource_pool
 rg_workload_group:
   - lowlydba.sqlserver.rg_workload_group
-rhel_facts:
-  - ansible.posix.rhel_facts
-rhel_rpm_ostree:
-  - ansible.posix.rhel_rpm_ostree
 rhevm:
   - community.general.rhevm
 rhn_channel:
@@ -14385,6 +14872,8 @@ rhsm_repository:
   - community.general.rhsm_repository
 riak:
   - community.general.riak
+rma_workflow_manager:
+  - cisco.dnac.rma_workflow_manager
 rocketchat:
   - community.general.rocketchat
 role:
@@ -14397,10 +14886,18 @@ role_binding:
   - sensu.sensu_go.role_binding
 role_binding_info:
   - sensu.sensu_go.role_binding_info
+role_definition:
+  - awx.awx.role_definition
 role_info:
   - sensu.sensu_go.role_info
 role_permissions_info:
   - cisco.dnac.role_permissions_info
+role_team_assignment:
+  - awx.awx.role_team_assignment
+role_user_assignment:
+  - awx.awx.role_user_assignment
+roles:
+  - cisco.dnac.roles
 roles_info:
   - cisco.dnac.roles_info
 rollbar_deployment:
@@ -14425,8 +14922,6 @@ rpm_key:
   - ansible.builtin.rpm_key
 rpm_ostree_pkg:
   - community.general.rpm_ostree_pkg
-rpm_ostree_upgrade:
-  - ansible.posix.rpm_ostree_upgrade
 rule:
   - ibm.qradar.rule
 rule_info:
@@ -14478,10 +14973,12 @@ sap_snote:
 sap_system_facts:
   - community.sap_libs.sap_system_facts
 sap_task_list_execute:
+  - community.general.sap_task_list_execute
   - community.sap_libs.sap_task_list_execute
 sap_user:
   - community.sap_libs.sap_user
 sapcar_extract:
+  - community.general.sapcar_extract
   - community.sap_libs.sapcar_extract
 say:
   - community.general.say
@@ -14489,28 +14986,8 @@ scaleway_compute:
   - community.general.scaleway_compute
 scaleway_compute_private_network:
   - community.general.scaleway_compute_private_network
-scaleway_container:
-  - community.general.scaleway_container
-scaleway_container_info:
-  - community.general.scaleway_container_info
-scaleway_container_namespace:
-  - community.general.scaleway_container_namespace
-scaleway_container_namespace_info:
-  - community.general.scaleway_container_namespace_info
-scaleway_container_registry:
-  - community.general.scaleway_container_registry
-scaleway_container_registry_info:
-  - community.general.scaleway_container_registry_info
 scaleway_database_backup:
   - community.general.scaleway_database_backup
-scaleway_function:
-  - community.general.scaleway_function
-scaleway_function_info:
-  - community.general.scaleway_function_info
-scaleway_function_namespace:
-  - community.general.scaleway_function_namespace
-scaleway_function_namespace_info:
-  - community.general.scaleway_function_namespace_info
 scaleway_image_info:
   - community.general.scaleway_image_info
 scaleway_ip:
@@ -14553,12 +15030,28 @@ schedule:
   - awx.awx.schedule
 script:
   - ansible.builtin.script
+sda_anycast_gateways:
+  - cisco.dnac.sda_anycast_gateways
+sda_anycast_gateways_count_info:
+  - cisco.dnac.sda_anycast_gateways_count_info
+sda_anycast_gateways_info:
+  - cisco.dnac.sda_anycast_gateways_info
+sda_authentication_profiles:
+  - cisco.dnac.sda_authentication_profiles
+sda_authentication_profiles_info:
+  - cisco.dnac.sda_authentication_profiles_info
 sda_count_info:
   - cisco.dnac.sda_count_info
 sda_device_info:
   - cisco.dnac.sda_device_info
 sda_device_role_info:
   - cisco.dnac.sda_device_role_info
+sda_extranet_policies:
+  - cisco.dnac.sda_extranet_policies
+sda_extranet_policies_count_info:
+  - cisco.dnac.sda_extranet_policies_count_info
+sda_extranet_policies_info:
+  - cisco.dnac.sda_extranet_policies_info
 sda_fabric:
   - cisco.dnac.sda_fabric
 sda_fabric_authentication_profile:
@@ -14573,6 +15066,30 @@ sda_fabric_control_plane_device:
   - cisco.dnac.sda_fabric_control_plane_device
 sda_fabric_control_plane_device_info:
   - cisco.dnac.sda_fabric_control_plane_device_info
+sda_fabric_devices:
+  - cisco.dnac.sda_fabric_devices
+sda_fabric_devices_count_info:
+  - cisco.dnac.sda_fabric_devices_count_info
+sda_fabric_devices_info:
+  - cisco.dnac.sda_fabric_devices_info
+sda_fabric_devices_layer2_handoffs:
+  - cisco.dnac.sda_fabric_devices_layer2_handoffs
+sda_fabric_devices_layer2_handoffs_count_info:
+  - cisco.dnac.sda_fabric_devices_layer2_handoffs_count_info
+sda_fabric_devices_layer2_handoffs_info:
+  - cisco.dnac.sda_fabric_devices_layer2_handoffs_info
+sda_fabric_devices_layer2_handoffs_ip_transits:
+  - cisco.dnac.sda_fabric_devices_layer2_handoffs_ip_transits
+sda_fabric_devices_layer2_handoffs_ip_transits_count_info:
+  - cisco.dnac.sda_fabric_devices_layer2_handoffs_ip_transits_count_info
+sda_fabric_devices_layer2_handoffs_ip_transits_info:
+  - cisco.dnac.sda_fabric_devices_layer2_handoffs_ip_transits_info
+sda_fabric_devices_layer2_handoffs_sda_transits:
+  - cisco.dnac.sda_fabric_devices_layer2_handoffs_sda_transits
+sda_fabric_devices_layer2_handoffs_sda_transits_count_info:
+  - cisco.dnac.sda_fabric_devices_layer2_handoffs_sda_transits_count_info
+sda_fabric_devices_layer2_handoffs_sda_transits_info:
+  - cisco.dnac.sda_fabric_devices_layer2_handoffs_sda_transits_info
 sda_fabric_edge_device:
   - cisco.dnac.sda_fabric_edge_device
 sda_fabric_edge_device_info:
@@ -14583,6 +15100,18 @@ sda_fabric_site:
   - cisco.dnac.sda_fabric_site
 sda_fabric_site_info:
   - cisco.dnac.sda_fabric_site_info
+sda_fabric_sites:
+  - cisco.dnac.sda_fabric_sites
+sda_fabric_sites_count_info:
+  - cisco.dnac.sda_fabric_sites_count_info
+sda_fabric_sites_info:
+  - cisco.dnac.sda_fabric_sites_info
+sda_fabric_zones:
+  - cisco.dnac.sda_fabric_zones
+sda_fabric_zones_count_info:
+  - cisco.dnac.sda_fabric_zones_count_info
+sda_fabric_zones_info:
+  - cisco.dnac.sda_fabric_zones_info
 sda_multicast:
   - cisco.dnac.sda_multicast
 sda_multicast_info:
@@ -14595,10 +15124,24 @@ sda_port_assignment_for_user_device:
   - cisco.dnac.sda_port_assignment_for_user_device
 sda_port_assignment_for_user_device_info:
   - cisco.dnac.sda_port_assignment_for_user_device_info
+sda_port_assignments:
+  - cisco.dnac.sda_port_assignments
+sda_port_assignments_count_info:
+  - cisco.dnac.sda_port_assignments_count_info
+sda_port_assignments_info:
+  - cisco.dnac.sda_port_assignments_info
 sda_provision_device:
   - cisco.dnac.sda_provision_device
 sda_provision_device_info:
   - cisco.dnac.sda_provision_device_info
+sda_provision_devices:
+  - cisco.dnac.sda_provision_devices
+sda_provision_devices_count_info:
+  - cisco.dnac.sda_provision_devices_count_info
+sda_provision_devices_info:
+  - cisco.dnac.sda_provision_devices_info
+sda_site_member_member_info:
+  - cisco.dnac.sda_site_member_member_info
 sda_virtual_network:
   - cisco.dnac.sda_virtual_network
 sda_virtual_network_info:
@@ -14654,8 +15197,10 @@ self_registered_portal:
 self_registered_portal_info:
   - cisco.ise.self_registered_portal_info
 self_test_info:
+  - ieisystem.inmanage.self_test_info
   - inspur.ispim.self_test_info
   - inspur.sm.self_test_info
+  - kaytus.ksmanage.self_test_info
 selfsigned_certificate_generate:
   - cisco.ise.selfsigned_certificate_generate
 selinux:
@@ -14670,8 +15215,10 @@ sensor:
   - cisco.dnac.sensor
 sensor_info:
   - cisco.dnac.sensor_info
+  - ieisystem.inmanage.sensor_info
   - inspur.ispim.sensor_info
   - inspur.sm.sensor_info
+  - kaytus.ksmanage.sensor_info
 sensor_test_run:
   - cisco.dnac.sensor_test_run
 sensor_test_template_duplicate:
@@ -14703,8 +15250,10 @@ server_group:
 server_info:
   - community.hrobot.server_info
   - hetzner.hcloud.server_info
+  - ieisystem.inmanage.server_info
   - inspur.ispim.server_info
   - inspur.sm.server_info
+  - kaytus.ksmanage.server_info
   - openstack.cloud.server_info
 server_metadata:
   - openstack.cloud.server_metadata
@@ -14721,8 +15270,10 @@ service:
 service_facts:
   - ansible.builtin.service_facts
 service_info:
+  - ieisystem.inmanage.service_info
   - inspur.ispim.service_info
   - inspur.sm.service_info
+  - kaytus.ksmanage.service_info
 service_provider_create:
   - cisco.dnac.service_provider_create
 service_provider_info:
@@ -14742,8 +15293,10 @@ ses_identity_policy:
 ses_rule_set:
   - community.aws.ses_rule_set
 session_info:
+  - ieisystem.inmanage.session_info
   - inspur.ispim.session_info
   - inspur.sm.session_info
+  - kaytus.ksmanage.session_info
 session_service_node_info:
   - cisco.ise.session_service_node_info
 set_fact:
@@ -14821,14 +15374,14 @@ silence:
   - sensu.sensu_go.silence
 silence_info:
   - sensu.sensu_go.silence_info
-simpleinit_msb:
-  - community.general.simpleinit_msb
 site_assign_credential:
   - cisco.dnac.site_assign_credential
 site_assign_device:
   - cisco.dnac.site_assign_device
 site_count_info:
   - cisco.dnac.site_count_info
+site_count_v2_info:
+  - cisco.dnac.site_count_v2_info
 site_create:
   - cisco.dnac.site_create
 site_delete:
@@ -14847,6 +15400,8 @@ site_membership_info:
   - cisco.dnac.site_membership_info
 site_update:
   - cisco.dnac.site_update
+site_v2_info:
+  - cisco.dnac.site_v2_info
 site_workflow_manager:
   - cisco.dnac.site_workflow_manager
 sl_vm:
@@ -14889,8 +15444,10 @@ smbshare:
 sms_provider_info:
   - cisco.ise.sms_provider_info
 smtp_info:
+  - ieisystem.inmanage.smtp_info
   - inspur.ispim.smtp_info
   - inspur.sm.smtp_info
+  - kaytus.ksmanage.smtp_info
 snap:
   - community.general.snap
 snap_alias:
@@ -14910,15 +15467,19 @@ snapshotschedule:
 snmp_facts:
   - community.general.snmp_facts
 snmp_info:
+  - ieisystem.inmanage.snmp_info
   - inspur.ispim.snmp_info
   - inspur.sm.snmp_info
+  - kaytus.ksmanage.snmp_info
 snmp_properties:
   - cisco.dnac.snmp_properties
 snmp_properties_info:
   - cisco.dnac.snmp_properties_info
 snmp_trap_info:
+  - ieisystem.inmanage.snmp_trap_info
   - inspur.ispim.snmp_trap_info
   - inspur.sm.snmp_trap_info
+  - kaytus.ksmanage.snmp_trap_info
 snmpv2_read_community_credential:
   - cisco.dnac.snmpv2_read_community_credential
 snmpv2_write_community_credential:
@@ -15121,6 +15682,10 @@ stepfunctions_state_machine:
   - community.aws.stepfunctions_state_machine
 stepfunctions_state_machine_execution:
   - community.aws.stepfunctions_state_machine_execution
+stop_replication:
+  - cisco.ise.stop_replication
+stop_replication_info:
+  - cisco.ise.stop_replication_info
 storagegateway_info:
   - community.aws.storagegateway_info
 storagepool:
@@ -15169,7 +15734,9 @@ support_bundle_download:
 support_bundle_status_info:
   - cisco.ise.support_bundle_status_info
 support_info:
+  - ieisystem.inmanage.support_info
   - inspur.ispim.support_info
+  - kaytus.ksmanage.support_info
 svc:
   - community.general.svc
 svr4pkg:
@@ -15249,8 +15816,10 @@ system_health_count_info:
 system_health_info:
   - cisco.dnac.system_health_info
 system_log_info:
+  - ieisystem.inmanage.system_log_info
   - inspur.ispim.system_log_info
   - inspur.sm.system_log_info
+  - kaytus.ksmanage.system_log_info
 system_performance_historical_info:
   - cisco.dnac.system_performance_historical_info
 system_performance_info:
@@ -15318,8 +15887,10 @@ telemetry_info:
 telnet:
   - ansible.netcommon.telnet
 temp_info:
+  - ieisystem.inmanage.temp_info
   - inspur.ispim.temp_info
   - inspur.sm.temp_info
+  - kaytus.ksmanage.temp_info
 tempfile:
   - ansible.builtin.tempfile
 template:
@@ -15338,8 +15909,6 @@ terraform:
   - community.general.terraform
 tessen:
   - sensu.sensu_go.tessen
-test_connector:
-  - cisco.ise.test_connector
 textfsm_parser:
   - dellemc.os10.textfsm_parser
 threat_detail:
@@ -15351,8 +15920,10 @@ threat_summary:
 threat_vulnerabilities_clear:
   - cisco.ise.threat_vulnerabilities_clear
 threshold_info:
+  - ieisystem.inmanage.threshold_info
   - inspur.ispim.threshold_info
   - inspur.sm.threshold_info
+  - kaytus.ksmanage.threshold_info
 timezone:
   - community.general.timezone
 token:
@@ -15389,6 +15960,40 @@ trusted_certificate_import:
   - cisco.ise.trusted_certificate_import
 trusted_certificate_info:
   - cisco.ise.trusted_certificate_info
+trustsec_nbar_app:
+  - cisco.ise.trustsec_nbar_app
+trustsec_nbar_app_info:
+  - cisco.ise.trustsec_nbar_app_info
+trustsec_sg_vn_mapping:
+  - cisco.ise.trustsec_sg_vn_mapping
+trustsec_sg_vn_mapping_bulk_create:
+  - cisco.ise.trustsec_sg_vn_mapping_bulk_create
+trustsec_sg_vn_mapping_bulk_delete:
+  - cisco.ise.trustsec_sg_vn_mapping_bulk_delete
+trustsec_sg_vn_mapping_bulk_update:
+  - cisco.ise.trustsec_sg_vn_mapping_bulk_update
+trustsec_sg_vn_mapping_info:
+  - cisco.ise.trustsec_sg_vn_mapping_info
+trustsec_vn:
+  - cisco.ise.trustsec_vn
+trustsec_vn_bulk_create:
+  - cisco.ise.trustsec_vn_bulk_create
+trustsec_vn_bulk_delete:
+  - cisco.ise.trustsec_vn_bulk_delete
+trustsec_vn_bulk_update:
+  - cisco.ise.trustsec_vn_bulk_update
+trustsec_vn_info:
+  - cisco.ise.trustsec_vn_info
+trustsec_vn_vlan_mapping:
+  - cisco.ise.trustsec_vn_vlan_mapping
+trustsec_vn_vlan_mapping_bulk_create:
+  - cisco.ise.trustsec_vn_vlan_mapping_bulk_create
+trustsec_vn_vlan_mapping_bulk_delete:
+  - cisco.ise.trustsec_vn_vlan_mapping_bulk_delete
+trustsec_vn_vlan_mapping_bulk_update:
+  - cisco.ise.trustsec_vn_vlan_mapping_bulk_update
+trustsec_vn_vlan_mapping_info:
+  - cisco.ise.trustsec_vn_vlan_mapping_info
 turbo_demo:
   - cloud.common.turbo_demo
 turbo_fail:
@@ -15470,34 +16075,54 @@ udm_user:
 ufw:
   - community.general.ufw
 uid_info:
+  - ieisystem.inmanage.uid_info
   - inspur.ispim.uid_info
   - inspur.sm.uid_info
+  - kaytus.ksmanage.uid_info
 unarchive:
   - ansible.builtin.unarchive
 update_cpld:
+  - ieisystem.inmanage.update_cpld
   - inspur.ispim.update_cpld
   - inspur.sm.update_cpld
+  - kaytus.ksmanage.update_cpld
 update_fact:
   - ansible.utils.update_fact
 update_fw:
+  - ieisystem.inmanage.update_fw
   - inspur.ispim.update_fw
   - inspur.sm.update_fw
+  - kaytus.ksmanage.update_fw
 update_psu:
+  - ieisystem.inmanage.update_psu
   - inspur.ispim.update_psu
+  - kaytus.ksmanage.update_psu
+upgrade_proceed:
+  - cisco.ise.upgrade_proceed
+upgrade_proceed_info:
+  - cisco.ise.upgrade_proceed_info
+upgrade_stage_cancel:
+  - cisco.ise.upgrade_stage_cancel
+upgrade_stage_cancel_info:
+  - cisco.ise.upgrade_stage_cancel_info
+upgrade_stage_start:
+  - cisco.ise.upgrade_stage_start
+upgrade_stage_start_info:
+  - cisco.ise.upgrade_stage_start_info
 uptimerobot:
   - community.general.uptimerobot
 uri:
   - ansible.builtin.uri
 urpmi:
   - community.general.urpmi
-usb_facts:
-  - community.general.usb_facts
 user:
   - ansible.builtin.user
   - awx.awx.user
   - cisco.dnac.user
+  - ieisystem.inmanage.user
   - inspur.ispim.user
   - inspur.sm.user
+  - kaytus.ksmanage.user
   - lowlydba.sqlserver.user
   - microsoft.ad.user
   - sensu.sensu_go.user
@@ -15505,22 +16130,50 @@ user:
   - vultr.cloud.user
 user_enrichment_details_info:
   - cisco.dnac.user_enrichment_details_info
+user_equipment:
+  - cisco.ise.user_equipment
+user_equipment_bulk:
+  - cisco.ise.user_equipment_bulk
+user_equipment_csv:
+  - cisco.ise.user_equipment_csv
+user_equipment_imei_info:
+  - cisco.ise.user_equipment_imei_info
+user_equipment_info:
+  - cisco.ise.user_equipment_info
+user_equipment_subscriber_info:
+  - cisco.ise.user_equipment_subscriber_info
 user_group:
+  - ieisystem.inmanage.user_group
   - inspur.ispim.user_group
   - inspur.sm.user_group
+  - kaytus.ksmanage.user_group
 user_group_info:
+  - ieisystem.inmanage.user_group_info
   - inspur.ispim.user_group_info
   - inspur.sm.user_group_info
+  - kaytus.ksmanage.user_group_info
 user_info:
   - cisco.dnac.user_info
+  - ieisystem.inmanage.user_info
   - inspur.ispim.user_info
   - inspur.sm.user_info
+  - kaytus.ksmanage.user_info
   - sensu.sensu_go.user_info
   - vultr.cloud.user_info
 user_quota:
   - dellemc.unity.user_quota
+user_role_workflow_manager:
+  - cisco.dnac.user_role_workflow_manager
 usergroup:
   - theforeman.foreman.usergroup
+users_external_authentication:
+  - cisco.dnac.users_external_authentication
+users_external_authentication_info:
+  - cisco.dnac.users_external_authentication_info
+users_external_servers_aaa_attribute:
+  - cisco.dnac.users_external_servers_aaa_attribute
+users_external_servers_aaa_attribute_info:
+  - cisco.dnac.users_external_servers_aaa_attribute_info
 users_external_servers_info:
   - cisco.dnac.users_external_servers_info
 utm_aaa_group:
@@ -15745,6 +16398,8 @@ vcenter_vmtemplate_libraryitems:
   - vmware.vmware_rest.vcenter_vmtemplate_libraryitems
 vcenter_vmtemplate_libraryitems_info:
   - vmware.vmware_rest.vcenter_vmtemplate_libraryitems_info
+vcsa_settings:
+  - vmware.vmware.vcsa_settings
 vdirect_commit:
   - community.network.vdirect_commit
 vdirect_file:
@@ -15774,14 +16429,22 @@ virt_net:
 virt_pool:
   - community.libvirt.virt_pool
 virtual_media_info:
+  - ieisystem.inmanage.virtual_media_info
   - inspur.ispim.virtual_media_info
   - inspur.sm.virtual_media_info
+  - kaytus.ksmanage.virtual_media_info
 vlt_validate:
   - dellemc.os10.vlt_validate
+vm_list_group_by_clusters_info:
+  - vmware.vmware.vm_list_group_by_clusters_info
+vm_portgroup_info:
+  - vmware.vmware.vm_portgroup_info
 vmadm:
   - community.general.vmadm
 vmware_about_info:
   - community.vmware.vmware_about_info
+vmware_all_snapshots_info:
+  - community.vmware.vmware_all_snapshots_info
 vmware_category:
   - community.vmware.vmware_category
 vmware_category_info:
@@ -16050,6 +16713,8 @@ vmware_resource_pool:
   - community.vmware.vmware_resource_pool
 vmware_resource_pool_info:
   - community.vmware.vmware_resource_pool_info
+vmware_sdrs_vm_overrides_info:
+  - community.vmware.vmware_sdrs_vm_overrides_info
 vmware_tag:
   - community.vmware.vmware_tag
 vmware_tag_info:
@@ -16107,8 +16772,10 @@ vmware_vswitch:
 vmware_vswitch_info:
   - community.vmware.vmware_vswitch_info
 volt_info:
+  - ieisystem.inmanage.volt_info
   - inspur.ispim.volt_info
   - inspur.sm.volt_info
+  - kaytus.ksmanage.volt_info
 volume:
   - cloudscale_ch.cloud.volume
   - dellemc.powerflex.volume
@@ -16260,6 +16927,8 @@ webfaction_mailbox:
   - community.general.webfaction_mailbox
 webfaction_site:
   - community.general.webfaction_site
+webhook:
+  - theforeman.foreman.webhook
 win_acl:
   - ansible.windows.win_acl
 win_acl_inheritance:
@@ -16520,6 +17189,8 @@ win_zip:
   - community.windows.win_zip
 wireless_accespoint_configuration:
   - cisco.dnac.wireless_accespoint_configuration
+wireless_accesspoint_configuration_create:
+  - cisco.dnac.wireless_accesspoint_configuration_create
 wireless_accesspoint_configuration_summary_info:
   - cisco.dnac.wireless_accesspoint_configuration_summary_info
 wireless_dynamic_interface:
@@ -16598,8 +17269,6 @@ xml:
   - community.general.xml
 yarn:
   - community.general.yarn
-yum:
-  - ansible.builtin.yum
 yum_repository:
   - ansible.builtin.yum_repository
 yum_versionlock:
@@ -16612,8 +17281,12 @@ zabbix_authentication:
   - community.zabbix.zabbix_authentication
 zabbix_autoregister:
   - community.zabbix.zabbix_autoregister
+zabbix_correlation:
+  - community.zabbix.zabbix_correlation
 zabbix_discovery_rule:
   - community.zabbix.zabbix_discovery_rule
+zabbix_discoveryrule:
+  - community.zabbix.zabbix_discoveryrule
 zabbix_globalmacro:
   - community.zabbix.zabbix_globalmacro
 zabbix_group:
@@ -16626,12 +17299,18 @@ zabbix_host:
   - community.zabbix.zabbix_host
 zabbix_host_events_info:
   - community.zabbix.zabbix_host_events_info
+zabbix_host_events_update:
+  - community.zabbix.zabbix_host_events_update
 zabbix_host_info:
   - community.zabbix.zabbix_host_info
 zabbix_hostmacro:
   - community.zabbix.zabbix_hostmacro
 zabbix_housekeeping:
   - community.zabbix.zabbix_housekeeping
+zabbix_item:
+  - community.zabbix.zabbix_item
+zabbix_itemprototype:
+  - community.zabbix.zabbix_itemprototype
 zabbix_maintenance:
   - community.zabbix.zabbix_maintenance
 zabbix_map:
@@ -16648,6 +17327,8 @@ zabbix_script:
   - community.zabbix.zabbix_script
 zabbix_service:
   - community.zabbix.zabbix_service
+zabbix_service_info:
+  - community.zabbix.zabbix_service_info
 zabbix_settings:
   - community.zabbix.zabbix_settings
 zabbix_template:
@@ -16658,6 +17339,10 @@ zabbix_templategroup:
   - community.zabbix.zabbix_templategroup
 zabbix_token:
   - community.zabbix.zabbix_token
+zabbix_trigger:
+  - community.zabbix.zabbix_trigger
+zabbix_triggerprototype:
+  - community.zabbix.zabbix_triggerprototype
 zabbix_user:
   - community.zabbix.zabbix_user
 zabbix_user_directory:
