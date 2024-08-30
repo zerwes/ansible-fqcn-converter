@@ -1,0 +1,12 @@
+---
+collections:
+  - ansible.posix
+  - community.general
+  - community.mysql
+  - community.postgresql
+  - dellemc.os10
+  - dellemc.os6
+  - arubanetworks.aos_switch
+  - arubanetworks.aoscx
+  - cisco.ios
+  - debops.debops
