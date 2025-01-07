@@ -12,6 +12,8 @@ accessanalyzer_validate_policy_info:
   - community.aws.accessanalyzer_validate_policy_info
 accesspoint_configuration_details_by_task_id_info:
   - cisco.dnac.accesspoint_configuration_details_by_task_id_info
+accesspoint_configuration_details_by_task_id_v1_info:
+  - cisco.dnac.accesspoint_configuration_details_by_task_id_v1_info
 accesspoint_workflow_manager:
   - cisco.dnac.accesspoint_workflow_manager
 account_info:
@@ -550,8 +552,14 @@ acme_account:
   - community.crypto.acme_account
 acme_account_info:
   - community.crypto.acme_account_info
+acme_ari_info:
+  - community.crypto.acme_ari_info
 acme_certificate:
   - community.crypto.acme_certificate
+acme_certificate_deactivate_authz:
+  - community.crypto.acme_certificate_deactivate_authz
+acme_certificate_renewal_info:
+  - community.crypto.acme_certificate_renewal_info
 acme_certificate_revoke:
   - community.crypto.acme_certificate_revoke
 acme_challenge_cert_helper:
@@ -589,12 +597,10 @@ ad_auth_provider:
 ad_group:
   - ieisystem.inmanage.ad_group
   - inspur.ispim.ad_group
-  - inspur.sm.ad_group
   - kaytus.ksmanage.ad_group
 ad_group_info:
   - ieisystem.inmanage.ad_group_info
   - inspur.ispim.ad_group_info
-  - inspur.sm.ad_group_info
   - kaytus.ksmanage.ad_group_info
 ad_groups_info:
   - cisco.ise.ad_groups_info
@@ -607,30 +613,19 @@ ad_hoc_command_wait:
 ad_info:
   - ieisystem.inmanage.ad_info
   - inspur.ispim.ad_info
-  - inspur.sm.ad_info
   - kaytus.ksmanage.ad_info
 adapter_info:
   - ieisystem.inmanage.adapter_info
   - inspur.ispim.adapter_info
-  - inspur.sm.adapter_info
   - kaytus.ksmanage.adapter_info
 adaptive_response_notable_event:
   - splunk.es.adaptive_response_notable_event
-add_ad_group:
-  - inspur.sm.add_ad_group
 add_host:
   - ansible.builtin.add_host
-add_ldap_group:
-  - inspur.sm.add_ldap_group
 add_ldisk:
   - ieisystem.inmanage.add_ldisk
   - inspur.ispim.add_ldisk
-  - inspur.sm.add_ldisk
   - kaytus.ksmanage.add_ldisk
-add_user:
-  - inspur.sm.add_user
-add_user_group:
-  - inspur.sm.add_user_group
 address_scope:
   - openstack.cloud.address_scope
 admin_user_info:
@@ -686,7 +681,6 @@ alert_notification_policy:
 alert_policy_info:
   - ieisystem.inmanage.alert_policy_info
   - inspur.ispim.alert_policy_info
-  - inspur.sm.alert_policy_info
   - kaytus.ksmanage.alert_policy_info
 alerta_customer:
   - community.general.alerta_customer
@@ -752,8 +746,6 @@ aoscx_lag_interface:
   - arubanetworks.aoscx.aoscx_lag_interface
 aoscx_mac:
   - arubanetworks.aoscx.aoscx_mac
-aoscx_object_group:
-  - arubanetworks.aoscx.aoscx_object_group
 aoscx_ospf_area:
   - arubanetworks.aoscx.aoscx_ospf_area
 aoscx_ospf_interface:
@@ -804,7 +796,6 @@ apache2_mod_proxy:
   - community.general.apache2_mod_proxy
 apache2_module:
   - community.general.apache2_module
-  - debops.debops.apache2_module
 apconos_command:
   - community.network.apconos_command
 api:
@@ -827,16 +818,28 @@ apk:
   - community.general.apk
 app_policy_default_info:
   - cisco.dnac.app_policy_default_info
+app_policy_default_v1_info:
+  - cisco.dnac.app_policy_default_v1_info
 app_policy_info:
   - cisco.dnac.app_policy_info
 app_policy_intent_create:
   - cisco.dnac.app_policy_intent_create
+app_policy_intent_create_v1:
+  - cisco.dnac.app_policy_intent_create_v1
 app_policy_queuing_profile:
   - cisco.dnac.app_policy_queuing_profile
 app_policy_queuing_profile_count_info:
   - cisco.dnac.app_policy_queuing_profile_count_info
+app_policy_queuing_profile_count_v1_info:
+  - cisco.dnac.app_policy_queuing_profile_count_v1_info
 app_policy_queuing_profile_info:
   - cisco.dnac.app_policy_queuing_profile_info
+app_policy_queuing_profile_v1:
+  - cisco.dnac.app_policy_queuing_profile_v1
+app_policy_queuing_profile_v1_info:
+  - cisco.dnac.app_policy_queuing_profile_v1_info
+app_policy_v1_info:
+  - cisco.dnac.app_policy_v1_info
 appliance_access_consolecli:
   - vmware.vmware_rest.appliance_access_consolecli
 appliance_access_consolecli_info:
@@ -967,28 +970,50 @@ application:
   - awx.awx.application
 application_autoscaling_policy:
   - community.aws.application_autoscaling_policy
+application_credential:
+  - openstack.cloud.application_credential
 application_policy_application_set:
   - cisco.dnac.application_policy_application_set
 application_policy_application_set_count_info:
   - cisco.dnac.application_policy_application_set_count_info
+application_policy_application_set_count_v2_info:
+  - cisco.dnac.application_policy_application_set_count_v2_info
 application_policy_application_set_info:
   - cisco.dnac.application_policy_application_set_info
+application_policy_application_set_v2:
+  - cisco.dnac.application_policy_application_set_v2
+application_policy_application_set_v2_info:
+  - cisco.dnac.application_policy_application_set_v2_info
 application_sets:
   - cisco.dnac.application_sets
 application_sets_count_info:
   - cisco.dnac.application_sets_count_info
+application_sets_count_v1_info:
+  - cisco.dnac.application_sets_count_v1_info
 application_sets_info:
   - cisco.dnac.application_sets_info
+application_sets_v1:
+  - cisco.dnac.application_sets_v1
+application_sets_v1_info:
+  - cisco.dnac.application_sets_v1_info
 applications:
   - cisco.dnac.applications
 applications_count_info:
   - cisco.dnac.applications_count_info
+applications_count_v1_info:
+  - cisco.dnac.applications_count_v1_info
 applications_count_v2_info:
   - cisco.dnac.applications_count_v2_info
 applications_health_info:
   - cisco.dnac.applications_health_info
+applications_health_v1_info:
+  - cisco.dnac.applications_health_v1_info
 applications_info:
   - cisco.dnac.applications_info
+applications_v1:
+  - cisco.dnac.applications_v1
+applications_v1_info:
+  - cisco.dnac.applications_v1_info
 applications_v2:
   - cisco.dnac.applications_v2
 applications_v2_info:
@@ -1007,6 +1032,14 @@ architecture:
   - theforeman.foreman.architecture
 archive:
   - community.general.archive
+areas:
+  - cisco.dnac.areas
+areas_info:
+  - cisco.dnac.areas_info
+areas_v1:
+  - cisco.dnac.areas_v1
+areas_v1_info:
+  - cisco.dnac.areas_v1_info
 aruba_command:
   - community.network.aruba_command
 aruba_config:
@@ -1103,8 +1136,80 @@ asset_info:
   - sensu.sensu_go.asset_info
 assign_device_to_site:
   - cisco.dnac.assign_device_to_site
+assign_device_to_site_v1:
+  - cisco.dnac.assign_device_to_site_v1
+assign_to_site_apply:
+  - cisco.dnac.assign_to_site_apply
+assign_to_site_apply_v1:
+  - cisco.dnac.assign_to_site_apply_v1
 associate_site_to_network_profile:
   - cisco.dnac.associate_site_to_network_profile
+associate_site_to_network_profile_v1:
+  - cisco.dnac.associate_site_to_network_profile_v1
+assurance_events_child_events_info:
+  - cisco.dnac.assurance_events_child_events_info
+assurance_events_child_events_v1_info:
+  - cisco.dnac.assurance_events_child_events_v1_info
+assurance_events_count_info:
+  - cisco.dnac.assurance_events_count_info
+assurance_events_count_v1_info:
+  - cisco.dnac.assurance_events_count_v1_info
+assurance_events_info:
+  - cisco.dnac.assurance_events_info
+assurance_events_query:
+  - cisco.dnac.assurance_events_query
+assurance_events_query_count:
+  - cisco.dnac.assurance_events_query_count
+assurance_events_query_count_v1:
+  - cisco.dnac.assurance_events_query_count_v1
+assurance_events_query_v1:
+  - cisco.dnac.assurance_events_query_v1
+assurance_events_v1_info:
+  - cisco.dnac.assurance_events_v1_info
+assurance_get_sensor_test_results_info:
+  - cisco.dnac.assurance_get_sensor_test_results_info
+assurance_get_sensor_test_results_v1_info:
+  - cisco.dnac.assurance_get_sensor_test_results_v1_info
+assurance_issues_count_info:
+  - cisco.dnac.assurance_issues_count_info
+assurance_issues_count_v1_info:
+  - cisco.dnac.assurance_issues_count_v1_info
+assurance_issues_ignore:
+  - cisco.dnac.assurance_issues_ignore
+assurance_issues_ignore_v1:
+  - cisco.dnac.assurance_issues_ignore_v1
+assurance_issues_info:
+  - cisco.dnac.assurance_issues_info
+assurance_issues_query:
+  - cisco.dnac.assurance_issues_query
+assurance_issues_query_count:
+  - cisco.dnac.assurance_issues_query_count
+assurance_issues_query_count_v1:
+  - cisco.dnac.assurance_issues_query_count_v1
+assurance_issues_query_v1:
+  - cisco.dnac.assurance_issues_query_v1
+assurance_issues_resolve:
+  - cisco.dnac.assurance_issues_resolve
+assurance_issues_resolve_v1:
+  - cisco.dnac.assurance_issues_resolve_v1
+assurance_issues_summary_analytics:
+  - cisco.dnac.assurance_issues_summary_analytics
+assurance_issues_summary_analytics_v1:
+  - cisco.dnac.assurance_issues_summary_analytics_v1
+assurance_issues_top_n_analytics:
+  - cisco.dnac.assurance_issues_top_n_analytics
+assurance_issues_top_n_analytics_v1:
+  - cisco.dnac.assurance_issues_top_n_analytics_v1
+assurance_issues_trend_analytics:
+  - cisco.dnac.assurance_issues_trend_analytics
+assurance_issues_trend_analytics_v1:
+  - cisco.dnac.assurance_issues_trend_analytics_v1
+assurance_issues_update:
+  - cisco.dnac.assurance_issues_update
+assurance_issues_update_v1:
+  - cisco.dnac.assurance_issues_update_v1
+assurance_issues_v1_info:
+  - cisco.dnac.assurance_issues_v1_info
 async_status:
   - ansible.windows.async_status
   - ansible.builtin.async_status
@@ -1119,7 +1224,6 @@ atomic_image:
 audit_log_info:
   - ieisystem.inmanage.audit_log_info
   - inspur.ispim.audit_log_info
-  - inspur.sm.audit_log_info
   - kaytus.ksmanage.audit_log_info
 auth:
   - openstack.cloud.auth
@@ -1129,14 +1233,24 @@ auth_source_ldap:
   - theforeman.foreman.auth_source_ldap
 auth_token_create:
   - cisco.dnac.auth_token_create
+auth_token_create_v1:
+  - cisco.dnac.auth_token_create_v1
 authentication_import_certificate:
   - cisco.dnac.authentication_import_certificate
 authentication_import_certificate_p12:
   - cisco.dnac.authentication_import_certificate_p12
+authentication_import_certificate_p12_v1:
+  - cisco.dnac.authentication_import_certificate_p12_v1
+authentication_import_certificate_v1:
+  - cisco.dnac.authentication_import_certificate_v1
 authentication_policy_servers:
   - cisco.dnac.authentication_policy_servers
 authentication_policy_servers_info:
   - cisco.dnac.authentication_policy_servers_info
+authentication_policy_servers_v1:
+  - cisco.dnac.authentication_policy_servers_v1
+authentication_policy_servers_v1_info:
+  - cisco.dnac.authentication_policy_servers_v1_info
 authorization_profile:
   - cisco.ise.authorization_profile
 authorization_profile_info:
@@ -1146,7 +1260,6 @@ authorized_key:
 auto_capture_info:
   - ieisystem.inmanage.auto_capture_info
   - inspur.ispim.auto_capture_info
-  - inspur.sm.auto_capture_info
   - kaytus.ksmanage.auto_capture_info
 autoscaling_complete_lifecycle_action:
   - community.aws.autoscaling_complete_lifecycle_action
@@ -1154,10 +1267,14 @@ autoscaling_group:
   - amazon.aws.autoscaling_group
 autoscaling_group_info:
   - amazon.aws.autoscaling_group_info
+autoscaling_instance:
+  - amazon.aws.autoscaling_instance
+autoscaling_instance_info:
+  - amazon.aws.autoscaling_instance_info
 autoscaling_instance_refresh:
-  - community.aws.autoscaling_instance_refresh
+  - amazon.aws.autoscaling_instance_refresh
 autoscaling_instance_refresh_info:
-  - community.aws.autoscaling_instance_refresh_info
+  - amazon.aws.autoscaling_instance_refresh_info
 autoscaling_launch_config:
   - community.aws.autoscaling_launch_config
 autoscaling_launch_config_find:
@@ -1334,6 +1451,10 @@ azure_rm_aduser:
   - azure.azcollection.azure_rm_aduser
 azure_rm_aduser_info:
   - azure.azcollection.azure_rm_aduser_info
+azure_rm_afdendpoint:
+  - azure.azcollection.azure_rm_afdendpoint
+azure_rm_afdendpoint_info:
+  - azure.azcollection.azure_rm_afdendpoint_info
 azure_rm_aks:
   - azure.azcollection.azure_rm_aks
 azure_rm_aks_info:
@@ -1406,6 +1527,18 @@ azure_rm_batchaccount:
   - azure.azcollection.azure_rm_batchaccount
 azure_rm_batchaccount_info:
   - azure.azcollection.azure_rm_batchaccount_info
+azure_rm_batchaccountapplication:
+  - azure.azcollection.azure_rm_batchaccountapplication
+azure_rm_batchaccountapplication_info:
+  - azure.azcollection.azure_rm_batchaccountapplication_info
+azure_rm_batchaccountapplicationpackage:
+  - azure.azcollection.azure_rm_batchaccountapplicationpackage
+azure_rm_batchaccountapplicationpackage_info:
+  - azure.azcollection.azure_rm_batchaccountapplicationpackage_info
+azure_rm_batchaccountpool:
+  - azure.azcollection.azure_rm_batchaccountpool
+azure_rm_batchaccountpool_info:
+  - azure.azcollection.azure_rm_batchaccountpool_info
 azure_rm_capacityreservationgroup:
   - azure.azcollection.azure_rm_capacityreservationgroup
 azure_rm_capacityreservationgroup_info:
@@ -1546,6 +1679,8 @@ azure_rm_image:
   - azure.azcollection.azure_rm_image
 azure_rm_image_info:
   - azure.azcollection.azure_rm_image_info
+azure_rm_imagesku_info:
+  - azure.azcollection.azure_rm_imagesku_info
 azure_rm_iotdevice:
   - azure.azcollection.azure_rm_iotdevice
 azure_rm_iotdevice_info:
@@ -1634,6 +1769,22 @@ azure_rm_mysqlfirewallrule:
   - azure.azcollection.azure_rm_mysqlfirewallrule
 azure_rm_mysqlfirewallrule_info:
   - azure.azcollection.azure_rm_mysqlfirewallrule_info
+azure_rm_mysqlflexibleconfiguration:
+  - azure.azcollection.azure_rm_mysqlflexibleconfiguration
+azure_rm_mysqlflexibleconfiguration_info:
+  - azure.azcollection.azure_rm_mysqlflexibleconfiguration_info
+azure_rm_mysqlflexibledatabase:
+  - azure.azcollection.azure_rm_mysqlflexibledatabase
+azure_rm_mysqlflexibledatabase_info:
+  - azure.azcollection.azure_rm_mysqlflexibledatabase_info
+azure_rm_mysqlflexiblefirewallrule:
+  - azure.azcollection.azure_rm_mysqlflexiblefirewallrule
+azure_rm_mysqlflexiblefirewallrule_info:
+  - azure.azcollection.azure_rm_mysqlflexiblefirewallrule_info
+azure_rm_mysqlflexibleserver:
+  - azure.azcollection.azure_rm_mysqlflexibleserver
+azure_rm_mysqlflexibleserver_info:
+  - azure.azcollection.azure_rm_mysqlflexibleserver_info
 azure_rm_mysqlserver:
   - azure.azcollection.azure_rm_mysqlserver
 azure_rm_mysqlserver_info:
@@ -1664,6 +1815,8 @@ azure_rm_openshiftmanagedcluster_info:
   - azure.azcollection.azure_rm_openshiftmanagedcluster_info
 azure_rm_openshiftmanagedclusterkubeconfig_info:
   - azure.azcollection.azure_rm_openshiftmanagedclusterkubeconfig_info
+azure_rm_openshiftmanagedclusterversion_info:
+  - azure.azcollection.azure_rm_openshiftmanagedclusterversion_info
 azure_rm_postgresqlconfiguration:
   - azure.azcollection.azure_rm_postgresqlconfiguration
 azure_rm_postgresqlconfiguration_info:
@@ -1794,6 +1947,8 @@ azure_rm_servicebustopicsubscription:
   - azure.azcollection.azure_rm_servicebustopicsubscription
 azure_rm_snapshot:
   - azure.azcollection.azure_rm_snapshot
+azure_rm_snapshot_info:
+  - azure.azcollection.azure_rm_snapshot_info
 azure_rm_sqldatabase:
   - azure.azcollection.azure_rm_sqldatabase
 azure_rm_sqldatabase_info:
@@ -1840,6 +1995,8 @@ azure_rm_storageaccountmanagementpolicy_info:
   - azure.azcollection.azure_rm_storageaccountmanagementpolicy_info
 azure_rm_storageblob:
   - azure.azcollection.azure_rm_storageblob
+azure_rm_storageblob_info:
+  - azure.azcollection.azure_rm_storageblob_info
 azure_rm_storageshare:
   - azure.azcollection.azure_rm_storageshare
 azure_rm_storageshare_info:
@@ -1898,6 +2055,10 @@ azure_rm_virtualnetwork_info:
   - azure.azcollection.azure_rm_virtualnetwork_info
 azure_rm_virtualnetworkgateway:
   - azure.azcollection.azure_rm_virtualnetworkgateway
+azure_rm_virtualnetworkgatewayconnection:
+  - azure.azcollection.azure_rm_virtualnetworkgatewayconnection
+azure_rm_virtualnetworkgatewayconnection_info:
+  - azure.azcollection.azure_rm_virtualnetworkgatewayconnection_info
 azure_rm_virtualnetworkgatewaynatrule:
   - azure.azcollection.azure_rm_virtualnetworkgatewaynatrule
 azure_rm_virtualnetworkgatewaynatrule_info:
@@ -1941,12 +2102,10 @@ azure_rm_webappvnetconnection_info:
 backplane_info:
   - ieisystem.inmanage.backplane_info
   - inspur.ispim.backplane_info
-  - inspur.sm.backplane_info
   - kaytus.ksmanage.backplane_info
 backup:
   - ieisystem.inmanage.backup
   - inspur.ispim.backup
-  - inspur.sm.backup
   - kaytus.ksmanage.backup
   - lowlydba.sqlserver.backup
 backup_cancel:
@@ -2380,17 +2539,14 @@ bind_signed_certificate:
 bios_export:
   - ieisystem.inmanage.bios_export
   - inspur.ispim.bios_export
-  - inspur.sm.bios_export
   - kaytus.ksmanage.bios_export
 bios_import:
   - ieisystem.inmanage.bios_import
   - inspur.ispim.bios_import
-  - inspur.sm.bios_import
   - kaytus.ksmanage.bios_import
 bios_info:
   - ieisystem.inmanage.bios_info
   - inspur.ispim.bios_info
-  - inspur.sm.bios_info
   - kaytus.ksmanage.bios_info
 bitbucket_access_key:
   - community.general.bitbucket_access_key
@@ -2409,7 +2565,6 @@ blockinfile:
 bmc_info:
   - ieisystem.inmanage.bmc_info
   - inspur.ispim.bmc_info
-  - inspur.sm.bmc_info
   - kaytus.ksmanage.bmc_info
 bonsai_asset:
   - sensu.sensu_go.bonsai_asset
@@ -2420,17 +2575,31 @@ boot:
 boot_image_info:
   - ieisystem.inmanage.boot_image_info
   - inspur.ispim.boot_image_info
-  - inspur.sm.boot_image_info
   - kaytus.ksmanage.boot_image_info
 boot_option_info:
   - ieisystem.inmanage.boot_option_info
   - inspur.ispim.boot_option_info
-  - inspur.sm.boot_option_info
   - kaytus.ksmanage.boot_option_info
+bootc_manage:
+  - community.general.bootc_manage
 bower:
   - community.general.bower
+btrfs_info:
+  - community.general.btrfs_info
+btrfs_subvolume:
+  - community.general.btrfs_subvolume
+buildings:
+  - cisco.dnac.buildings
+buildings_info:
+  - cisco.dnac.buildings_info
 buildings_planned_access_points_info:
   - cisco.dnac.buildings_planned_access_points_info
+buildings_planned_access_points_v1_info:
+  - cisco.dnac.buildings_planned_access_points_v1_info
+buildings_v2:
+  - cisco.dnac.buildings_v2
+buildings_v2_info:
+  - cisco.dnac.buildings_v2_info
 bulk_host_create:
   - awx.awx.bulk_host_create
 bulk_host_delete:
@@ -2443,12 +2612,22 @@ business_sda_hostonboarding_ssid_ippool:
   - cisco.dnac.business_sda_hostonboarding_ssid_ippool
 business_sda_hostonboarding_ssid_ippool_info:
   - cisco.dnac.business_sda_hostonboarding_ssid_ippool_info
+business_sda_hostonboarding_ssid_ippool_v1:
+  - cisco.dnac.business_sda_hostonboarding_ssid_ippool_v1
+business_sda_hostonboarding_ssid_ippool_v1_info:
+  - cisco.dnac.business_sda_hostonboarding_ssid_ippool_v1_info
 business_sda_virtual_network_summary_info:
   - cisco.dnac.business_sda_virtual_network_summary_info
+business_sda_virtual_network_summary_v1_info:
+  - cisco.dnac.business_sda_virtual_network_summary_v1_info
 business_sda_wireless_controller_create:
   - cisco.dnac.business_sda_wireless_controller_create
+business_sda_wireless_controller_create_v1:
+  - cisco.dnac.business_sda_wireless_controller_create_v1
 business_sda_wireless_controller_delete:
   - cisco.dnac.business_sda_wireless_controller_delete
+business_sda_wireless_controller_delete_v1:
+  - cisco.dnac.business_sda_wireless_controller_delete_v1
 byod_portal:
   - cisco.ise.byod_portal
 byod_portal_info:
@@ -2664,38 +2843,73 @@ clc_server_snapshot:
 clear_audit_log:
   - ieisystem.inmanage.clear_audit_log
   - inspur.ispim.clear_audit_log
-  - inspur.sm.clear_audit_log
   - kaytus.ksmanage.clear_audit_log
 clear_event_log:
   - ieisystem.inmanage.clear_event_log
   - inspur.ispim.clear_event_log
-  - inspur.sm.clear_event_log
   - kaytus.ksmanage.clear_event_log
 clear_system_log:
   - ieisystem.inmanage.clear_system_log
   - inspur.ispim.clear_system_log
-  - inspur.sm.clear_system_log
   - kaytus.ksmanage.clear_system_log
-cli_backup:
-  - ansible.netcommon.cli_backup
 cli_command:
   - ansible.netcommon.cli_command
 cli_config:
   - ansible.netcommon.cli_config
 cli_credential:
   - cisco.dnac.cli_credential
+cli_credential_v1:
+  - cisco.dnac.cli_credential_v1
 cli_parse:
   - ansible.utils.cli_parse
-cli_restore:
-  - ansible.netcommon.cli_restore
 client_detail_info:
   - cisco.dnac.client_detail_info
+client_detail_v1_info:
+  - cisco.dnac.client_detail_v1_info
 client_enrichment_details_info:
   - cisco.dnac.client_enrichment_details_info
+client_enrichment_details_v1_info:
+  - cisco.dnac.client_enrichment_details_v1_info
 client_health_info:
   - cisco.dnac.client_health_info
+client_health_v1_info:
+  - cisco.dnac.client_health_v1_info
 client_proximity_info:
   - cisco.dnac.client_proximity_info
+client_proximity_v1_info:
+  - cisco.dnac.client_proximity_v1_info
+clients_count_info:
+  - cisco.dnac.clients_count_info
+clients_count_v1_info:
+  - cisco.dnac.clients_count_v1_info
+clients_info:
+  - cisco.dnac.clients_info
+clients_query:
+  - cisco.dnac.clients_query
+clients_query_count:
+  - cisco.dnac.clients_query_count
+clients_query_count_v1:
+  - cisco.dnac.clients_query_count_v1
+clients_query_v1:
+  - cisco.dnac.clients_query_v1
+clients_summary_analytics:
+  - cisco.dnac.clients_summary_analytics
+clients_summary_analytics_v1:
+  - cisco.dnac.clients_summary_analytics_v1
+clients_top_n_analytics:
+  - cisco.dnac.clients_top_n_analytics
+clients_top_n_analytics_v1:
+  - cisco.dnac.clients_top_n_analytics_v1
+clients_trend_analytics:
+  - cisco.dnac.clients_trend_analytics
+clients_trend_analytics_id:
+  - cisco.dnac.clients_trend_analytics_id
+clients_trend_analytics_id_v1:
+  - cisco.dnac.clients_trend_analytics_id_v1
+clients_trend_analytics_v1:
+  - cisco.dnac.clients_trend_analytics_v1
+clients_v1_info:
+  - cisco.dnac.clients_v1_info
 cloud_api_key:
   - grafana.grafana.cloud_api_key
 cloud_init_data_facts:
@@ -2742,10 +2956,16 @@ cloudwatchlogs_log_group_metric_filter:
   - amazon.aws.cloudwatchlogs_log_group_metric_filter
 cluster:
   - sensu.sensu_go.cluster
+  - vmware.vmware.cluster
+cluster_dpm:
+  - vmware.vmware.cluster_dpm
 cluster_drs:
   - vmware.vmware.cluster_drs
+cluster_drs_recommendations:
+  - vmware.vmware.cluster_drs_recommendations
 cluster_info:
   - sensu.sensu_go.cluster_info
+  - vmware.vmware.cluster_info
 cluster_role:
   - sensu.sensu_go.cluster_role
 cluster_role_binding:
@@ -2754,6 +2974,8 @@ cluster_role_binding_info:
   - sensu.sensu_go.cluster_role_binding_info
 cluster_role_info:
   - sensu.sensu_go.cluster_role_info
+cluster_vcls:
+  - vmware.vmware.cluster_vcls
 cnos_backup:
   - community.network.cnos_backup
 cnos_banner:
@@ -2825,12 +3047,10 @@ coe_cluster_template:
 collect_blackbox:
   - ieisystem.inmanage.collect_blackbox
   - inspur.ispim.collect_blackbox
-  - inspur.sm.collect_blackbox
   - kaytus.ksmanage.collect_blackbox
 collect_log:
   - ieisystem.inmanage.collect_log
   - inspur.ispim.collect_log
-  - inspur.sm.collect_log
   - kaytus.ksmanage.collect_log
 command:
   - ansible.builtin.command
@@ -2838,18 +3058,36 @@ command:
   - community.routeros.command
 command_runner_run_command:
   - cisco.dnac.command_runner_run_command
+command_runner_run_command_v1:
+  - cisco.dnac.command_runner_run_command_v1
 compliance_check_run:
   - cisco.dnac.compliance_check_run
+compliance_check_run_v1:
+  - cisco.dnac.compliance_check_run_v1
 compliance_device_by_id_info:
   - cisco.dnac.compliance_device_by_id_info
+compliance_device_by_id_v1_info:
+  - cisco.dnac.compliance_device_by_id_v1_info
 compliance_device_details_count_info:
   - cisco.dnac.compliance_device_details_count_info
+compliance_device_details_count_v1_info:
+  - cisco.dnac.compliance_device_details_count_v1_info
 compliance_device_details_info:
   - cisco.dnac.compliance_device_details_info
+compliance_device_details_v1_info:
+  - cisco.dnac.compliance_device_details_v1_info
+compliance_device_id_info:
+  - cisco.dnac.compliance_device_id_info
+compliance_device_id_v1_info:
+  - cisco.dnac.compliance_device_id_v1_info
 compliance_device_info:
   - cisco.dnac.compliance_device_info
 compliance_device_status_count_info:
   - cisco.dnac.compliance_device_status_count_info
+compliance_device_status_count_v1_info:
+  - cisco.dnac.compliance_device_status_count_v1_info
+compliance_device_v1_info:
+  - cisco.dnac.compliance_device_v1_info
 composer:
   - community.general.composer
 compute_attribute:
@@ -2884,55 +3122,94 @@ config_rule:
   - community.aws.config_rule
 configuration:
   - cisco.ise.configuration
-configuration_archive_details_info:
-  - cisco.dnac.configuration_archive_details_info
 configuration_info:
   - cisco.ise.configuration_info
 configuration_template:
   - cisco.dnac.configuration_template
 configuration_template_clone:
   - cisco.dnac.configuration_template_clone
+configuration_template_clone_v1:
+  - cisco.dnac.configuration_template_clone_v1
 configuration_template_create:
   - cisco.dnac.configuration_template_create
+configuration_template_create_v1:
+  - cisco.dnac.configuration_template_create_v1
 configuration_template_deploy:
   - cisco.dnac.configuration_template_deploy
 configuration_template_deploy_status_info:
   - cisco.dnac.configuration_template_deploy_status_info
+configuration_template_deploy_status_v1_info:
+  - cisco.dnac.configuration_template_deploy_status_v1_info
+configuration_template_deploy_v1:
+  - cisco.dnac.configuration_template_deploy_v1
 configuration_template_deploy_v2:
   - cisco.dnac.configuration_template_deploy_v2
 configuration_template_export_project:
   - cisco.dnac.configuration_template_export_project
+configuration_template_export_project_v1:
+  - cisco.dnac.configuration_template_export_project_v1
 configuration_template_export_template:
   - cisco.dnac.configuration_template_export_template
+configuration_template_export_template_v1:
+  - cisco.dnac.configuration_template_export_template_v1
 configuration_template_import_project:
   - cisco.dnac.configuration_template_import_project
+configuration_template_import_project_v1:
+  - cisco.dnac.configuration_template_import_project_v1
 configuration_template_import_template:
   - cisco.dnac.configuration_template_import_template
+configuration_template_import_template_v1:
+  - cisco.dnac.configuration_template_import_template_v1
 configuration_template_info:
   - cisco.dnac.configuration_template_info
 configuration_template_project:
   - cisco.dnac.configuration_template_project
 configuration_template_project_info:
   - cisco.dnac.configuration_template_project_info
+configuration_template_project_v1:
+  - cisco.dnac.configuration_template_project_v1
+configuration_template_project_v1_info:
+  - cisco.dnac.configuration_template_project_v1_info
+configuration_template_v1:
+  - cisco.dnac.configuration_template_v1
+configuration_template_v1_info:
+  - cisco.dnac.configuration_template_v1_info
 configuration_template_version_create:
   - cisco.dnac.configuration_template_version_create
+configuration_template_version_create_v1:
+  - cisco.dnac.configuration_template_version_create_v1
 configuration_template_version_info:
   - cisco.dnac.configuration_template_version_info
+configuration_template_version_v1_info:
+  - cisco.dnac.configuration_template_version_v1_info
 connect_media_info:
   - ieisystem.inmanage.connect_media_info
   - inspur.ispim.connect_media_info
-  - inspur.sm.connect_media_info
   - kaytus.ksmanage.connect_media_info
 consistencygroup:
   - dellemc.unity.consistencygroup
 consul:
   - community.general.consul
-consul_acl:
-  - community.general.consul_acl
+consul_acl_bootstrap:
+  - community.general.consul_acl_bootstrap
+consul_agent_check:
+  - community.general.consul_agent_check
+consul_agent_service:
+  - community.general.consul_agent_service
+consul_auth_method:
+  - community.general.consul_auth_method
+consul_binding_rule:
+  - community.general.consul_binding_rule
 consul_kv:
   - community.general.consul_kv
+consul_policy:
+  - community.general.consul_policy
+consul_role:
+  - community.general.consul_role
 consul_session:
   - community.general.consul_session
+consul_token:
+  - community.general.consul_token
 content_configuration:
   - vmware.vmware_rest.content_configuration
 content_configuration_info:
@@ -2955,8 +3232,13 @@ content_import_repository:
   - theforeman.foreman.content_import_repository
 content_import_version:
   - theforeman.foreman.content_import_version
+content_library_info:
+  - vmware.vmware_rest.content_library_info
 content_library_item_info:
+  - vmware.vmware.content_library_item_info
   - vmware.vmware_rest.content_library_item_info
+content_library_subscriptions_info:
+  - vmware.vmware_rest.content_library_subscriptions_info
 content_locallibrary:
   - vmware.vmware_rest.content_locallibrary
 content_locallibrary_info:
@@ -3023,12 +3305,16 @@ cp_mgmt_add_api_key:
   - check_point.mgmt.cp_mgmt_add_api_key
 cp_mgmt_add_central_license:
   - check_point.mgmt.cp_mgmt_add_central_license
+cp_mgmt_add_custom_trusted_ca_certificate:
+  - check_point.mgmt.cp_mgmt_add_custom_trusted_ca_certificate
 cp_mgmt_add_data_center_object:
   - check_point.mgmt.cp_mgmt_add_data_center_object
 cp_mgmt_add_domain:
   - check_point.mgmt.cp_mgmt_add_domain
 cp_mgmt_add_nat_rule:
   - check_point.mgmt.cp_mgmt_add_nat_rule
+cp_mgmt_add_outbound_inspection_certificate:
+  - check_point.mgmt.cp_mgmt_add_outbound_inspection_certificate
 cp_mgmt_add_repository_package:
   - check_point.mgmt.cp_mgmt_add_repository_package
 cp_mgmt_add_rules_batch:
@@ -3073,18 +3359,60 @@ cp_mgmt_cluster_members_facts:
   - check_point.mgmt.cp_mgmt_cluster_members_facts
 cp_mgmt_connect_cloud_services:
   - check_point.mgmt.cp_mgmt_connect_cloud_services
+cp_mgmt_cp_trusted_ca_certificate_facts:
+  - check_point.mgmt.cp_mgmt_cp_trusted_ca_certificate_facts
+cp_mgmt_custom_trusted_ca_certificate_facts:
+  - check_point.mgmt.cp_mgmt_custom_trusted_ca_certificate_facts
 cp_mgmt_data_center_object_facts:
   - check_point.mgmt.cp_mgmt_data_center_object_facts
+cp_mgmt_data_type_compound_group:
+  - check_point.mgmt.cp_mgmt_data_type_compound_group
+cp_mgmt_data_type_compound_group_facts:
+  - check_point.mgmt.cp_mgmt_data_type_compound_group_facts
+cp_mgmt_data_type_file_attributes:
+  - check_point.mgmt.cp_mgmt_data_type_file_attributes
+cp_mgmt_data_type_file_attributes_facts:
+  - check_point.mgmt.cp_mgmt_data_type_file_attributes_facts
+cp_mgmt_data_type_file_group_facts:
+  - check_point.mgmt.cp_mgmt_data_type_file_group_facts
+cp_mgmt_data_type_group:
+  - check_point.mgmt.cp_mgmt_data_type_group
+cp_mgmt_data_type_group_facts:
+  - check_point.mgmt.cp_mgmt_data_type_group_facts
+cp_mgmt_data_type_keywords:
+  - check_point.mgmt.cp_mgmt_data_type_keywords
+cp_mgmt_data_type_keywords_facts:
+  - check_point.mgmt.cp_mgmt_data_type_keywords_facts
+cp_mgmt_data_type_patterns:
+  - check_point.mgmt.cp_mgmt_data_type_patterns
+cp_mgmt_data_type_patterns_facts:
+  - check_point.mgmt.cp_mgmt_data_type_patterns_facts
+cp_mgmt_data_type_traditional_group:
+  - check_point.mgmt.cp_mgmt_data_type_traditional_group
+cp_mgmt_data_type_traditional_group_facts:
+  - check_point.mgmt.cp_mgmt_data_type_traditional_group_facts
+cp_mgmt_data_type_weighted_keywords:
+  - check_point.mgmt.cp_mgmt_data_type_weighted_keywords
+cp_mgmt_data_type_weighted_keywords_facts:
+  - check_point.mgmt.cp_mgmt_data_type_weighted_keywords_facts
 cp_mgmt_delete_api_key:
   - check_point.mgmt.cp_mgmt_delete_api_key
 cp_mgmt_delete_central_license:
   - check_point.mgmt.cp_mgmt_delete_central_license
+cp_mgmt_delete_custom_trusted_ca_certificate:
+  - check_point.mgmt.cp_mgmt_delete_custom_trusted_ca_certificate
 cp_mgmt_delete_data_center_object:
   - check_point.mgmt.cp_mgmt_delete_data_center_object
 cp_mgmt_delete_domain:
   - check_point.mgmt.cp_mgmt_delete_domain
+cp_mgmt_delete_infinity_idp:
+  - check_point.mgmt.cp_mgmt_delete_infinity_idp
+cp_mgmt_delete_infinity_idp_object:
+  - check_point.mgmt.cp_mgmt_delete_infinity_idp_object
 cp_mgmt_delete_nat_rule:
   - check_point.mgmt.cp_mgmt_delete_nat_rule
+cp_mgmt_delete_outbound_inspection_certificate:
+  - check_point.mgmt.cp_mgmt_delete_outbound_inspection_certificate
 cp_mgmt_delete_repository_package:
   - check_point.mgmt.cp_mgmt_delete_repository_package
 cp_mgmt_delete_rules_batch:
@@ -3123,6 +3451,10 @@ cp_mgmt_export_management:
   - check_point.mgmt.cp_mgmt_export_management
 cp_mgmt_export_smart_task:
   - check_point.mgmt.cp_mgmt_export_smart_task
+cp_mgmt_external_trusted_ca:
+  - check_point.mgmt.cp_mgmt_external_trusted_ca
+cp_mgmt_external_trusted_ca_facts:
+  - check_point.mgmt.cp_mgmt_external_trusted_ca_facts
 cp_mgmt_get_attachment:
   - check_point.mgmt.cp_mgmt_get_attachment
 cp_mgmt_get_interfaces:
@@ -3157,6 +3489,10 @@ cp_mgmt_https_layer:
   - check_point.mgmt.cp_mgmt_https_layer
 cp_mgmt_https_layer_facts:
   - check_point.mgmt.cp_mgmt_https_layer_facts
+cp_mgmt_https_rule:
+  - check_point.mgmt.cp_mgmt_https_rule
+cp_mgmt_https_rule_facts:
+  - check_point.mgmt.cp_mgmt_https_rule_facts
 cp_mgmt_https_section:
   - check_point.mgmt.cp_mgmt_https_section
 cp_mgmt_identity_tag:
@@ -3171,8 +3507,14 @@ cp_mgmt_idp_to_domain_assignment_facts:
   - check_point.mgmt.cp_mgmt_idp_to_domain_assignment_facts
 cp_mgmt_import_management:
   - check_point.mgmt.cp_mgmt_import_management
+cp_mgmt_import_outbound_inspection_certificate:
+  - check_point.mgmt.cp_mgmt_import_outbound_inspection_certificate
 cp_mgmt_import_smart_task:
   - check_point.mgmt.cp_mgmt_import_smart_task
+cp_mgmt_infinity_idp_facts:
+  - check_point.mgmt.cp_mgmt_infinity_idp_facts
+cp_mgmt_infinity_idp_object_facts:
+  - check_point.mgmt.cp_mgmt_infinity_idp_object_facts
 cp_mgmt_install_database:
   - check_point.mgmt.cp_mgmt_install_database
 cp_mgmt_install_lsm_policy:
@@ -3183,12 +3525,20 @@ cp_mgmt_install_policy:
   - check_point.mgmt.cp_mgmt_install_policy
 cp_mgmt_install_software_package:
   - check_point.mgmt.cp_mgmt_install_software_package
+cp_mgmt_interface:
+  - check_point.mgmt.cp_mgmt_interface
+cp_mgmt_interface_facts:
+  - check_point.mgmt.cp_mgmt_interface_facts
 cp_mgmt_interoperable_device:
   - check_point.mgmt.cp_mgmt_interoperable_device
 cp_mgmt_interoperable_device_facts:
   - check_point.mgmt.cp_mgmt_interoperable_device_facts
 cp_mgmt_ips_protection_extended_attribute_facts:
   - check_point.mgmt.cp_mgmt_ips_protection_extended_attribute_facts
+cp_mgmt_limit:
+  - check_point.mgmt.cp_mgmt_limit
+cp_mgmt_limit_facts:
+  - check_point.mgmt.cp_mgmt_limit_facts
 cp_mgmt_lock_object:
   - check_point.mgmt.cp_mgmt_lock_object
 cp_mgmt_lsm_cluster:
@@ -3217,10 +3567,30 @@ cp_mgmt_mds:
   - check_point.mgmt.cp_mgmt_mds
 cp_mgmt_mds_facts:
   - check_point.mgmt.cp_mgmt_mds_facts
+cp_mgmt_mobile_access_profile_rule:
+  - check_point.mgmt.cp_mgmt_mobile_access_profile_rule
+cp_mgmt_mobile_access_profile_rule_facts:
+  - check_point.mgmt.cp_mgmt_mobile_access_profile_rule_facts
+cp_mgmt_mobile_access_profile_section:
+  - check_point.mgmt.cp_mgmt_mobile_access_profile_section
+cp_mgmt_mobile_access_rule:
+  - check_point.mgmt.cp_mgmt_mobile_access_rule
+cp_mgmt_mobile_access_rule_facts:
+  - check_point.mgmt.cp_mgmt_mobile_access_rule_facts
+cp_mgmt_mobile_access_section:
+  - check_point.mgmt.cp_mgmt_mobile_access_section
+cp_mgmt_mobile_profile:
+  - check_point.mgmt.cp_mgmt_mobile_profile
+cp_mgmt_mobile_profile_facts:
+  - check_point.mgmt.cp_mgmt_mobile_profile_facts
 cp_mgmt_multicast_address_range:
   - check_point.mgmt.cp_mgmt_multicast_address_range
 cp_mgmt_multicast_address_range_facts:
   - check_point.mgmt.cp_mgmt_multicast_address_range_facts
+cp_mgmt_multiple_key_exchanges:
+  - check_point.mgmt.cp_mgmt_multiple_key_exchanges
+cp_mgmt_multiple_key_exchanges_facts:
+  - check_point.mgmt.cp_mgmt_multiple_key_exchanges_facts
 cp_mgmt_nat_rule:
   - check_point.mgmt.cp_mgmt_nat_rule
 cp_mgmt_nat_rule_facts:
@@ -3235,12 +3605,30 @@ cp_mgmt_network_feed:
   - check_point.mgmt.cp_mgmt_network_feed
 cp_mgmt_network_feed_facts:
   - check_point.mgmt.cp_mgmt_network_feed_facts
+cp_mgmt_network_probe:
+  - check_point.mgmt.cp_mgmt_network_probe
+cp_mgmt_network_probe_facts:
+  - check_point.mgmt.cp_mgmt_network_probe_facts
 cp_mgmt_objects_facts:
   - check_point.mgmt.cp_mgmt_objects_facts
+cp_mgmt_opsec_trusted_ca:
+  - check_point.mgmt.cp_mgmt_opsec_trusted_ca
+cp_mgmt_opsec_trusted_ca_facts:
+  - check_point.mgmt.cp_mgmt_opsec_trusted_ca_facts
+cp_mgmt_outbound_inspection_certificate_facts:
+  - check_point.mgmt.cp_mgmt_outbound_inspection_certificate_facts
+cp_mgmt_override_categorization:
+  - check_point.mgmt.cp_mgmt_override_categorization
+cp_mgmt_override_categorization_facts:
+  - check_point.mgmt.cp_mgmt_override_categorization_facts
 cp_mgmt_package:
   - check_point.mgmt.cp_mgmt_package
 cp_mgmt_package_facts:
   - check_point.mgmt.cp_mgmt_package_facts
+cp_mgmt_passcode_profile:
+  - check_point.mgmt.cp_mgmt_passcode_profile
+cp_mgmt_passcode_profile_facts:
+  - check_point.mgmt.cp_mgmt_passcode_profile_facts
 cp_mgmt_provisioning_profile_facts:
   - check_point.mgmt.cp_mgmt_provisioning_profile_facts
 cp_mgmt_publish:
@@ -3265,6 +3653,22 @@ cp_mgmt_repository_script_facts:
   - check_point.mgmt.cp_mgmt_repository_script_facts
 cp_mgmt_reset_sic:
   - check_point.mgmt.cp_mgmt_reset_sic
+cp_mgmt_resource_cifs:
+  - check_point.mgmt.cp_mgmt_resource_cifs
+cp_mgmt_resource_cifs_facts:
+  - check_point.mgmt.cp_mgmt_resource_cifs_facts
+cp_mgmt_resource_ftp:
+  - check_point.mgmt.cp_mgmt_resource_ftp
+cp_mgmt_resource_ftp_facts:
+  - check_point.mgmt.cp_mgmt_resource_ftp_facts
+cp_mgmt_resource_smtp:
+  - check_point.mgmt.cp_mgmt_resource_smtp
+cp_mgmt_resource_smtp_facts:
+  - check_point.mgmt.cp_mgmt_resource_smtp_facts
+cp_mgmt_resource_uri:
+  - check_point.mgmt.cp_mgmt_resource_uri
+cp_mgmt_resource_uri_facts:
+  - check_point.mgmt.cp_mgmt_resource_uri_facts
 cp_mgmt_run_ips_update:
   - check_point.mgmt.cp_mgmt_run_ips_update
 cp_mgmt_run_script:
@@ -3321,26 +3725,40 @@ cp_mgmt_session_facts:
   - check_point.mgmt.cp_mgmt_session_facts
 cp_mgmt_set_api_settings:
   - check_point.mgmt.cp_mgmt_set_api_settings
+cp_mgmt_set_app_control_advanced_settings:
+  - check_point.mgmt.cp_mgmt_set_app_control_advanced_settings
 cp_mgmt_set_cloud_services:
   - check_point.mgmt.cp_mgmt_set_cloud_services
+cp_mgmt_set_content_awareness_advanced_settings:
+  - check_point.mgmt.cp_mgmt_set_content_awareness_advanced_settings
+cp_mgmt_set_cp_trusted_ca_certificate:
+  - check_point.mgmt.cp_mgmt_set_cp_trusted_ca_certificate
 cp_mgmt_set_domain:
   - check_point.mgmt.cp_mgmt_set_domain
+cp_mgmt_set_gateway_global_use:
+  - check_point.mgmt.cp_mgmt_set_gateway_global_use
 cp_mgmt_set_global_domain:
   - check_point.mgmt.cp_mgmt_set_global_domain
 cp_mgmt_set_global_properties:
   - check_point.mgmt.cp_mgmt_set_global_properties
 cp_mgmt_set_ha_state:
   - check_point.mgmt.cp_mgmt_set_ha_state
+cp_mgmt_set_https_advanced_settings:
+  - check_point.mgmt.cp_mgmt_set_https_advanced_settings
 cp_mgmt_set_idp_default_assignment:
   - check_point.mgmt.cp_mgmt_set_idp_default_assignment
 cp_mgmt_set_idp_to_domain_assignment:
   - check_point.mgmt.cp_mgmt_set_idp_to_domain_assignment
+cp_mgmt_set_internal_trusted_ca:
+  - check_point.mgmt.cp_mgmt_set_internal_trusted_ca
 cp_mgmt_set_ips_update_schedule:
   - check_point.mgmt.cp_mgmt_set_ips_update_schedule
 cp_mgmt_set_login_message:
   - check_point.mgmt.cp_mgmt_set_login_message
 cp_mgmt_set_nat_rule:
   - check_point.mgmt.cp_mgmt_set_nat_rule
+cp_mgmt_set_outbound_inspection_certificate:
+  - check_point.mgmt.cp_mgmt_set_outbound_inspection_certificate
 cp_mgmt_set_policy_settings:
   - check_point.mgmt.cp_mgmt_set_policy_settings
 cp_mgmt_set_session:
@@ -3355,6 +3773,8 @@ cp_mgmt_show_api_settings:
   - check_point.mgmt.cp_mgmt_show_api_settings
 cp_mgmt_show_api_versions:
   - check_point.mgmt.cp_mgmt_show_api_versions
+cp_mgmt_show_app_control_advanced_settings:
+  - check_point.mgmt.cp_mgmt_show_app_control_advanced_settings
 cp_mgmt_show_azure_ad_content:
   - check_point.mgmt.cp_mgmt_show_azure_ad_content
 cp_mgmt_show_changes:
@@ -3365,6 +3785,12 @@ cp_mgmt_show_cloud_services:
   - check_point.mgmt.cp_mgmt_show_cloud_services
 cp_mgmt_show_commands:
   - check_point.mgmt.cp_mgmt_show_commands
+cp_mgmt_show_content_awareness_advanced_settings:
+  - check_point.mgmt.cp_mgmt_show_content_awareness_advanced_settings
+cp_mgmt_show_gateway_capabilities:
+  - check_point.mgmt.cp_mgmt_show_gateway_capabilities
+cp_mgmt_show_gateway_global_use:
+  - check_point.mgmt.cp_mgmt_show_gateway_global_use
 cp_mgmt_show_gateways_and_servers:
   - check_point.mgmt.cp_mgmt_show_gateways_and_servers
 cp_mgmt_show_global_domain:
@@ -3375,20 +3801,30 @@ cp_mgmt_show_ha_state:
   - check_point.mgmt.cp_mgmt_show_ha_state
 cp_mgmt_show_ha_status:
   - check_point.mgmt.cp_mgmt_show_ha_status
+cp_mgmt_show_https_advanced_settings:
+  - check_point.mgmt.cp_mgmt_show_https_advanced_settings
 cp_mgmt_show_https_section:
   - check_point.mgmt.cp_mgmt_show_https_section
 cp_mgmt_show_idp_default_assignment:
   - check_point.mgmt.cp_mgmt_show_idp_default_assignment
+cp_mgmt_show_internal_trusted_ca:
+  - check_point.mgmt.cp_mgmt_show_internal_trusted_ca
 cp_mgmt_show_ips_status:
   - check_point.mgmt.cp_mgmt_show_ips_status
 cp_mgmt_show_ips_update_schedule:
   - check_point.mgmt.cp_mgmt_show_ips_update_schedule
+cp_mgmt_show_last_published_session:
+  - check_point.mgmt.cp_mgmt_show_last_published_session
 cp_mgmt_show_layer_structure:
   - check_point.mgmt.cp_mgmt_show_layer_structure
 cp_mgmt_show_login_message:
   - check_point.mgmt.cp_mgmt_show_login_message
 cp_mgmt_show_logs:
   - check_point.mgmt.cp_mgmt_show_logs
+cp_mgmt_show_mobile_access_profile_section:
+  - check_point.mgmt.cp_mgmt_show_mobile_access_profile_section
+cp_mgmt_show_mobile_access_section:
+  - check_point.mgmt.cp_mgmt_show_mobile_access_section
 cp_mgmt_show_nat_section:
   - check_point.mgmt.cp_mgmt_show_nat_section
 cp_mgmt_show_place_holder:
@@ -3501,6 +3937,8 @@ cp_mgmt_user_group:
   - check_point.mgmt.cp_mgmt_user_group
 cp_mgmt_user_group_facts:
   - check_point.mgmt.cp_mgmt_user_group_facts
+cp_mgmt_verify_management_license:
+  - check_point.mgmt.cp_mgmt_verify_management_license
 cp_mgmt_verify_policy:
   - check_point.mgmt.cp_mgmt_verify_policy
 cp_mgmt_verify_software_package:
@@ -3515,6 +3953,8 @@ cp_mgmt_vpn_community_star:
   - check_point.mgmt.cp_mgmt_vpn_community_star
 cp_mgmt_vpn_community_star_facts:
   - check_point.mgmt.cp_mgmt_vpn_community_star_facts
+cp_mgmt_vsx_provisioning_tool:
+  - check_point.mgmt.cp_mgmt_vsx_provisioning_tool
 cp_mgmt_vsx_run_operation:
   - check_point.mgmt.cp_mgmt_vsx_run_operation
 cp_mgmt_where_used:
@@ -3533,6 +3973,10 @@ cpm_config_restore:
   - wti.remote.cpm_config_restore
 cpm_current_info:
   - wti.remote.cpm_current_info
+cpm_dnsservices_config:
+  - wti.remote.cpm_dnsservices_config
+cpm_dnsservices_info:
+  - wti.remote.cpm_dnsservices_info
 cpm_firmware_info:
   - wti.remote.cpm_firmware_info
 cpm_firmware_update:
@@ -3585,18 +4029,21 @@ cpm_time_info:
   - wti.remote.cpm_time_info
 cpm_user:
   - wti.remote.cpm_user
+cpm_web_config:
+  - wti.remote.cpm_web_config
+cpm_web_info:
+  - wti.remote.cpm_web_info
 cpu_info:
   - ieisystem.inmanage.cpu_info
   - inspur.ispim.cpu_info
-  - inspur.sm.cpu_info
   - kaytus.ksmanage.cpu_info
-cran:
-  - debops.debops.cran
 credential:
   - awx.awx.credential
   - lowlydba.sqlserver.credential
 credential_input_source:
   - awx.awx.credential_input_source
+credential_to_site_by_siteid_create:
+  - cisco.dnac.credential_to_site_by_siteid_create
 credential_to_site_by_siteid_create_v2:
   - cisco.dnac.credential_to_site_by_siteid_create_v2
 credential_type:
@@ -3735,6 +4182,18 @@ custom_attributes_rename:
   - cisco.ise.custom_attributes_rename
 custom_image:
   - cloudscale_ch.cloud.custom_image
+custom_issue_definitions:
+  - cisco.dnac.custom_issue_definitions
+custom_issue_definitions_count_info:
+  - cisco.dnac.custom_issue_definitions_count_info
+custom_issue_definitions_count_v1_info:
+  - cisco.dnac.custom_issue_definitions_count_v1_info
+custom_issue_definitions_info:
+  - cisco.dnac.custom_issue_definitions_info
+custom_issue_definitions_v1:
+  - cisco.dnac.custom_issue_definitions_v1
+custom_issue_definitions_v1_info:
+  - cisco.dnac.custom_issue_definitions_v1_info
 cv_server_provision:
   - community.network.cv_server_provision
 cyberark_account:
@@ -3791,19 +4250,12 @@ debug:
   - ansible.builtin.debug
 debug_ldap_client:
   - microsoft.ad.debug_ldap_client
-del_ad_group:
-  - inspur.sm.del_ad_group
-del_ldap_group:
-  - inspur.sm.del_ldap_group
+decompress:
+  - community.general.decompress
 del_session:
   - ieisystem.inmanage.del_session
   - inspur.ispim.del_session
-  - inspur.sm.del_session
   - kaytus.ksmanage.del_session
-del_user:
-  - inspur.sm.del_user
-del_user_group:
-  - inspur.sm.del_user_group
 dellemc_configure_idrac_eventing:
   - dellemc.openmanage.dellemc_configure_idrac_eventing
 dellemc_configure_idrac_services:
@@ -3888,48 +4340,80 @@ device_configs_backup_workflow_manager:
   - cisco.dnac.device_configs_backup_workflow_manager
 device_configurations_export:
   - cisco.dnac.device_configurations_export
-device_credential_create:
-  - cisco.dnac.device_credential_create
-device_credential_delete:
-  - cisco.dnac.device_credential_delete
+device_configurations_export_v1:
+  - cisco.dnac.device_configurations_export_v1
+device_credential:
+  - cisco.dnac.device_credential
 device_credential_info:
   - cisco.dnac.device_credential_info
 device_credential_intent:
   - cisco.dnac.device_credential_intent
-device_credential_update:
-  - cisco.dnac.device_credential_update
+device_credential_v1:
+  - cisco.dnac.device_credential_v1
+device_credential_v1_info:
+  - cisco.dnac.device_credential_v1_info
 device_credential_workflow_manager:
   - cisco.dnac.device_credential_workflow_manager
 device_details_info:
   - cisco.dnac.device_details_info
+device_details_v1_info:
+  - cisco.dnac.device_details_v1_info
 device_enrichment_details_info:
   - cisco.dnac.device_enrichment_details_info
+device_enrichment_details_v1_info:
+  - cisco.dnac.device_enrichment_details_v1_info
 device_family_identifiers_details_info:
   - cisco.dnac.device_family_identifiers_details_info
+device_family_identifiers_details_v1_info:
+  - cisco.dnac.device_family_identifiers_details_v1_info
 device_health_info:
   - cisco.dnac.device_health_info
+device_health_v1_info:
+  - cisco.dnac.device_health_v1_info
 device_interface_by_ip_info:
   - cisco.dnac.device_interface_by_ip_info
+device_interface_by_ip_v1_info:
+  - cisco.dnac.device_interface_by_ip_v1_info
 device_interface_count_info:
   - cisco.dnac.device_interface_count_info
+device_interface_count_v1_info:
+  - cisco.dnac.device_interface_count_v1_info
 device_interface_info:
   - cisco.dnac.device_interface_info
 device_interface_isis_info:
   - cisco.dnac.device_interface_isis_info
+device_interface_isis_v1_info:
+  - cisco.dnac.device_interface_isis_v1_info
 device_interface_ospf_info:
   - cisco.dnac.device_interface_ospf_info
+device_interface_ospf_v1_info:
+  - cisco.dnac.device_interface_ospf_v1_info
+device_interface_v1_info:
+  - cisco.dnac.device_interface_v1_info
 device_reboot_apreboot:
   - cisco.dnac.device_reboot_apreboot
 device_reboot_apreboot_info:
   - cisco.dnac.device_reboot_apreboot_info
+device_reboot_apreboot_v1:
+  - cisco.dnac.device_reboot_apreboot_v1
+device_reboot_apreboot_v1_info:
+  - cisco.dnac.device_reboot_apreboot_v1_info
 device_replacement:
   - cisco.dnac.device_replacement
 device_replacement_count_info:
   - cisco.dnac.device_replacement_count_info
+device_replacement_count_v1_info:
+  - cisco.dnac.device_replacement_count_v1_info
 device_replacement_deploy:
   - cisco.dnac.device_replacement_deploy
+device_replacement_deploy_v1:
+  - cisco.dnac.device_replacement_deploy_v1
 device_replacement_info:
   - cisco.dnac.device_replacement_info
+device_replacement_v1:
+  - cisco.dnac.device_replacement_v1
+device_replacement_v1_info:
+  - cisco.dnac.device_replacement_v1_info
 devices:
   - cisco.meraki.devices
 devices_appliance_performance_info:
@@ -4060,6 +4544,22 @@ devices_wireless_radio_settings_info:
   - cisco.meraki.devices_wireless_radio_settings_info
 devices_wireless_status_info:
   - cisco.meraki.devices_wireless_status_info
+diagnostic_validation_sets_info:
+  - cisco.dnac.diagnostic_validation_sets_info
+diagnostic_validation_sets_v1_info:
+  - cisco.dnac.diagnostic_validation_sets_v1_info
+diagnostic_validation_workflows:
+  - cisco.dnac.diagnostic_validation_workflows
+diagnostic_validation_workflows_count_info:
+  - cisco.dnac.diagnostic_validation_workflows_count_info
+diagnostic_validation_workflows_count_v1_info:
+  - cisco.dnac.diagnostic_validation_workflows_count_v1_info
+diagnostic_validation_workflows_info:
+  - cisco.dnac.diagnostic_validation_workflows_info
+diagnostic_validation_workflows_v1:
+  - cisco.dnac.diagnostic_validation_workflows_v1
+diagnostic_validation_workflows_v1_info:
+  - cisco.dnac.diagnostic_validation_workflows_v1_info
 digital_ocean:
   - community.digitalocean.digital_ocean
 digital_ocean_account_facts:
@@ -4188,38 +4688,70 @@ directconnect_virtual_interface:
   - community.aws.directconnect_virtual_interface
 disassociate_site_to_network_profile:
   - cisco.dnac.disassociate_site_to_network_profile
+disassociate_site_to_network_profile_v1:
+  - cisco.dnac.disassociate_site_to_network_profile_v1
 disasterrecovery_system_operationstatus_info:
   - cisco.dnac.disasterrecovery_system_operationstatus_info
+disasterrecovery_system_operationstatus_v1_info:
+  - cisco.dnac.disasterrecovery_system_operationstatus_v1_info
 disasterrecovery_system_status_info:
   - cisco.dnac.disasterrecovery_system_status_info
+disasterrecovery_system_status_v1_info:
+  - cisco.dnac.disasterrecovery_system_status_v1_info
 discord:
   - community.general.discord
 discovery:
   - cisco.dnac.discovery
 discovery_count_info:
   - cisco.dnac.discovery_count_info
+discovery_count_v1_info:
+  - cisco.dnac.discovery_count_v1_info
 discovery_device_count_info:
   - cisco.dnac.discovery_device_count_info
+discovery_device_count_v1_info:
+  - cisco.dnac.discovery_device_count_v1_info
 discovery_device_info:
   - cisco.dnac.discovery_device_info
 discovery_device_range_info:
   - cisco.dnac.discovery_device_range_info
+discovery_device_range_v1_info:
+  - cisco.dnac.discovery_device_range_v1_info
+discovery_device_v1_info:
+  - cisco.dnac.discovery_device_v1_info
 discovery_info:
   - cisco.dnac.discovery_info
 discovery_intent:
   - cisco.dnac.discovery_intent
 discovery_job_info:
   - cisco.dnac.discovery_job_info
+discovery_job_v1_info:
+  - cisco.dnac.discovery_job_v1_info
 discovery_range_delete:
   - cisco.dnac.discovery_range_delete
+discovery_range_delete_v1:
+  - cisco.dnac.discovery_range_delete_v1
 discovery_range_info:
   - cisco.dnac.discovery_range_info
+discovery_range_v1_info:
+  - cisco.dnac.discovery_range_v1_info
 discovery_rule:
   - theforeman.foreman.discovery_rule
 discovery_summary_info:
   - cisco.dnac.discovery_summary_info
+discovery_summary_v1_info:
+  - cisco.dnac.discovery_summary_v1_info
+discovery_v1:
+  - cisco.dnac.discovery_v1
+discovery_v1_info:
+  - cisco.dnac.discovery_v1_info
 discovery_workflow_manager:
   - cisco.dnac.discovery_workflow_manager
+django_check:
+  - community.general.django_check
+django_command:
+  - community.general.django_command
+django_createcachetable:
+  - community.general.django_createcachetable
 django_manage:
   - community.general.django_manage
 dladm_etherstub:
@@ -4238,16 +4770,26 @@ dms_replication_subnet_group:
   - community.aws.dms_replication_subnet_group
 dna_command_runner_keywords_info:
   - cisco.dnac.dna_command_runner_keywords_info
+dna_command_runner_keywords_v1_info:
+  - cisco.dnac.dna_command_runner_keywords_v1_info
 dna_event_snmp_config_info:
   - cisco.dnac.dna_event_snmp_config_info
+dna_event_snmp_config_v1_info:
+  - cisco.dnac.dna_event_snmp_config_v1_info
 dnac_packages_info:
   - cisco.dnac.dnac_packages_info
+dnac_packages_v1_info:
+  - cisco.dnac.dnac_packages_v1_info
 dnacaap_management_execution_status_info:
   - cisco.dnac.dnacaap_management_execution_status_info
+dnacaap_management_execution_status_v1_info:
+  - cisco.dnac.dnacaap_management_execution_status_v1_info
 dnf:
   - ansible.builtin.dnf
 dnf5:
   - ansible.builtin.dnf5
+dnf_config_manager:
+  - community.general.dnf_config_manager
 dnf_versionlock:
   - community.general.dnf_versionlock
 dns_domain:
@@ -4257,7 +4799,6 @@ dns_domain_info:
 dns_info:
   - ieisystem.inmanage.dns_info
   - inspur.ispim.dns_info
-  - inspur.sm.dns_info
   - kaytus.ksmanage.dns_info
 dns_record:
   - vultr.cloud.dns_record
@@ -4271,12 +4812,14 @@ dnsimple_info:
   - community.general.dnsimple_info
 dnsmadeeasy:
   - community.general.dnsmadeeasy
-docker_compose:
-  - community.docker.docker_compose
 docker_compose_v2:
   - community.docker.docker_compose_v2
+docker_compose_v2_exec:
+  - community.docker.docker_compose_v2_exec
 docker_compose_v2_pull:
   - community.docker.docker_compose_v2_pull
+docker_compose_v2_run:
+  - community.docker.docker_compose_v2_run
 docker_config:
   - community.docker.docker_config
 docker_container:
@@ -4353,12 +4896,10 @@ domain_info:
 download_auto_screenshot:
   - ieisystem.inmanage.download_auto_screenshot
   - inspur.ispim.download_auto_screenshot
-  - inspur.sm.download_auto_screenshot
   - kaytus.ksmanage.download_auto_screenshot
 download_manual_screenshot:
   - ieisystem.inmanage.download_manual_screenshot
   - inspur.ispim.download_manual_screenshot
-  - inspur.sm.download_manual_screenshot
   - kaytus.ksmanage.download_manual_screenshot
 downloadable_acl:
   - cisco.ise.downloadable_acl
@@ -4366,7 +4907,6 @@ downloadable_acl_info:
   - cisco.ise.downloadable_acl_info
 dpkg_divert:
   - community.general.dpkg_divert
-  - debops.debops.dpkg_divert
 dpkg_selections:
   - ansible.builtin.dpkg_selections
 duo_identity_sync:
@@ -4428,13 +4968,15 @@ ec2_key:
 ec2_key_info:
   - amazon.aws.ec2_key_info
 ec2_launch_template:
-  - community.aws.ec2_launch_template
+  - amazon.aws.ec2_launch_template
+ec2_launch_template_info:
+  - amazon.aws.ec2_launch_template_info
 ec2_metadata_facts:
   - amazon.aws.ec2_metadata_facts
 ec2_placement_group:
-  - community.aws.ec2_placement_group
+  - amazon.aws.ec2_placement_group
 ec2_placement_group_info:
-  - community.aws.ec2_placement_group_info
+  - amazon.aws.ec2_placement_group_info
 ec2_security_group:
   - amazon.aws.ec2_security_group
 ec2_security_group_info:
@@ -4454,13 +4996,13 @@ ec2_tag:
 ec2_tag_info:
   - amazon.aws.ec2_tag_info
 ec2_transit_gateway:
-  - community.aws.ec2_transit_gateway
+  - amazon.aws.ec2_transit_gateway
 ec2_transit_gateway_info:
-  - community.aws.ec2_transit_gateway_info
+  - amazon.aws.ec2_transit_gateway_info
 ec2_transit_gateway_vpc_attachment:
-  - community.aws.ec2_transit_gateway_vpc_attachment
+  - amazon.aws.ec2_transit_gateway_vpc_attachment
 ec2_transit_gateway_vpc_attachment_info:
-  - community.aws.ec2_transit_gateway_vpc_attachment_info
+  - amazon.aws.ec2_transit_gateway_vpc_attachment_info
 ec2_vol:
   - amazon.aws.ec2_vol
 ec2_vol_info:
@@ -4470,7 +5012,9 @@ ec2_vpc_dhcp_option:
 ec2_vpc_dhcp_option_info:
   - amazon.aws.ec2_vpc_dhcp_option_info
 ec2_vpc_egress_igw:
-  - community.aws.ec2_vpc_egress_igw
+  - amazon.aws.ec2_vpc_egress_igw
+ec2_vpc_egress_igw_info:
+  - amazon.aws.ec2_vpc_egress_igw_info
 ec2_vpc_endpoint:
   - amazon.aws.ec2_vpc_endpoint
 ec2_vpc_endpoint_info:
@@ -4482,9 +5026,9 @@ ec2_vpc_igw:
 ec2_vpc_igw_info:
   - amazon.aws.ec2_vpc_igw_info
 ec2_vpc_nacl:
-  - community.aws.ec2_vpc_nacl
+  - amazon.aws.ec2_vpc_nacl
 ec2_vpc_nacl_info:
-  - community.aws.ec2_vpc_nacl_info
+  - amazon.aws.ec2_vpc_nacl_info
 ec2_vpc_nat_gateway:
   - amazon.aws.ec2_vpc_nat_gateway
 ec2_vpc_nat_gateway_info:
@@ -4493,10 +5037,10 @@ ec2_vpc_net:
   - amazon.aws.ec2_vpc_net
 ec2_vpc_net_info:
   - amazon.aws.ec2_vpc_net_info
-ec2_vpc_peer:
-  - community.aws.ec2_vpc_peer
+ec2_vpc_peering:
+  - amazon.aws.ec2_vpc_peering
 ec2_vpc_peering_info:
-  - community.aws.ec2_vpc_peering_info
+  - amazon.aws.ec2_vpc_peering_info
 ec2_vpc_route_table:
   - amazon.aws.ec2_vpc_route_table
 ec2_vpc_route_table_info:
@@ -4506,13 +5050,13 @@ ec2_vpc_subnet:
 ec2_vpc_subnet_info:
   - amazon.aws.ec2_vpc_subnet_info
 ec2_vpc_vgw:
-  - community.aws.ec2_vpc_vgw
+  - amazon.aws.ec2_vpc_vgw
 ec2_vpc_vgw_info:
-  - community.aws.ec2_vpc_vgw_info
+  - amazon.aws.ec2_vpc_vgw_info
 ec2_vpc_vpn:
-  - community.aws.ec2_vpc_vpn
+  - amazon.aws.ec2_vpc_vpn
 ec2_vpc_vpn_info:
-  - community.aws.ec2_vpc_vpn_info
+  - amazon.aws.ec2_vpc_vpn_info
 ec2_win_password:
   - community.aws.ec2_win_password
 ecs_attribute:
@@ -4550,91 +5094,70 @@ edgeswitch_vlan:
 edit_ad:
   - ieisystem.inmanage.edit_ad
   - inspur.ispim.edit_ad
-  - inspur.sm.edit_ad
   - kaytus.ksmanage.edit_ad
-edit_ad_group:
-  - inspur.sm.edit_ad_group
 edit_alert_policy:
   - ieisystem.inmanage.edit_alert_policy
   - inspur.ispim.edit_alert_policy
-  - inspur.sm.edit_alert_policy
   - kaytus.ksmanage.edit_alert_policy
 edit_auto_capture:
   - ieisystem.inmanage.edit_auto_capture
   - inspur.ispim.edit_auto_capture
-  - inspur.sm.edit_auto_capture
   - kaytus.ksmanage.edit_auto_capture
 edit_bios:
   - ieisystem.inmanage.edit_bios
   - inspur.ispim.edit_bios
-  - inspur.sm.edit_bios
   - kaytus.ksmanage.edit_bios
 edit_boot_image:
   - ieisystem.inmanage.edit_boot_image
   - inspur.ispim.edit_boot_image
-  - inspur.sm.edit_boot_image
   - kaytus.ksmanage.edit_boot_image
 edit_boot_option:
   - ieisystem.inmanage.edit_boot_option
   - inspur.ispim.edit_boot_option
-  - inspur.sm.edit_boot_option
   - kaytus.ksmanage.edit_boot_option
 edit_connect_media:
   - ieisystem.inmanage.edit_connect_media
   - inspur.ispim.edit_connect_media
-  - inspur.sm.edit_connect_media
   - kaytus.ksmanage.edit_connect_media
 edit_dns:
   - ieisystem.inmanage.edit_dns
   - inspur.ispim.edit_dns
-  - inspur.sm.edit_dns
   - kaytus.ksmanage.edit_dns
 edit_event_log_policy:
   - ieisystem.inmanage.edit_event_log_policy
   - inspur.ispim.edit_event_log_policy
-  - inspur.sm.edit_event_log_policy
   - kaytus.ksmanage.edit_event_log_policy
 edit_fan:
   - ieisystem.inmanage.edit_fan
   - inspur.ispim.edit_fan
-  - inspur.sm.edit_fan
   - kaytus.ksmanage.edit_fan
 edit_fru:
   - ieisystem.inmanage.edit_fru
   - inspur.ispim.edit_fru
-  - inspur.sm.edit_fru
   - kaytus.ksmanage.edit_fru
 edit_ipv4:
   - ieisystem.inmanage.edit_ipv4
   - inspur.ispim.edit_ipv4
-  - inspur.sm.edit_ipv4
   - kaytus.ksmanage.edit_ipv4
 edit_ipv6:
   - ieisystem.inmanage.edit_ipv6
   - inspur.ispim.edit_ipv6
-  - inspur.sm.edit_ipv6
   - kaytus.ksmanage.edit_ipv6
 edit_kvm:
   - ieisystem.inmanage.edit_kvm
   - inspur.ispim.edit_kvm
-  - inspur.sm.edit_kvm
   - kaytus.ksmanage.edit_kvm
 edit_ldap:
   - ieisystem.inmanage.edit_ldap
   - inspur.ispim.edit_ldap
-  - inspur.sm.edit_ldap
   - kaytus.ksmanage.edit_ldap
-edit_ldap_group:
-  - inspur.sm.edit_ldap_group
 edit_ldisk:
   - ieisystem.inmanage.edit_ldisk
   - inspur.ispim.edit_ldisk
-  - inspur.sm.edit_ldisk
   - kaytus.ksmanage.edit_ldisk
 edit_log_setting:
   - ieisystem.inmanage.edit_log_setting
   - inspur.ispim.edit_log_setting
-  - inspur.sm.edit_log_setting
   - kaytus.ksmanage.edit_log_setting
 edit_m6_log_setting:
   - ieisystem.inmanage.edit_m6_log_setting
@@ -4643,133 +5166,105 @@ edit_m6_log_setting:
 edit_manual_capture:
   - ieisystem.inmanage.edit_manual_capture
   - inspur.ispim.edit_manual_capture
-  - inspur.sm.edit_manual_capture
   - kaytus.ksmanage.edit_manual_capture
 edit_media_instance:
   - ieisystem.inmanage.edit_media_instance
   - inspur.ispim.edit_media_instance
-  - inspur.sm.edit_media_instance
   - kaytus.ksmanage.edit_media_instance
 edit_ncsi:
   - ieisystem.inmanage.edit_ncsi
   - inspur.ispim.edit_ncsi
-  - inspur.sm.edit_ncsi
   - kaytus.ksmanage.edit_ncsi
 edit_network:
   - ieisystem.inmanage.edit_network
   - inspur.ispim.edit_network
-  - inspur.sm.edit_network
   - kaytus.ksmanage.edit_network
 edit_network_bond:
   - ieisystem.inmanage.edit_network_bond
   - inspur.ispim.edit_network_bond
-  - inspur.sm.edit_network_bond
   - kaytus.ksmanage.edit_network_bond
 edit_network_link:
   - ieisystem.inmanage.edit_network_link
   - inspur.ispim.edit_network_link
-  - inspur.sm.edit_network_link
   - kaytus.ksmanage.edit_network_link
 edit_ntp:
   - ieisystem.inmanage.edit_ntp
   - inspur.ispim.edit_ntp
-  - inspur.sm.edit_ntp
   - kaytus.ksmanage.edit_ntp
-edit_pass_user:
-  - inspur.sm.edit_pass_user
 edit_pdisk:
   - ieisystem.inmanage.edit_pdisk
   - inspur.ispim.edit_pdisk
-  - inspur.sm.edit_pdisk
   - kaytus.ksmanage.edit_pdisk
 edit_power_budget:
   - ieisystem.inmanage.edit_power_budget
   - inspur.ispim.edit_power_budget
-  - inspur.sm.edit_power_budget
   - kaytus.ksmanage.edit_power_budget
 edit_power_restore:
   - ieisystem.inmanage.edit_power_restore
   - inspur.ispim.edit_power_restore
-  - inspur.sm.edit_power_restore
   - kaytus.ksmanage.edit_power_restore
 edit_power_status:
   - ieisystem.inmanage.edit_power_status
   - inspur.ispim.edit_power_status
-  - inspur.sm.edit_power_status
   - kaytus.ksmanage.edit_power_status
 edit_preserve_config:
   - ieisystem.inmanage.edit_preserve_config
   - inspur.ispim.edit_preserve_config
-  - inspur.sm.edit_preserve_config
   - kaytus.ksmanage.edit_preserve_config
-edit_priv_user:
-  - inspur.sm.edit_priv_user
 edit_psu_config:
   - ieisystem.inmanage.edit_psu_config
   - inspur.ispim.edit_psu_config
-  - inspur.sm.edit_psu_config
   - kaytus.ksmanage.edit_psu_config
 edit_psu_peak:
   - ieisystem.inmanage.edit_psu_peak
   - inspur.ispim.edit_psu_peak
-  - inspur.sm.edit_psu_peak
   - kaytus.ksmanage.edit_psu_peak
 edit_restore_factory_default:
   - ieisystem.inmanage.edit_restore_factory_default
   - inspur.ispim.edit_restore_factory_default
-  - inspur.sm.edit_restore_factory_default
   - kaytus.ksmanage.edit_restore_factory_default
 edit_service:
   - ieisystem.inmanage.edit_service
   - inspur.ispim.edit_service
-  - inspur.sm.edit_service
   - kaytus.ksmanage.edit_service
 edit_smtp:
   - ieisystem.inmanage.edit_smtp
   - inspur.ispim.edit_smtp
-  - inspur.sm.edit_smtp
   - kaytus.ksmanage.edit_smtp
 edit_smtp_com:
   - ieisystem.inmanage.edit_smtp_com
   - inspur.ispim.edit_smtp_com
-  - inspur.sm.edit_smtp_com
   - kaytus.ksmanage.edit_smtp_com
 edit_smtp_dest:
   - ieisystem.inmanage.edit_smtp_dest
   - inspur.ispim.edit_smtp_dest
-  - inspur.sm.edit_smtp_dest
   - kaytus.ksmanage.edit_smtp_dest
 edit_snmp:
   - ieisystem.inmanage.edit_snmp
   - inspur.ispim.edit_snmp
-  - inspur.sm.edit_snmp
   - kaytus.ksmanage.edit_snmp
 edit_snmp_trap:
   - ieisystem.inmanage.edit_snmp_trap
   - inspur.ispim.edit_snmp_trap
-  - inspur.sm.edit_snmp_trap
   - kaytus.ksmanage.edit_snmp_trap
+edit_system_lock_mode:
+  - ieisystem.inmanage.edit_system_lock_mode
+  - kaytus.ksmanage.edit_system_lock_mode
 edit_threshold:
   - ieisystem.inmanage.edit_threshold
   - inspur.ispim.edit_threshold
-  - inspur.sm.edit_threshold
   - kaytus.ksmanage.edit_threshold
 edit_uid:
   - ieisystem.inmanage.edit_uid
   - inspur.ispim.edit_uid
-  - inspur.sm.edit_uid
   - kaytus.ksmanage.edit_uid
-edit_user_group:
-  - inspur.sm.edit_user_group
 edit_virtual_media:
   - ieisystem.inmanage.edit_virtual_media
   - inspur.ispim.edit_virtual_media
-  - inspur.sm.edit_virtual_media
   - kaytus.ksmanage.edit_virtual_media
 edit_vlan:
   - ieisystem.inmanage.edit_vlan
   - inspur.ispim.edit_vlan
-  - inspur.sm.edit_vlan
   - kaytus.ksmanage.edit_vlan
 efs:
   - community.aws.efs
@@ -4820,7 +5315,7 @@ elb_application_lb_info:
 elb_classic_lb:
   - amazon.aws.elb_classic_lb
 elb_classic_lb_info:
-  - community.aws.elb_classic_lb_info
+  - amazon.aws.elb_classic_lb_info
 elb_instance:
   - community.aws.elb_instance
 elb_network_lb:
@@ -4838,10 +5333,58 @@ emc_vnx_sg_member:
 endpoint:
   - cisco.ise.endpoint
   - openstack.cloud.endpoint
+endpoint_analytics_anc_policies_info:
+  - cisco.dnac.endpoint_analytics_anc_policies_info
+endpoint_analytics_anc_policies_v1_info:
+  - cisco.dnac.endpoint_analytics_anc_policies_v1_info
+endpoint_analytics_cmdb_endpoints:
+  - cisco.dnac.endpoint_analytics_cmdb_endpoints
+endpoint_analytics_cmdb_endpoints_v1:
+  - cisco.dnac.endpoint_analytics_cmdb_endpoints_v1
+endpoint_analytics_dictionaries_info:
+  - cisco.dnac.endpoint_analytics_dictionaries_info
+endpoint_analytics_dictionaries_v1_info:
+  - cisco.dnac.endpoint_analytics_dictionaries_v1_info
+endpoint_analytics_endpoints:
+  - cisco.dnac.endpoint_analytics_endpoints
+endpoint_analytics_endpoints_anc_policy_delete:
+  - cisco.dnac.endpoint_analytics_endpoints_anc_policy_delete
+endpoint_analytics_endpoints_anc_policy_delete_v1:
+  - cisco.dnac.endpoint_analytics_endpoints_anc_policy_delete_v1
+endpoint_analytics_endpoints_anc_policy_update:
+  - cisco.dnac.endpoint_analytics_endpoints_anc_policy_update
+endpoint_analytics_endpoints_anc_policy_update_v1:
+  - cisco.dnac.endpoint_analytics_endpoints_anc_policy_update_v1
+endpoint_analytics_endpoints_count_info:
+  - cisco.dnac.endpoint_analytics_endpoints_count_info
+endpoint_analytics_endpoints_count_v1_info:
+  - cisco.dnac.endpoint_analytics_endpoints_count_v1_info
+endpoint_analytics_endpoints_info:
+  - cisco.dnac.endpoint_analytics_endpoints_info
+endpoint_analytics_endpoints_v1:
+  - cisco.dnac.endpoint_analytics_endpoints_v1
+endpoint_analytics_endpoints_v1_info:
+  - cisco.dnac.endpoint_analytics_endpoints_v1_info
 endpoint_analytics_profiling_rules:
   - cisco.dnac.endpoint_analytics_profiling_rules
+endpoint_analytics_profiling_rules_bulk:
+  - cisco.dnac.endpoint_analytics_profiling_rules_bulk
+endpoint_analytics_profiling_rules_bulk_v1:
+  - cisco.dnac.endpoint_analytics_profiling_rules_bulk_v1
+endpoint_analytics_profiling_rules_count_info:
+  - cisco.dnac.endpoint_analytics_profiling_rules_count_info
+endpoint_analytics_profiling_rules_count_v1_info:
+  - cisco.dnac.endpoint_analytics_profiling_rules_count_v1_info
 endpoint_analytics_profiling_rules_info:
   - cisco.dnac.endpoint_analytics_profiling_rules_info
+endpoint_analytics_profiling_rules_v1:
+  - cisco.dnac.endpoint_analytics_profiling_rules_v1
+endpoint_analytics_profiling_rules_v1_info:
+  - cisco.dnac.endpoint_analytics_profiling_rules_v1_info
+endpoint_analytics_tasks_info:
+  - cisco.dnac.endpoint_analytics_tasks_info
+endpoint_analytics_tasks_v1_info:
+  - cisco.dnac.endpoint_analytics_tasks_v1_info
 endpoint_bulk_monitor_status_info:
   - cisco.ise.endpoint_bulk_monitor_status_info
 endpoint_bulk_request:
@@ -4950,8 +5493,12 @@ eos_vrf:
   - arista.eos.eos_vrf
 eox_status_device_info:
   - cisco.dnac.eox_status_device_info
+eox_status_device_v1_info:
+  - cisco.dnac.eox_status_device_v1_info
 eox_status_summary_info:
   - cisco.dnac.eox_status_summary_info
+eox_status_summary_v1_info:
+  - cisco.dnac.eox_status_summary_v1_info
 eric_eccli_command:
   - community.network.eric_eccli_command
 etcd3:
@@ -4964,93 +5511,145 @@ event:
   - sensu.sensu_go.event
 event_api_status_info:
   - cisco.dnac.event_api_status_info
+event_api_status_v1_info:
+  - cisco.dnac.event_api_status_v1_info
 event_artifact_count_info:
   - cisco.dnac.event_artifact_count_info
+event_artifact_count_v1_info:
+  - cisco.dnac.event_artifact_count_v1_info
 event_artifact_info:
   - cisco.dnac.event_artifact_info
+event_artifact_v1_info:
+  - cisco.dnac.event_artifact_v1_info
 event_config_connector_types_info:
   - cisco.dnac.event_config_connector_types_info
+event_config_connector_types_v1_info:
+  - cisco.dnac.event_config_connector_types_v1_info
 event_count_info:
   - cisco.dnac.event_count_info
+event_count_v1_info:
+  - cisco.dnac.event_count_v1_info
 event_email_config:
   - cisco.dnac.event_email_config
-event_email_config_create:
-  - cisco.dnac.event_email_config_create
 event_email_config_info:
   - cisco.dnac.event_email_config_info
-event_email_config_update:
-  - cisco.dnac.event_email_config_update
+event_email_config_v1:
+  - cisco.dnac.event_email_config_v1
+event_email_config_v1_info:
+  - cisco.dnac.event_email_config_v1_info
 event_info:
   - cisco.dnac.event_info
   - sensu.sensu_go.event_info
 event_log_info:
   - ieisystem.inmanage.event_log_info
   - inspur.ispim.event_log_info
-  - inspur.sm.event_log_info
   - kaytus.ksmanage.event_log_info
 event_log_policy_info:
   - ieisystem.inmanage.event_log_policy_info
   - inspur.ispim.event_log_policy_info
-  - inspur.sm.event_log_policy_info
   - kaytus.ksmanage.event_log_policy_info
 event_series_audit_logs_info:
   - cisco.dnac.event_series_audit_logs_info
 event_series_audit_logs_parent_records_info:
   - cisco.dnac.event_series_audit_logs_parent_records_info
+event_series_audit_logs_parent_records_v1_info:
+  - cisco.dnac.event_series_audit_logs_parent_records_v1_info
 event_series_audit_logs_summary_info:
   - cisco.dnac.event_series_audit_logs_summary_info
+event_series_audit_logs_summary_v1_info:
+  - cisco.dnac.event_series_audit_logs_summary_v1_info
+event_series_audit_logs_v1_info:
+  - cisco.dnac.event_series_audit_logs_v1_info
 event_series_count_info:
   - cisco.dnac.event_series_count_info
+event_series_count_v1_info:
+  - cisco.dnac.event_series_count_v1_info
 event_series_info:
   - cisco.dnac.event_series_info
+event_series_v1_info:
+  - cisco.dnac.event_series_v1_info
 event_snmp_config:
   - cisco.dnac.event_snmp_config
 event_snmp_config_info:
   - cisco.dnac.event_snmp_config_info
+event_snmp_config_v1:
+  - cisco.dnac.event_snmp_config_v1
+event_snmp_config_v1_info:
+  - cisco.dnac.event_snmp_config_v1_info
 event_subscription:
   - cisco.dnac.event_subscription
 event_subscription_count_info:
   - cisco.dnac.event_subscription_count_info
+event_subscription_count_v1_info:
+  - cisco.dnac.event_subscription_count_v1_info
 event_subscription_details_email_info:
   - cisco.dnac.event_subscription_details_email_info
+event_subscription_details_email_v1_info:
+  - cisco.dnac.event_subscription_details_email_v1_info
 event_subscription_details_rest_info:
   - cisco.dnac.event_subscription_details_rest_info
+event_subscription_details_rest_v1_info:
+  - cisco.dnac.event_subscription_details_rest_v1_info
 event_subscription_details_syslog_info:
   - cisco.dnac.event_subscription_details_syslog_info
+event_subscription_details_syslog_v1_info:
+  - cisco.dnac.event_subscription_details_syslog_v1_info
 event_subscription_email:
   - cisco.dnac.event_subscription_email
 event_subscription_email_info:
   - cisco.dnac.event_subscription_email_info
+event_subscription_email_v1:
+  - cisco.dnac.event_subscription_email_v1
+event_subscription_email_v1_info:
+  - cisco.dnac.event_subscription_email_v1_info
 event_subscription_info:
   - cisco.dnac.event_subscription_info
 event_subscription_rest:
   - cisco.dnac.event_subscription_rest
 event_subscription_rest_info:
   - cisco.dnac.event_subscription_rest_info
+event_subscription_rest_v1:
+  - cisco.dnac.event_subscription_rest_v1
+event_subscription_rest_v1_info:
+  - cisco.dnac.event_subscription_rest_v1_info
 event_subscription_syslog:
   - cisco.dnac.event_subscription_syslog
 event_subscription_syslog_info:
   - cisco.dnac.event_subscription_syslog_info
+event_subscription_syslog_v1:
+  - cisco.dnac.event_subscription_syslog_v1
+event_subscription_syslog_v1_info:
+  - cisco.dnac.event_subscription_syslog_v1_info
+event_subscription_v1:
+  - cisco.dnac.event_subscription_v1
+event_subscription_v1_info:
+  - cisco.dnac.event_subscription_v1_info
 event_syslog_config:
   - cisco.dnac.event_syslog_config
 event_syslog_config_info:
   - cisco.dnac.event_syslog_config_info
-event_webhook_create:
-  - cisco.dnac.event_webhook_create
-event_webhook_read_info:
-  - cisco.dnac.event_webhook_read_info
-event_webhook_update:
-  - cisco.dnac.event_webhook_update
+event_syslog_config_v1:
+  - cisco.dnac.event_syslog_config_v1
+event_syslog_config_v1_info:
+  - cisco.dnac.event_syslog_config_v1_info
+event_v1_info:
+  - cisco.dnac.event_v1_info
+event_webhook:
+  - cisco.dnac.event_webhook
+event_webhook_info:
+  - cisco.dnac.event_webhook_info
+event_webhook_v1:
+  - cisco.dnac.event_webhook_v1
+event_webhook_v1_info:
+  - cisco.dnac.event_webhook_v1_info
 events_and_notifications_workflow_manager:
   - cisco.dnac.events_and_notifications_workflow_manager
 execute_suggested_actions_commands:
   - cisco.dnac.execute_suggested_actions_commands
+execute_suggested_actions_commands_v1:
+  - cisco.dnac.execute_suggested_actions_commands_v1
 execution_environment:
   - awx.awx.execution_environment
-exo_dns_domain:
-  - ngine_io.exoscale.exo_dns_domain
-exo_dns_record:
-  - ngine_io.exoscale.exo_dns_record
 exos_command:
   - community.network.exos_command
 exos_config:
@@ -5079,6 +5678,8 @@ fact_diff:
   - ansible.utils.fact_diff
 facter:
   - community.general.facter
+facter_facts:
+  - community.general.facter_facts
 facts:
   - community.ciscosmb.facts
   - community.routeros.facts
@@ -5091,7 +5692,6 @@ failover_ip_info:
 fan_info:
   - ieisystem.inmanage.fan_info
   - inspur.ispim.fan_info
-  - inspur.sm.fan_info
   - kaytus.ksmanage.fan_info
 fault_set:
   - dellemc.powerflex.fault_set
@@ -5109,12 +5709,20 @@ file:
   - ansible.builtin.file
 file_import:
   - cisco.dnac.file_import
+file_import_v1:
+  - cisco.dnac.file_import_v1
 file_info:
   - cisco.dnac.file_info
 file_namespace_files_info:
   - cisco.dnac.file_namespace_files_info
+file_namespace_files_v1_info:
+  - cisco.dnac.file_namespace_files_v1_info
 file_namespaces_info:
   - cisco.dnac.file_namespaces_info
+file_namespaces_v1_info:
+  - cisco.dnac.file_namespaces_v1_info
+file_v1_info:
+  - cisco.dnac.file_v1_info
 filesize:
   - community.general.filesize
 filesystem:
@@ -5160,16 +5768,28 @@ flatpak_remote:
   - community.general.flatpak_remote
 flexible_report_content_info:
   - cisco.dnac.flexible_report_content_info
+flexible_report_content_v1_info:
+  - cisco.dnac.flexible_report_content_v1_info
 flexible_report_execute:
   - cisco.dnac.flexible_report_execute
+flexible_report_execute_v1:
+  - cisco.dnac.flexible_report_execute_v1
 flexible_report_executions_info:
   - cisco.dnac.flexible_report_executions_info
+flexible_report_executions_v1_info:
+  - cisco.dnac.flexible_report_executions_v1_info
 flexible_report_schedule:
   - cisco.dnac.flexible_report_schedule
 flexible_report_schedule_info:
   - cisco.dnac.flexible_report_schedule_info
+flexible_report_schedule_v1:
+  - cisco.dnac.flexible_report_schedule_v1
+flexible_report_schedule_v1_info:
+  - cisco.dnac.flexible_report_schedule_v1_info
 flexible_report_schedules_info:
   - cisco.dnac.flexible_report_schedules_info
+flexible_report_schedules_v1_info:
+  - cisco.dnac.flexible_report_schedules_v1_info
 floating_ip:
   - cloudscale_ch.cloud.floating_ip
   - hetzner.hcloud.floating_ip
@@ -5177,10 +5797,28 @@ floating_ip:
 floating_ip_info:
   - hetzner.hcloud.floating_ip_info
   - openstack.cloud.floating_ip_info
+floors:
+  - cisco.dnac.floors
+floors_info:
+  - cisco.dnac.floors_info
+floors_settings:
+  - cisco.dnac.floors_settings
+floors_settings_info:
+  - cisco.dnac.floors_settings_info
+floors_settings_v2:
+  - cisco.dnac.floors_settings_v2
+floors_settings_v2_info:
+  - cisco.dnac.floors_settings_v2_info
+floors_upload_image:
+  - cisco.dnac.floors_upload_image
+floors_upload_image_v2:
+  - cisco.dnac.floors_upload_image_v2
+floors_v2:
+  - cisco.dnac.floors_v2
+floors_v2_info:
+  - cisco.dnac.floors_v2_info
 flowadm:
   - community.network.flowadm
-flowdock:
-  - community.general.flowdock
 fmgr_adom_options:
   - fortinet.fortimanager.fmgr_adom_options
 fmgr_antivirus_mmschecksum:
@@ -6073,6 +6711,10 @@ fmgr_fmg_fabric_authorization_template:
   - fortinet.fortimanager.fmgr_fmg_fabric_authorization_template
 fmgr_fmg_fabric_authorization_template_platforms:
   - fortinet.fortimanager.fmgr_fmg_fabric_authorization_template_platforms
+fmgr_fmg_sasemanager_settings:
+  - fortinet.fortimanager.fmgr_fmg_sasemanager_settings
+fmgr_fmg_sasemanager_status:
+  - fortinet.fortimanager.fmgr_fmg_sasemanager_status
 fmgr_fmg_variable:
   - fortinet.fortimanager.fmgr_fmg_variable
 fmgr_fmg_variable_dynamicmapping:
@@ -6415,6 +7057,8 @@ fmgr_pkg_header_shapingpolicy:
   - fortinet.fortimanager.fmgr_pkg_header_shapingpolicy
 fmgr_pkg_user_nacpolicy:
   - fortinet.fortimanager.fmgr_pkg_user_nacpolicy
+fmgr_pkg_videofilter_youtubekey:
+  - fortinet.fortimanager.fmgr_pkg_videofilter_youtubekey
 fmgr_pm_config_meta_reference:
   - fortinet.fortimanager.fmgr_pm_config_meta_reference
 fmgr_pm_config_metafields_firewall_address:
@@ -6441,6 +7085,10 @@ fmgr_pm_config_pblock_firewall_policy6_sectionvalue:
   - fortinet.fortimanager.fmgr_pm_config_pblock_firewall_policy6_sectionvalue
 fmgr_pm_config_pblock_firewall_policy_sectionvalue:
   - fortinet.fortimanager.fmgr_pm_config_pblock_firewall_policy_sectionvalue
+fmgr_pm_config_pblock_firewall_proxypolicy:
+  - fortinet.fortimanager.fmgr_pm_config_pblock_firewall_proxypolicy
+fmgr_pm_config_pblock_firewall_proxypolicy_sectionvalue:
+  - fortinet.fortimanager.fmgr_pm_config_pblock_firewall_proxypolicy_sectionvalue
 fmgr_pm_config_pblock_firewall_securitypolicy:
   - fortinet.fortimanager.fmgr_pm_config_pblock_firewall_securitypolicy
 fmgr_pm_config_pblock_firewall_securitypolicy_sectionvalue:
@@ -6737,6 +7385,8 @@ fmgr_system_admin_user_ipsfilter:
   - fortinet.fortimanager.fmgr_system_admin_user_ipsfilter
 fmgr_system_admin_user_metadata:
   - fortinet.fortimanager.fmgr_system_admin_user_metadata
+fmgr_system_admin_user_policyblock:
+  - fortinet.fortimanager.fmgr_system_admin_user_policyblock
 fmgr_system_admin_user_policypackage:
   - fortinet.fortimanager.fmgr_system_admin_user_policypackage
 fmgr_system_admin_user_restrictdevvdom:
@@ -6805,6 +7455,10 @@ fmgr_system_externalresource:
   - fortinet.fortimanager.fmgr_system_externalresource
 fmgr_system_fips:
   - fortinet.fortimanager.fmgr_system_fips
+fmgr_system_fmgcluster:
+  - fortinet.fortimanager.fmgr_system_fmgcluster
+fmgr_system_fmgcluster_peer:
+  - fortinet.fortimanager.fmgr_system_fmgcluster_peer
 fmgr_system_fortiguard:
   - fortinet.fortimanager.fmgr_system_fortiguard
 fmgr_system_fortiview_autocache:
@@ -8555,6 +9209,8 @@ fortios_system_snmp_community:
   - fortinet.fortios.fortios_system_snmp_community
 fortios_system_snmp_mib_view:
   - fortinet.fortios.fortios_system_snmp_mib_view
+fortios_system_snmp_rmon_stat:
+  - fortinet.fortios.fortios_system_snmp_rmon_stat
 fortios_system_snmp_sysinfo:
   - fortinet.fortios.fortios_system_snmp_sysinfo
 fortios_system_snmp_user:
@@ -8605,6 +9261,8 @@ fortios_system_virtual_wan_link:
   - fortinet.fortios.fortios_system_virtual_wan_link
 fortios_system_virtual_wire_pair:
   - fortinet.fortios.fortios_system_virtual_wire_pair
+fortios_system_vne_interface:
+  - fortinet.fortios.fortios_system_vne_interface
 fortios_system_vne_tunnel:
   - fortinet.fortios.fortios_system_vne_tunnel
 fortios_system_vxlan:
@@ -8661,6 +9319,8 @@ fortios_user_radius:
   - fortinet.fortios.fortios_user_radius
 fortios_user_saml:
   - fortinet.fortios.fortios_user_saml
+fortios_user_scim:
+  - fortinet.fortios.fortios_user_scim
 fortios_user_security_exempt_list:
   - fortinet.fortios.fortios_user_security_exempt_list
 fortios_user_setting:
@@ -8905,14 +9565,13 @@ fortios_wireless_controller_wtp_profile:
   - fortinet.fortios.fortios_wireless_controller_wtp_profile
 fortios_wireless_controller_wtp_status:
   - fortinet.fortios.fortios_wireless_controller_wtp_status
-frr_bgp:
-  - frr.frr.frr_bgp
-frr_facts:
-  - frr.frr.frr_facts
+fortios_ztna_traffic_forward_proxy:
+  - fortinet.fortios.fortios_ztna_traffic_forward_proxy
+fortios_ztna_traffic_forward_proxy_reverse_service:
+  - fortinet.fortios.fortios_ztna_traffic_forward_proxy_reverse_service
 fru_info:
   - ieisystem.inmanage.fru_info
   - inspur.ispim.fru_info
-  - inspur.sm.fru_info
   - kaytus.ksmanage.fru_info
 ftd_configuration:
   - community.network.ftd_configuration
@@ -8925,7 +9584,6 @@ ftd_install:
 fw_version_info:
   - ieisystem.inmanage.fw_version_info
   - inspur.ispim.fw_version_info
-  - inspur.sm.fw_version_info
   - kaytus.ksmanage.fw_version_info
 gandi_livedns:
   - community.general.gandi_livedns
@@ -9233,6 +9891,8 @@ gcp_runtimeconfig_variable:
   - google.cloud.gcp_runtimeconfig_variable
 gcp_runtimeconfig_variable_info:
   - google.cloud.gcp_runtimeconfig_variable_info
+gcp_secret_manager:
+  - google.cloud.gcp_secret_manager
 gcp_serviceusage_service:
   - google.cloud.gcp_serviceusage_service
 gcp_serviceusage_service_info:
@@ -9283,10 +9943,14 @@ get_url:
   - ansible.builtin.get_url
 getent:
   - ansible.builtin.getent
+gio_mime:
+  - community.general.gio_mime
 git:
   - ansible.builtin.git
 git_config:
   - community.general.git_config
+git_config_info:
+  - community.general.git_config_info
 github_deploy_key:
   - community.general.github_deploy_key
 github_issue:
@@ -9307,14 +9971,30 @@ gitlab_deploy_key:
   - community.general.gitlab_deploy_key
 gitlab_group:
   - community.general.gitlab_group
+gitlab_group_access_token:
+  - community.general.gitlab_group_access_token
 gitlab_group_members:
   - community.general.gitlab_group_members
 gitlab_group_variable:
   - community.general.gitlab_group_variable
 gitlab_hook:
   - community.general.gitlab_hook
+gitlab_instance_variable:
+  - community.general.gitlab_instance_variable
+gitlab_issue:
+  - community.general.gitlab_issue
+gitlab_label:
+  - community.general.gitlab_label
+gitlab_merge_request:
+  - community.general.gitlab_merge_request
+gitlab_milestone:
+  - community.general.gitlab_milestone
 gitlab_project:
   - community.general.gitlab_project
+gitlab_project_access_token:
+  - community.general.gitlab_project_access_token
+gitlab_project_badge:
+  - community.general.gitlab_project_badge
 gitlab_project_members:
   - community.general.gitlab_project_members
 gitlab_project_variable:
@@ -9327,10 +10007,16 @@ gitlab_user:
   - community.general.gitlab_user
 global_credential_delete:
   - cisco.dnac.global_credential_delete
+global_credential_delete_v1:
+  - cisco.dnac.global_credential_delete_v1
 global_credential_info:
   - cisco.dnac.global_credential_info
 global_credential_update:
   - cisco.dnac.global_credential_update
+global_credential_update_v1:
+  - cisco.dnac.global_credential_update_v1
+global_credential_v1_info:
+  - cisco.dnac.global_credential_v1_info
 global_credential_v2:
   - cisco.dnac.global_credential_v2
 global_credential_v2_info:
@@ -9341,6 +10027,10 @@ global_pool:
   - cisco.dnac.global_pool
 global_pool_info:
   - cisco.dnac.global_pool_info
+global_pool_v1:
+  - cisco.dnac.global_pool_v1
+global_pool_v1_info:
+  - cisco.dnac.global_pool_v1_info
 glue_connection:
   - community.aws.glue_connection
 glue_crawler:
@@ -9349,15 +10039,22 @@ glue_job:
   - community.aws.glue_job
 golden_image_create:
   - cisco.dnac.golden_image_create
+golden_image_create_v1:
+  - cisco.dnac.golden_image_create_v1
 golden_tag_image_delete:
   - cisco.dnac.golden_tag_image_delete
+golden_tag_image_delete_v1:
+  - cisco.dnac.golden_tag_image_delete_v1
 golden_tag_image_details_info:
   - cisco.dnac.golden_tag_image_details_info
+golden_tag_image_details_v1_info:
+  - cisco.dnac.golden_tag_image_details_v1_info
 gpu_info:
   - ieisystem.inmanage.gpu_info
   - inspur.ispim.gpu_info
-  - inspur.sm.gpu_info
   - kaytus.ksmanage.gpu_info
+grafana_contact_point:
+  - community.grafana.grafana_contact_point
 grafana_dashboard:
   - community.grafana.grafana_dashboard
 grafana_datasource:
@@ -9440,8 +10137,6 @@ gunicorn:
   - community.general.gunicorn
 hadr:
   - lowlydba.sqlserver.hadr
-hana_query:
-  - community.general.hana_query
 handler_info:
   - sensu.sensu_go.handler_info
 handler_set:
@@ -9451,7 +10146,6 @@ haproxy:
 hard_disk_info:
   - ieisystem.inmanage.hard_disk_info
   - inspur.ispim.hard_disk_info
-  - inspur.sm.hard_disk_info
   - kaytus.ksmanage.hard_disk_info
 hardware_model:
   - theforeman.foreman.hardware_model
@@ -9459,6 +10153,22 @@ hba_info:
   - ieisystem.inmanage.hba_info
   - inspur.ispim.hba_info
   - kaytus.ksmanage.hba_info
+health_score_definitions:
+  - cisco.dnac.health_score_definitions
+health_score_definitions_bulk_update:
+  - cisco.dnac.health_score_definitions_bulk_update
+health_score_definitions_bulk_update_v1:
+  - cisco.dnac.health_score_definitions_bulk_update_v1
+health_score_definitions_count_info:
+  - cisco.dnac.health_score_definitions_count_info
+health_score_definitions_count_v1_info:
+  - cisco.dnac.health_score_definitions_count_v1_info
+health_score_definitions_info:
+  - cisco.dnac.health_score_definitions_info
+health_score_definitions_v1:
+  - cisco.dnac.health_score_definitions_v1
+health_score_definitions_v1_info:
+  - cisco.dnac.health_score_definitions_v1_info
 helm:
   - kubernetes.core.helm
 helm_info:
@@ -9495,6 +10205,8 @@ homebrew:
   - community.general.homebrew
 homebrew_cask:
   - community.general.homebrew_cask
+homebrew_services:
+  - community.general.homebrew_services
 homebrew_tap:
   - community.general.homebrew_tap
 homectl:
@@ -9559,8 +10271,12 @@ http_proxy:
   - theforeman.foreman.http_proxy
 http_read_credential:
   - cisco.dnac.http_read_credential
+http_read_credential_v1:
+  - cisco.dnac.http_read_credential_v1
 http_write_credential:
   - cisco.dnac.http_write_credential
+http_write_credential_v1:
+  - cisco.dnac.http_write_credential_v1
 hwc_ecs_instance:
   - community.general.hwc_ecs_instance
 hwc_evs_disk:
@@ -9948,14 +10664,20 @@ idrac_redfish_storage_controller:
   - dellemc.openmanage.idrac_redfish_storage_controller
 idrac_reset:
   - dellemc.openmanage.idrac_reset
+idrac_secure_boot:
+  - dellemc.openmanage.idrac_secure_boot
 idrac_server_config_profile:
   - dellemc.openmanage.idrac_server_config_profile
 idrac_session:
   - dellemc.openmanage.idrac_session
 idrac_storage_volume:
   - dellemc.openmanage.idrac_storage_volume
+idrac_support_assist:
+  - dellemc.openmanage.idrac_support_assist
 idrac_syslog:
   - dellemc.openmanage.idrac_syslog
+idrac_system_erase:
+  - dellemc.openmanage.idrac_system_erase
 idrac_system_info:
   - dellemc.openmanage.idrac_system_info
 idrac_timezone_ntp:
@@ -9970,6 +10692,8 @@ ig_config:
   - community.network.ig_config
 ig_unit_information:
   - community.network.ig_unit_information
+ilo_redfish_command:
+  - community.general.ilo_redfish_command
 ilo_redfish_config:
   - community.general.ilo_redfish_config
 ilo_redfish_info:
@@ -9980,6 +10704,46 @@ image:
 image_info:
   - hetzner.hcloud.image_info
   - openstack.cloud.image_info
+images_addon_images_count_info:
+  - cisco.dnac.images_addon_images_count_info
+images_addon_images_count_v1_info:
+  - cisco.dnac.images_addon_images_count_v1_info
+images_addon_images_info:
+  - cisco.dnac.images_addon_images_info
+images_addon_images_v1_info:
+  - cisco.dnac.images_addon_images_v1_info
+images_count_info:
+  - cisco.dnac.images_count_info
+images_count_v1_info:
+  - cisco.dnac.images_count_v1_info
+images_distribution_server_settings:
+  - cisco.dnac.images_distribution_server_settings
+images_distribution_server_settings_info:
+  - cisco.dnac.images_distribution_server_settings_info
+images_distribution_server_settings_v1:
+  - cisco.dnac.images_distribution_server_settings_v1
+images_distribution_server_settings_v1_info:
+  - cisco.dnac.images_distribution_server_settings_v1_info
+images_download:
+  - cisco.dnac.images_download
+images_download_v1:
+  - cisco.dnac.images_download_v1
+images_info:
+  - cisco.dnac.images_info
+images_site_wise_product_names:
+  - cisco.dnac.images_site_wise_product_names
+images_site_wise_product_names_count_info:
+  - cisco.dnac.images_site_wise_product_names_count_info
+images_site_wise_product_names_count_v1_info:
+  - cisco.dnac.images_site_wise_product_names_count_v1_info
+images_site_wise_product_names_info:
+  - cisco.dnac.images_site_wise_product_names_info
+images_site_wise_product_names_v1:
+  - cisco.dnac.images_site_wise_product_names_v1
+images_site_wise_product_names_v1_info:
+  - cisco.dnac.images_site_wise_product_names_v1_info
+images_v1_info:
+  - cisco.dnac.images_v1_info
 imc_rest:
   - community.general.imc_rest
 imgadm:
@@ -10073,32 +10837,74 @@ instance_group:
 instance_info:
   - lowlydba.sqlserver.instance_info
   - vultr.cloud.instance_info
-instance_rdns_record:
-  - ngine_io.exoscale.instance_rdns_record
+integrate_ise:
+  - cisco.dnac.integrate_ise
+integrate_ise_v1:
+  - cisco.dnac.integrate_ise_v1
 integration_settings_instances_itsm:
   - cisco.dnac.integration_settings_instances_itsm
 integration_settings_instances_itsm_info:
   - cisco.dnac.integration_settings_instances_itsm_info
+integration_settings_instances_itsm_v1:
+  - cisco.dnac.integration_settings_instances_itsm_v1
+integration_settings_instances_itsm_v1_info:
+  - cisco.dnac.integration_settings_instances_itsm_v1_info
 integration_settings_itsm_instances_info:
   - cisco.dnac.integration_settings_itsm_instances_info
+integration_settings_itsm_instances_v1_info:
+  - cisco.dnac.integration_settings_itsm_instances_v1_info
 integration_settings_status_info:
   - cisco.dnac.integration_settings_status_info
+integration_settings_status_v1_info:
+  - cisco.dnac.integration_settings_status_v1_info
+intent_custom_issue_definitions_info:
+  - cisco.dnac.intent_custom_issue_definitions_info
+intent_custom_issue_definitions_v1_info:
+  - cisco.dnac.intent_custom_issue_definitions_v1_info
 interface:
   - dellemc.unity.interface
 interface_info:
   - cisco.dnac.interface_info
 interface_network_device_detail_info:
   - cisco.dnac.interface_network_device_detail_info
+interface_network_device_detail_v1_info:
+  - cisco.dnac.interface_network_device_detail_v1_info
 interface_network_device_info:
   - cisco.dnac.interface_network_device_info
 interface_network_device_range_info:
   - cisco.dnac.interface_network_device_range_info
+interface_network_device_range_v1_info:
+  - cisco.dnac.interface_network_device_range_v1_info
+interface_network_device_v1_info:
+  - cisco.dnac.interface_network_device_v1_info
 interface_operation_create:
   - cisco.dnac.interface_operation_create
+interface_operation_create_v1:
+  - cisco.dnac.interface_operation_create_v1
 interface_update:
   - cisco.dnac.interface_update
+interface_update_v1:
+  - cisco.dnac.interface_update_v1
+interface_v1_info:
+  - cisco.dnac.interface_v1_info
+interfaces_count_info:
+  - cisco.dnac.interfaces_count_info
+interfaces_count_v1_info:
+  - cisco.dnac.interfaces_count_v1_info
 interfaces_file:
   - community.general.interfaces_file
+interfaces_info:
+  - cisco.dnac.interfaces_info
+interfaces_query:
+  - cisco.dnac.interfaces_query
+interfaces_query_count:
+  - cisco.dnac.interfaces_query_count
+interfaces_query_count_v1:
+  - cisco.dnac.interfaces_query_count_v1
+interfaces_query_v1:
+  - cisco.dnac.interfaces_query_v1
+interfaces_v1_info:
+  - cisco.dnac.interfaces_v1_info
 internal_user:
   - cisco.ise.internal_user
 internal_user_info:
@@ -10167,10 +10973,6 @@ ios_lacp_interfaces:
   - cisco.ios.ios_lacp_interfaces
 ios_lag_interfaces:
   - cisco.ios.ios_lag_interfaces
-ios_linkagg:
-  - cisco.ios.ios_linkagg
-ios_lldp:
-  - cisco.ios.ios_lldp
 ios_lldp_global:
   - cisco.ios.ios_lldp_global
 ios_lldp_interfaces:
@@ -10205,6 +11007,8 @@ ios_vlans:
   - cisco.ios.ios_vlans
 ios_vrf:
   - cisco.ios.ios_vrf
+ios_vrf_global:
+  - cisco.ios.ios_vrf_global
 ios_vxlan_vtep:
   - cisco.ios.ios_vxlan_vtep
 iosxr_acl_interfaces:
@@ -10261,6 +11065,8 @@ iosxr_ping:
   - cisco.iosxr.iosxr_ping
 iosxr_prefix_lists:
   - cisco.iosxr.iosxr_prefix_lists
+iosxr_route_maps:
+  - cisco.iosxr.iosxr_route_maps
 iosxr_snmp_server:
   - cisco.iosxr.iosxr_snmp_server
 iosxr_static_routes:
@@ -10269,6 +11075,10 @@ iosxr_system:
   - cisco.iosxr.iosxr_system
 iosxr_user:
   - cisco.iosxr.iosxr_user
+iosxr_vrf_address_family:
+  - cisco.iosxr.iosxr_vrf_address_family
+iosxr_vrf_global:
+  - cisco.iosxr.iosxr_vrf_global
 ip_netns:
   - community.general.ip_netns
 ipa_config:
@@ -10277,6 +11087,8 @@ ipa_dnsrecord:
   - community.general.ipa_dnsrecord
 ipa_dnszone:
   - community.general.ipa_dnszone
+ipa_getkeytab:
+  - community.general.ipa_getkeytab
 ipa_group:
   - community.general.ipa_group
 ipa_hbacrule:
@@ -10317,6 +11129,16 @@ ipadm_ifprop:
   - community.network.ipadm_ifprop
 ipadm_prop:
   - community.network.ipadm_prop
+ipam_server_setting:
+  - cisco.dnac.ipam_server_setting
+ipam_server_setting_info:
+  - cisco.dnac.ipam_server_setting_info
+ipam_server_setting_v1:
+  - cisco.dnac.ipam_server_setting_v1
+ipam_server_setting_v1_info:
+  - cisco.dnac.ipam_server_setting_v1_info
+ipbase_info:
+  - community.general.ipbase_info
 ipify_facts:
   - community.general.ipify_facts
 ipinfoio_facts:
@@ -10361,26 +11183,40 @@ ironware_facts:
   - community.network.ironware_facts
 ise_integration_status_info:
   - cisco.dnac.ise_integration_status_info
+ise_integration_status_v1_info:
+  - cisco.dnac.ise_integration_status_v1_info
 ise_radius_integration_workflow_manager:
   - cisco.dnac.ise_radius_integration_workflow_manager
 ise_root_ca_regenerate:
   - cisco.ise.ise_root_ca_regenerate
 iso_create:
   - community.general.iso_create
+iso_customize:
+  - community.general.iso_customize
 iso_extract:
   - community.general.iso_extract
 iso_info:
   - hetzner.hcloud.iso_info
 issues_enrichment_details_info:
   - cisco.dnac.issues_enrichment_details_info
+issues_enrichment_details_v1_info:
+  - cisco.dnac.issues_enrichment_details_v1_info
 issues_info:
   - cisco.dnac.issues_info
+issues_v1_info:
+  - cisco.dnac.issues_v1_info
 itsm_cmdb_sync_status_info:
   - cisco.dnac.itsm_cmdb_sync_status_info
+itsm_cmdb_sync_status_v1_info:
+  - cisco.dnac.itsm_cmdb_sync_status_v1_info
+itsm_integration_events_failed:
+  - cisco.dnac.itsm_integration_events_failed
 itsm_integration_events_failed_info:
   - cisco.dnac.itsm_integration_events_failed_info
-itsm_integration_events_retry:
-  - cisco.dnac.itsm_integration_events_retry
+itsm_integration_events_failed_v1:
+  - cisco.dnac.itsm_integration_events_failed_v1
+itsm_integration_events_failed_v1_info:
+  - cisco.dnac.itsm_integration_events_failed_v1_info
 jabber:
   - community.general.jabber
 java_cert:
@@ -10391,10 +11227,14 @@ jboss:
   - community.general.jboss
 jenkins_build:
   - community.general.jenkins_build
+jenkins_build_info:
+  - community.general.jenkins_build_info
 jenkins_job:
   - community.general.jenkins_job
 jenkins_job_info:
   - community.general.jenkins_job_info
+jenkins_node:
+  - community.general.jenkins_node
 jenkins_plugin:
   - community.general.jenkins_plugin
 jenkins_script:
@@ -10517,18 +11357,42 @@ k8s_service:
   - kubernetes.core.k8s_service
 k8s_taint:
   - kubernetes.core.k8s_taint
+kdeconfig:
+  - community.general.kdeconfig
 kernel_blacklist:
   - community.general.kernel_blacklist
 keycloak_authentication:
   - community.general.keycloak_authentication
+keycloak_authentication_required_actions:
+  - community.general.keycloak_authentication_required_actions
+keycloak_authz_authorization_scope:
+  - community.general.keycloak_authz_authorization_scope
+keycloak_authz_custom_policy:
+  - community.general.keycloak_authz_custom_policy
+keycloak_authz_permission:
+  - community.general.keycloak_authz_permission
+keycloak_authz_permission_info:
+  - community.general.keycloak_authz_permission_info
 keycloak_client:
   - community.general.keycloak_client
 keycloak_client_rolemapping:
   - community.general.keycloak_client_rolemapping
+keycloak_client_rolescope:
+  - community.general.keycloak_client_rolescope
 keycloak_clientscope:
   - community.general.keycloak_clientscope
+keycloak_clientscope_type:
+  - community.general.keycloak_clientscope_type
+keycloak_clientsecret_info:
+  - community.general.keycloak_clientsecret_info
+keycloak_clientsecret_regenerate:
+  - community.general.keycloak_clientsecret_regenerate
 keycloak_clienttemplate:
   - community.general.keycloak_clienttemplate
+keycloak_component:
+  - community.general.keycloak_component
+keycloak_component_info:
+  - community.general.keycloak_component_info
 keycloak_group:
   - community.general.keycloak_group
 keycloak_identity_provider:
@@ -10537,10 +11401,22 @@ keycloak_realm:
   - community.general.keycloak_realm
 keycloak_realm_info:
   - community.general.keycloak_realm_info
+keycloak_realm_key:
+  - community.general.keycloak_realm_key
+keycloak_realm_keys_metadata_info:
+  - community.general.keycloak_realm_keys_metadata_info
+keycloak_realm_rolemapping:
+  - community.general.keycloak_realm_rolemapping
 keycloak_role:
   - community.general.keycloak_role
+keycloak_user:
+  - community.general.keycloak_user
 keycloak_user_federation:
   - community.general.keycloak_user_federation
+keycloak_user_rolemapping:
+  - community.general.keycloak_user_rolemapping
+keycloak_userprofile:
+  - community.general.keycloak_userprofile
 keypair:
   - openstack.cloud.keypair
 keypair_info:
@@ -10563,14 +11439,17 @@ kms_key_info:
   - amazon.aws.kms_key_info
 known_hosts:
   - ansible.builtin.known_hosts
+krb_ticket:
+  - community.general.krb_ticket
 kubevirt_vm:
   - kubevirt.core.kubevirt_vm
 kubevirt_vm_info:
   - kubevirt.core.kubevirt_vm_info
+kubevirt_vmi_info:
+  - kubevirt.core.kubevirt_vmi_info
 kvm_info:
   - ieisystem.inmanage.kvm_info
   - inspur.ispim.kvm_info
-  - inspur.sm.kvm_info
   - kaytus.ksmanage.kvm_info
 label:
   - awx.awx.label
@@ -10590,28 +11469,50 @@ lambda_layer_info:
   - amazon.aws.lambda_layer_info
 lambda_policy:
   - amazon.aws.lambda_policy
+lan_automation:
+  - cisco.dnac.lan_automation
 lan_automation_count_info:
   - cisco.dnac.lan_automation_count_info
+lan_automation_count_v1_info:
+  - cisco.dnac.lan_automation_count_v1_info
 lan_automation_create:
   - cisco.dnac.lan_automation_create
+lan_automation_create_v1:
+  - cisco.dnac.lan_automation_create_v1
 lan_automation_delete:
   - cisco.dnac.lan_automation_delete
+lan_automation_delete_v1:
+  - cisco.dnac.lan_automation_delete_v1
 lan_automation_log_by_serial_number_info:
   - cisco.dnac.lan_automation_log_by_serial_number_info
+lan_automation_log_by_serial_number_v1_info:
+  - cisco.dnac.lan_automation_log_by_serial_number_v1_info
 lan_automation_log_info:
   - cisco.dnac.lan_automation_log_info
+lan_automation_log_v1_info:
+  - cisco.dnac.lan_automation_log_v1_info
 lan_automation_sessions_info:
   - cisco.dnac.lan_automation_sessions_info
+lan_automation_sessions_v1_info:
+  - cisco.dnac.lan_automation_sessions_v1_info
 lan_automation_status_info:
   - cisco.dnac.lan_automation_status_info
+lan_automation_status_v1_info:
+  - cisco.dnac.lan_automation_status_v1_info
 lan_automation_update:
   - cisco.dnac.lan_automation_update
 lan_automation_update_device:
   - cisco.dnac.lan_automation_update_device
+lan_automation_update_device_v1:
+  - cisco.dnac.lan_automation_update_device_v1
+lan_automation_update_v1:
+  - cisco.dnac.lan_automation_update_v1
 lan_automation_update_v2:
   - cisco.dnac.lan_automation_update_v2
 lan_automation_v2:
   - cisco.dnac.lan_automation_v2
+lan_automation_workflow_manager:
+  - cisco.dnac.lan_automation_workflow_manager
 launchd:
   - community.general.launchd
 layman:
@@ -10628,7 +11529,6 @@ lbu:
   - community.general.lbu
 ldap_attrs:
   - community.general.ldap_attrs
-  - debops.debops.ldap_attrs
 ldap_auth_provider:
   - sensu.sensu_go.ldap_auth_provider
 ldap_entry:
@@ -10636,17 +11536,14 @@ ldap_entry:
 ldap_group:
   - ieisystem.inmanage.ldap_group
   - inspur.ispim.ldap_group
-  - inspur.sm.ldap_group
   - kaytus.ksmanage.ldap_group
 ldap_group_info:
   - ieisystem.inmanage.ldap_group_info
   - inspur.ispim.ldap_group_info
-  - inspur.sm.ldap_group_info
   - kaytus.ksmanage.ldap_group_info
 ldap_info:
   - ieisystem.inmanage.ldap_info
   - inspur.ispim.ldap_info
-  - inspur.sm.ldap_info
   - kaytus.ksmanage.ldap_info
 ldap_passwd:
   - community.general.ldap_passwd
@@ -10655,7 +11552,6 @@ ldap_search:
 ldisk_info:
   - ieisystem.inmanage.ldisk_info
   - inspur.ispim.ldisk_info
-  - inspur.sm.ldisk_info
   - kaytus.ksmanage.ldisk_info
 librato_annotation:
   - community.general.librato_annotation
@@ -10663,26 +11559,54 @@ license:
   - awx.awx.license
 license_device_count_info:
   - cisco.dnac.license_device_count_info
+license_device_count_v1_info:
+  - cisco.dnac.license_device_count_v1_info
 license_device_deregistration:
   - cisco.dnac.license_device_deregistration
+license_device_deregistration_v1:
+  - cisco.dnac.license_device_deregistration_v1
 license_device_license_details_info:
   - cisco.dnac.license_device_license_details_info
+license_device_license_details_v1_info:
+  - cisco.dnac.license_device_license_details_v1_info
 license_device_license_summary_info:
   - cisco.dnac.license_device_license_summary_info
+license_device_license_summary_v1_info:
+  - cisco.dnac.license_device_license_summary_v1_info
 license_device_registration:
   - cisco.dnac.license_device_registration
+license_device_registration_v1:
+  - cisco.dnac.license_device_registration_v1
 license_info:
   - vmware.vmware.license_info
+license_setting:
+  - cisco.dnac.license_setting
+license_setting_info:
+  - cisco.dnac.license_setting_info
+license_setting_v1:
+  - cisco.dnac.license_setting_v1
+license_setting_v1_info:
+  - cisco.dnac.license_setting_v1_info
 license_smart_account_details_info:
   - cisco.dnac.license_smart_account_details_info
+license_smart_account_details_v1_info:
+  - cisco.dnac.license_smart_account_details_v1_info
 license_term_details_info:
   - cisco.dnac.license_term_details_info
+license_term_details_v1_info:
+  - cisco.dnac.license_term_details_v1_info
 license_usage_details_info:
   - cisco.dnac.license_usage_details_info
+license_usage_details_v1_info:
+  - cisco.dnac.license_usage_details_v1_info
 license_virtual_account_change:
   - cisco.dnac.license_virtual_account_change
+license_virtual_account_change_v1:
+  - cisco.dnac.license_virtual_account_change_v1
 license_virtual_account_details_info:
   - cisco.dnac.license_virtual_account_details_info
+license_virtual_account_details_v1_info:
+  - cisco.dnac.license_virtual_account_details_v1_info
 licensing_connection_type_info:
   - cisco.ise.licensing_connection_type_info
 licensing_eval_license_info:
@@ -10753,7 +11677,6 @@ location_info:
 log_setting_info:
   - ieisystem.inmanage.log_setting_info
   - inspur.ispim.log_setting_info
-  - inspur.sm.log_setting_info
   - kaytus.ksmanage.log_setting_info
 log_source_management:
   - ibm.qradar.log_source_management
@@ -10769,6 +11692,8 @@ luks_device:
   - community.crypto.luks_device
 lvg:
   - community.general.lvg
+lvg_rename:
+  - community.general.lvg_rename
 lvol:
   - community.general.lvol
 lxc_container:
@@ -10799,26 +11724,42 @@ manageiq_group:
   - community.general.manageiq_group
 manageiq_policies:
   - community.general.manageiq_policies
+manageiq_policies_info:
+  - community.general.manageiq_policies_info
 manageiq_provider:
   - community.general.manageiq_provider
 manageiq_tags:
   - community.general.manageiq_tags
+manageiq_tags_info:
+  - community.general.manageiq_tags_info
 manageiq_tenant:
   - community.general.manageiq_tenant
 manageiq_user:
   - community.general.manageiq_user
 maps_export:
   - cisco.dnac.maps_export
+maps_export_v1:
+  - cisco.dnac.maps_export_v1
 maps_import:
   - cisco.dnac.maps_import
 maps_import_perform:
   - cisco.dnac.maps_import_perform
+maps_import_perform_v1:
+  - cisco.dnac.maps_import_perform_v1
 maps_import_start:
   - cisco.dnac.maps_import_start
+maps_import_start_v1:
+  - cisco.dnac.maps_import_start_v1
 maps_import_status_info:
   - cisco.dnac.maps_import_status_info
+maps_import_status_v1_info:
+  - cisco.dnac.maps_import_status_v1_info
+maps_import_v1:
+  - cisco.dnac.maps_import_v1
 maps_supported_access_points_info:
   - cisco.dnac.maps_supported_access_points_info
+maps_supported_access_points_v1_info:
+  - cisco.dnac.maps_supported_access_points_v1_info
 mas:
   - community.general.mas
 matrix:
@@ -10832,12 +11773,10 @@ mdm_cluster:
 media_instance_info:
   - ieisystem.inmanage.media_instance_info
   - inspur.ispim.media_instance_info
-  - inspur.sm.media_instance_info
   - kaytus.ksmanage.media_instance_info
 mem_info:
   - ieisystem.inmanage.mem_info
   - inspur.ispim.mem_info
-  - inspur.sm.mem_info
   - kaytus.ksmanage.mem_info
 membership:
   - microsoft.ad.membership
@@ -11029,6 +11968,8 @@ monit:
   - community.general.monit
 mount:
   - ansible.posix.mount
+mount_facts:
+  - ansible.builtin.mount_facts
 mq_broker:
   - community.aws.mq_broker
 mq_broker_config:
@@ -11249,6 +12190,8 @@ na_ontap_autosupport:
   - netapp.ontap.na_ontap_autosupport
 na_ontap_autosupport_invoke:
   - netapp.ontap.na_ontap_autosupport_invoke
+na_ontap_bgp_config:
+  - netapp.ontap.na_ontap_bgp_config
 na_ontap_bgp_peer_group:
   - netapp.ontap.na_ontap_bgp_peer_group
 na_ontap_broadcast_domain:
@@ -11271,6 +12214,8 @@ na_ontap_cifs_local_user_modify:
   - netapp.ontap.na_ontap_cifs_local_user_modify
 na_ontap_cifs_local_user_set_password:
   - netapp.ontap.na_ontap_cifs_local_user_set_password
+na_ontap_cifs_privileges:
+  - netapp.ontap.na_ontap_cifs_privileges
 na_ontap_cifs_server:
   - netapp.ontap.na_ontap_cifs_server
 na_ontap_cifs_unix_symlink_mapping:
@@ -11573,6 +12518,8 @@ na_santricity_hostgroup:
   - netapp_eseries.santricity.na_santricity_hostgroup
 na_santricity_ib_iser_interface:
   - netapp_eseries.santricity.na_santricity_ib_iser_interface
+na_santricity_iscsi_interface:
+  - netapp_eseries.santricity.na_santricity_iscsi_interface
 na_santricity_iscsi_target:
   - netapp_eseries.santricity.na_santricity_iscsi_target
 na_santricity_ldap:
@@ -11658,7 +12605,6 @@ nclu:
 ncsi_info:
   - ieisystem.inmanage.ncsi_info
   - inspur.ispim.ncsi_info
-  - inspur.sm.ncsi_info
   - kaytus.ksmanage.ncsi_info
 ndo_dhcp_option_policy:
   - cisco.mso.ndo_dhcp_option_policy
@@ -11830,6 +12776,8 @@ netbox_module_bay:
   - netbox.netbox.netbox_module_bay
 netbox_module_type:
   - netbox.netbox.netbox_module_type
+netbox_permission:
+  - netbox.netbox.netbox_permission
 netbox_platform:
   - netbox.netbox.netbox_platform
 netbox_power_feed:
@@ -11880,6 +12828,16 @@ netbox_tenant:
   - netbox.netbox.netbox_tenant
 netbox_tenant_group:
   - netbox.netbox.netbox_tenant_group
+netbox_token:
+  - netbox.netbox.netbox_token
+netbox_tunnel:
+  - netbox.netbox.netbox_tunnel
+netbox_tunnel_group:
+  - netbox.netbox.netbox_tunnel_group
+netbox_user:
+  - netbox.netbox.netbox_user
+netbox_user_group:
+  - netbox.netbox.netbox_user_group
 netbox_virtual_chassis:
   - netbox.netbox.netbox_virtual_chassis
 netbox_virtual_disk:
@@ -11906,6 +12864,8 @@ netconf_config:
   - ansible.netcommon.netconf_config
 netconf_credential:
   - cisco.dnac.netconf_credential
+netconf_credential_v1:
+  - cisco.dnac.netconf_credential_v1
 netconf_get:
   - ansible.netcommon.netconf_get
 netconf_rpc:
@@ -12017,12 +12977,13 @@ network_access_time_date_conditions_info:
 network_bond_info:
   - ieisystem.inmanage.network_bond_info
   - inspur.ispim.network_bond_info
-  - inspur.sm.network_bond_info
   - kaytus.ksmanage.network_bond_info
 network_compliance_workflow_manager:
   - cisco.dnac.network_compliance_workflow_manager
 network_create:
   - cisco.dnac.network_create
+network_create_v1:
+  - cisco.dnac.network_create_v1
 network_device:
   - cisco.dnac.network_device
   - cisco.ise.network_device
@@ -12032,105 +12993,305 @@ network_device_bulk_request:
   - cisco.ise.network_device_bulk_request
 network_device_by_ip_info:
   - cisco.dnac.network_device_by_ip_info
+network_device_by_ip_v1_info:
+  - cisco.dnac.network_device_by_ip_v1_info
 network_device_by_serial_number_info:
   - cisco.dnac.network_device_by_serial_number_info
+network_device_by_serial_number_v1_info:
+  - cisco.dnac.network_device_by_serial_number_v1_info
 network_device_chassis_details_info:
   - cisco.dnac.network_device_chassis_details_info
+network_device_chassis_details_v1_info:
+  - cisco.dnac.network_device_chassis_details_v1_info
 network_device_config_count_info:
   - cisco.dnac.network_device_config_count_info
+network_device_config_count_v1_info:
+  - cisco.dnac.network_device_config_count_v1_info
 network_device_config_info:
   - cisco.dnac.network_device_config_info
 network_device_config_task_info:
   - cisco.dnac.network_device_config_task_info
+network_device_config_task_v1_info:
+  - cisco.dnac.network_device_config_task_v1_info
+network_device_config_v1_info:
+  - cisco.dnac.network_device_config_v1_info
 network_device_config_write_memory:
   - cisco.dnac.network_device_config_write_memory
+network_device_config_write_memory_v1:
+  - cisco.dnac.network_device_config_write_memory_v1
 network_device_count_info:
   - cisco.dnac.network_device_count_info
+network_device_count_v1_info:
+  - cisco.dnac.network_device_count_v1_info
 network_device_custom_prompt:
   - cisco.dnac.network_device_custom_prompt
-network_device_custom_prompt_info:
-  - cisco.dnac.network_device_custom_prompt_info
+network_device_custom_prompt_info_info:
+  - cisco.dnac.network_device_custom_prompt_info_info
+network_device_custom_prompt_info_v1_info:
+  - cisco.dnac.network_device_custom_prompt_info_v1_info
+network_device_custom_prompt_v1:
+  - cisco.dnac.network_device_custom_prompt_v1
 network_device_equipment_info:
   - cisco.dnac.network_device_equipment_info
+network_device_equipment_v1_info:
+  - cisco.dnac.network_device_equipment_v1_info
 network_device_export:
   - cisco.dnac.network_device_export
+network_device_export_v1:
+  - cisco.dnac.network_device_export_v1
 network_device_functional_capability_info:
   - cisco.dnac.network_device_functional_capability_info
+network_device_functional_capability_v1_info:
+  - cisco.dnac.network_device_functional_capability_v1_info
 network_device_global_polling_interval_info:
   - cisco.dnac.network_device_global_polling_interval_info
+network_device_global_polling_interval_v1_info:
+  - cisco.dnac.network_device_global_polling_interval_v1_info
 network_device_group:
   - cisco.ise.network_device_group
 network_device_group_info:
   - cisco.ise.network_device_group_info
+network_device_image_updates_count_info:
+  - cisco.dnac.network_device_image_updates_count_info
+network_device_image_updates_count_v1_info:
+  - cisco.dnac.network_device_image_updates_count_v1_info
+network_device_image_updates_info:
+  - cisco.dnac.network_device_image_updates_info
+network_device_image_updates_v1_info:
+  - cisco.dnac.network_device_image_updates_v1_info
 network_device_info:
   - cisco.dnac.network_device_info
   - cisco.ise.network_device_info
-network_device_insight_device_link_info:
-  - cisco.dnac.network_device_insight_device_link_info
 network_device_interface_neighbor_info:
   - cisco.dnac.network_device_interface_neighbor_info
+network_device_interface_neighbor_v1_info:
+  - cisco.dnac.network_device_interface_neighbor_v1_info
 network_device_interface_poe_info:
   - cisco.dnac.network_device_interface_poe_info
+network_device_interface_poe_v1_info:
+  - cisco.dnac.network_device_interface_poe_v1_info
 network_device_inventory_insight_link_mismatch_info:
   - cisco.dnac.network_device_inventory_insight_link_mismatch_info
+network_device_inventory_insight_link_mismatch_v1_info:
+  - cisco.dnac.network_device_inventory_insight_link_mismatch_v1_info
 network_device_ip_address_info:
   - cisco.dnac.network_device_ip_address_info
+network_device_ip_address_v1_info:
+  - cisco.dnac.network_device_ip_address_v1_info
 network_device_lexicographically_sorted_info:
   - cisco.dnac.network_device_lexicographically_sorted_info
+network_device_lexicographically_sorted_v1_info:
+  - cisco.dnac.network_device_lexicographically_sorted_v1_info
 network_device_linecard_details_info:
   - cisco.dnac.network_device_linecard_details_info
+network_device_linecard_details_v1_info:
+  - cisco.dnac.network_device_linecard_details_v1_info
 network_device_management_address_update:
   - cisco.dnac.network_device_management_address_update
+network_device_management_address_update_v1:
+  - cisco.dnac.network_device_management_address_update_v1
 network_device_meraki_organization_info:
   - cisco.dnac.network_device_meraki_organization_info
+network_device_meraki_organization_v1_info:
+  - cisco.dnac.network_device_meraki_organization_v1_info
 network_device_module_count_info:
   - cisco.dnac.network_device_module_count_info
+network_device_module_count_v1_info:
+  - cisco.dnac.network_device_module_count_v1_info
 network_device_module_info:
   - cisco.dnac.network_device_module_info
+network_device_module_v1_info:
+  - cisco.dnac.network_device_module_v1_info
 network_device_poe_info:
   - cisco.dnac.network_device_poe_info
+network_device_poe_v1_info:
+  - cisco.dnac.network_device_poe_v1_info
 network_device_polling_interval_info:
   - cisco.dnac.network_device_polling_interval_info
+network_device_polling_interval_v1_info:
+  - cisco.dnac.network_device_polling_interval_v1_info
 network_device_range_info:
   - cisco.dnac.network_device_range_info
+network_device_range_v1_info:
+  - cisco.dnac.network_device_range_v1_info
 network_device_register_for_wsa_info:
   - cisco.dnac.network_device_register_for_wsa_info
+network_device_register_for_wsa_v1_info:
+  - cisco.dnac.network_device_register_for_wsa_v1_info
 network_device_stack_details_info:
   - cisco.dnac.network_device_stack_details_info
+network_device_stack_details_v1_info:
+  - cisco.dnac.network_device_stack_details_v1_info
 network_device_summary_info:
   - cisco.dnac.network_device_summary_info
+network_device_summary_v1_info:
+  - cisco.dnac.network_device_summary_v1_info
 network_device_supervisor_card_details_info:
   - cisco.dnac.network_device_supervisor_card_details_info
+network_device_supervisor_card_details_v1_info:
+  - cisco.dnac.network_device_supervisor_card_details_v1_info
 network_device_sync:
   - cisco.dnac.network_device_sync
+network_device_sync_v1:
+  - cisco.dnac.network_device_sync_v1
 network_device_update_role:
   - cisco.dnac.network_device_update_role
+network_device_update_role_v1:
+  - cisco.dnac.network_device_update_role_v1
 network_device_user_defined_field:
   - cisco.dnac.network_device_user_defined_field
 network_device_user_defined_field_delete:
   - cisco.dnac.network_device_user_defined_field_delete
+network_device_user_defined_field_delete_v1:
+  - cisco.dnac.network_device_user_defined_field_delete_v1
 network_device_user_defined_field_info:
   - cisco.dnac.network_device_user_defined_field_info
 network_device_user_defined_field_update:
   - cisco.dnac.network_device_user_defined_field_update
+network_device_user_defined_field_update_v1:
+  - cisco.dnac.network_device_user_defined_field_update_v1
+network_device_user_defined_field_v1:
+  - cisco.dnac.network_device_user_defined_field_v1
+network_device_user_defined_field_v1_info:
+  - cisco.dnac.network_device_user_defined_field_v1_info
+network_device_v1:
+  - cisco.dnac.network_device_v1
+network_device_v1_info:
+  - cisco.dnac.network_device_v1_info
 network_device_vlan_info:
   - cisco.dnac.network_device_vlan_info
+network_device_vlan_v1_info:
+  - cisco.dnac.network_device_vlan_v1_info
 network_device_wireless_lan_info:
   - cisco.dnac.network_device_wireless_lan_info
-network_device_with_snmp_v3_des_info:
-  - cisco.dnac.network_device_with_snmp_v3_des_info
+network_device_wireless_lan_v1_info:
+  - cisco.dnac.network_device_wireless_lan_v1_info
+network_devices_assigned_to_site_count_info:
+  - cisco.dnac.network_devices_assigned_to_site_count_info
+network_devices_assigned_to_site_count_v1_info:
+  - cisco.dnac.network_devices_assigned_to_site_count_v1_info
+network_devices_assigned_to_site_id_info:
+  - cisco.dnac.network_devices_assigned_to_site_id_info
+network_devices_assigned_to_site_id_v1_info:
+  - cisco.dnac.network_devices_assigned_to_site_id_v1_info
+network_devices_assigned_to_site_info:
+  - cisco.dnac.network_devices_assigned_to_site_info
+network_devices_assigned_to_site_v1_info:
+  - cisco.dnac.network_devices_assigned_to_site_v1_info
+network_devices_count_info:
+  - cisco.dnac.network_devices_count_info
+network_devices_count_v1_info:
+  - cisco.dnac.network_devices_count_v1_info
+network_devices_device_controllability_settings:
+  - cisco.dnac.network_devices_device_controllability_settings
+network_devices_device_controllability_settings_info:
+  - cisco.dnac.network_devices_device_controllability_settings_info
+network_devices_device_controllability_settings_v1:
+  - cisco.dnac.network_devices_device_controllability_settings_v1
+network_devices_device_controllability_settings_v1_info:
+  - cisco.dnac.network_devices_device_controllability_settings_v1_info
+network_devices_info:
+  - cisco.dnac.network_devices_info
+network_devices_interfaces_query:
+  - cisco.dnac.network_devices_interfaces_query
+network_devices_interfaces_query_v2:
+  - cisco.dnac.network_devices_interfaces_query_v2
+network_devices_issues_remediation_provision:
+  - cisco.dnac.network_devices_issues_remediation_provision
+network_devices_issues_remediation_provision_v1:
+  - cisco.dnac.network_devices_issues_remediation_provision_v1
+network_devices_network_profiles_for_sites:
+  - cisco.dnac.network_devices_network_profiles_for_sites
+network_devices_network_profiles_for_sites_count_info:
+  - cisco.dnac.network_devices_network_profiles_for_sites_count_info
+network_devices_network_profiles_for_sites_count_v1_info:
+  - cisco.dnac.network_devices_network_profiles_for_sites_count_v1_info
+network_devices_network_profiles_for_sites_info:
+  - cisco.dnac.network_devices_network_profiles_for_sites_info
+network_devices_network_profiles_for_sites_v1:
+  - cisco.dnac.network_devices_network_profiles_for_sites_v1
+network_devices_network_profiles_for_sites_v1_info:
+  - cisco.dnac.network_devices_network_profiles_for_sites_v1_info
+network_devices_not_assigned_to_site_count_info:
+  - cisco.dnac.network_devices_not_assigned_to_site_count_info
+network_devices_not_assigned_to_site_count_v1_info:
+  - cisco.dnac.network_devices_not_assigned_to_site_count_v1_info
+network_devices_not_assigned_to_site_info:
+  - cisco.dnac.network_devices_not_assigned_to_site_info
+network_devices_not_assigned_to_site_v1_info:
+  - cisco.dnac.network_devices_not_assigned_to_site_v1_info
+network_devices_query:
+  - cisco.dnac.network_devices_query
+network_devices_query_count:
+  - cisco.dnac.network_devices_query_count
+network_devices_query_count_v1:
+  - cisco.dnac.network_devices_query_count_v1
+network_devices_query_v1:
+  - cisco.dnac.network_devices_query_v1
+network_devices_resync_interval_settings:
+  - cisco.dnac.network_devices_resync_interval_settings
+network_devices_resync_interval_settings_id:
+  - cisco.dnac.network_devices_resync_interval_settings_id
+network_devices_resync_interval_settings_id_info:
+  - cisco.dnac.network_devices_resync_interval_settings_id_info
+network_devices_resync_interval_settings_id_v1:
+  - cisco.dnac.network_devices_resync_interval_settings_id_v1
+network_devices_resync_interval_settings_id_v1_info:
+  - cisco.dnac.network_devices_resync_interval_settings_id_v1_info
+network_devices_resync_interval_settings_override:
+  - cisco.dnac.network_devices_resync_interval_settings_override
+network_devices_resync_interval_settings_override_v1:
+  - cisco.dnac.network_devices_resync_interval_settings_override_v1
+network_devices_resync_interval_settings_v1:
+  - cisco.dnac.network_devices_resync_interval_settings_v1
+network_devices_summary_analytics:
+  - cisco.dnac.network_devices_summary_analytics
+network_devices_summary_analytics_v1:
+  - cisco.dnac.network_devices_summary_analytics_v1
+network_devices_trend_analytics:
+  - cisco.dnac.network_devices_trend_analytics
+network_devices_trend_analytics_id:
+  - cisco.dnac.network_devices_trend_analytics_id
+network_devices_trend_analytics_id_v1:
+  - cisco.dnac.network_devices_trend_analytics_id_v1
+network_devices_trend_analytics_v1:
+  - cisco.dnac.network_devices_trend_analytics_v1
+network_devices_unassign_from_site_apply:
+  - cisco.dnac.network_devices_unassign_from_site_apply
+network_devices_unassign_from_site_apply_v1:
+  - cisco.dnac.network_devices_unassign_from_site_apply_v1
+network_devices_v1_info:
+  - cisco.dnac.network_devices_v1_info
 network_info:
   - cisco.dnac.network_info
   - hetzner.hcloud.network_info
   - ieisystem.inmanage.network_info
   - inspur.ispim.network_info
-  - inspur.sm.network_info
   - kaytus.ksmanage.network_info
 network_link_info:
   - ieisystem.inmanage.network_link_info
   - inspur.ispim.network_link_info
-  - inspur.sm.network_link_info
   - kaytus.ksmanage.network_link_info
+network_profiles_for_sites_site_assignments:
+  - cisco.dnac.network_profiles_for_sites_site_assignments
+network_profiles_for_sites_site_assignments_bulk_create:
+  - cisco.dnac.network_profiles_for_sites_site_assignments_bulk_create
+network_profiles_for_sites_site_assignments_bulk_create_v1:
+  - cisco.dnac.network_profiles_for_sites_site_assignments_bulk_create_v1
+network_profiles_for_sites_site_assignments_bulk_delete:
+  - cisco.dnac.network_profiles_for_sites_site_assignments_bulk_delete
+network_profiles_for_sites_site_assignments_bulk_delete_v1:
+  - cisco.dnac.network_profiles_for_sites_site_assignments_bulk_delete_v1
+network_profiles_for_sites_site_assignments_count_info:
+  - cisco.dnac.network_profiles_for_sites_site_assignments_count_info
+network_profiles_for_sites_site_assignments_count_v1_info:
+  - cisco.dnac.network_profiles_for_sites_site_assignments_count_v1_info
+network_profiles_for_sites_site_assignments_info:
+  - cisco.dnac.network_profiles_for_sites_site_assignments_info
+network_profiles_for_sites_site_assignments_v1:
+  - cisco.dnac.network_profiles_for_sites_site_assignments_v1
+network_profiles_for_sites_site_assignments_v1_info:
+  - cisco.dnac.network_profiles_for_sites_site_assignments_v1_info
 network_resource:
   - ansible.netcommon.network_resource
 network_settings_intent:
@@ -12139,6 +13300,10 @@ network_settings_workflow_manager:
   - cisco.dnac.network_settings_workflow_manager
 network_update:
   - cisco.dnac.network_update
+network_update_v1:
+  - cisco.dnac.network_update_v1
+network_v1_info:
+  - cisco.dnac.network_v1_info
 network_v2:
   - cisco.dnac.network_v2
 network_v2_info:
@@ -12251,6 +13416,8 @@ networks_appliance_traffic_shaping:
   - cisco.meraki.networks_appliance_traffic_shaping
 networks_appliance_traffic_shaping_custom_performance_classes:
   - cisco.meraki.networks_appliance_traffic_shaping_custom_performance_classes
+networks_appliance_traffic_shaping_custom_performance_classes_info:
+  - cisco.meraki.networks_appliance_traffic_shaping_custom_performance_classes_info
 networks_appliance_traffic_shaping_info:
   - cisco.meraki.networks_appliance_traffic_shaping_info
 networks_appliance_traffic_shaping_rules:
@@ -12730,16 +13897,6 @@ nfs:
   - dellemc.unity.nfs
 nfsserver:
   - dellemc.unity.nfsserver
-nfv_profile:
-  - cisco.dnac.nfv_profile
-nfv_profile_info:
-  - cisco.dnac.nfv_profile_info
-nfv_provision:
-  - cisco.dnac.nfv_provision
-nfv_provision_detail_info:
-  - cisco.dnac.nfv_provision_detail_info
-nfv_provision_details:
-  - cisco.dnac.nfv_provision_details
 nginx_status_info:
   - community.general.nginx_status_info
 nictagadm:
@@ -12772,6 +13929,8 @@ nios_dtc_server:
   - infoblox.nios_modules.nios_dtc_server
 nios_dtc_topology:
   - infoblox.nios_modules.nios_dtc_topology
+nios_extensible_attribute:
+  - infoblox.nios_modules.nios_extensible_attribute
 nios_fixed_address:
   - infoblox.nios_modules.nios_fixed_address
 nios_host_record:
@@ -12788,6 +13947,14 @@ nios_network_view:
   - infoblox.nios_modules.nios_network_view
 nios_nsgroup:
   - infoblox.nios_modules.nios_nsgroup
+nios_nsgroup_delegation:
+  - infoblox.nios_modules.nios_nsgroup_delegation
+nios_nsgroup_forwardingmember:
+  - infoblox.nios_modules.nios_nsgroup_forwardingmember
+nios_nsgroup_forwardstubserver:
+  - infoblox.nios_modules.nios_nsgroup_forwardstubserver
+nios_nsgroup_stubmember:
+  - infoblox.nios_modules.nios_nsgroup_stubmember
 nios_ptr_record:
   - infoblox.nios_modules.nios_ptr_record
 nios_range:
@@ -12846,6 +14013,8 @@ nomad_job:
   - community.general.nomad_job
 nomad_job_info:
   - community.general.nomad_job_info
+nomad_token:
+  - community.general.nomad_token
 nonquery:
   - lowlydba.sqlserver.nonquery
 nos_command:
@@ -12865,7 +14034,6 @@ nsupdate:
 ntp_info:
   - ieisystem.inmanage.ntp_info
   - inspur.ispim.ntp_info
-  - inspur.sm.ntp_info
   - kaytus.ksmanage.ntp_info
 nuage_vspk:
   - community.network.nuage_vspk
@@ -13013,6 +14181,8 @@ nxos_vrf:
   - cisco.nxos.nxos_vrf
 nxos_vrf_af:
   - cisco.nxos.nxos_vrf_af
+nxos_vrf_global:
+  - cisco.nxos.nxos_vrf_global
 nxos_vrf_interface:
   - cisco.nxos.nxos_vrf_interface
 nxos_vrrp:
@@ -13042,6 +14212,10 @@ object_storage:
   - vultr.cloud.object_storage
 objects_user:
   - cloudscale_ch.cloud.objects_user
+ocapi_command:
+  - community.general.ocapi_command
+ocapi_info:
+  - community.general.ocapi_info
 oci_vcn:
   - community.general.oci_vcn
 odbc:
@@ -13180,10 +14354,21 @@ ome_user:
   - dellemc.openmanage.ome_user
 ome_user_info:
   - dellemc.openmanage.ome_user_info
+omevv_baseline_profile:
+  - dellemc.openmanage.omevv_baseline_profile
+omevv_baseline_profile_info:
+  - dellemc.openmanage.omevv_baseline_profile_info
+omevv_firmware_compliance_info:
+  - dellemc.openmanage.omevv_firmware_compliance_info
+omevv_firmware_repository_profile:
+  - dellemc.openmanage.omevv_firmware_repository_profile
+omevv_firmware_repository_profile_info:
+  - dellemc.openmanage.omevv_firmware_repository_profile_info
+omevv_vcenter_info:
+  - dellemc.openmanage.omevv_vcenter_info
 onboard_disk_info:
   - ieisystem.inmanage.onboard_disk_info
   - inspur.ispim.onboard_disk_info
-  - inspur.sm.onboard_disk_info
   - kaytus.ksmanage.onboard_disk_info
 one_host:
   - community.general.one_host
@@ -13197,6 +14382,8 @@ one_template:
   - community.general.one_template
 one_vm:
   - community.general.one_vm
+one_vnet:
+  - community.general.one_vnet
 oneandone_firewall_policy:
   - community.general.oneandone_firewall_policy
 oneandone_load_balancer:
@@ -13307,14 +14494,6 @@ openssl_signature:
   - community.crypto.openssl_signature
 openssl_signature_info:
   - community.crypto.openssl_signature_info
-openvswitch_bond:
-  - openvswitch.openvswitch.openvswitch_bond
-openvswitch_bridge:
-  - openvswitch.openvswitch.openvswitch_bridge
-openvswitch_db:
-  - openvswitch.openvswitch.openvswitch_db
-openvswitch_port:
-  - openvswitch.openvswitch.openvswitch_port
 openwrt_init:
   - community.general.openwrt_init
 operatingsystem:
@@ -13796,17 +14975,19 @@ path_trace:
   - cisco.dnac.path_trace
 path_trace_info:
   - cisco.dnac.path_trace_info
+path_trace_v1:
+  - cisco.dnac.path_trace_v1
+path_trace_v1_info:
+  - cisco.dnac.path_trace_v1_info
 pause:
   - ansible.builtin.pause
 pcie_info:
   - ieisystem.inmanage.pcie_info
   - inspur.ispim.pcie_info
-  - inspur.sm.pcie_info
   - kaytus.ksmanage.pcie_info
 pdisk_info:
   - ieisystem.inmanage.pdisk_info
   - inspur.ispim.pdisk_info
-  - inspur.sm.pdisk_info
   - kaytus.ksmanage.pdisk_info
 pear:
   - community.general.pear
@@ -13860,10 +15041,18 @@ planned_access_points:
   - cisco.dnac.planned_access_points
 planned_access_points_info:
   - cisco.dnac.planned_access_points_info
+planned_access_points_v1:
+  - cisco.dnac.planned_access_points_v1
+planned_access_points_v1_info:
+  - cisco.dnac.planned_access_points_v1_info
 platform_nodes_configuration_summary_info:
   - cisco.dnac.platform_nodes_configuration_summary_info
+platform_nodes_configuration_summary_v1_info:
+  - cisco.dnac.platform_nodes_configuration_summary_v1_info
 platform_release_summary_info:
   - cisco.dnac.platform_release_summary_info
+platform_release_summary_v1_info:
+  - cisco.dnac.platform_release_summary_v1_info
 pmem:
   - community.general.pmem
 pn_access_list:
@@ -13950,54 +15139,104 @@ pnp_device:
   - cisco.dnac.pnp_device
 pnp_device_authorize:
   - cisco.dnac.pnp_device_authorize
+pnp_device_authorize_v1:
+  - cisco.dnac.pnp_device_authorize_v1
 pnp_device_claim:
   - cisco.dnac.pnp_device_claim
 pnp_device_claim_to_site:
   - cisco.dnac.pnp_device_claim_to_site
+pnp_device_claim_to_site_v1:
+  - cisco.dnac.pnp_device_claim_to_site_v1
+pnp_device_claim_v1:
+  - cisco.dnac.pnp_device_claim_v1
 pnp_device_config_preview:
   - cisco.dnac.pnp_device_config_preview
+pnp_device_config_preview_v1:
+  - cisco.dnac.pnp_device_config_preview_v1
 pnp_device_count_info:
   - cisco.dnac.pnp_device_count_info
+pnp_device_count_v1_info:
+  - cisco.dnac.pnp_device_count_v1_info
 pnp_device_history_info:
   - cisco.dnac.pnp_device_history_info
+pnp_device_history_v1_info:
+  - cisco.dnac.pnp_device_history_v1_info
 pnp_device_import:
   - cisco.dnac.pnp_device_import
+pnp_device_import_v1:
+  - cisco.dnac.pnp_device_import_v1
 pnp_device_info:
   - cisco.dnac.pnp_device_info
 pnp_device_reset:
   - cisco.dnac.pnp_device_reset
+pnp_device_reset_v1:
+  - cisco.dnac.pnp_device_reset_v1
 pnp_device_unclaim:
   - cisco.dnac.pnp_device_unclaim
+pnp_device_unclaim_v1:
+  - cisco.dnac.pnp_device_unclaim_v1
+pnp_device_v1:
+  - cisco.dnac.pnp_device_v1
+pnp_device_v1_info:
+  - cisco.dnac.pnp_device_v1_info
 pnp_global_settings:
   - cisco.dnac.pnp_global_settings
 pnp_global_settings_info:
   - cisco.dnac.pnp_global_settings_info
+pnp_global_settings_v1:
+  - cisco.dnac.pnp_global_settings_v1
+pnp_global_settings_v1_info:
+  - cisco.dnac.pnp_global_settings_v1_info
 pnp_intent:
   - cisco.dnac.pnp_intent
 pnp_server_profile_update:
   - cisco.dnac.pnp_server_profile_update
+pnp_server_profile_update_v1:
+  - cisco.dnac.pnp_server_profile_update_v1
 pnp_smart_account_domains_info:
   - cisco.dnac.pnp_smart_account_domains_info
+pnp_smart_account_domains_v1_info:
+  - cisco.dnac.pnp_smart_account_domains_v1_info
 pnp_virtual_account_add:
   - cisco.dnac.pnp_virtual_account_add
+pnp_virtual_account_add_v1:
+  - cisco.dnac.pnp_virtual_account_add_v1
 pnp_virtual_account_deregister:
   - cisco.dnac.pnp_virtual_account_deregister
+pnp_virtual_account_deregister_v1:
+  - cisco.dnac.pnp_virtual_account_deregister_v1
 pnp_virtual_account_devices_sync:
   - cisco.dnac.pnp_virtual_account_devices_sync
+pnp_virtual_account_devices_sync_v1:
+  - cisco.dnac.pnp_virtual_account_devices_sync_v1
 pnp_virtual_account_sync_result_info:
   - cisco.dnac.pnp_virtual_account_sync_result_info
+pnp_virtual_account_sync_result_v1_info:
+  - cisco.dnac.pnp_virtual_account_sync_result_v1_info
 pnp_virtual_accounts_info:
   - cisco.dnac.pnp_virtual_accounts_info
+pnp_virtual_accounts_v1_info:
+  - cisco.dnac.pnp_virtual_accounts_v1_info
 pnp_workflow:
   - cisco.dnac.pnp_workflow
 pnp_workflow_count_info:
   - cisco.dnac.pnp_workflow_count_info
+pnp_workflow_count_v1_info:
+  - cisco.dnac.pnp_workflow_count_v1_info
 pnp_workflow_info:
   - cisco.dnac.pnp_workflow_info
 pnp_workflow_manager:
   - cisco.dnac.pnp_workflow_manager
+pnp_workflow_v1:
+  - cisco.dnac.pnp_workflow_v1
+pnp_workflow_v1_info:
+  - cisco.dnac.pnp_workflow_v1_info
+pnpm:
+  - community.general.pnpm
 podman_container:
   - containers.podman.podman_container
+podman_container_copy:
+  - containers.podman.podman_container_copy
 podman_container_exec:
   - containers.podman.podman_container_exec
 podman_container_info:
@@ -14117,27 +15356,22 @@ postgresql_user_obj_stat_info:
 power_budget_info:
   - ieisystem.inmanage.power_budget_info
   - inspur.ispim.power_budget_info
-  - inspur.sm.power_budget_info
   - kaytus.ksmanage.power_budget_info
 power_consumption_info:
   - ieisystem.inmanage.power_consumption_info
   - inspur.ispim.power_consumption_info
-  - inspur.sm.power_consumption_info
   - kaytus.ksmanage.power_consumption_info
 power_restore_info:
   - ieisystem.inmanage.power_restore_info
   - inspur.ispim.power_restore_info
-  - inspur.sm.power_restore_info
   - kaytus.ksmanage.power_restore_info
 power_status_info:
   - ieisystem.inmanage.power_status_info
   - inspur.ispim.power_status_info
-  - inspur.sm.power_status_info
   - kaytus.ksmanage.power_status_info
 preserve_config_info:
   - ieisystem.inmanage.preserve_config_info
   - inspur.ispim.preserve_config_info
-  - inspur.sm.preserve_config_info
   - kaytus.ksmanage.preserve_config_info
 primary_ip:
   - hetzner.hcloud.primary_ip
@@ -14153,12 +15387,16 @@ pritunl_user_info:
   - community.general.pritunl_user_info
 product:
   - theforeman.foreman.product
+product_names_count_info:
+  - cisco.dnac.product_names_count_info
+product_names_count_v1_info:
+  - cisco.dnac.product_names_count_v1_info
+product_names_info:
+  - cisco.dnac.product_names_info
+product_names_v1_info:
+  - cisco.dnac.product_names_v1_info
 profiler_profile_info:
   - cisco.ise.profiler_profile_info
-profiling_rules_count_info:
-  - cisco.dnac.profiling_rules_count_info
-profiling_rules_in_bulk_create:
-  - cisco.dnac.profiling_rules_in_bulk_create
 profitbricks:
   - community.general.profitbricks
 profitbricks_datacenter:
@@ -14178,16 +15416,30 @@ project_update:
   - awx.awx.project_update
 projects_details_info:
   - cisco.dnac.projects_details_info
+projects_details_v2_info:
+  - cisco.dnac.projects_details_v2_info
 protection_domain:
   - dellemc.powerflex.protection_domain
 provision_intent:
   - cisco.dnac.provision_intent
 provision_workflow_manager:
   - cisco.dnac.provision_workflow_manager
+provisioning_settings:
+  - cisco.dnac.provisioning_settings
+provisioning_settings_info:
+  - cisco.dnac.provisioning_settings_info
+provisioning_settings_v1:
+  - cisco.dnac.provisioning_settings_v1
+provisioning_settings_v1_info:
+  - cisco.dnac.provisioning_settings_v1_info
 provisioning_template:
   - theforeman.foreman.provisioning_template
 proxmox:
   - community.general.proxmox
+proxmox_backup:
+  - community.general.proxmox_backup
+proxmox_disk:
+  - community.general.proxmox_disk
 proxmox_domain_info:
   - community.general.proxmox_domain_info
 proxmox_group_info:
@@ -14196,8 +15448,16 @@ proxmox_kvm:
   - community.general.proxmox_kvm
 proxmox_nic:
   - community.general.proxmox_nic
+proxmox_node_info:
+  - community.general.proxmox_node_info
+proxmox_pool:
+  - community.general.proxmox_pool
+proxmox_pool_member:
+  - community.general.proxmox_pool_member
 proxmox_snap:
   - community.general.proxmox_snap
+proxmox_storage_contents_info:
+  - community.general.proxmox_storage_contents_info
 proxmox_storage_info:
   - community.general.proxmox_storage_info
 proxmox_tasks_info:
@@ -14206,6 +15466,8 @@ proxmox_template:
   - community.general.proxmox_template
 proxmox_user_info:
   - community.general.proxmox_user_info
+proxmox_vm_info:
+  - community.general.proxmox_vm_info
 proxy_connection_settings:
   - cisco.ise.proxy_connection_settings
 proxy_connection_settings_info:
@@ -14235,17 +15497,14 @@ psexec:
 psu_config_info:
   - ieisystem.inmanage.psu_config_info
   - inspur.ispim.psu_config_info
-  - inspur.sm.psu_config_info
   - kaytus.ksmanage.psu_config_info
 psu_info:
   - ieisystem.inmanage.psu_info
   - inspur.ispim.psu_info
-  - inspur.sm.psu_info
   - kaytus.ksmanage.psu_info
 psu_peak_info:
   - ieisystem.inmanage.psu_peak_info
   - inspur.ispim.psu_peak_info
-  - inspur.sm.psu_peak_info
   - kaytus.ksmanage.psu_peak_info
 pubnub_blocks:
   - community.general.pubnub_blocks
@@ -14291,6 +15550,8 @@ purefa_ds:
   - purestorage.flasharray.purefa_ds
 purefa_dsrole:
   - purestorage.flasharray.purefa_dsrole
+purefa_dsrole_old:
+  - purestorage.flasharray.purefa_dsrole_old
 purefa_endpoint:
   - purestorage.flasharray.purefa_endpoint
 purefa_eradication:
@@ -14453,6 +15714,8 @@ purefb_s3acc:
   - purestorage.flashblade.purefb_s3acc
 purefb_s3user:
   - purestorage.flashblade.purefb_s3user
+purefb_saml:
+  - purestorage.flashblade.purefb_saml
 purefb_smtp:
   - purestorage.flashblade.purefb_smtp
 purefb_snap:
@@ -14573,6 +15836,12 @@ qos_device_interface_info:
   - cisco.dnac.qos_device_interface_info
 qos_device_interface_info_count_info:
   - cisco.dnac.qos_device_interface_info_count_info
+qos_device_interface_info_count_v1_info:
+  - cisco.dnac.qos_device_interface_info_count_v1_info
+qos_device_interface_v1:
+  - cisco.dnac.qos_device_interface_v1
+qos_device_interface_v1_info:
+  - cisco.dnac.qos_device_interface_v1_info
 qradar_analytics_rules:
   - ibm.qradar.qradar_analytics_rules
 qradar_deploy:
@@ -14628,62 +15897,9 @@ radius_server_sequence_info:
 raid_info:
   - ieisystem.inmanage.raid_info
   - inspur.ispim.raid_info
-  - inspur.sm.raid_info
   - kaytus.ksmanage.raid_info
 raw:
   - ansible.builtin.raw
-rax:
-  - community.general.rax
-rax_cbs:
-  - community.general.rax_cbs
-rax_cbs_attachments:
-  - community.general.rax_cbs_attachments
-rax_cdb:
-  - community.general.rax_cdb
-rax_cdb_database:
-  - community.general.rax_cdb_database
-rax_cdb_user:
-  - community.general.rax_cdb_user
-rax_clb:
-  - community.general.rax_clb
-rax_clb_nodes:
-  - community.general.rax_clb_nodes
-rax_clb_ssl:
-  - community.general.rax_clb_ssl
-rax_dns:
-  - community.general.rax_dns
-rax_dns_record:
-  - community.general.rax_dns_record
-rax_facts:
-  - community.general.rax_facts
-rax_files:
-  - community.general.rax_files
-rax_files_objects:
-  - community.general.rax_files_objects
-rax_identity:
-  - community.general.rax_identity
-rax_keypair:
-  - community.general.rax_keypair
-rax_meta:
-  - community.general.rax_meta
-rax_mon_alarm:
-  - community.general.rax_mon_alarm
-rax_mon_check:
-  - community.general.rax_mon_check
-rax_mon_entity:
-  - community.general.rax_mon_entity
-rax_mon_notification:
-  - community.general.rax_mon_notification
-rax_mon_notification_plan:
-  - community.general.rax_mon_notification_plan
-rax_network:
-  - community.general.rax_network
-rax_queue:
-  - community.general.rax_queue
-rax_scaling_group:
-  - community.general.rax_scaling_group
-rax_scaling_policy:
-  - community.general.rax_scaling_policy
 rdns:
   - hetzner.hcloud.rdns
 rds_cluster:
@@ -14780,12 +15996,22 @@ reports:
   - cisco.dnac.reports
 reports_executions_info:
   - cisco.dnac.reports_executions_info
+reports_executions_v1_info:
+  - cisco.dnac.reports_executions_v1_info
 reports_info:
   - cisco.dnac.reports_info
+reports_v1:
+  - cisco.dnac.reports_v1
+reports_v1_info:
+  - cisco.dnac.reports_v1_info
 reports_view_group_info:
   - cisco.dnac.reports_view_group_info
+reports_view_group_v1_info:
+  - cisco.dnac.reports_view_group_v1_info
 reports_view_group_view_info:
   - cisco.dnac.reports_view_group_view_info
+reports_view_group_view_v1_info:
+  - cisco.dnac.reports_view_group_view_v1_info
 repository:
   - cisco.ise.repository
   - theforeman.foreman.repository
@@ -14808,12 +16034,22 @@ reserve_ip_subpool:
   - cisco.dnac.reserve_ip_subpool
 reserve_ip_subpool_create:
   - cisco.dnac.reserve_ip_subpool_create
+reserve_ip_subpool_create_v1:
+  - cisco.dnac.reserve_ip_subpool_create_v1
 reserve_ip_subpool_delete:
   - cisco.dnac.reserve_ip_subpool_delete
+reserve_ip_subpool_delete_v1:
+  - cisco.dnac.reserve_ip_subpool_delete_v1
 reserve_ip_subpool_info:
   - cisco.dnac.reserve_ip_subpool_info
 reserve_ip_subpool_update:
   - cisco.dnac.reserve_ip_subpool_update
+reserve_ip_subpool_update_v1:
+  - cisco.dnac.reserve_ip_subpool_update_v1
+reserve_ip_subpool_v1:
+  - cisco.dnac.reserve_ip_subpool_v1
+reserve_ip_subpool_v1_info:
+  - cisco.dnac.reserve_ip_subpool_v1_info
 reserved_ip:
   - vultr.cloud.reserved_ip
 reset:
@@ -14821,12 +16057,10 @@ reset:
 reset_bmc:
   - ieisystem.inmanage.reset_bmc
   - inspur.ispim.reset_bmc
-  - inspur.sm.reset_bmc
   - kaytus.ksmanage.reset_bmc
 reset_kvm:
   - ieisystem.inmanage.reset_kvm
   - inspur.ispim.reset_kvm
-  - inspur.sm.reset_kvm
   - kaytus.ksmanage.reset_kvm
 resource:
   - openstack.cloud.resource
@@ -14851,7 +16085,6 @@ restconf_get:
 restore:
   - ieisystem.inmanage.restore
   - inspur.ispim.restore
-  - inspur.sm.restore
   - kaytus.ksmanage.restore
   - lowlydba.sqlserver.restore
 reverse_dns:
@@ -14860,12 +16093,12 @@ rg_resource_pool:
   - lowlydba.sqlserver.rg_resource_pool
 rg_workload_group:
   - lowlydba.sqlserver.rg_workload_group
+rhel_facts:
+  - ansible.posix.rhel_facts
+rhel_rpm_ostree:
+  - ansible.posix.rhel_rpm_ostree
 rhevm:
   - community.general.rhevm
-rhn_channel:
-  - community.general.rhn_channel
-rhn_register:
-  - community.general.rhn_register
 rhsm_release:
   - community.general.rhsm_release
 rhsm_repository:
@@ -14892,6 +16125,8 @@ role_info:
   - sensu.sensu_go.role_info
 role_permissions_info:
   - cisco.dnac.role_permissions_info
+role_permissions_v1_info:
+  - cisco.dnac.role_permissions_v1_info
 role_team_assignment:
   - awx.awx.role_team_assignment
 role_user_assignment:
@@ -14900,6 +16135,10 @@ roles:
   - cisco.dnac.roles
 roles_info:
   - cisco.dnac.roles_info
+roles_v1:
+  - cisco.dnac.roles_v1
+roles_v1_info:
+  - cisco.dnac.roles_v1_info
 rollbar_deployment:
   - community.general.rollbar_deployment
 route:
@@ -14922,6 +16161,8 @@ rpm_key:
   - ansible.builtin.rpm_key
 rpm_ostree_pkg:
   - community.general.rpm_ostree_pkg
+rpm_ostree_upgrade:
+  - ansible.posix.rpm_ostree_upgrade
 rule:
   - ibm.qradar.rule
 rule_info:
@@ -14973,12 +16214,10 @@ sap_snote:
 sap_system_facts:
   - community.sap_libs.sap_system_facts
 sap_task_list_execute:
-  - community.general.sap_task_list_execute
   - community.sap_libs.sap_task_list_execute
 sap_user:
   - community.sap_libs.sap_user
 sapcar_extract:
-  - community.general.sapcar_extract
   - community.sap_libs.sapcar_extract
 say:
   - community.general.say
@@ -14986,8 +16225,28 @@ scaleway_compute:
   - community.general.scaleway_compute
 scaleway_compute_private_network:
   - community.general.scaleway_compute_private_network
+scaleway_container:
+  - community.general.scaleway_container
+scaleway_container_info:
+  - community.general.scaleway_container_info
+scaleway_container_namespace:
+  - community.general.scaleway_container_namespace
+scaleway_container_namespace_info:
+  - community.general.scaleway_container_namespace_info
+scaleway_container_registry:
+  - community.general.scaleway_container_registry
+scaleway_container_registry_info:
+  - community.general.scaleway_container_registry_info
 scaleway_database_backup:
   - community.general.scaleway_database_backup
+scaleway_function:
+  - community.general.scaleway_function
+scaleway_function_info:
+  - community.general.scaleway_function_info
+scaleway_function_namespace:
+  - community.general.scaleway_function_namespace
+scaleway_function_namespace_info:
+  - community.general.scaleway_function_namespace_info
 scaleway_image_info:
   - community.general.scaleway_image_info
 scaleway_ip:
@@ -15034,114 +16293,306 @@ sda_anycast_gateways:
   - cisco.dnac.sda_anycast_gateways
 sda_anycast_gateways_count_info:
   - cisco.dnac.sda_anycast_gateways_count_info
+sda_anycast_gateways_count_v1_info:
+  - cisco.dnac.sda_anycast_gateways_count_v1_info
 sda_anycast_gateways_info:
   - cisco.dnac.sda_anycast_gateways_info
+sda_anycast_gateways_v1:
+  - cisco.dnac.sda_anycast_gateways_v1
+sda_anycast_gateways_v1_info:
+  - cisco.dnac.sda_anycast_gateways_v1_info
 sda_authentication_profiles:
   - cisco.dnac.sda_authentication_profiles
 sda_authentication_profiles_info:
   - cisco.dnac.sda_authentication_profiles_info
-sda_count_info:
-  - cisco.dnac.sda_count_info
+sda_authentication_profiles_v1:
+  - cisco.dnac.sda_authentication_profiles_v1
+sda_authentication_profiles_v1_info:
+  - cisco.dnac.sda_authentication_profiles_v1_info
 sda_device_info:
   - cisco.dnac.sda_device_info
 sda_device_role_info:
   - cisco.dnac.sda_device_role_info
+sda_device_role_v1_info:
+  - cisco.dnac.sda_device_role_v1_info
+sda_device_v1_info:
+  - cisco.dnac.sda_device_v1_info
 sda_extranet_policies:
   - cisco.dnac.sda_extranet_policies
 sda_extranet_policies_count_info:
   - cisco.dnac.sda_extranet_policies_count_info
+sda_extranet_policies_count_v1_info:
+  - cisco.dnac.sda_extranet_policies_count_v1_info
 sda_extranet_policies_info:
   - cisco.dnac.sda_extranet_policies_info
-sda_fabric:
-  - cisco.dnac.sda_fabric
+sda_extranet_policies_v1:
+  - cisco.dnac.sda_extranet_policies_v1
+sda_extranet_policies_v1_info:
+  - cisco.dnac.sda_extranet_policies_v1_info
+sda_extranet_policies_workflow_manager:
+  - cisco.dnac.sda_extranet_policies_workflow_manager
 sda_fabric_authentication_profile:
   - cisco.dnac.sda_fabric_authentication_profile
 sda_fabric_authentication_profile_info:
   - cisco.dnac.sda_fabric_authentication_profile_info
+sda_fabric_authentication_profile_v1:
+  - cisco.dnac.sda_fabric_authentication_profile_v1
+sda_fabric_authentication_profile_v1_info:
+  - cisco.dnac.sda_fabric_authentication_profile_v1_info
 sda_fabric_border_device:
   - cisco.dnac.sda_fabric_border_device
 sda_fabric_border_device_info:
   - cisco.dnac.sda_fabric_border_device_info
+sda_fabric_border_device_v1:
+  - cisco.dnac.sda_fabric_border_device_v1
+sda_fabric_border_device_v1_info:
+  - cisco.dnac.sda_fabric_border_device_v1_info
 sda_fabric_control_plane_device:
   - cisco.dnac.sda_fabric_control_plane_device
 sda_fabric_control_plane_device_info:
   - cisco.dnac.sda_fabric_control_plane_device_info
+sda_fabric_control_plane_device_v1:
+  - cisco.dnac.sda_fabric_control_plane_device_v1
+sda_fabric_control_plane_device_v1_info:
+  - cisco.dnac.sda_fabric_control_plane_device_v1_info
 sda_fabric_devices:
   - cisco.dnac.sda_fabric_devices
 sda_fabric_devices_count_info:
   - cisco.dnac.sda_fabric_devices_count_info
+sda_fabric_devices_count_v1_info:
+  - cisco.dnac.sda_fabric_devices_count_v1_info
 sda_fabric_devices_info:
   - cisco.dnac.sda_fabric_devices_info
 sda_fabric_devices_layer2_handoffs:
   - cisco.dnac.sda_fabric_devices_layer2_handoffs
 sda_fabric_devices_layer2_handoffs_count_info:
   - cisco.dnac.sda_fabric_devices_layer2_handoffs_count_info
+sda_fabric_devices_layer2_handoffs_count_v1_info:
+  - cisco.dnac.sda_fabric_devices_layer2_handoffs_count_v1_info
 sda_fabric_devices_layer2_handoffs_info:
   - cisco.dnac.sda_fabric_devices_layer2_handoffs_info
 sda_fabric_devices_layer2_handoffs_ip_transits:
   - cisco.dnac.sda_fabric_devices_layer2_handoffs_ip_transits
 sda_fabric_devices_layer2_handoffs_ip_transits_count_info:
   - cisco.dnac.sda_fabric_devices_layer2_handoffs_ip_transits_count_info
+sda_fabric_devices_layer2_handoffs_ip_transits_count_v1_info:
+  - cisco.dnac.sda_fabric_devices_layer2_handoffs_ip_transits_count_v1_info
 sda_fabric_devices_layer2_handoffs_ip_transits_info:
   - cisco.dnac.sda_fabric_devices_layer2_handoffs_ip_transits_info
+sda_fabric_devices_layer2_handoffs_ip_transits_v1:
+  - cisco.dnac.sda_fabric_devices_layer2_handoffs_ip_transits_v1
+sda_fabric_devices_layer2_handoffs_ip_transits_v1_info:
+  - cisco.dnac.sda_fabric_devices_layer2_handoffs_ip_transits_v1_info
 sda_fabric_devices_layer2_handoffs_sda_transits:
   - cisco.dnac.sda_fabric_devices_layer2_handoffs_sda_transits
 sda_fabric_devices_layer2_handoffs_sda_transits_count_info:
   - cisco.dnac.sda_fabric_devices_layer2_handoffs_sda_transits_count_info
+sda_fabric_devices_layer2_handoffs_sda_transits_count_v1_info:
+  - cisco.dnac.sda_fabric_devices_layer2_handoffs_sda_transits_count_v1_info
 sda_fabric_devices_layer2_handoffs_sda_transits_info:
   - cisco.dnac.sda_fabric_devices_layer2_handoffs_sda_transits_info
+sda_fabric_devices_layer2_handoffs_sda_transits_v1:
+  - cisco.dnac.sda_fabric_devices_layer2_handoffs_sda_transits_v1
+sda_fabric_devices_layer2_handoffs_sda_transits_v1_info:
+  - cisco.dnac.sda_fabric_devices_layer2_handoffs_sda_transits_v1_info
+sda_fabric_devices_layer2_handoffs_v1:
+  - cisco.dnac.sda_fabric_devices_layer2_handoffs_v1
+sda_fabric_devices_layer2_handoffs_v1_info:
+  - cisco.dnac.sda_fabric_devices_layer2_handoffs_v1_info
+sda_fabric_devices_v1:
+  - cisco.dnac.sda_fabric_devices_v1
+sda_fabric_devices_v1_info:
+  - cisco.dnac.sda_fabric_devices_v1_info
+sda_fabric_devices_workflow_manager:
+  - cisco.dnac.sda_fabric_devices_workflow_manager
 sda_fabric_edge_device:
   - cisco.dnac.sda_fabric_edge_device
 sda_fabric_edge_device_info:
   - cisco.dnac.sda_fabric_edge_device_info
-sda_fabric_info:
-  - cisco.dnac.sda_fabric_info
+sda_fabric_edge_device_v1:
+  - cisco.dnac.sda_fabric_edge_device_v1
+sda_fabric_edge_device_v1_info:
+  - cisco.dnac.sda_fabric_edge_device_v1_info
 sda_fabric_site:
   - cisco.dnac.sda_fabric_site
 sda_fabric_site_info:
   - cisco.dnac.sda_fabric_site_info
+sda_fabric_site_v1:
+  - cisco.dnac.sda_fabric_site_v1
+sda_fabric_site_v1_info:
+  - cisco.dnac.sda_fabric_site_v1_info
 sda_fabric_sites:
   - cisco.dnac.sda_fabric_sites
 sda_fabric_sites_count_info:
   - cisco.dnac.sda_fabric_sites_count_info
+sda_fabric_sites_count_v1_info:
+  - cisco.dnac.sda_fabric_sites_count_v1_info
 sda_fabric_sites_info:
   - cisco.dnac.sda_fabric_sites_info
+sda_fabric_sites_v1:
+  - cisco.dnac.sda_fabric_sites_v1
+sda_fabric_sites_v1_info:
+  - cisco.dnac.sda_fabric_sites_v1_info
+sda_fabric_sites_zones_workflow_manager:
+  - cisco.dnac.sda_fabric_sites_zones_workflow_manager
+sda_fabric_transits_workflow_manager:
+  - cisco.dnac.sda_fabric_transits_workflow_manager
+sda_fabric_virtual_networks_workflow_manager:
+  - cisco.dnac.sda_fabric_virtual_networks_workflow_manager
 sda_fabric_zones:
   - cisco.dnac.sda_fabric_zones
 sda_fabric_zones_count_info:
   - cisco.dnac.sda_fabric_zones_count_info
+sda_fabric_zones_count_v1_info:
+  - cisco.dnac.sda_fabric_zones_count_v1_info
 sda_fabric_zones_info:
   - cisco.dnac.sda_fabric_zones_info
+sda_fabric_zones_v1:
+  - cisco.dnac.sda_fabric_zones_v1
+sda_fabric_zones_v1_info:
+  - cisco.dnac.sda_fabric_zones_v1_info
+sda_fabrics_vlan_to_ssids_count_info:
+  - cisco.dnac.sda_fabrics_vlan_to_ssids_count_info
+sda_fabrics_vlan_to_ssids_count_v1_info:
+  - cisco.dnac.sda_fabrics_vlan_to_ssids_count_v1_info
+sda_fabrics_vlan_to_ssids_fabric_id:
+  - cisco.dnac.sda_fabrics_vlan_to_ssids_fabric_id
+sda_fabrics_vlan_to_ssids_fabric_id_count_info:
+  - cisco.dnac.sda_fabrics_vlan_to_ssids_fabric_id_count_info
+sda_fabrics_vlan_to_ssids_fabric_id_count_v1_info:
+  - cisco.dnac.sda_fabrics_vlan_to_ssids_fabric_id_count_v1_info
+sda_fabrics_vlan_to_ssids_fabric_id_info:
+  - cisco.dnac.sda_fabrics_vlan_to_ssids_fabric_id_info
+sda_fabrics_vlan_to_ssids_fabric_id_v1:
+  - cisco.dnac.sda_fabrics_vlan_to_ssids_fabric_id_v1
+sda_fabrics_vlan_to_ssids_fabric_id_v1_info:
+  - cisco.dnac.sda_fabrics_vlan_to_ssids_fabric_id_v1_info
+sda_fabrics_vlan_to_ssids_info:
+  - cisco.dnac.sda_fabrics_vlan_to_ssids_info
+sda_fabrics_vlan_to_ssids_v1_info:
+  - cisco.dnac.sda_fabrics_vlan_to_ssids_v1_info
+sda_host_port_onboarding_workflow_manager:
+  - cisco.dnac.sda_host_port_onboarding_workflow_manager
+sda_layer2_virtual_networks:
+  - cisco.dnac.sda_layer2_virtual_networks
+sda_layer2_virtual_networks_count_info:
+  - cisco.dnac.sda_layer2_virtual_networks_count_info
+sda_layer2_virtual_networks_count_v1_info:
+  - cisco.dnac.sda_layer2_virtual_networks_count_v1_info
+sda_layer2_virtual_networks_info:
+  - cisco.dnac.sda_layer2_virtual_networks_info
+sda_layer2_virtual_networks_v1:
+  - cisco.dnac.sda_layer2_virtual_networks_v1
+sda_layer2_virtual_networks_v1_info:
+  - cisco.dnac.sda_layer2_virtual_networks_v1_info
+sda_layer3_virtual_networks:
+  - cisco.dnac.sda_layer3_virtual_networks
+sda_layer3_virtual_networks_count_info:
+  - cisco.dnac.sda_layer3_virtual_networks_count_info
+sda_layer3_virtual_networks_count_v1_info:
+  - cisco.dnac.sda_layer3_virtual_networks_count_v1_info
+sda_layer3_virtual_networks_info:
+  - cisco.dnac.sda_layer3_virtual_networks_info
+sda_layer3_virtual_networks_v1:
+  - cisco.dnac.sda_layer3_virtual_networks_v1
+sda_layer3_virtual_networks_v1_info:
+  - cisco.dnac.sda_layer3_virtual_networks_v1_info
 sda_multicast:
   - cisco.dnac.sda_multicast
 sda_multicast_info:
   - cisco.dnac.sda_multicast_info
+sda_multicast_v1:
+  - cisco.dnac.sda_multicast_v1
+sda_multicast_v1_info:
+  - cisco.dnac.sda_multicast_v1_info
+sda_multicast_virtual_networks:
+  - cisco.dnac.sda_multicast_virtual_networks
+sda_multicast_virtual_networks_count_info:
+  - cisco.dnac.sda_multicast_virtual_networks_count_info
+sda_multicast_virtual_networks_count_v1_info:
+  - cisco.dnac.sda_multicast_virtual_networks_count_v1_info
+sda_multicast_virtual_networks_info:
+  - cisco.dnac.sda_multicast_virtual_networks_info
+sda_multicast_virtual_networks_v1:
+  - cisco.dnac.sda_multicast_virtual_networks_v1
+sda_multicast_virtual_networks_v1_info:
+  - cisco.dnac.sda_multicast_virtual_networks_v1_info
 sda_port_assignment_for_access_point:
   - cisco.dnac.sda_port_assignment_for_access_point
 sda_port_assignment_for_access_point_info:
   - cisco.dnac.sda_port_assignment_for_access_point_info
+sda_port_assignment_for_access_point_v1:
+  - cisco.dnac.sda_port_assignment_for_access_point_v1
+sda_port_assignment_for_access_point_v1_info:
+  - cisco.dnac.sda_port_assignment_for_access_point_v1_info
 sda_port_assignment_for_user_device:
   - cisco.dnac.sda_port_assignment_for_user_device
 sda_port_assignment_for_user_device_info:
   - cisco.dnac.sda_port_assignment_for_user_device_info
+sda_port_assignment_for_user_device_v1:
+  - cisco.dnac.sda_port_assignment_for_user_device_v1
+sda_port_assignment_for_user_device_v1_info:
+  - cisco.dnac.sda_port_assignment_for_user_device_v1_info
 sda_port_assignments:
   - cisco.dnac.sda_port_assignments
 sda_port_assignments_count_info:
   - cisco.dnac.sda_port_assignments_count_info
+sda_port_assignments_count_v1_info:
+  - cisco.dnac.sda_port_assignments_count_v1_info
 sda_port_assignments_info:
   - cisco.dnac.sda_port_assignments_info
+sda_port_assignments_v1:
+  - cisco.dnac.sda_port_assignments_v1
+sda_port_assignments_v1_info:
+  - cisco.dnac.sda_port_assignments_v1_info
+sda_port_channels:
+  - cisco.dnac.sda_port_channels
+sda_port_channels_count_info:
+  - cisco.dnac.sda_port_channels_count_info
+sda_port_channels_count_v1_info:
+  - cisco.dnac.sda_port_channels_count_v1_info
+sda_port_channels_info:
+  - cisco.dnac.sda_port_channels_info
+sda_port_channels_v1:
+  - cisco.dnac.sda_port_channels_v1
+sda_port_channels_v1_info:
+  - cisco.dnac.sda_port_channels_v1_info
 sda_provision_device:
   - cisco.dnac.sda_provision_device
 sda_provision_device_info:
   - cisco.dnac.sda_provision_device_info
+sda_provision_device_v1:
+  - cisco.dnac.sda_provision_device_v1
+sda_provision_device_v1_info:
+  - cisco.dnac.sda_provision_device_v1_info
 sda_provision_devices:
   - cisco.dnac.sda_provision_devices
 sda_provision_devices_count_info:
   - cisco.dnac.sda_provision_devices_count_info
+sda_provision_devices_count_v1_info:
+  - cisco.dnac.sda_provision_devices_count_v1_info
 sda_provision_devices_info:
   - cisco.dnac.sda_provision_devices_info
+sda_provision_devices_v1:
+  - cisco.dnac.sda_provision_devices_v1
+sda_provision_devices_v1_info:
+  - cisco.dnac.sda_provision_devices_v1_info
 sda_site_member_member_info:
   - cisco.dnac.sda_site_member_member_info
+sda_site_member_member_v1_info:
+  - cisco.dnac.sda_site_member_member_v1_info
+sda_transit_networks:
+  - cisco.dnac.sda_transit_networks
+sda_transit_networks_count_info:
+  - cisco.dnac.sda_transit_networks_count_info
+sda_transit_networks_count_v1_info:
+  - cisco.dnac.sda_transit_networks_count_v1_info
+sda_transit_networks_info:
+  - cisco.dnac.sda_transit_networks_info
+sda_transit_networks_v1:
+  - cisco.dnac.sda_transit_networks_v1
+sda_transit_networks_v1_info:
+  - cisco.dnac.sda_transit_networks_v1_info
 sda_virtual_network:
   - cisco.dnac.sda_virtual_network
 sda_virtual_network_info:
@@ -15150,6 +16601,14 @@ sda_virtual_network_ip_pool:
   - cisco.dnac.sda_virtual_network_ip_pool
 sda_virtual_network_ip_pool_info:
   - cisco.dnac.sda_virtual_network_ip_pool_info
+sda_virtual_network_ip_pool_v1:
+  - cisco.dnac.sda_virtual_network_ip_pool_v1
+sda_virtual_network_ip_pool_v1_info:
+  - cisco.dnac.sda_virtual_network_ip_pool_v1_info
+sda_virtual_network_v1:
+  - cisco.dnac.sda_virtual_network_v1
+sda_virtual_network_v1_info:
+  - cisco.dnac.sda_virtual_network_v1_info
 sda_virtual_network_v2:
   - cisco.dnac.sda_virtual_network_v2
 sda_virtual_network_v2_info:
@@ -15174,14 +16633,24 @@ secretsmanager_secret:
   - community.aws.secretsmanager_secret
 security_advisories_devices_info:
   - cisco.dnac.security_advisories_devices_info
+security_advisories_devices_v1_info:
+  - cisco.dnac.security_advisories_devices_v1_info
 security_advisories_ids_per_device_info:
   - cisco.dnac.security_advisories_ids_per_device_info
+security_advisories_ids_per_device_v1_info:
+  - cisco.dnac.security_advisories_ids_per_device_v1_info
 security_advisories_info:
   - cisco.dnac.security_advisories_info
 security_advisories_per_device_info:
   - cisco.dnac.security_advisories_per_device_info
+security_advisories_per_device_v1_info:
+  - cisco.dnac.security_advisories_per_device_v1_info
 security_advisories_summary_info:
   - cisco.dnac.security_advisories_summary_info
+security_advisories_summary_v1_info:
+  - cisco.dnac.security_advisories_summary_v1_info
+security_advisories_v1_info:
+  - cisco.dnac.security_advisories_v1_info
 security_group:
   - openstack.cloud.security_group
 security_group_info:
@@ -15190,6 +16659,58 @@ security_group_rule:
   - openstack.cloud.security_group_rule
 security_group_rule_info:
   - openstack.cloud.security_group_rule_info
+security_rogue_additional_details:
+  - cisco.dnac.security_rogue_additional_details
+security_rogue_additional_details_count:
+  - cisco.dnac.security_rogue_additional_details_count
+security_rogue_additional_details_count_v1:
+  - cisco.dnac.security_rogue_additional_details_count_v1
+security_rogue_additional_details_v1:
+  - cisco.dnac.security_rogue_additional_details_v1
+security_rogue_wireless_containment_start:
+  - cisco.dnac.security_rogue_wireless_containment_start
+security_rogue_wireless_containment_start_v1:
+  - cisco.dnac.security_rogue_wireless_containment_start_v1
+security_rogue_wireless_containment_status_info:
+  - cisco.dnac.security_rogue_wireless_containment_status_info
+security_rogue_wireless_containment_status_v1_info:
+  - cisco.dnac.security_rogue_wireless_containment_status_v1_info
+security_rogue_wireless_containment_stop:
+  - cisco.dnac.security_rogue_wireless_containment_stop
+security_rogue_wireless_containment_stop_v1:
+  - cisco.dnac.security_rogue_wireless_containment_stop_v1
+security_threats_details:
+  - cisco.dnac.security_threats_details
+security_threats_details_count:
+  - cisco.dnac.security_threats_details_count
+security_threats_details_count_v1:
+  - cisco.dnac.security_threats_details_count_v1
+security_threats_details_v1:
+  - cisco.dnac.security_threats_details_v1
+security_threats_level_info:
+  - cisco.dnac.security_threats_level_info
+security_threats_level_v1_info:
+  - cisco.dnac.security_threats_level_v1_info
+security_threats_rogue_allowed_list:
+  - cisco.dnac.security_threats_rogue_allowed_list
+security_threats_rogue_allowed_list_count_info:
+  - cisco.dnac.security_threats_rogue_allowed_list_count_info
+security_threats_rogue_allowed_list_count_v1_info:
+  - cisco.dnac.security_threats_rogue_allowed_list_count_v1_info
+security_threats_rogue_allowed_list_info:
+  - cisco.dnac.security_threats_rogue_allowed_list_info
+security_threats_rogue_allowed_list_v1:
+  - cisco.dnac.security_threats_rogue_allowed_list_v1
+security_threats_rogue_allowed_list_v1_info:
+  - cisco.dnac.security_threats_rogue_allowed_list_v1_info
+security_threats_summary:
+  - cisco.dnac.security_threats_summary
+security_threats_summary_v1:
+  - cisco.dnac.security_threats_summary_v1
+security_threats_type_info:
+  - cisco.dnac.security_threats_type_info
+security_threats_type_v1_info:
+  - cisco.dnac.security_threats_type_v1_info
 sefcontext:
   - community.general.sefcontext
 self_registered_portal:
@@ -15199,7 +16720,6 @@ self_registered_portal_info:
 self_test_info:
   - ieisystem.inmanage.self_test_info
   - inspur.ispim.self_test_info
-  - inspur.sm.self_test_info
   - kaytus.ksmanage.self_test_info
 selfsigned_certificate_generate:
   - cisco.ise.selfsigned_certificate_generate
@@ -15217,14 +16737,23 @@ sensor_info:
   - cisco.dnac.sensor_info
   - ieisystem.inmanage.sensor_info
   - inspur.ispim.sensor_info
-  - inspur.sm.sensor_info
   - kaytus.ksmanage.sensor_info
 sensor_test_run:
   - cisco.dnac.sensor_test_run
+sensor_test_run_v1:
+  - cisco.dnac.sensor_test_run_v1
 sensor_test_template_duplicate:
   - cisco.dnac.sensor_test_template_duplicate
+sensor_test_template_duplicate_v1:
+  - cisco.dnac.sensor_test_template_duplicate_v1
 sensor_test_template_edit:
   - cisco.dnac.sensor_test_template_edit
+sensor_test_template_edit_v1:
+  - cisco.dnac.sensor_test_template_edit_v1
+sensor_v1:
+  - cisco.dnac.sensor_v1
+sensor_v1_info:
+  - cisco.dnac.sensor_v1_info
 sensu_check:
   - community.general.sensu_check
 sensu_client:
@@ -15252,7 +16781,6 @@ server_info:
   - hetzner.hcloud.server_info
   - ieisystem.inmanage.server_info
   - inspur.ispim.server_info
-  - inspur.sm.server_info
   - kaytus.ksmanage.server_info
   - openstack.cloud.server_info
 server_metadata:
@@ -15267,21 +16795,30 @@ serverless:
   - community.general.serverless
 service:
   - ansible.builtin.service
+service_account:
+  - microsoft.ad.service_account
 service_facts:
   - ansible.builtin.service_facts
 service_info:
   - ieisystem.inmanage.service_info
   - inspur.ispim.service_info
-  - inspur.sm.service_info
   - kaytus.ksmanage.service_info
 service_provider_create:
   - cisco.dnac.service_provider_create
+service_provider_create_v1:
+  - cisco.dnac.service_provider_create_v1
 service_provider_info:
   - cisco.dnac.service_provider_info
 service_provider_profile_delete:
   - cisco.dnac.service_provider_profile_delete
+service_provider_profile_delete_v1:
+  - cisco.dnac.service_provider_profile_delete_v1
 service_provider_update:
   - cisco.dnac.service_provider_update
+service_provider_update_v1:
+  - cisco.dnac.service_provider_update_v1
+service_provider_v1_info:
+  - cisco.dnac.service_provider_v1_info
 service_provider_v2:
   - cisco.dnac.service_provider_v2
 service_provider_v2_info:
@@ -15295,7 +16832,6 @@ ses_rule_set:
 session_info:
   - ieisystem.inmanage.session_info
   - inspur.ispim.session_info
-  - inspur.sm.session_info
   - kaytus.ksmanage.session_info
 session_service_node_info:
   - cisco.ise.session_service_node_info
@@ -15374,36 +16910,184 @@ silence:
   - sensu.sensu_go.silence
 silence_info:
   - sensu.sensu_go.silence_info
+simpleinit_msb:
+  - community.general.simpleinit_msb
 site_assign_credential:
   - cisco.dnac.site_assign_credential
-site_assign_device:
-  - cisco.dnac.site_assign_device
+site_assign_credential_v1:
+  - cisco.dnac.site_assign_credential_v1
 site_count_info:
   - cisco.dnac.site_count_info
+site_count_v1_info:
+  - cisco.dnac.site_count_v1_info
 site_count_v2_info:
   - cisco.dnac.site_count_v2_info
 site_create:
   - cisco.dnac.site_create
+site_create_v1:
+  - cisco.dnac.site_create_v1
 site_delete:
   - cisco.dnac.site_delete
-site_design_floormap:
-  - cisco.dnac.site_design_floormap
-site_design_floormap_info:
-  - cisco.dnac.site_design_floormap_info
+site_delete_v1:
+  - cisco.dnac.site_delete_v1
 site_health_info:
   - cisco.dnac.site_health_info
+site_health_summaries_count_info:
+  - cisco.dnac.site_health_summaries_count_info
+site_health_summaries_count_v1_info:
+  - cisco.dnac.site_health_summaries_count_v1_info
+site_health_summaries_info:
+  - cisco.dnac.site_health_summaries_info
+site_health_summaries_summary_analytics:
+  - cisco.dnac.site_health_summaries_summary_analytics
+site_health_summaries_summary_analytics_info:
+  - cisco.dnac.site_health_summaries_summary_analytics_info
+site_health_summaries_summary_analytics_v1:
+  - cisco.dnac.site_health_summaries_summary_analytics_v1
+site_health_summaries_summary_analytics_v1_info:
+  - cisco.dnac.site_health_summaries_summary_analytics_v1_info
+site_health_summaries_v1_info:
+  - cisco.dnac.site_health_summaries_v1_info
+site_health_v1_info:
+  - cisco.dnac.site_health_v1_info
 site_info:
   - cisco.dnac.site_info
 site_intent:
   - cisco.dnac.site_intent
 site_membership_info:
   - cisco.dnac.site_membership_info
+site_membership_v1_info:
+  - cisco.dnac.site_membership_v1_info
 site_update:
   - cisco.dnac.site_update
+site_update_v1:
+  - cisco.dnac.site_update_v1
+site_v1_info:
+  - cisco.dnac.site_v1_info
 site_v2_info:
   - cisco.dnac.site_v2_info
+site_wise_product_names_count_info:
+  - cisco.dnac.site_wise_product_names_count_info
+site_wise_product_names_count_v1_info:
+  - cisco.dnac.site_wise_product_names_count_v1_info
+site_wise_product_names_info:
+  - cisco.dnac.site_wise_product_names_info
+site_wise_product_names_v1_info:
+  - cisco.dnac.site_wise_product_names_v1_info
 site_workflow_manager:
   - cisco.dnac.site_workflow_manager
+sites_aaa_settings:
+  - cisco.dnac.sites_aaa_settings
+sites_aaa_settings_info:
+  - cisco.dnac.sites_aaa_settings_info
+sites_aaa_settings_v1:
+  - cisco.dnac.sites_aaa_settings_v1
+sites_aaa_settings_v1_info:
+  - cisco.dnac.sites_aaa_settings_v1_info
+sites_banner_settings:
+  - cisco.dnac.sites_banner_settings
+sites_banner_settings_info:
+  - cisco.dnac.sites_banner_settings_info
+sites_banner_settings_v1:
+  - cisco.dnac.sites_banner_settings_v1
+sites_banner_settings_v1_info:
+  - cisco.dnac.sites_banner_settings_v1_info
+sites_bulk:
+  - cisco.dnac.sites_bulk
+sites_bulk_v1:
+  - cisco.dnac.sites_bulk_v1
+sites_count_info:
+  - cisco.dnac.sites_count_info
+sites_count_v1_info:
+  - cisco.dnac.sites_count_v1_info
+sites_device_credentials:
+  - cisco.dnac.sites_device_credentials
+sites_device_credentials_apply:
+  - cisco.dnac.sites_device_credentials_apply
+sites_device_credentials_apply_v1:
+  - cisco.dnac.sites_device_credentials_apply_v1
+sites_device_credentials_info:
+  - cisco.dnac.sites_device_credentials_info
+sites_device_credentials_status_info:
+  - cisco.dnac.sites_device_credentials_status_info
+sites_device_credentials_status_v1_info:
+  - cisco.dnac.sites_device_credentials_status_v1_info
+sites_device_credentials_v1:
+  - cisco.dnac.sites_device_credentials_v1
+sites_device_credentials_v1_info:
+  - cisco.dnac.sites_device_credentials_v1_info
+sites_dhcp_settings:
+  - cisco.dnac.sites_dhcp_settings
+sites_dhcp_settings_info:
+  - cisco.dnac.sites_dhcp_settings_info
+sites_dhcp_settings_v1:
+  - cisco.dnac.sites_dhcp_settings_v1
+sites_dhcp_settings_v1_info:
+  - cisco.dnac.sites_dhcp_settings_v1_info
+sites_dns_settings:
+  - cisco.dnac.sites_dns_settings
+sites_dns_settings_info:
+  - cisco.dnac.sites_dns_settings_info
+sites_dns_settings_v1:
+  - cisco.dnac.sites_dns_settings_v1
+sites_dns_settings_v1_info:
+  - cisco.dnac.sites_dns_settings_v1_info
+sites_image_distribution_settings:
+  - cisco.dnac.sites_image_distribution_settings
+sites_image_distribution_settings_info:
+  - cisco.dnac.sites_image_distribution_settings_info
+sites_image_distribution_settings_v1:
+  - cisco.dnac.sites_image_distribution_settings_v1
+sites_image_distribution_settings_v1_info:
+  - cisco.dnac.sites_image_distribution_settings_v1_info
+sites_info:
+  - cisco.dnac.sites_info
+sites_ntp_settings:
+  - cisco.dnac.sites_ntp_settings
+sites_ntp_settings_info:
+  - cisco.dnac.sites_ntp_settings_info
+sites_ntp_settings_v1:
+  - cisco.dnac.sites_ntp_settings_v1
+sites_ntp_settings_v1_info:
+  - cisco.dnac.sites_ntp_settings_v1_info
+sites_profile_assignments_count_info:
+  - cisco.dnac.sites_profile_assignments_count_info
+sites_profile_assignments_count_v1_info:
+  - cisco.dnac.sites_profile_assignments_count_v1_info
+sites_profile_assignments_info:
+  - cisco.dnac.sites_profile_assignments_info
+sites_profile_assignments_v1_info:
+  - cisco.dnac.sites_profile_assignments_v1_info
+sites_telemetry_settings:
+  - cisco.dnac.sites_telemetry_settings
+sites_telemetry_settings_info:
+  - cisco.dnac.sites_telemetry_settings_info
+sites_telemetry_settings_v1:
+  - cisco.dnac.sites_telemetry_settings_v1
+sites_telemetry_settings_v1_info:
+  - cisco.dnac.sites_telemetry_settings_v1_info
+sites_time_zone_settings:
+  - cisco.dnac.sites_time_zone_settings
+sites_time_zone_settings_info:
+  - cisco.dnac.sites_time_zone_settings_info
+sites_time_zone_settings_v1:
+  - cisco.dnac.sites_time_zone_settings_v1
+sites_time_zone_settings_v1_info:
+  - cisco.dnac.sites_time_zone_settings_v1_info
+sites_v1_info:
+  - cisco.dnac.sites_v1_info
+sites_wireless_settings_ssids:
+  - cisco.dnac.sites_wireless_settings_ssids
+sites_wireless_settings_ssids_count_info:
+  - cisco.dnac.sites_wireless_settings_ssids_count_info
+sites_wireless_settings_ssids_count_v1_info:
+  - cisco.dnac.sites_wireless_settings_ssids_count_v1_info
+sites_wireless_settings_ssids_info:
+  - cisco.dnac.sites_wireless_settings_ssids_info
+sites_wireless_settings_ssids_v1:
+  - cisco.dnac.sites_wireless_settings_ssids_v1
+sites_wireless_settings_ssids_v1_info:
+  - cisco.dnac.sites_wireless_settings_ssids_v1_info
 sl_vm:
   - community.general.sl_vm
 slack:
@@ -15446,7 +17130,6 @@ sms_provider_info:
 smtp_info:
   - ieisystem.inmanage.smtp_info
   - inspur.ispim.smtp_info
-  - inspur.sm.smtp_info
   - kaytus.ksmanage.smtp_info
 snap:
   - community.general.snap
@@ -15469,23 +17152,31 @@ snmp_facts:
 snmp_info:
   - ieisystem.inmanage.snmp_info
   - inspur.ispim.snmp_info
-  - inspur.sm.snmp_info
   - kaytus.ksmanage.snmp_info
 snmp_properties:
   - cisco.dnac.snmp_properties
 snmp_properties_info:
   - cisco.dnac.snmp_properties_info
+snmp_properties_v1:
+  - cisco.dnac.snmp_properties_v1
+snmp_properties_v1_info:
+  - cisco.dnac.snmp_properties_v1_info
 snmp_trap_info:
   - ieisystem.inmanage.snmp_trap_info
   - inspur.ispim.snmp_trap_info
-  - inspur.sm.snmp_trap_info
   - kaytus.ksmanage.snmp_trap_info
 snmpv2_read_community_credential:
   - cisco.dnac.snmpv2_read_community_credential
+snmpv2_read_community_credential_v1:
+  - cisco.dnac.snmpv2_read_community_credential_v1
 snmpv2_write_community_credential:
   - cisco.dnac.snmpv2_write_community_credential
+snmpv2_write_community_credential_v1:
+  - cisco.dnac.snmpv2_write_community_credential_v1
 snmpv3_credential:
   - cisco.dnac.snmpv3_credential
+snmpv3_credential_v1:
+  - cisco.dnac.snmpv3_credential_v1
 sns:
   - community.aws.sns
 sns_topic:
@@ -15530,6 +17221,10 @@ sonic_dhcp_snooping:
   - dellemc.enterprise_sonic.sonic_dhcp_snooping
 sonic_facts:
   - dellemc.enterprise_sonic.sonic_facts
+sonic_fips:
+  - dellemc.enterprise_sonic.sonic_fips
+sonic_image_management:
+  - dellemc.enterprise_sonic.sonic_image_management
 sonic_interfaces:
   - dellemc.enterprise_sonic.sonic_interfaces
 sonic_ip_neighbor:
@@ -15544,28 +17239,64 @@ sonic_l3_interfaces:
   - dellemc.enterprise_sonic.sonic_l3_interfaces
 sonic_lag_interfaces:
   - dellemc.enterprise_sonic.sonic_lag_interfaces
+sonic_ldap:
+  - dellemc.enterprise_sonic.sonic_ldap
 sonic_lldp_global:
   - dellemc.enterprise_sonic.sonic_lldp_global
+sonic_lldp_interfaces:
+  - dellemc.enterprise_sonic.sonic_lldp_interfaces
 sonic_logging:
   - dellemc.enterprise_sonic.sonic_logging
+sonic_login_lockout:
+  - dellemc.enterprise_sonic.sonic_login_lockout
 sonic_mac:
   - dellemc.enterprise_sonic.sonic_mac
 sonic_mclag:
   - dellemc.enterprise_sonic.sonic_mclag
+sonic_mgmt_servers:
+  - dellemc.enterprise_sonic.sonic_mgmt_servers
 sonic_ntp:
   - dellemc.enterprise_sonic.sonic_ntp
+sonic_ospf_area:
+  - dellemc.enterprise_sonic.sonic_ospf_area
+sonic_ospfv2:
+  - dellemc.enterprise_sonic.sonic_ospfv2
+sonic_ospfv2_interfaces:
+  - dellemc.enterprise_sonic.sonic_ospfv2_interfaces
+sonic_pim_global:
+  - dellemc.enterprise_sonic.sonic_pim_global
+sonic_pim_interfaces:
+  - dellemc.enterprise_sonic.sonic_pim_interfaces
 sonic_pki:
   - dellemc.enterprise_sonic.sonic_pki
+sonic_poe:
+  - dellemc.enterprise_sonic.sonic_poe
 sonic_port_breakout:
   - dellemc.enterprise_sonic.sonic_port_breakout
 sonic_port_group:
   - dellemc.enterprise_sonic.sonic_port_group
 sonic_prefix_lists:
   - dellemc.enterprise_sonic.sonic_prefix_lists
+sonic_qos_buffer:
+  - dellemc.enterprise_sonic.sonic_qos_buffer
+sonic_qos_interfaces:
+  - dellemc.enterprise_sonic.sonic_qos_interfaces
+sonic_qos_maps:
+  - dellemc.enterprise_sonic.sonic_qos_maps
+sonic_qos_pfc:
+  - dellemc.enterprise_sonic.sonic_qos_pfc
+sonic_qos_scheduler:
+  - dellemc.enterprise_sonic.sonic_qos_scheduler
+sonic_qos_wred:
+  - dellemc.enterprise_sonic.sonic_qos_wred
 sonic_radius_server:
   - dellemc.enterprise_sonic.sonic_radius_server
+sonic_roce:
+  - dellemc.enterprise_sonic.sonic_roce
 sonic_route_maps:
   - dellemc.enterprise_sonic.sonic_route_maps
+sonic_sflow:
+  - dellemc.enterprise_sonic.sonic_sflow
 sonic_static_routes:
   - dellemc.enterprise_sonic.sonic_static_routes
 sonic_stp:
@@ -15582,6 +17313,8 @@ sonic_vlans:
   - dellemc.enterprise_sonic.sonic_vlans
 sonic_vrfs:
   - dellemc.enterprise_sonic.sonic_vrfs
+sonic_vrrp:
+  - dellemc.enterprise_sonic.sonic_vrrp
 sonic_vxlans:
   - dellemc.enterprise_sonic.sonic_vxlans
 sops_encrypt:
@@ -15590,6 +17323,8 @@ sorcery:
   - community.general.sorcery
 sp_configure:
   - lowlydba.sqlserver.sp_configure
+sp_profile_delete:
+  - cisco.dnac.sp_profile_delete
 sp_profile_delete_v2:
   - cisco.dnac.sp_profile_delete_v2
 sp_whoisactive:
@@ -15662,8 +17397,6 @@ stack:
   - openstack.cloud.stack
 stack_info:
   - openstack.cloud.stack_info
-stackdriver:
-  - community.general.stackdriver
 stacki_host:
   - community.general.stacki_host
 startup_script:
@@ -15745,16 +17478,26 @@ swdepot:
   - community.general.swdepot
 swim_image_details_info:
   - cisco.dnac.swim_image_details_info
+swim_image_details_v1_info:
+  - cisco.dnac.swim_image_details_v1_info
 swim_import_local:
   - cisco.dnac.swim_import_local
+swim_import_local_v1:
+  - cisco.dnac.swim_import_local_v1
 swim_import_via_url:
   - cisco.dnac.swim_import_via_url
+swim_import_via_url_v1:
+  - cisco.dnac.swim_import_via_url_v1
 swim_intent:
   - cisco.dnac.swim_intent
 swim_trigger_activation:
   - cisco.dnac.swim_trigger_activation
+swim_trigger_activation_v1:
+  - cisco.dnac.swim_trigger_activation_v1
 swim_trigger_distribution:
   - cisco.dnac.swim_trigger_distribution
+swim_trigger_distribution_v1:
+  - cisco.dnac.swim_trigger_distribution_v1
 swim_workflow_manager:
   - cisco.dnac.swim_workflow_manager
 swupd:
@@ -15789,10 +17532,6 @@ synchronize:
   - ansible.posix.synchronize
 sysctl:
   - ansible.posix.sysctl
-syslog_config_create:
-  - cisco.dnac.syslog_config_create
-syslog_config_update:
-  - cisco.dnac.syslog_config_update
 syslogger:
   - community.general.syslogger
 syspatch:
@@ -15813,17 +17552,43 @@ system_config_version_info:
   - cisco.ise.system_config_version_info
 system_health_count_info:
   - cisco.dnac.system_health_count_info
+system_health_count_v1_info:
+  - cisco.dnac.system_health_count_v1_info
 system_health_info:
   - cisco.dnac.system_health_info
+system_health_v1_info:
+  - cisco.dnac.system_health_v1_info
+system_issue_definitions_count_info:
+  - cisco.dnac.system_issue_definitions_count_info
+system_issue_definitions_count_v1_info:
+  - cisco.dnac.system_issue_definitions_count_v1_info
+system_issue_definitions_id:
+  - cisco.dnac.system_issue_definitions_id
+system_issue_definitions_id_info:
+  - cisco.dnac.system_issue_definitions_id_info
+system_issue_definitions_id_v1:
+  - cisco.dnac.system_issue_definitions_id_v1
+system_issue_definitions_id_v1_info:
+  - cisco.dnac.system_issue_definitions_id_v1_info
+system_issue_definitions_info:
+  - cisco.dnac.system_issue_definitions_info
+system_issue_definitions_v1_info:
+  - cisco.dnac.system_issue_definitions_v1_info
+system_lock_mode_info:
+  - ieisystem.inmanage.system_lock_mode_info
+  - kaytus.ksmanage.system_lock_mode_info
 system_log_info:
   - ieisystem.inmanage.system_log_info
   - inspur.ispim.system_log_info
-  - inspur.sm.system_log_info
   - kaytus.ksmanage.system_log_info
 system_performance_historical_info:
   - cisco.dnac.system_performance_historical_info
+system_performance_historical_v1_info:
+  - cisco.dnac.system_performance_historical_v1_info
 system_performance_info:
   - cisco.dnac.system_performance_info
+system_performance_v1_info:
+  - cisco.dnac.system_performance_v1_info
 systemd:
   - ansible.builtin.systemd_service
 systemd_service:
@@ -15852,30 +17617,89 @@ tag:
   - cisco.dnac.tag
 tag_count_info:
   - cisco.dnac.tag_count_info
+tag_count_v1_info:
+  - cisco.dnac.tag_count_v1_info
 tag_info:
   - cisco.dnac.tag_info
 tag_member:
   - cisco.dnac.tag_member
 tag_member_count_info:
   - cisco.dnac.tag_member_count_info
+tag_member_count_v1_info:
+  - cisco.dnac.tag_member_count_v1_info
 tag_member_info:
   - cisco.dnac.tag_member_info
 tag_member_type_info:
   - cisco.dnac.tag_member_type_info
+tag_member_type_v1_info:
+  - cisco.dnac.tag_member_type_v1_info
+tag_member_v1:
+  - cisco.dnac.tag_member_v1
+tag_member_v1_info:
+  - cisco.dnac.tag_member_v1_info
 tag_membership:
   - cisco.dnac.tag_membership
+tag_membership_v1:
+  - cisco.dnac.tag_membership_v1
+tag_v1:
+  - cisco.dnac.tag_v1
+tag_v1_info:
+  - cisco.dnac.tag_v1_info
+tags_interfaces_members_associations_count_info:
+  - cisco.dnac.tags_interfaces_members_associations_count_info
+tags_interfaces_members_associations_count_v1_info:
+  - cisco.dnac.tags_interfaces_members_associations_count_v1_info
+tags_interfaces_members_associations_info:
+  - cisco.dnac.tags_interfaces_members_associations_info
+tags_interfaces_members_associations_query:
+  - cisco.dnac.tags_interfaces_members_associations_query
+tags_interfaces_members_associations_query_v1:
+  - cisco.dnac.tags_interfaces_members_associations_query_v1
+tags_interfaces_members_associations_v1_info:
+  - cisco.dnac.tags_interfaces_members_associations_v1_info
+tags_network_devices_members_associations_count_info:
+  - cisco.dnac.tags_network_devices_members_associations_count_info
+tags_network_devices_members_associations_count_v1_info:
+  - cisco.dnac.tags_network_devices_members_associations_count_v1_info
+tags_network_devices_members_associations_info:
+  - cisco.dnac.tags_network_devices_members_associations_info
+tags_network_devices_members_associations_query:
+  - cisco.dnac.tags_network_devices_members_associations_query
+tags_network_devices_members_associations_query_v1:
+  - cisco.dnac.tags_network_devices_members_associations_query_v1
+tags_network_devices_members_associations_v1_info:
+  - cisco.dnac.tags_network_devices_members_associations_v1_info
 taiga_issue:
   - community.general.taiga_issue
 task_count_info:
   - cisco.dnac.task_count_info
+task_count_v1_info:
+  - cisco.dnac.task_count_v1_info
 task_info:
   - cisco.dnac.task_info
 task_operation_info:
   - cisco.dnac.task_operation_info
+task_operation_v1_info:
+  - cisco.dnac.task_operation_v1_info
 task_tree_info:
   - cisco.dnac.task_tree_info
+task_tree_v1_info:
+  - cisco.dnac.task_tree_v1_info
+task_v1_info:
+  - cisco.dnac.task_v1_info
+tasks_count_info:
+  - cisco.dnac.tasks_count_info
+tasks_count_v1_info:
+  - cisco.dnac.tasks_count_v1_info
+tasks_detail_info:
+  - cisco.dnac.tasks_detail_info
+tasks_detail_v1_info:
+  - cisco.dnac.tasks_detail_v1_info
 tasks_info:
+  - cisco.dnac.tasks_info
   - cisco.ise.tasks_info
+tasks_v1_info:
+  - cisco.dnac.tasks_v1_info
 tcp_port:
   - lowlydba.sqlserver.tcp_port
 team:
@@ -15884,12 +17708,15 @@ telegram:
   - community.general.telegram
 telemetry_info:
   - cisco.ise.telemetry_info
+telemetry_settings_apply:
+  - cisco.dnac.telemetry_settings_apply
+telemetry_settings_apply_v1:
+  - cisco.dnac.telemetry_settings_apply_v1
 telnet:
   - ansible.netcommon.telnet
 temp_info:
   - ieisystem.inmanage.temp_info
   - inspur.ispim.temp_info
-  - inspur.sm.temp_info
   - kaytus.ksmanage.temp_info
 tempfile:
   - ansible.builtin.tempfile
@@ -15899,10 +17726,14 @@ template_intent:
   - cisco.dnac.template_intent
 template_preview:
   - cisco.dnac.template_preview
+template_preview_v1:
+  - cisco.dnac.template_preview_v1
 template_workflow_manager:
   - cisco.dnac.template_workflow_manager
 templates_details_info:
   - cisco.dnac.templates_details_info
+templates_details_v2_info:
+  - cisco.dnac.templates_details_v2_info
 templates_import:
   - theforeman.foreman.templates_import
 terraform:
@@ -15911,18 +17742,11 @@ tessen:
   - sensu.sensu_go.tessen
 textfsm_parser:
   - dellemc.os10.textfsm_parser
-threat_detail:
-  - cisco.dnac.threat_detail
-threat_detail_count:
-  - cisco.dnac.threat_detail_count
-threat_summary:
-  - cisco.dnac.threat_summary
 threat_vulnerabilities_clear:
   - cisco.ise.threat_vulnerabilities_clear
 threshold_info:
   - ieisystem.inmanage.threshold_info
   - inspur.ispim.threshold_info
-  - inspur.sm.threshold_info
   - kaytus.ksmanage.threshold_info
 timezone:
   - community.general.timezone
@@ -15930,28 +17754,46 @@ token:
   - awx.awx.token
 topology_layer_2_info:
   - cisco.dnac.topology_layer_2_info
+topology_layer_2_v1_info:
+  - cisco.dnac.topology_layer_2_v1_info
 topology_layer_3_info:
   - cisco.dnac.topology_layer_3_info
+topology_layer_3_v1_info:
+  - cisco.dnac.topology_layer_3_v1_info
 topology_network_health_info:
   - cisco.dnac.topology_network_health_info
+topology_network_health_v1_info:
+  - cisco.dnac.topology_network_health_v1_info
 topology_physical_info:
   - cisco.dnac.topology_physical_info
+topology_physical_v1_info:
+  - cisco.dnac.topology_physical_v1_info
 topology_site_info:
   - cisco.dnac.topology_site_info
+topology_site_v1_info:
+  - cisco.dnac.topology_site_v1_info
 topology_vlan_details_info:
   - cisco.dnac.topology_vlan_details_info
+topology_vlan_details_v1_info:
+  - cisco.dnac.topology_vlan_details_v1_info
 traceflag:
   - lowlydba.sqlserver.traceflag
 transit_peer_network:
   - cisco.dnac.transit_peer_network
 transit_peer_network_info:
   - cisco.dnac.transit_peer_network_info
+transit_peer_network_v1:
+  - cisco.dnac.transit_peer_network_v1
+transit_peer_network_v1_info:
+  - cisco.dnac.transit_peer_network_v1_info
 transport_gateway_settings:
   - cisco.ise.transport_gateway_settings
 transport_gateway_settings_info:
   - cisco.ise.transport_gateway_settings_info
 tree_quota:
   - dellemc.unity.tree_quota
+trunk:
+  - openstack.cloud.trunk
 trusted_certificate:
   - cisco.ise.trusted_certificate
 trusted_certificate_export_info:
@@ -15960,6 +17802,10 @@ trusted_certificate_import:
   - cisco.ise.trusted_certificate_import
 trusted_certificate_info:
   - cisco.ise.trusted_certificate_info
+trusted_certificates_import:
+  - cisco.dnac.trusted_certificates_import
+trusted_certificates_import_v1:
+  - cisco.dnac.trusted_certificates_import_v1
 trustsec_nbar_app:
   - cisco.ise.trustsec_nbar_app
 trustsec_nbar_app_info:
@@ -16077,21 +17923,18 @@ ufw:
 uid_info:
   - ieisystem.inmanage.uid_info
   - inspur.ispim.uid_info
-  - inspur.sm.uid_info
   - kaytus.ksmanage.uid_info
 unarchive:
   - ansible.builtin.unarchive
 update_cpld:
   - ieisystem.inmanage.update_cpld
   - inspur.ispim.update_cpld
-  - inspur.sm.update_cpld
   - kaytus.ksmanage.update_cpld
 update_fact:
   - ansible.utils.update_fact
 update_fw:
   - ieisystem.inmanage.update_fw
   - inspur.ispim.update_fw
-  - inspur.sm.update_fw
   - kaytus.ksmanage.update_fw
 update_psu:
   - ieisystem.inmanage.update_psu
@@ -16115,13 +17958,14 @@ uri:
   - ansible.builtin.uri
 urpmi:
   - community.general.urpmi
+usb_facts:
+  - community.general.usb_facts
 user:
   - ansible.builtin.user
   - awx.awx.user
   - cisco.dnac.user
   - ieisystem.inmanage.user
   - inspur.ispim.user
-  - inspur.sm.user
   - kaytus.ksmanage.user
   - lowlydba.sqlserver.user
   - microsoft.ad.user
@@ -16130,6 +17974,8 @@ user:
   - vultr.cloud.user
 user_enrichment_details_info:
   - cisco.dnac.user_enrichment_details_info
+user_enrichment_details_v1_info:
+  - cisco.dnac.user_enrichment_details_v1_info
 user_equipment:
   - cisco.ise.user_equipment
 user_equipment_bulk:
@@ -16145,18 +17991,15 @@ user_equipment_subscriber_info:
 user_group:
   - ieisystem.inmanage.user_group
   - inspur.ispim.user_group
-  - inspur.sm.user_group
   - kaytus.ksmanage.user_group
 user_group_info:
   - ieisystem.inmanage.user_group_info
   - inspur.ispim.user_group_info
-  - inspur.sm.user_group_info
   - kaytus.ksmanage.user_group_info
 user_info:
   - cisco.dnac.user_info
   - ieisystem.inmanage.user_info
   - inspur.ispim.user_info
-  - inspur.sm.user_info
   - kaytus.ksmanage.user_info
   - sensu.sensu_go.user_info
   - vultr.cloud.user_info
@@ -16164,18 +18007,32 @@ user_quota:
   - dellemc.unity.user_quota
 user_role_workflow_manager:
   - cisco.dnac.user_role_workflow_manager
+user_v1:
+  - cisco.dnac.user_v1
+user_v1_info:
+  - cisco.dnac.user_v1_info
 usergroup:
   - theforeman.foreman.usergroup
 users_external_authentication:
   - cisco.dnac.users_external_authentication
 users_external_authentication_info:
   - cisco.dnac.users_external_authentication_info
+users_external_authentication_v1:
+  - cisco.dnac.users_external_authentication_v1
+users_external_authentication_v1_info:
+  - cisco.dnac.users_external_authentication_v1_info
 users_external_servers_aaa_attribute:
   - cisco.dnac.users_external_servers_aaa_attribute
 users_external_servers_aaa_attribute_info:
   - cisco.dnac.users_external_servers_aaa_attribute_info
+users_external_servers_aaa_attribute_v1:
+  - cisco.dnac.users_external_servers_aaa_attribute_v1
+users_external_servers_aaa_attribute_v1_info:
+  - cisco.dnac.users_external_servers_aaa_attribute_v1_info
 users_external_servers_info:
   - cisco.dnac.users_external_servers_info
+users_external_servers_v1_info:
+  - cisco.dnac.users_external_servers_v1_info
 utm_aaa_group:
   - community.general.utm_aaa_group
 utm_aaa_group_info:
@@ -16431,7 +18288,6 @@ virt_pool:
 virtual_media_info:
   - ieisystem.inmanage.virtual_media_info
   - inspur.ispim.virtual_media_info
-  - inspur.sm.virtual_media_info
   - kaytus.ksmanage.virtual_media_info
 vlt_validate:
   - dellemc.os10.vlt_validate
@@ -16501,6 +18357,8 @@ vmware_drs_group_info:
   - community.vmware.vmware_drs_group_info
 vmware_drs_group_manager:
   - community.vmware.vmware_drs_group_manager
+vmware_drs_override:
+  - community.vmware.vmware_drs_override
 vmware_drs_rule_info:
   - community.vmware.vmware_drs_rule_info
 vmware_dvs_host:
@@ -16774,7 +18632,6 @@ vmware_vswitch_info:
 volt_info:
   - ieisystem.inmanage.volt_info
   - inspur.ispim.volt_info
-  - inspur.sm.volt_info
   - kaytus.ksmanage.volt_info
 volume:
   - cloudscale_ch.cloud.volume
@@ -16789,6 +18646,8 @@ volume_backup_info:
 volume_info:
   - hetzner.hcloud.volume_info
   - openstack.cloud.volume_info
+volume_service_info:
+  - openstack.cloud.volume_service_info
 volume_snapshot:
   - openstack.cloud.volume_snapshot
 volume_snapshot_info:
@@ -16917,16 +18776,6 @@ wdc_redfish_command:
   - community.general.wdc_redfish_command
 wdc_redfish_info:
   - community.general.wdc_redfish_info
-webfaction_app:
-  - community.general.webfaction_app
-webfaction_db:
-  - community.general.webfaction_db
-webfaction_domain:
-  - community.general.webfaction_domain
-webfaction_mailbox:
-  - community.general.webfaction_mailbox
-webfaction_site:
-  - community.general.webfaction_site
 webhook:
   - theforeman.foreman.webhook
 win_acl:
@@ -17189,40 +19038,184 @@ win_zip:
   - community.windows.win_zip
 wireless_accespoint_configuration:
   - cisco.dnac.wireless_accespoint_configuration
+wireless_accespoint_configuration_v1:
+  - cisco.dnac.wireless_accespoint_configuration_v1
+wireless_access_points_factory_reset_request_provision:
+  - cisco.dnac.wireless_access_points_factory_reset_request_provision
+wireless_access_points_factory_reset_request_provision_v1:
+  - cisco.dnac.wireless_access_points_factory_reset_request_provision_v1
+wireless_access_points_factory_reset_request_status_info:
+  - cisco.dnac.wireless_access_points_factory_reset_request_status_info
+wireless_access_points_factory_reset_request_status_v1_info:
+  - cisco.dnac.wireless_access_points_factory_reset_request_status_v1_info
+wireless_access_points_provision:
+  - cisco.dnac.wireless_access_points_provision
+wireless_access_points_provision_v1:
+  - cisco.dnac.wireless_access_points_provision_v1
 wireless_accesspoint_configuration_create:
   - cisco.dnac.wireless_accesspoint_configuration_create
+wireless_accesspoint_configuration_create_v2:
+  - cisco.dnac.wireless_accesspoint_configuration_create_v2
 wireless_accesspoint_configuration_summary_info:
   - cisco.dnac.wireless_accesspoint_configuration_summary_info
+wireless_accesspoint_configuration_summary_v1_info:
+  - cisco.dnac.wireless_accesspoint_configuration_summary_v1_info
+wireless_controllers_anchor_managed_ap_locations_info:
+  - cisco.dnac.wireless_controllers_anchor_managed_ap_locations_info
+wireless_controllers_anchor_managed_ap_locations_v1_info:
+  - cisco.dnac.wireless_controllers_anchor_managed_ap_locations_v1_info
+wireless_controllers_assign_managed_ap_locations:
+  - cisco.dnac.wireless_controllers_assign_managed_ap_locations
+wireless_controllers_assign_managed_ap_locations_v1:
+  - cisco.dnac.wireless_controllers_assign_managed_ap_locations_v1
+wireless_controllers_managed_ap_locations_count_info:
+  - cisco.dnac.wireless_controllers_managed_ap_locations_count_info
+wireless_controllers_managed_ap_locations_count_v1_info:
+  - cisco.dnac.wireless_controllers_managed_ap_locations_count_v1_info
+wireless_controllers_primary_managed_ap_locations_info:
+  - cisco.dnac.wireless_controllers_primary_managed_ap_locations_info
+wireless_controllers_primary_managed_ap_locations_v1_info:
+  - cisco.dnac.wireless_controllers_primary_managed_ap_locations_v1_info
+wireless_controllers_provision:
+  - cisco.dnac.wireless_controllers_provision
+wireless_controllers_provision_v1:
+  - cisco.dnac.wireless_controllers_provision_v1
+wireless_controllers_secondary_managed_ap_locations_info:
+  - cisco.dnac.wireless_controllers_secondary_managed_ap_locations_info
+wireless_controllers_secondary_managed_ap_locations_v1_info:
+  - cisco.dnac.wireless_controllers_secondary_managed_ap_locations_v1_info
+wireless_controllers_ssid_details_count_info:
+  - cisco.dnac.wireless_controllers_ssid_details_count_info
+wireless_controllers_ssid_details_count_v1_info:
+  - cisco.dnac.wireless_controllers_ssid_details_count_v1_info
+wireless_controllers_ssid_details_info:
+  - cisco.dnac.wireless_controllers_ssid_details_info
+wireless_controllers_ssid_details_v1_info:
+  - cisco.dnac.wireless_controllers_ssid_details_v1_info
+wireless_controllers_wireless_mobility_groups_count_info:
+  - cisco.dnac.wireless_controllers_wireless_mobility_groups_count_info
+wireless_controllers_wireless_mobility_groups_count_v1_info:
+  - cisco.dnac.wireless_controllers_wireless_mobility_groups_count_v1_info
+wireless_controllers_wireless_mobility_groups_info:
+  - cisco.dnac.wireless_controllers_wireless_mobility_groups_info
+wireless_controllers_wireless_mobility_groups_mobility_provision:
+  - cisco.dnac.wireless_controllers_wireless_mobility_groups_mobility_provision
+wireless_controllers_wireless_mobility_groups_mobility_provision_v1:
+  - cisco.dnac.wireless_controllers_wireless_mobility_groups_mobility_provision_v1
+wireless_controllers_wireless_mobility_groups_mobility_reset:
+  - cisco.dnac.wireless_controllers_wireless_mobility_groups_mobility_reset
+wireless_controllers_wireless_mobility_groups_mobility_reset_v1:
+  - cisco.dnac.wireless_controllers_wireless_mobility_groups_mobility_reset_v1
+wireless_controllers_wireless_mobility_groups_v1_info:
+  - cisco.dnac.wireless_controllers_wireless_mobility_groups_v1_info
 wireless_dynamic_interface:
   - cisco.dnac.wireless_dynamic_interface
 wireless_dynamic_interface_info:
   - cisco.dnac.wireless_dynamic_interface_info
+wireless_dynamic_interface_v1:
+  - cisco.dnac.wireless_dynamic_interface_v1
+wireless_dynamic_interface_v1_info:
+  - cisco.dnac.wireless_dynamic_interface_v1_info
 wireless_enterprise_ssid:
   - cisco.dnac.wireless_enterprise_ssid
 wireless_enterprise_ssid_info:
   - cisco.dnac.wireless_enterprise_ssid_info
+wireless_enterprise_ssid_v1:
+  - cisco.dnac.wireless_enterprise_ssid_v1
+wireless_enterprise_ssid_v1_info:
+  - cisco.dnac.wireless_enterprise_ssid_v1_info
 wireless_profile:
   - cisco.dnac.wireless_profile
 wireless_profile_info:
   - cisco.dnac.wireless_profile_info
+wireless_profile_v1:
+  - cisco.dnac.wireless_profile_v1
+wireless_profile_v1_info:
+  - cisco.dnac.wireless_profile_v1_info
+wireless_profiles:
+  - cisco.dnac.wireless_profiles
+wireless_profiles_count_info:
+  - cisco.dnac.wireless_profiles_count_info
+wireless_profiles_count_v1_info:
+  - cisco.dnac.wireless_profiles_count_v1_info
+wireless_profiles_info:
+  - cisco.dnac.wireless_profiles_info
+wireless_profiles_v1:
+  - cisco.dnac.wireless_profiles_v1
+wireless_profiles_v1_info:
+  - cisco.dnac.wireless_profiles_v1_info
 wireless_provision_access_point:
   - cisco.dnac.wireless_provision_access_point
+wireless_provision_access_point_v1:
+  - cisco.dnac.wireless_provision_access_point_v1
 wireless_provision_device_create:
   - cisco.dnac.wireless_provision_device_create
+wireless_provision_device_create_v1:
+  - cisco.dnac.wireless_provision_device_create_v1
 wireless_provision_device_update:
   - cisco.dnac.wireless_provision_device_update
+wireless_provision_device_update_v1:
+  - cisco.dnac.wireless_provision_device_update_v1
 wireless_provision_ssid_create_provision:
   - cisco.dnac.wireless_provision_ssid_create_provision
+wireless_provision_ssid_create_provision_v1:
+  - cisco.dnac.wireless_provision_ssid_create_provision_v1
 wireless_provision_ssid_delete_reprovision:
   - cisco.dnac.wireless_provision_ssid_delete_reprovision
+wireless_provision_ssid_delete_reprovision_v1:
+  - cisco.dnac.wireless_provision_ssid_delete_reprovision_v1
 wireless_psk_override:
   - cisco.dnac.wireless_psk_override
+wireless_psk_override_v1:
+  - cisco.dnac.wireless_psk_override_v1
 wireless_rf_profile:
   - cisco.dnac.wireless_rf_profile
 wireless_rf_profile_info:
   - cisco.dnac.wireless_rf_profile_info
+wireless_rf_profile_v1:
+  - cisco.dnac.wireless_rf_profile_v1
+wireless_rf_profile_v1_info:
+  - cisco.dnac.wireless_rf_profile_v1_info
 wireless_sensor_test_results_info:
   - cisco.dnac.wireless_sensor_test_results_info
+wireless_sensor_test_results_v1_info:
+  - cisco.dnac.wireless_sensor_test_results_v1_info
+wireless_settings_dot11be_profiles:
+  - cisco.dnac.wireless_settings_dot11be_profiles
+wireless_settings_dot11be_profiles_count_info:
+  - cisco.dnac.wireless_settings_dot11be_profiles_count_info
+wireless_settings_dot11be_profiles_count_v1_info:
+  - cisco.dnac.wireless_settings_dot11be_profiles_count_v1_info
+wireless_settings_dot11be_profiles_info:
+  - cisco.dnac.wireless_settings_dot11be_profiles_info
+wireless_settings_dot11be_profiles_v1:
+  - cisco.dnac.wireless_settings_dot11be_profiles_v1
+wireless_settings_dot11be_profiles_v1_info:
+  - cisco.dnac.wireless_settings_dot11be_profiles_v1_info
+wireless_settings_interfaces:
+  - cisco.dnac.wireless_settings_interfaces
+wireless_settings_interfaces_count_info:
+  - cisco.dnac.wireless_settings_interfaces_count_info
+wireless_settings_interfaces_count_v1_info:
+  - cisco.dnac.wireless_settings_interfaces_count_v1_info
+wireless_settings_interfaces_info:
+  - cisco.dnac.wireless_settings_interfaces_info
+wireless_settings_interfaces_v1:
+  - cisco.dnac.wireless_settings_interfaces_v1
+wireless_settings_interfaces_v1_info:
+  - cisco.dnac.wireless_settings_interfaces_v1_info
+wireless_settings_rf_profiles:
+  - cisco.dnac.wireless_settings_rf_profiles
+wireless_settings_rf_profiles_count_info:
+  - cisco.dnac.wireless_settings_rf_profiles_count_info
+wireless_settings_rf_profiles_count_v1_info:
+  - cisco.dnac.wireless_settings_rf_profiles_count_v1_info
+wireless_settings_rf_profiles_info:
+  - cisco.dnac.wireless_settings_rf_profiles_info
+wireless_settings_rf_profiles_v1:
+  - cisco.dnac.wireless_settings_rf_profiles_v1
+wireless_settings_rf_profiles_v1_info:
+  - cisco.dnac.wireless_settings_rf_profiles_v1_info
 wiring_validate:
   - dellemc.os10.wiring_validate
 workflow_approval:
@@ -17237,6 +19230,8 @@ workflow_node_wait:
   - awx.awx.workflow_node_wait
 x509_certificate:
   - community.crypto.x509_certificate
+x509_certificate_convert:
+  - community.crypto.x509_certificate_convert
 x509_certificate_info:
   - community.crypto.x509_certificate_info
 x509_certificate_pipe:
@@ -17317,8 +19312,12 @@ zabbix_map:
   - community.zabbix.zabbix_map
 zabbix_mediatype:
   - community.zabbix.zabbix_mediatype
+zabbix_mfa:
+  - community.zabbix.zabbix_mfa
 zabbix_proxy:
   - community.zabbix.zabbix_proxy
+zabbix_proxy_group:
+  - community.zabbix.zabbix_proxy_group
 zabbix_proxy_info:
   - community.zabbix.zabbix_proxy_info
 zabbix_regexp:
@@ -17369,4 +19368,6 @@ zypper:
   - community.general.zypper
 zypper_repository:
   - community.general.zypper_repository
+zypper_repository_info:
+  - community.general.zypper_repository_info
 ...
