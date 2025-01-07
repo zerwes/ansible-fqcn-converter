@@ -19264,6 +19264,8 @@ xml:
   - community.general.xml
 yarn:
   - community.general.yarn
+yum:
+  - ansible.builtin.yum
 yum_repository:
   - ansible.builtin.yum_repository
 yum_versionlock:
