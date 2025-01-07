@@ -1,6 +1,6 @@
 #! /usr/bin/env python3
 # vim: tabstop=4 expandtab shiftwidth=4 softtabstop=4 smartindent
-# pylint: disable=invalid-name
+# pylint: disable=invalid-name,consider-using-f-string
 
 import sys
 import os
@@ -188,6 +188,12 @@ argparser.add_argument(
     help="update the fqcn-map-file"
     )
 argparser.add_argument(
+    '-X', '--extra-fqcn-map-file',
+    dest='extrafqcnmapfile',
+    default='extra-fqcn-map.yml',
+    help="add the extra fqcn map while updating the fqcn-map-file"
+    )
+argparser.add_argument(
     '-D', '--debug',
     dest='debug',
     action='store_true',
@@ -252,6 +258,25 @@ if not fqcnmapfile or args.updatefqcnmapfile:
                 else:
                     fqcndict[nonfqcn].append(fqcn)
             print('%s : %s -> %s' % (modname, nonfqcn, fqcn))
+
+    if args.extrafqcnmapfile:
+        try:
+            with open(args.extrafqcnmapfile, "r", encoding="utf-8") as xfqcnf:
+                print('loading extra fqcn map from %s ...' % args.extrafqcnmapfile)
+                xfqcndict = yaml.load(xfqcnf, Loader=yaml.BaseLoader)
+                for nonfqcn, fqcnlist in xfqcndict.items():
+                    if nonfqcn not in fqcndict.keys():
+                        fqcndict[nonfqcn] = []
+                    for fqcn in fqcnlist:
+                        if fqcn not in fqcndict[nonfqcn]:
+                            # this defines the precedence of the replacements made
+                            if fqcn.startswith('ansible.'):
+                                fqcndict[nonfqcn].insert(0, fqcn)
+                            else:
+                                fqcndict[nonfqcn].append(fqcn)
+        except (FileNotFoundError, KeyError) as fqcnmapfilerror:
+            print(fqcnmapfilerror)
+
     with open(args.fqcnmapfile, "w", encoding="utf-8") as fqcnmapfile:
         fqcnmapfile.write(
             yaml.dump(
