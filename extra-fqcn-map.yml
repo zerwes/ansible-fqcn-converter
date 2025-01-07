@@ -1,0 +1,6 @@
+---
+
+yum:
+  - ansible.builtin.yum
+
+...
