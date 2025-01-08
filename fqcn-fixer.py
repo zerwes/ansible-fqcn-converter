@@ -384,6 +384,7 @@ for f in parsefiles:
             if args.printdiff:
                 originallines.append(line)
             nline = line
+            taskmatch = _taskstartregex.match(line)
             if checkstartexcludeblock(line):
                 in_ignore_block = True
                 startingwhitespaces_ignore_block = re.match(r'\s*-?\s*', line).group()
@@ -398,11 +399,15 @@ for f in parsefiles:
                     startingwhitespaces_ignore_block = None
                     if args.debug:
                         debugmsg('end exclude block!')
+                elif taskmatch:
+                    in_ignore_block = False
+                    startingwhitespaces_ignore_block = None
+                    if args.debug:
+                        debugmsg('taskmatch in exclude block => end exclude block!')
                 else:
                     if args.debug:
                         debugmsg('... in exclude block ... ignore line')
             if not in_ignore_block:
-                taskmatch = _taskstartregex.match(line)
                 if taskmatch:
                     if args.debug:
                         debugmsg('taskmatch: %s' % taskmatch)
