@@ -143,3 +143,28 @@
     enabled: false
     state: stopped
     masked: true
+
+---
+# issue #31
+- name: test file 1
+  ansible.builtin.file:
+    path: /a/b/c/1
+
+- name: command with vars 1
+  ansible.builtin.command: echo "before file 2"
+  vars:
+    ansible_ssh_pipelining: true
+
+- name: test file 2
+  ansible.builtin.file:
+    path: /a/b/c/2
+
+- name: command with vars 2
+  vars:
+    ansible_ssh_pipelining: true
+  ansible.builtin.command: echo "before file 3"
+
+- name: test file 3
+  ansible.builtin.file:
+    path: /a/b/c/3
+# end issue #31
