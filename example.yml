@@ -143,3 +143,28 @@
     enabled: false
     state: stopped
     masked: true
+
+---
+# issue #31
+- name: test file 1
+  file:
+    path: /a/b/c/1
+
+- name: command with vars 1
+  command: echo "before file 2"
+  vars:
+    ansible_ssh_pipelining: true
+
+- name: test file 2
+  file:
+    path: /a/b/c/2
+
+- name: command with vars 2
+  vars:
+    ansible_ssh_pipelining: true
+  command: echo "before file 3"
+
+- name: test file 3
+  file:
+    path: /a/b/c/3
+# end issue #31
