@@ -118,6 +118,9 @@ You can use a `.ansible-lint` config file as input to `-c` in order to define `E
 ### tricks
 parse just one file: use `-e $FILENAME`
 
+### comparision to `ansible-lint --fix fqcn`
+**As of ansible-lint 6.15.0 (2023-04-21), `ansible-lint --fix fqcn` can also do the following but it will reformat the YAML when rewriting.**
+
 ## example
 Example result from [ansible-opnsense-checkmk](https://github.com/Rosa-Luxemburgstiftung-Berlin/ansible-opnsense-checkmk): [commit ffb281e67511c3c729661e8bbd3ca460b8c3d190](https://github.com/Rosa-Luxemburgstiftung-Berlin/ansible-opnsense-checkmk/commit/ffb281e67511c3c729661e8bbd3ca460b8c3d190)
 
@@ -247,7 +250,3 @@ index d9885ca..dca0b0c 100644
      path: /etc/rc.conf.d/inetd
      create: true
 ```
-
-## Notes
-
-**As of ansible-lint 6.15.0 (2023-04-21), `ansible-lint --fix fqcn` can also do the following but it will reformat the YAML when rewriting.**
