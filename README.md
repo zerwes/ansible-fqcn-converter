@@ -61,13 +61,12 @@ The ansible files should be linted and valid yaml files! Esp. the following ansi
 
 ## usage
 ```
-usage: fqcn-fixer.py [-h] [-d DIRECTORY] [-e FILEEXTENSIONS [FILEEXTENSIONS ...]]
-                     [--exclude EXCLUDE_PATHS [EXCLUDE_PATHS ...]] [--do-not-use-default-exclude]
-                     [-c CONFIG] [-w] [-W] [-b BACKUPEXTENSION] [-x] [-m FQCNMAPFILE] [-u]
+usage: fqcn-fixer.py [-h] [-d DIRECTORY] [-e FILEEXTENSIONS [FILEEXTENSIONS ...]] [--exclude EXCLUDE_PATHS [EXCLUDE_PATHS ...]] [-f FILTER_PATH [FILTER_PATH ...]] [--do-not-use-default-exclude]
+                     [-i IGNORE_MODULE [IGNORE_MODULE ...]] [-c CONFIG] [-w] [-W] [-b BACKUPEXTENSION] [-x] [-m FQCNMAPFILE] [-u] [-X EXTRAFQCNMAPFILE] [-D]
 
 simple script to fix the fqcn module names
 
-optional arguments:
+options:
   -h, --help            show this help message and exit
   -d DIRECTORY, --directory DIRECTORY
                         directory to search files (default: current directory)
@@ -90,10 +89,12 @@ optional arguments:
                         backup extension to use (default: .bak)
   -x, --no-diff         do not print a diff after parsing a file (default: print it)
   -m FQCNMAPFILE, --fqcn-map-file FQCNMAPFILE
-                        yaml file to use for the fqcn map
-                        (default: fqcn.yml in the directory of the script)
+                        yaml file to use for the fqcn map (default: /home/zerwes/git/ansible-fqcn-converter/fqcn.yml)
   -u, --update-fqcn-map-file
                         update the fqcn-map-file
+  -X EXTRAFQCNMAPFILE, --extra-fqcn-map-file EXTRAFQCNMAPFILE
+                        add the extra fqcn map while updating the fqcn-map-file
+  -D, --debug           debug output
 ```
 
 ## config
