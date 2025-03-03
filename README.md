@@ -5,8 +5,6 @@
 
 # Ansible FQCN converter
 
-**As of ansible-lint 6.15.0 (2023-04-21), `ansible-lint --fix fqcn` can also do the following but it will reformat the YAML when rewriting.**
-
 Update ansible tasks, playbooks, handlers etc. to use fully qualified module names (even for ansible builtins) by searching for all known modules that are not in fqcn notation and replacing them with the fqcn name.
 
 In some cases the replacement might be ambiguous, so a warning will be issued (and by default added as a comment to the changed files; see `-W` arg).
@@ -249,3 +247,7 @@ index d9885ca..dca0b0c 100644
      path: /etc/rc.conf.d/inetd
      create: true
 ```
+
+## Notes
+
+**As of ansible-lint 6.15.0 (2023-04-21), `ansible-lint --fix fqcn` can also do the following but it will reformat the YAML when rewriting.**
