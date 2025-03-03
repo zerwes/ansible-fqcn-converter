@@ -89,7 +89,7 @@ options:
                         backup extension to use (default: .bak)
   -x, --no-diff         do not print a diff after parsing a file (default: print it)
   -m FQCNMAPFILE, --fqcn-map-file FQCNMAPFILE
-                        yaml file to use for the fqcn map (default: /home/zerwes/git/ansible-fqcn-converter/fqcn.yml)
+                        yaml file to use for the fqcn map (default: fqcn.yml in the directory of the script)
   -u, --update-fqcn-map-file
                         update the fqcn-map-file
   -X EXTRAFQCNMAPFILE, --extra-fqcn-map-file EXTRAFQCNMAPFILE
