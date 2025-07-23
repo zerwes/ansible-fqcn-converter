@@ -1552,6 +1552,26 @@ azure_rm_afdendpoint:
   - azure.azcollection.azure_rm_afdendpoint
 azure_rm_afdendpoint_info:
   - azure.azcollection.azure_rm_afdendpoint_info
+azure_rm_afdorigin:
+  - azure.azcollection.azure_rm_afdorigin
+azure_rm_afdorigin_info:
+  - azure.azcollection.azure_rm_afdorigin_info
+azure_rm_afdorigingroup:
+  - azure.azcollection.azure_rm_afdorigingroup
+azure_rm_afdorigingroup_info:
+  - azure.azcollection.azure_rm_afdorigingroup_info
+azure_rm_afdroute:
+  - azure.azcollection.azure_rm_afdroute
+azure_rm_afdroute_info:
+  - azure.azcollection.azure_rm_afdroute_info
+azure_rm_afdrules:
+  - azure.azcollection.azure_rm_afdrules
+azure_rm_afdrules_info:
+  - azure.azcollection.azure_rm_afdrules_info
+azure_rm_afdruleset:
+  - azure.azcollection.azure_rm_afdruleset
+azure_rm_afdruleset_info:
+  - azure.azcollection.azure_rm_afdruleset_info
 azure_rm_aks:
   - azure.azcollection.azure_rm_aks
 azure_rm_aks_info:
@@ -1808,6 +1828,10 @@ azure_rm_keyvault:
   - azure.azcollection.azure_rm_keyvault
 azure_rm_keyvault_info:
   - azure.azcollection.azure_rm_keyvault_info
+azure_rm_keyvaultcertificate:
+  - azure.azcollection.azure_rm_keyvaultcertificate
+azure_rm_keyvaultcertificate_info:
+  - azure.azcollection.azure_rm_keyvaultcertificate_info
 azure_rm_keyvaultkey:
   - azure.azcollection.azure_rm_keyvaultkey
 azure_rm_keyvaultkey_info:
@@ -1998,6 +2022,10 @@ azure_rm_recoveryservicesvault:
   - azure.azcollection.azure_rm_recoveryservicesvault
 azure_rm_recoveryservicesvault_info:
   - azure.azcollection.azure_rm_recoveryservicesvault_info
+azure_rm_recoveryservicesvaultconfig:
+  - azure.azcollection.azure_rm_recoveryservicesvaultconfig
+azure_rm_recoveryservicesvaultconfig_info:
+  - azure.azcollection.azure_rm_recoveryservicesvaultconfig_info
 azure_rm_rediscache:
   - azure.azcollection.azure_rm_rediscache
 azure_rm_rediscache_info:
@@ -10733,6 +10761,12 @@ hv_disk_drive:
   - hitachivantara.vspone_block.hv_disk_drive
 hv_disk_drive_facts:
   - hitachivantara.vspone_block.hv_disk_drive_facts
+hv_external_parity_group_facts:
+  - hitachivantara.vspone_block.hv_external_parity_group_facts
+hv_external_path_group:
+  - hitachivantara.vspone_block.hv_external_path_group
+hv_external_path_group_facts:
+  - hitachivantara.vspone_block.hv_external_path_group_facts
 hv_external_volume:
   - hitachivantara.vspone_block.hv_external_volume
 hv_external_volume_facts:
@@ -10775,6 +10809,8 @@ hv_ldev:
   - hitachivantara.vspone_block.hv_ldev
 hv_ldev_facts:
   - hitachivantara.vspone_block.hv_ldev_facts
+hv_mp_facts:
+  - hitachivantara.vspone_block.hv_mp_facts
 hv_nvm_subsystems:
   - hitachivantara.vspone_block.hv_nvm_subsystems
 hv_nvm_subsystems_facts:
@@ -11180,6 +11216,10 @@ icinga_command_template:
   - telekom_mms.icinga_director.icinga_command_template
 icinga_command_template_info:
   - telekom_mms.icinga_director.icinga_command_template_info
+icinga_dependency_apply:
+  - telekom_mms.icinga_director.icinga_dependency_apply
+icinga_dependency_template:
+  - telekom_mms.icinga_director.icinga_dependency_template
 icinga_deploy:
   - telekom_mms.icinga_director.icinga_deploy
 icinga_deploy_info:
@@ -11355,7 +11395,7 @@ idrac_storage_volume:
 idrac_support_assist:
   - dellemc.openmanage.idrac_support_assist
 idrac_syslog:
-  - dellemc.openmanage.idrac_syslog
+  - dellemc.openmanage.idrac_attributes
 idrac_system_erase:
   - dellemc.openmanage.idrac_system_erase
 idrac_system_info:
@@ -16651,40 +16691,64 @@ provisioning_template:
   - theforeman.foreman.provisioning_template
 proxmox:
   - community.general.proxmox
+  - community.proxmox.proxmox
 proxmox_backup:
   - community.general.proxmox_backup
+  - community.proxmox.proxmox_backup
 proxmox_backup_info:
   - community.general.proxmox_backup_info
+  - community.proxmox.proxmox_backup_info
+proxmox_backup_schedule:
+  - community.proxmox.proxmox_backup_schedule
+proxmox_cluster:
+  - community.proxmox.proxmox_cluster
+proxmox_cluster_join_info:
+  - community.proxmox.proxmox_cluster_join_info
 proxmox_disk:
   - community.general.proxmox_disk
+  - community.proxmox.proxmox_disk
 proxmox_domain_info:
   - community.general.proxmox_domain_info
+  - community.proxmox.proxmox_domain_info
 proxmox_group_info:
   - community.general.proxmox_group_info
+  - community.proxmox.proxmox_group_info
 proxmox_kvm:
   - community.general.proxmox_kvm
+  - community.proxmox.proxmox_kvm
 proxmox_nic:
   - community.general.proxmox_nic
+  - community.proxmox.proxmox_nic
 proxmox_node_info:
   - community.general.proxmox_node_info
+  - community.proxmox.proxmox_node_info
 proxmox_pool:
   - community.general.proxmox_pool
+  - community.proxmox.proxmox_pool
 proxmox_pool_member:
   - community.general.proxmox_pool_member
+  - community.proxmox.proxmox_pool_member
 proxmox_snap:
   - community.general.proxmox_snap
+  - community.proxmox.proxmox_snap
 proxmox_storage_contents_info:
   - community.general.proxmox_storage_contents_info
+  - community.proxmox.proxmox_storage_contents_info
 proxmox_storage_info:
   - community.general.proxmox_storage_info
+  - community.proxmox.proxmox_storage_info
 proxmox_tasks_info:
   - community.general.proxmox_tasks_info
+  - community.proxmox.proxmox_tasks_info
 proxmox_template:
   - community.general.proxmox_template
+  - community.proxmox.proxmox_template
 proxmox_user_info:
   - community.general.proxmox_user_info
+  - community.proxmox.proxmox_user_info
 proxmox_vm_info:
   - community.general.proxmox_vm_info
+  - community.proxmox.proxmox_vm_info
 proxy_connection_settings:
   - cisco.ise.proxy_connection_settings
 proxy_connection_settings_info:
@@ -18806,10 +18870,16 @@ storagebox_set_password:
   - community.hrobot.storagebox_set_password
 storagebox_snapshot:
   - community.hrobot.storagebox_snapshot
+storagebox_snapshot_info:
+  - community.hrobot.storagebox_snapshot_info
 storagebox_snapshot_plan:
   - community.hrobot.storagebox_snapshot_plan
 storagebox_snapshot_plan_info:
   - community.hrobot.storagebox_snapshot_plan_info
+storagebox_subaccount:
+  - community.hrobot.storagebox_subaccount
+storagebox_subaccount_info:
+  - community.hrobot.storagebox_subaccount_info
 storagegateway_info:
   - community.aws.storagegateway_info
 storagepool:
@@ -19752,6 +19822,8 @@ virt_net:
   - community.libvirt.virt_net
 virt_pool:
   - community.libvirt.virt_pool
+virt_volume:
+  - community.libvirt.virt_volume
 virtual_directory:
   - microsoft.iis.virtual_directory
 virtual_directory_info:
@@ -20140,6 +20212,7 @@ volume_info:
 volume_service_info:
   - openstack.cloud.volume_service_info
 volume_snapshot:
+  - cloudscale_ch.cloud.volume_snapshot
   - openstack.cloud.volume_snapshot
 volume_snapshot_info:
   - openstack.cloud.volume_snapshot_info
