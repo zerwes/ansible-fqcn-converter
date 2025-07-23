@@ -119,7 +119,7 @@ You can use a `.ansible-lint` config file as input to `-c` in order to define `E
 ### tricks
 parse just one file: use `-e $FILENAME`
 
-### comparision to `ansible-lint --fix fqcn`
+## comparision to `ansible-lint --fix fqcn`
 **As of ansible-lint 6.15.0 (2023-04-21), `ansible-lint --fix fqcn` can also do the following but it will reformat the YAML when rewriting.**
 
 ## example
