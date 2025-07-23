@@ -1,6 +1,7 @@
 ---
 collections:
   - ansible.posix
+  - ansible.utils
   - community.general
   - community.mysql
   - community.postgresql
