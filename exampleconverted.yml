@@ -59,7 +59,7 @@
 
 # galaxy module
 - name: general command os6_config
-  dellemc.os6.os6_config:
+  os6_config:
     commands: "{{ dellos_general_command | default([]) }}"
   when: ansible_network_os == "dellemc.os6.os6"
 
