@@ -366,6 +366,8 @@ aci_interface_policy_pim:
   - cisco.aci.aci_interface_policy_pim
 aci_interface_policy_port_channel:
   - cisco.aci.aci_interface_policy_port_channel
+aci_interface_policy_port_channel_member:
+  - cisco.aci.aci_interface_policy_port_channel_member
 aci_interface_policy_port_security:
   - cisco.aci.aci_interface_policy_port_security
 aci_interface_policy_spanning_tree:
@@ -450,6 +452,38 @@ aci_l3out_static_routes_nexthop:
   - cisco.aci.aci_l3out_static_routes_nexthop
 aci_l3out_to_sr_mpls_infra_l3out:
   - cisco.aci.aci_l3out_to_sr_mpls_infra_l3out
+aci_l4l7_concrete_device:
+  - cisco.aci.aci_l4l7_concrete_device
+aci_l4l7_concrete_interface:
+  - cisco.aci.aci_l4l7_concrete_interface
+aci_l4l7_concrete_interface_attachment:
+  - cisco.aci.aci_l4l7_concrete_interface_attachment
+aci_l4l7_device:
+  - cisco.aci.aci_l4l7_device
+aci_l4l7_device_selection_interface_context:
+  - cisco.aci.aci_l4l7_device_selection_interface_context
+aci_l4l7_device_selection_policy:
+  - cisco.aci.aci_l4l7_device_selection_policy
+aci_l4l7_logical_interface:
+  - cisco.aci.aci_l4l7_logical_interface
+aci_l4l7_policy_based_redirect:
+  - cisco.aci.aci_l4l7_policy_based_redirect
+aci_l4l7_policy_based_redirect_destination:
+  - cisco.aci.aci_l4l7_policy_based_redirect_destination
+aci_l4l7_redirect_health_group:
+  - cisco.aci.aci_l4l7_redirect_health_group
+aci_l4l7_service_graph_template:
+  - cisco.aci.aci_l4l7_service_graph_template
+aci_l4l7_service_graph_template_connection:
+  - cisco.aci.aci_l4l7_service_graph_template_connection
+aci_l4l7_service_graph_template_connection_to_connector:
+  - cisco.aci.aci_l4l7_service_graph_template_connection_to_connector
+aci_l4l7_service_graph_template_functional_connection:
+  - cisco.aci.aci_l4l7_service_graph_template_functional_connection
+aci_l4l7_service_graph_template_node:
+  - cisco.aci.aci_l4l7_service_graph_template_node
+aci_l4l7_service_graph_template_term_node:
+  - cisco.aci.aci_l4l7_service_graph_template_term_node
 aci_maintenance_group:
   - cisco.aci.aci_maintenance_group
 aci_maintenance_group_node:
@@ -480,10 +514,14 @@ aci_node_block:
   - cisco.aci.aci_node_block
 aci_node_mgmt_epg:
   - cisco.aci.aci_node_mgmt_epg
+aci_node_mgmt_epg_to_contract:
+  - cisco.aci.aci_node_mgmt_epg_to_contract
 aci_ntp_policy:
   - cisco.aci.aci_ntp_policy
 aci_ntp_server:
   - cisco.aci.aci_ntp_server
+aci_oob_contract:
+  - cisco.aci.aci_oob_contract
 aci_pim_route_map_entry:
   - cisco.aci.aci_pim_route_map_entry
 aci_pim_route_map_policy:
@@ -570,6 +608,8 @@ aci_vmm_controller:
   - cisco.aci.aci_vmm_controller
 aci_vmm_credential:
   - cisco.aci.aci_vmm_credential
+aci_vmm_enhanced_lag_policy:
+  - cisco.aci.aci_vmm_enhanced_lag_policy
 aci_vmm_uplink:
   - cisco.aci.aci_vmm_uplink
 aci_vmm_uplink_container:
@@ -578,6 +618,8 @@ aci_vmm_vswitch_policy:
   - cisco.aci.aci_vmm_vswitch_policy
 aci_vrf:
   - cisco.aci.aci_vrf
+aci_vrf_fallback_route_group:
+  - cisco.aci.aci_vrf_fallback_route_group
 aci_vrf_leak_internal_subnet:
   - cisco.aci.aci_vrf_leak_internal_subnet
 aci_vrf_multicast:
@@ -678,6 +720,10 @@ add_ldisk:
   - kaytus.ksmanage.add_ldisk
 address_scope:
   - openstack.cloud.address_scope
+adguardhome_rewrite:
+  - community.dns.adguardhome_rewrite
+adguardhome_rewrite_info:
+  - community.dns.adguardhome_rewrite_info
 admin_user_info:
   - cisco.ise.admin_user_info
 administered_identities_me_api_keys_generate:
@@ -772,91 +818,10 @@ android_sdk:
   - community.general.android_sdk
 ansible_galaxy_install:
   - community.general.ansible_galaxy_install
-aoscx_acl:
-  - arubanetworks.aoscx.aoscx_acl
-aoscx_acl_interface:
-  - arubanetworks.aoscx.aoscx_acl_interface
-aoscx_acl_vlan:
-  - arubanetworks.aoscx.aoscx_acl_vlan
-aoscx_backup_config:
-  - arubanetworks.aoscx.aoscx_backup_config
-aoscx_banner:
-  - arubanetworks.aoscx.aoscx_banner
-aoscx_boot_firmware:
-  - arubanetworks.aoscx.aoscx_boot_firmware
-aoscx_checkpoint:
-  - arubanetworks.aoscx.aoscx_checkpoint
-aoscx_command:
-  - arubanetworks.aoscx.aoscx_command
-aoscx_config:
-  - arubanetworks.aoscx.aoscx_config
-aoscx_dns:
-  - arubanetworks.aoscx.aoscx_dns
-aoscx_facts:
-  - arubanetworks.aoscx.aoscx_facts
-aoscx_interface:
-  - arubanetworks.aoscx.aoscx_interface
-aoscx_l2_interface:
-  - arubanetworks.aoscx.aoscx_l2_interface
-aoscx_l3_interface:
-  - arubanetworks.aoscx.aoscx_l3_interface
-aoscx_lag_interface:
-  - arubanetworks.aoscx.aoscx_lag_interface
-aoscx_mac:
-  - arubanetworks.aoscx.aoscx_mac
-aoscx_object_group:
-  - arubanetworks.aoscx.aoscx_object_group
-aoscx_ospf_area:
-  - arubanetworks.aoscx.aoscx_ospf_area
-aoscx_ospf_interface:
-  - arubanetworks.aoscx.aoscx_ospf_interface
-aoscx_ospf_router:
-  - arubanetworks.aoscx.aoscx_ospf_router
-aoscx_ospf_vlink:
-  - arubanetworks.aoscx.aoscx_ospf_vlink
-aoscx_ospfv3_area:
-  - arubanetworks.aoscx.aoscx_ospfv3_area
-aoscx_ospfv3_router:
-  - arubanetworks.aoscx.aoscx_ospfv3_router
-aoscx_ospfv3_vlink:
-  - arubanetworks.aoscx.aoscx_ospfv3_vlink
-aoscx_poe:
-  - arubanetworks.aoscx.aoscx_poe
-aoscx_qos:
-  - arubanetworks.aoscx.aoscx_qos
-aoscx_qos_cos:
-  - arubanetworks.aoscx.aoscx_qos_cos
-aoscx_qos_dscp:
-  - arubanetworks.aoscx.aoscx_qos_dscp
-aoscx_queue:
-  - arubanetworks.aoscx.aoscx_queue
-aoscx_queue_profile:
-  - arubanetworks.aoscx.aoscx_queue_profile
-aoscx_queue_profile_entry:
-  - arubanetworks.aoscx.aoscx_queue_profile_entry
-aoscx_static_mac:
-  - arubanetworks.aoscx.aoscx_static_mac
-aoscx_static_route:
-  - arubanetworks.aoscx.aoscx_static_route
-aoscx_system:
-  - arubanetworks.aoscx.aoscx_system
-aoscx_upload_config:
-  - arubanetworks.aoscx.aoscx_upload_config
-aoscx_upload_firmware:
-  - arubanetworks.aoscx.aoscx_upload_firmware
-aoscx_vlan:
-  - arubanetworks.aoscx.aoscx_vlan
-aoscx_vlan_interface:
-  - arubanetworks.aoscx.aoscx_vlan_interface
-aoscx_vrf:
-  - arubanetworks.aoscx.aoscx_vrf
-aoscx_vsx:
-  - arubanetworks.aoscx.aoscx_vsx
 apache2_mod_proxy:
   - community.general.apache2_mod_proxy
 apache2_module:
   - community.general.apache2_module
-  - debops.debops.apache2_module
 apconos_command:
   - community.network.apconos_command
 api:
@@ -1129,78 +1094,6 @@ aruba_command:
   - community.network.aruba_command
 aruba_config:
   - community.network.aruba_config
-arubaoss_aaa_accounting:
-  - arubanetworks.aos_switch.arubaoss_aaa_accounting
-arubaoss_aaa_authentication:
-  - arubanetworks.aos_switch.arubaoss_aaa_authentication
-arubaoss_aaa_authorization:
-  - arubanetworks.aos_switch.arubaoss_aaa_authorization
-arubaoss_acl_policy:
-  - arubanetworks.aos_switch.arubaoss_acl_policy
-arubaoss_anycli:
-  - arubanetworks.aos_switch.arubaoss_anycli
-arubaoss_captive_portal:
-  - arubanetworks.aos_switch.arubaoss_captive_portal
-arubaoss_command:
-  - arubanetworks.aos_switch.arubaoss_command
-arubaoss_config:
-  - arubanetworks.aos_switch.arubaoss_config
-arubaoss_config_bkup:
-  - arubanetworks.aos_switch.arubaoss_config_bkup
-arubaoss_dns:
-  - arubanetworks.aos_switch.arubaoss_dns
-arubaoss_dot1x:
-  - arubanetworks.aos_switch.arubaoss_dot1x
-arubaoss_dsnoop:
-  - arubanetworks.aos_switch.arubaoss_dsnoop
-arubaoss_facts:
-  - arubanetworks.aos_switch.arubaoss_facts
-arubaoss_file_transfer:
-  - arubanetworks.aos_switch.arubaoss_file_transfer
-arubaoss_interface:
-  - arubanetworks.aos_switch.arubaoss_interface
-arubaoss_ip_auth:
-  - arubanetworks.aos_switch.arubaoss_ip_auth
-arubaoss_ip_route:
-  - arubanetworks.aos_switch.arubaoss_ip_route
-arubaoss_loop_protect:
-  - arubanetworks.aos_switch.arubaoss_loop_protect
-arubaoss_mac_authentication:
-  - arubanetworks.aos_switch.arubaoss_mac_authentication
-arubaoss_ntp:
-  - arubanetworks.aos_switch.arubaoss_ntp
-arubaoss_poe:
-  - arubanetworks.aos_switch.arubaoss_poe
-arubaoss_port_rate_limit:
-  - arubanetworks.aos_switch.arubaoss_port_rate_limit
-arubaoss_qos_policy:
-  - arubanetworks.aos_switch.arubaoss_qos_policy
-arubaoss_radius_profile:
-  - arubanetworks.aos_switch.arubaoss_radius_profile
-arubaoss_reboot:
-  - arubanetworks.aos_switch.arubaoss_reboot
-arubaoss_routing:
-  - arubanetworks.aos_switch.arubaoss_routing
-arubaoss_snmp:
-  - arubanetworks.aos_switch.arubaoss_snmp
-arubaoss_snmp_trap:
-  - arubanetworks.aos_switch.arubaoss_snmp_trap
-arubaoss_sntp:
-  - arubanetworks.aos_switch.arubaoss_sntp
-arubaoss_stp:
-  - arubanetworks.aos_switch.arubaoss_stp
-arubaoss_syslog:
-  - arubanetworks.aos_switch.arubaoss_syslog
-arubaoss_system_attributes:
-  - arubanetworks.aos_switch.arubaoss_system_attributes
-arubaoss_tacacs_profile:
-  - arubanetworks.aos_switch.arubaoss_tacacs_profile
-arubaoss_traffic_class:
-  - arubanetworks.aos_switch.arubaoss_interfaces
-arubaoss_user:
-  - arubanetworks.aos_switch.arubaoss_user
-arubaoss_vlan:
-  - arubanetworks.aos_switch.arubaoss_vlan
 asa_acls:
   - cisco.asa.asa_acls
 asa_command:
@@ -1690,10 +1583,20 @@ azure_rm_containerregistryreplication:
   - azure.azcollection.azure_rm_containerregistryreplication
 azure_rm_containerregistryreplication_info:
   - azure.azcollection.azure_rm_containerregistryreplication_info
+azure_rm_containerregistryscopemap:
+  - azure.azcollection.azure_rm_containerregistryscopemap
+azure_rm_containerregistryscopemap_info:
+  - azure.azcollection.azure_rm_containerregistryscopemap_info
 azure_rm_containerregistrytag:
   - azure.azcollection.azure_rm_containerregistrytag
 azure_rm_containerregistrytag_info:
   - azure.azcollection.azure_rm_containerregistrytag_info
+azure_rm_containerregistrytoken:
+  - azure.azcollection.azure_rm_containerregistrytoken
+azure_rm_containerregistrytoken_info:
+  - azure.azcollection.azure_rm_containerregistrytoken_info
+azure_rm_containerregistrytokenpassword:
+  - azure.azcollection.azure_rm_containerregistrytokenpassword
 azure_rm_containerregistrywebhook:
   - azure.azcollection.azure_rm_containerregistrywebhook
 azure_rm_containerregistrywebhook_info:
@@ -1710,6 +1613,10 @@ azure_rm_ddosprotectionplan:
   - azure.azcollection.azure_rm_ddosprotectionplan
 azure_rm_ddosprotectionplan_info:
   - azure.azcollection.azure_rm_ddosprotectionplan_info
+azure_rm_dedicatedhost:
+  - azure.azcollection.azure_rm_dedicatedhost
+azure_rm_dedicatedhost_info:
+  - azure.azcollection.azure_rm_dedicatedhost_info
 azure_rm_deployment:
   - azure.azcollection.azure_rm_deployment
 azure_rm_deployment_info:
@@ -1840,6 +1747,8 @@ azure_rm_keyvaultsecret:
   - azure.azcollection.azure_rm_keyvaultsecret
 azure_rm_keyvaultsecret_info:
   - azure.azcollection.azure_rm_keyvaultsecret_info
+azure_rm_keyvaultsecuritydomain:
+  - azure.azcollection.azure_rm_keyvaultsecuritydomain
 azure_rm_loadbalancer:
   - azure.azcollection.azure_rm_loadbalancer
 azure_rm_loadbalancer_info:
@@ -1880,12 +1789,36 @@ azure_rm_mariadbserver:
   - azure.azcollection.azure_rm_mariadbserver
 azure_rm_mariadbserver_info:
   - azure.azcollection.azure_rm_mariadbserver_info
+azure_rm_monitoractiongroups:
+  - azure.azcollection.azure_rm_monitoractiongroups
+azure_rm_monitoractiongroups_info:
+  - azure.azcollection.azure_rm_monitoractiongroups_info
+azure_rm_monitoractivitylogalerts:
+  - azure.azcollection.azure_rm_monitoractivitylogalerts
+azure_rm_monitoractivitylogalerts_info:
+  - azure.azcollection.azure_rm_monitoractivitylogalerts_info
+azure_rm_monitordatacollectionendpoint:
+  - azure.azcollection.azure_rm_monitordatacollectionendpoint
+azure_rm_monitordatacollectionendpoint_info:
+  - azure.azcollection.azure_rm_monitordatacollectionendpoint_info
+azure_rm_monitordatacollectionruleassociation:
+  - azure.azcollection.azure_rm_monitordatacollectionruleassociation
+azure_rm_monitordatacollectionruleassociation_info:
+  - azure.azcollection.azure_rm_monitordatacollectionruleassociation_info
+azure_rm_monitordatacollectionrules:
+  - azure.azcollection.azure_rm_monitordatacollectionrules
+azure_rm_monitordatacollectionrules_info:
+  - azure.azcollection.azure_rm_monitordatacollectionrules_info
 azure_rm_monitordiagnosticsetting:
   - azure.azcollection.azure_rm_monitordiagnosticsetting
 azure_rm_monitordiagnosticsetting_info:
   - azure.azcollection.azure_rm_monitordiagnosticsetting_info
 azure_rm_monitorlogprofile:
   - azure.azcollection.azure_rm_monitorlogprofile
+azure_rm_monitormetricalerts:
+  - azure.azcollection.azure_rm_monitormetricalerts
+azure_rm_monitormetricalerts_info:
+  - azure.azcollection.azure_rm_monitormetricalerts_info
 azure_rm_multiplemanageddisks:
   - azure.azcollection.azure_rm_multiplemanageddisks
 azure_rm_mysqlconfiguration:
@@ -1960,6 +1893,14 @@ azure_rm_postgresqlfirewallrule:
   - azure.azcollection.azure_rm_postgresqlfirewallrule
 azure_rm_postgresqlfirewallrule_info:
   - azure.azcollection.azure_rm_postgresqlfirewallrule_info
+azure_rm_postgresqlflexibleadministrator:
+  - azure.azcollection.azure_rm_postgresqlflexibleadministrator
+azure_rm_postgresqlflexibleadministrator_info:
+  - azure.azcollection.azure_rm_postgresqlflexibleadministrator_info
+azure_rm_postgresqlflexiblebackup:
+  - azure.azcollection.azure_rm_postgresqlflexiblebackup
+azure_rm_postgresqlflexiblebackup_info:
+  - azure.azcollection.azure_rm_postgresqlflexiblebackup_info
 azure_rm_postgresqlflexibleconfiguration_info:
   - azure.azcollection.azure_rm_postgresqlflexibleconfiguration_info
 azure_rm_postgresqlflexibledatabase:
@@ -1974,6 +1915,10 @@ azure_rm_postgresqlflexibleserver:
   - azure.azcollection.azure_rm_postgresqlflexibleserver
 azure_rm_postgresqlflexibleserver_info:
   - azure.azcollection.azure_rm_postgresqlflexibleserver_info
+azure_rm_postgresqlflexiblevirtualendpoint:
+  - azure.azcollection.azure_rm_postgresqlflexiblevirtualendpoint
+azure_rm_postgresqlflexiblevirtualendpoint_info:
+  - azure.azcollection.azure_rm_postgresqlflexiblevirtualendpoint_info
 azure_rm_postgresqlserver:
   - azure.azcollection.azure_rm_postgresqlserver
 azure_rm_postgresqlserver_info:
@@ -2082,6 +2027,14 @@ azure_rm_servicebustopic:
   - azure.azcollection.azure_rm_servicebustopic
 azure_rm_servicebustopicsubscription:
   - azure.azcollection.azure_rm_servicebustopicsubscription
+azure_rm_serviceendpointpolicy:
+  - azure.azcollection.azure_rm_serviceendpointpolicy
+azure_rm_serviceendpointpolicy_info:
+  - azure.azcollection.azure_rm_serviceendpointpolicy_info
+azure_rm_serviceendpointpolicydefinition:
+  - azure.azcollection.azure_rm_serviceendpointpolicydefinition
+azure_rm_serviceendpointpolicydefinition_info:
+  - azure.azcollection.azure_rm_serviceendpointpolicydefinition_info
 azure_rm_snapshot:
   - azure.azcollection.azure_rm_snapshot
 azure_rm_snapshot_info:
@@ -2144,6 +2097,10 @@ azure_rm_subnet_info:
   - azure.azcollection.azure_rm_subnet_info
 azure_rm_subscription_info:
   - azure.azcollection.azure_rm_subscription_info
+azure_rm_tags:
+  - azure.azcollection.azure_rm_tags
+azure_rm_tags_info:
+  - azure.azcollection.azure_rm_tags_info
 azure_rm_trafficmanager:
   - azure.azcollection.azure_rm_trafficmanager
 azure_rm_trafficmanagerendpoint:
@@ -2192,6 +2149,8 @@ azure_rm_virtualnetwork_info:
   - azure.azcollection.azure_rm_virtualnetwork_info
 azure_rm_virtualnetworkgateway:
   - azure.azcollection.azure_rm_virtualnetworkgateway
+azure_rm_virtualnetworkgateway_info:
+  - azure.azcollection.azure_rm_virtualnetworkgateway_info
 azure_rm_virtualnetworkgatewayconnection:
   - azure.azcollection.azure_rm_virtualnetworkgatewayconnection
 azure_rm_virtualnetworkgatewayconnection_info:
@@ -2291,8 +2250,6 @@ baremetal_port:
   - openstack.cloud.baremetal_port
 baremetal_port_info:
   - openstack.cloud.baremetal_port_info
-base_xml_to_dict:
-  - dellemc.os10.base_xml_to_dict
 batch_compute_environment:
   - community.aws.batch_compute_environment
 batch_job_definition:
@@ -2305,8 +2262,6 @@ beadm:
   - community.general.beadm
 bearychat:
   - community.general.bearychat
-bgp_validate:
-  - dellemc.os10.bgp_validate
 bigip_apm_acl:
   - f5networks.f5_modules.bigip_apm_acl
 bigip_apm_network_access:
@@ -2725,7 +2680,6 @@ btrfs_info:
   - community.general.btrfs_info
 btrfs_subvolume:
   - community.general.btrfs_subvolume
-  - debops.debops.btrfs_subvolume
 buildings:
   - cisco.dnac.buildings
 buildings_info:
@@ -3358,6 +3312,8 @@ connection_modesetting_v1:
   - cisco.dnac.connection_modesetting_v1
 connection_modesetting_v1_info:
   - cisco.dnac.connection_modesetting_v1_info
+connection_string:
+  - ravendb.ravendb.connection_string
 consistencygroup:
   - dellemc.unity.consistencygroup
 consul:
@@ -3667,6 +3623,10 @@ cp_mgmt_https_rule_facts:
   - check_point.mgmt.cp_mgmt_https_rule_facts
 cp_mgmt_https_section:
   - check_point.mgmt.cp_mgmt_https_section
+cp_mgmt_identity_provider:
+  - check_point.mgmt.cp_mgmt_identity_provider
+cp_mgmt_identity_provider_facts:
+  - check_point.mgmt.cp_mgmt_identity_provider_facts
 cp_mgmt_identity_tag:
   - check_point.mgmt.cp_mgmt_identity_tag
 cp_mgmt_identity_tag_facts:
@@ -3677,6 +3637,10 @@ cp_mgmt_idp_administrator_group_facts:
   - check_point.mgmt.cp_mgmt_idp_administrator_group_facts
 cp_mgmt_idp_to_domain_assignment_facts:
   - check_point.mgmt.cp_mgmt_idp_to_domain_assignment_facts
+cp_mgmt_if_map_server:
+  - check_point.mgmt.cp_mgmt_if_map_server
+cp_mgmt_if_map_server_facts:
+  - check_point.mgmt.cp_mgmt_if_map_server_facts
 cp_mgmt_import_management:
   - check_point.mgmt.cp_mgmt_import_management
 cp_mgmt_import_outbound_inspection_certificate:
@@ -3707,12 +3671,20 @@ cp_mgmt_interoperable_device_facts:
   - check_point.mgmt.cp_mgmt_interoperable_device_facts
 cp_mgmt_ips_protection_extended_attribute_facts:
   - check_point.mgmt.cp_mgmt_ips_protection_extended_attribute_facts
+cp_mgmt_ldap_group:
+  - check_point.mgmt.cp_mgmt_ldap_group
+cp_mgmt_ldap_group_facts:
+  - check_point.mgmt.cp_mgmt_ldap_group_facts
 cp_mgmt_limit:
   - check_point.mgmt.cp_mgmt_limit
 cp_mgmt_limit_facts:
   - check_point.mgmt.cp_mgmt_limit_facts
 cp_mgmt_lock_object:
   - check_point.mgmt.cp_mgmt_lock_object
+cp_mgmt_log_exporter:
+  - check_point.mgmt.cp_mgmt_log_exporter
+cp_mgmt_log_exporter_facts:
+  - check_point.mgmt.cp_mgmt_log_exporter_facts
 cp_mgmt_lsm_cluster:
   - check_point.mgmt.cp_mgmt_lsm_cluster
 cp_mgmt_lsm_cluster_facts:
@@ -3833,18 +3805,40 @@ cp_mgmt_resource_ftp:
   - check_point.mgmt.cp_mgmt_resource_ftp
 cp_mgmt_resource_ftp_facts:
   - check_point.mgmt.cp_mgmt_resource_ftp_facts
+cp_mgmt_resource_mms:
+  - check_point.mgmt.cp_mgmt_resource_mms
+cp_mgmt_resource_mms_facts:
+  - check_point.mgmt.cp_mgmt_resource_mms_facts
 cp_mgmt_resource_smtp:
   - check_point.mgmt.cp_mgmt_resource_smtp
 cp_mgmt_resource_smtp_facts:
   - check_point.mgmt.cp_mgmt_resource_smtp_facts
+cp_mgmt_resource_tcp:
+  - check_point.mgmt.cp_mgmt_resource_tcp
+cp_mgmt_resource_tcp_facts:
+  - check_point.mgmt.cp_mgmt_resource_tcp_facts
 cp_mgmt_resource_uri:
   - check_point.mgmt.cp_mgmt_resource_uri
 cp_mgmt_resource_uri_facts:
   - check_point.mgmt.cp_mgmt_resource_uri_facts
+cp_mgmt_resource_uri_for_qos:
+  - check_point.mgmt.cp_mgmt_resource_uri_for_qos
+cp_mgmt_resource_uri_for_qos_facts:
+  - check_point.mgmt.cp_mgmt_resource_uri_for_qos_facts
+cp_mgmt_run_app_control_update:
+  - check_point.mgmt.cp_mgmt_run_app_control_update
 cp_mgmt_run_ips_update:
   - check_point.mgmt.cp_mgmt_run_ips_update
 cp_mgmt_run_script:
   - check_point.mgmt.cp_mgmt_run_script
+cp_mgmt_securemote_dns_server:
+  - check_point.mgmt.cp_mgmt_securemote_dns_server
+cp_mgmt_securemote_dns_server_facts:
+  - check_point.mgmt.cp_mgmt_securemote_dns_server_facts
+cp_mgmt_securid_server:
+  - check_point.mgmt.cp_mgmt_securid_server
+cp_mgmt_securid_server_facts:
+  - check_point.mgmt.cp_mgmt_securid_server_facts
 cp_mgmt_security_zone:
   - check_point.mgmt.cp_mgmt_security_zone
 cp_mgmt_security_zone_facts:
@@ -3895,10 +3889,14 @@ cp_mgmt_service_udp_facts:
   - check_point.mgmt.cp_mgmt_service_udp_facts
 cp_mgmt_session_facts:
   - check_point.mgmt.cp_mgmt_session_facts
+cp_mgmt_set_anti_malware_update_schedule:
+  - check_point.mgmt.cp_mgmt_set_anti_malware_update_schedule
 cp_mgmt_set_api_settings:
   - check_point.mgmt.cp_mgmt_set_api_settings
 cp_mgmt_set_app_control_advanced_settings:
   - check_point.mgmt.cp_mgmt_set_app_control_advanced_settings
+cp_mgmt_set_app_control_update_schedule:
+  - check_point.mgmt.cp_mgmt_set_app_control_update_schedule
 cp_mgmt_set_cloud_services:
   - check_point.mgmt.cp_mgmt_set_cloud_services
 cp_mgmt_set_content_awareness_advanced_settings:
@@ -3941,12 +3939,18 @@ cp_mgmt_set_vpn_community_remote_access:
   - check_point.mgmt.cp_mgmt_set_vpn_community_remote_access
 cp_mgmt_show_access_section:
   - check_point.mgmt.cp_mgmt_show_access_section
+cp_mgmt_show_anti_malware_update_schedule:
+  - check_point.mgmt.cp_mgmt_show_anti_malware_update_schedule
 cp_mgmt_show_api_settings:
   - check_point.mgmt.cp_mgmt_show_api_settings
 cp_mgmt_show_api_versions:
   - check_point.mgmt.cp_mgmt_show_api_versions
 cp_mgmt_show_app_control_advanced_settings:
   - check_point.mgmt.cp_mgmt_show_app_control_advanced_settings
+cp_mgmt_show_app_control_status:
+  - check_point.mgmt.cp_mgmt_show_app_control_status
+cp_mgmt_show_app_control_update_schedule:
+  - check_point.mgmt.cp_mgmt_show_app_control_update_schedule
 cp_mgmt_show_azure_ad_content:
   - check_point.mgmt.cp_mgmt_show_azure_ad_content
 cp_mgmt_show_changes:
@@ -4041,6 +4045,10 @@ cp_mgmt_smtp_server_facts:
   - check_point.mgmt.cp_mgmt_smtp_server_facts
 cp_mgmt_submit_session:
   - check_point.mgmt.cp_mgmt_submit_session
+cp_mgmt_syslog_server:
+  - check_point.mgmt.cp_mgmt_syslog_server
+cp_mgmt_syslog_server_facts:
+  - check_point.mgmt.cp_mgmt_syslog_server_facts
 cp_mgmt_tacacs_group:
   - check_point.mgmt.cp_mgmt_tacacs_group
 cp_mgmt_tacacs_group_facts:
@@ -4217,8 +4225,6 @@ cpu_info:
   - ieisystem.inmanage.cpu_info
   - inspur.ispim.cpu_info
   - kaytus.ksmanage.cpu_info
-cran:
-  - debops.debops.cran
 credential:
   - awx.awx.credential
   - lowlydba.sqlserver.credential
@@ -4396,6 +4402,7 @@ data_pipeline:
   - community.aws.data_pipeline
 database:
   - lowlydba.sqlserver.database
+  - ravendb.ravendb.database
 datacenter_info:
   - hetzner.hcloud.datacenter_info
 dataconnect_info:
@@ -5195,7 +5202,6 @@ downloadable_acl_info:
   - cisco.ise.downloadable_acl_info
 dpkg_divert:
   - community.general.dpkg_divert
-  - debops.debops.dpkg_divert
 dpkg_selections:
   - ansible.builtin.dpkg_selections
 duo_identity_sync:
@@ -6484,12 +6490,20 @@ fmgr_dlp_dictionary:
   - fortinet.fortimanager.fmgr_dlp_dictionary
 fmgr_dlp_dictionary_entries:
   - fortinet.fortimanager.fmgr_dlp_dictionary_entries
+fmgr_dlp_exactdatamatch:
+  - fortinet.fortimanager.fmgr_dlp_exactdatamatch
+fmgr_dlp_exactdatamatch_columns:
+  - fortinet.fortimanager.fmgr_dlp_exactdatamatch_columns
 fmgr_dlp_filepattern:
   - fortinet.fortimanager.fmgr_dlp_filepattern
 fmgr_dlp_filepattern_entries:
   - fortinet.fortimanager.fmgr_dlp_filepattern_entries
 fmgr_dlp_fpsensitivity:
   - fortinet.fortimanager.fmgr_dlp_fpsensitivity
+fmgr_dlp_label:
+  - fortinet.fortimanager.fmgr_dlp_label
+fmgr_dlp_label_entries:
+  - fortinet.fortimanager.fmgr_dlp_label_entries
 fmgr_dlp_profile:
   - fortinet.fortimanager.fmgr_dlp_profile
 fmgr_dlp_profile_rule:
@@ -6782,6 +6796,8 @@ fmgr_extensioncontroller_extenderprofile_wifi_radio1:
   - fortinet.fortimanager.fmgr_extensioncontroller_extenderprofile_wifi_radio1
 fmgr_extensioncontroller_extenderprofile_wifi_radio2:
   - fortinet.fortimanager.fmgr_extensioncontroller_extenderprofile_wifi_radio2
+fmgr_extensioncontroller_extendervap:
+  - fortinet.fortimanager.fmgr_extensioncontroller_extendervap
 fmgr_fact:
   - fortinet.fortimanager.fmgr_fact
 fmgr_filefilter_profile:
@@ -6956,6 +6972,20 @@ fmgr_firewall_internetservicecustom_entry_portrange:
   - fortinet.fortimanager.fmgr_firewall_internetservicecustom_entry_portrange
 fmgr_firewall_internetservicecustomgroup:
   - fortinet.fortimanager.fmgr_firewall_internetservicecustomgroup
+fmgr_firewall_internetserviceextension:
+  - fortinet.fortimanager.fmgr_firewall_internetserviceextension
+fmgr_firewall_internetserviceextension_disableentry:
+  - fortinet.fortimanager.fmgr_firewall_internetserviceextension_disableentry
+fmgr_firewall_internetserviceextension_disableentry_ip6range:
+  - fortinet.fortimanager.fmgr_firewall_internetserviceextension_disableentry_ip6range
+fmgr_firewall_internetserviceextension_disableentry_iprange:
+  - fortinet.fortimanager.fmgr_firewall_internetserviceextension_disableentry_iprange
+fmgr_firewall_internetserviceextension_disableentry_portrange:
+  - fortinet.fortimanager.fmgr_firewall_internetserviceextension_disableentry_portrange
+fmgr_firewall_internetserviceextension_entry:
+  - fortinet.fortimanager.fmgr_firewall_internetserviceextension_entry
+fmgr_firewall_internetserviceextension_entry_portrange:
+  - fortinet.fortimanager.fmgr_firewall_internetserviceextension_entry_portrange
 fmgr_firewall_internetservicegroup:
   - fortinet.fortimanager.fmgr_firewall_internetservicegroup
 fmgr_firewall_internetservicename:
@@ -7186,6 +7216,10 @@ fmgr_fmupdate_fdssetting_serveroverride_servlist:
   - fortinet.fortimanager.fmgr_fmupdate_fdssetting_serveroverride_servlist
 fmgr_fmupdate_fdssetting_updateschedule:
   - fortinet.fortimanager.fmgr_fmupdate_fdssetting_updateschedule
+fmgr_fmupdate_fgdsetting:
+  - fortinet.fortimanager.fmgr_fmupdate_fgdsetting
+fmgr_fmupdate_fgdsetting_serveroverride:
+  - fortinet.fortimanager.fmgr_fmupdate_fgdsetting_serveroverride
 fmgr_fmupdate_fwmsetting:
   - fortinet.fortimanager.fmgr_fmupdate_fwmsetting
 fmgr_fmupdate_fwmsetting_upgradetimeout:
@@ -7288,6 +7322,8 @@ fmgr_gtp_messagefilterv0v1:
   - fortinet.fortimanager.fmgr_gtp_messagefilterv0v1
 fmgr_gtp_messagefilterv2:
   - fortinet.fortimanager.fmgr_gtp_messagefilterv2
+fmgr_gtp_rattimeoutprofile:
+  - fortinet.fortimanager.fmgr_gtp_rattimeoutprofile
 fmgr_gtp_tunnellimit:
   - fortinet.fortimanager.fmgr_gtp_tunnellimit
 fmgr_hotspot20_anqp3gppcellular:
@@ -7366,6 +7402,10 @@ fmgr_icap_profile_respmodforwardrules_headergroup:
   - fortinet.fortimanager.fmgr_icap_profile_respmodforwardrules_headergroup
 fmgr_icap_server:
   - fortinet.fortimanager.fmgr_icap_server
+fmgr_icap_servergroup:
+  - fortinet.fortimanager.fmgr_icap_servergroup
+fmgr_icap_servergroup_serverlist:
+  - fortinet.fortimanager.fmgr_icap_servergroup_serverlist
 fmgr_ips_baseline_sensor:
   - fortinet.fortimanager.fmgr_ips_baseline_sensor
 fmgr_ips_baseline_sensor_entries:
@@ -7980,6 +8020,8 @@ fmgr_system_log_alert:
   - fortinet.fortimanager.fmgr_system_log_alert
 fmgr_system_log_devicedisable:
   - fortinet.fortimanager.fmgr_system_log_devicedisable
+fmgr_system_log_deviceselector:
+  - fortinet.fortimanager.fmgr_system_log_deviceselector
 fmgr_system_log_fospolicystats:
   - fortinet.fortimanager.fmgr_system_log_fospolicystats
 fmgr_system_log_interfacestats:
@@ -8234,6 +8276,16 @@ fmgr_system_workflow_approvalmatrix:
   - fortinet.fortimanager.fmgr_system_workflow_approvalmatrix
 fmgr_system_workflow_approvalmatrix_approver:
   - fortinet.fortimanager.fmgr_system_workflow_approvalmatrix_approver
+fmgr_telemetrycontroller_agentprofile:
+  - fortinet.fortimanager.fmgr_telemetrycontroller_agentprofile
+fmgr_telemetrycontroller_application_predefine:
+  - fortinet.fortimanager.fmgr_telemetrycontroller_application_predefine
+fmgr_telemetrycontroller_profile:
+  - fortinet.fortimanager.fmgr_telemetrycontroller_profile
+fmgr_telemetrycontroller_profile_application:
+  - fortinet.fortimanager.fmgr_telemetrycontroller_profile_application
+fmgr_telemetrycontroller_profile_application_sla:
+  - fortinet.fortimanager.fmgr_telemetrycontroller_profile_application_sla
 fmgr_template:
   - fortinet.fortimanager.fmgr_template
 fmgr_templategroup:
@@ -8340,6 +8392,8 @@ fmgr_user_saml:
   - fortinet.fortimanager.fmgr_user_saml
 fmgr_user_saml_dynamicmapping:
   - fortinet.fortimanager.fmgr_user_saml_dynamicmapping
+fmgr_user_scim:
+  - fortinet.fortimanager.fmgr_user_scim
 fmgr_user_securityexemptlist:
   - fortinet.fortimanager.fmgr_user_securityexemptlist
 fmgr_user_securityexemptlist_rule:
@@ -8630,6 +8684,8 @@ fmgr_wireless_ssidpolicy:
   - fortinet.fortimanager.fmgr_wireless_ssidpolicy
 fmgr_wireless_syslogprofile:
   - fortinet.fortimanager.fmgr_wireless_syslogprofile
+fmgr_wireless_vap_ip6prefixlist:
+  - fortinet.fortimanager.fmgr_wireless_vap_ip6prefixlist
 fmgr_wtpprofile:
   - fortinet.fortimanager.fmgr_wtpprofile
 fmgr_wtpprofile_denymaclist:
@@ -8703,6 +8759,8 @@ fortios_certificate_ca:
   - fortinet.fortios.fortios_certificate_ca
 fortios_certificate_crl:
   - fortinet.fortios.fortios_certificate_crl
+fortios_certificate_hsm_local:
+  - fortinet.fortios.fortios_certificate_hsm_local
 fortios_certificate_local:
   - fortinet.fortios.fortios_certificate_local
 fortios_certificate_remote:
@@ -8729,6 +8787,8 @@ fortios_dlp_fp_doc_source:
   - fortinet.fortios.fortios_dlp_fp_doc_source
 fortios_dlp_fp_sensitivity:
   - fortinet.fortios.fortios_dlp_fp_sensitivity
+fortios_dlp_label:
+  - fortinet.fortios.fortios_dlp_label
 fortios_dlp_profile:
   - fortinet.fortios.fortios_dlp_profile
 fortios_dlp_sensitivity:
@@ -8879,6 +8939,8 @@ fortios_firewall_internet_service_definition:
   - fortinet.fortios.fortios_firewall_internet_service_definition
 fortios_firewall_internet_service_extension:
   - fortinet.fortios.fortios_firewall_internet_service_extension
+fortios_firewall_internet_service_fortiguard:
+  - fortinet.fortios.fortios_firewall_internet_service_fortiguard
 fortios_firewall_internet_service_group:
   - fortinet.fortios.fortios_firewall_internet_service_group
 fortios_firewall_internet_service_ipbl_reason:
@@ -9309,6 +9371,8 @@ fortios_switch_controller_initial_config_template:
   - fortinet.fortios.fortios_switch_controller_initial_config_template
 fortios_switch_controller_initial_config_vlans:
   - fortinet.fortios.fortios_switch_controller_initial_config_vlans
+fortios_switch_controller_ip_source_guard_log:
+  - fortinet.fortios.fortios_switch_controller_ip_source_guard_log
 fortios_switch_controller_lldp_profile:
   - fortinet.fortios.fortios_switch_controller_lldp_profile
 fortios_switch_controller_lldp_settings:
@@ -9437,6 +9501,8 @@ fortios_system_autoupdate_tunneling:
   - fortinet.fortios.fortios_system_autoupdate_tunneling
 fortios_system_central_management:
   - fortinet.fortios.fortios_system_central_management
+fortios_system_cloud_service:
+  - fortinet.fortios.fortios_system_cloud_service
 fortios_system_cluster_sync:
   - fortinet.fortios.fortios_system_cluster_sync
 fortios_system_console:
@@ -9451,6 +9517,8 @@ fortios_system_dedicated_mgmt:
   - fortinet.fortios.fortios_system_dedicated_mgmt
 fortios_system_device_upgrade:
   - fortinet.fortios.fortios_system_device_upgrade
+fortios_system_device_upgrade_exemptions:
+  - fortinet.fortios.fortios_system_device_upgrade_exemptions
 fortios_system_dhcp6_server:
   - fortinet.fortios.fortios_system_dhcp6_server
 fortios_system_dhcp_server:
@@ -9481,6 +9549,8 @@ fortios_system_fm:
   - fortinet.fortios.fortios_system_fm
 fortios_system_fortiai:
   - fortinet.fortios.fortios_system_fortiai
+fortios_system_fortidata:
+  - fortinet.fortios.fortios_system_fortidata
 fortios_system_fortiguard:
   - fortinet.fortios.fortios_system_fortiguard
 fortios_system_fortimanager:
@@ -9733,6 +9803,16 @@ fortios_system_wccp:
   - fortinet.fortios.fortios_system_wccp
 fortios_system_zone:
   - fortinet.fortios.fortios_system_zone
+fortios_telemetry_controller_agent:
+  - fortinet.fortios.fortios_telemetry_controller_agent
+fortios_telemetry_controller_agent_profile:
+  - fortinet.fortios.fortios_telemetry_controller_agent_profile
+fortios_telemetry_controller_application_predefine:
+  - fortinet.fortios.fortios_telemetry_controller_application_predefine
+fortios_telemetry_controller_global:
+  - fortinet.fortios.fortios_telemetry_controller_global
+fortios_telemetry_controller_profile:
+  - fortinet.fortios.fortios_telemetry_controller_profile
 fortios_user_adgrp:
   - fortinet.fortios.fortios_user_adgrp
 fortios_user_certificate:
@@ -9805,6 +9885,8 @@ fortios_vpn_certificate_ca:
   - fortinet.fortios.fortios_vpn_certificate_ca
 fortios_vpn_certificate_crl:
   - fortinet.fortios.fortios_vpn_certificate_crl
+fortios_vpn_certificate_hsm_local:
+  - fortinet.fortios.fortios_vpn_certificate_hsm_local
 fortios_vpn_certificate_local:
   - fortinet.fortios.fortios_vpn_certificate_local
 fortios_vpn_certificate_ocsp_server:
@@ -10343,6 +10425,8 @@ gcp_mlengine_version:
   - google.cloud.gcp_mlengine_version
 gcp_mlengine_version_info:
   - google.cloud.gcp_mlengine_version_info
+gcp_parameter_manager:
+  - google.cloud.gcp_parameter_manager
 gcp_pubsub_subscription:
   - google.cloud.gcp_pubsub_subscription
 gcp_pubsub_subscription_info:
@@ -10641,6 +10725,8 @@ health_score_definitions_v1:
   - cisco.dnac.health_score_definitions_v1
 health_score_definitions_v1_info:
   - cisco.dnac.health_score_definitions_v1_info
+healthcheck:
+  - ravendb.ravendb.healthcheck
 helm:
   - kubernetes.core.helm
 helm_info:
@@ -10751,8 +10837,14 @@ http_write_credential:
   - cisco.dnac.http_write_credential
 http_write_credential_v1:
   - cisco.dnac.http_write_credential_v1
+hv_certificates:
+  - hitachivantara.vspone_object.hv_certificates
+hv_certificates_facts:
+  - hitachivantara.vspone_object.hv_certificates_facts
 hv_cmd_dev:
   - hitachivantara.vspone_block.hv_cmd_dev
+hv_csrf:
+  - hitachivantara.vspone_object.hv_csrf
 hv_ddp_pool:
   - hitachivantara.vspone_block.hv_ddp_pool
 hv_ddp_pool_facts:
@@ -10761,8 +10853,12 @@ hv_disk_drive:
   - hitachivantara.vspone_block.hv_disk_drive
 hv_disk_drive_facts:
   - hitachivantara.vspone_block.hv_disk_drive_facts
+hv_events_facts:
+  - hitachivantara.vspone_object.hv_events_facts
 hv_external_parity_group_facts:
   - hitachivantara.vspone_block.hv_external_parity_group_facts
+hv_external_paritygroup_facts:
+  - hitachivantara.vspone_block.hv_external_paritygroup_facts
 hv_external_path_group:
   - hitachivantara.vspone_block.hv_external_path_group
 hv_external_path_group_facts:
@@ -10775,6 +10871,8 @@ hv_gad:
   - hitachivantara.vspone_block.hv_gad
 hv_gad_facts:
   - hitachivantara.vspone_block.hv_gad_facts
+hv_galaxy_facts:
+  - hitachivantara.vspone_object.hv_galaxy_facts
 hv_gateway_admin_password:
   - hitachivantara.vspone_block.hv_gateway_admin_password
 hv_gateway_subscriber:
@@ -10801,14 +10899,26 @@ hv_iscsi_target:
   - hitachivantara.vspone_block.hv_iscsi_target
 hv_iscsi_target_facts:
   - hitachivantara.vspone_block.hv_iscsi_target_facts
+hv_job:
+  - hitachivantara.vspone_object.hv_job
+hv_jobs_facts:
+  - hitachivantara.vspone_object.hv_jobs_facts
 hv_journal_volume:
   - hitachivantara.vspone_block.hv_journal_volume
 hv_journal_volume_facts:
   - hitachivantara.vspone_block.hv_journal_volume_facts
+hv_kmip:
+  - hitachivantara.vspone_object.hv_kmip
+hv_kmip_server_facts:
+  - hitachivantara.vspone_object.hv_kmip_server_facts
 hv_ldev:
   - hitachivantara.vspone_block.hv_ldev
 hv_ldev_facts:
   - hitachivantara.vspone_block.hv_ldev_facts
+hv_license:
+  - hitachivantara.vspone_object.hv_license
+hv_licenses_facts:
+  - hitachivantara.vspone_object.hv_licenses_facts
 hv_mp_facts:
   - hitachivantara.vspone_block.hv_mp_facts
 hv_nvm_subsystems:
@@ -10823,6 +10933,8 @@ hv_quorum_disk:
   - hitachivantara.vspone_block.hv_quorum_disk
 hv_quorum_disk_facts:
   - hitachivantara.vspone_block.hv_quorum_disk_facts
+hv_region_facts:
+  - hitachivantara.vspone_object.hv_region_facts
 hv_remote_connection:
   - hitachivantara.vspone_block.hv_remote_connection
 hv_remote_connection_facts:
@@ -10841,6 +10953,12 @@ hv_resource_group_facts:
   - hitachivantara.vspone_block.hv_resource_group_facts
 hv_resource_group_lock:
   - hitachivantara.vspone_block.hv_resource_group_lock
+hv_s3_encryption:
+  - hitachivantara.vspone_object.hv_s3_encryption
+hv_s3_encryption_facts:
+  - hitachivantara.vspone_object.hv_s3_encryption_facts
+hv_s3_user_credentials:
+  - hitachivantara.vspone_object.hv_s3_user_credentials
 hv_sds_block_chap_user:
   - hitachivantara.vspone_block.hv_sds_block_chap_user
 hv_sds_block_chap_user_facts:
@@ -10863,6 +10981,10 @@ hv_sds_block_vps:
   - hitachivantara.vspone_block.hv_sds_block_vps
 hv_sds_block_vps_facts:
   - hitachivantara.vspone_block.hv_sds_block_vps_facts
+hv_serial_number:
+  - hitachivantara.vspone_object.hv_serial_number
+hv_serial_number_facts:
+  - hitachivantara.vspone_object.hv_serial_number_facts
 hv_shadow_image_group:
   - hitachivantara.vspone_block.hv_shadow_image_group
 hv_shadow_image_group_facts:
@@ -10879,6 +11001,20 @@ hv_snapshot_group:
   - hitachivantara.vspone_block.hv_snapshot_group
 hv_snapshot_group_facts:
   - hitachivantara.vspone_block.hv_snapshot_group_facts
+hv_storage_class:
+  - hitachivantara.vspone_object.hv_storage_class
+hv_storage_class_facts:
+  - hitachivantara.vspone_object.hv_storage_class_facts
+hv_storage_component:
+  - hitachivantara.vspone_object.hv_storage_component
+hv_storage_component_state_update:
+  - hitachivantara.vspone_object.hv_storage_component_state_update
+hv_storage_components_facts:
+  - hitachivantara.vspone_object.hv_storage_components_facts
+hv_storage_fault_domain:
+  - hitachivantara.vspone_object.hv_storage_fault_domain
+hv_storage_fault_domain_facts:
+  - hitachivantara.vspone_object.hv_storage_fault_domain_facts
 hv_storage_port:
   - hitachivantara.vspone_block.hv_storage_port
 hv_storage_port_facts:
@@ -10893,6 +11029,7 @@ hv_storagesystem_facts:
   - hitachivantara.vspone_block.hv_storagesystem_facts
 hv_troubleshooting_facts:
   - hitachivantara.vspone_block.hv_troubleshooting_facts
+  - hitachivantara.vspone_object.hv_troubleshooting_facts
 hv_truecopy:
   - hitachivantara.vspone_block.hv_truecopy
 hv_truecopy_facts:
@@ -10901,12 +11038,18 @@ hv_uaig_token_facts:
   - hitachivantara.vspone_block.hv_uaig_token_facts
 hv_user:
   - hitachivantara.vspone_block.hv_user
+hv_user_buckets_facts:
+  - hitachivantara.vspone_object.hv_user_buckets_facts
 hv_user_facts:
   - hitachivantara.vspone_block.hv_user_facts
 hv_user_group:
   - hitachivantara.vspone_block.hv_user_group
 hv_user_group_facts:
   - hitachivantara.vspone_block.hv_user_group_facts
+hv_user_id_facts:
+  - hitachivantara.vspone_object.hv_user_id_facts
+hv_users_facts:
+  - hitachivantara.vspone_object.hv_users_facts
 hwc_ecs_instance:
   - community.general.hwc_ecs_instance
 hwc_evs_disk:
@@ -11500,6 +11643,8 @@ include_tasks:
   - ansible.builtin.include_tasks
 include_vars:
   - ansible.builtin.include_vars
+index:
+  - ravendb.ravendb.index
 infini_certificate:
   - infinidat.infinibox.infini_certificate
 infini_cluster:
@@ -11522,8 +11667,6 @@ infini_infinimetrics:
   - infinidat.infinibox.infini_infinimetrics
 infini_map:
   - infinidat.infinibox.infini_map
-infini_metadata:
-  - infinidat.infinibox.infini_metadata
 infini_network_space:
   - infinidat.infinibox.infini_network_space
 infini_notification_rule:
@@ -11657,24 +11800,168 @@ internal_user_info:
   - cisco.ise.internal_user_info
 intersight_bios_policy:
   - cisco.intersight.intersight_bios_policy
+intersight_bios_policy_info:
+  - cisco.intersight.intersight_bios_policy_info
 intersight_boot_order_policy:
   - cisco.intersight.intersight_boot_order_policy
+intersight_boot_order_policy_info:
+  - cisco.intersight.intersight_boot_order_policy_info
+intersight_ethernet_adapter_policy:
+  - cisco.intersight.intersight_ethernet_adapter_policy
+intersight_ethernet_adapter_policy_info:
+  - cisco.intersight.intersight_ethernet_adapter_policy_info
+intersight_ethernet_network_control_policy:
+  - cisco.intersight.intersight_ethernet_network_control_policy
+intersight_ethernet_network_control_policy_info:
+  - cisco.intersight.intersight_ethernet_network_control_policy_info
+intersight_ethernet_network_group_policy:
+  - cisco.intersight.intersight_ethernet_network_group_policy
+intersight_ethernet_network_group_policy_info:
+  - cisco.intersight.intersight_ethernet_network_group_policy_info
+intersight_ethernet_qos_policy:
+  - cisco.intersight.intersight_ethernet_qos_policy
+intersight_ethernet_qos_policy_info:
+  - cisco.intersight.intersight_ethernet_qos_policy_info
+intersight_fibre_channel_adapter_policy:
+  - cisco.intersight.intersight_fibre_channel_adapter_policy
+intersight_fibre_channel_adapter_policy_info:
+  - cisco.intersight.intersight_fibre_channel_adapter_policy_info
+intersight_fibre_channel_network_policy:
+  - cisco.intersight.intersight_fibre_channel_network_policy
+intersight_fibre_channel_network_policy_info:
+  - cisco.intersight.intersight_fibre_channel_network_policy_info
+intersight_fibre_channel_qos_policy:
+  - cisco.intersight.intersight_fibre_channel_qos_policy
+intersight_fibre_channel_qos_policy_info:
+  - cisco.intersight.intersight_fibre_channel_qos_policy_info
+intersight_fibre_channel_zone_policy:
+  - cisco.intersight.intersight_fibre_channel_zone_policy
+intersight_fibre_channel_zone_policy_info:
+  - cisco.intersight.intersight_fibre_channel_zone_policy_info
+intersight_firmware_policy:
+  - cisco.intersight.intersight_firmware_policy
+intersight_firmware_policy_info:
+  - cisco.intersight.intersight_firmware_policy_info
 intersight_imc_access_policy:
   - cisco.intersight.intersight_imc_access_policy
 intersight_info:
   - cisco.intersight.intersight_info
+intersight_ip_pool:
+  - cisco.intersight.intersight_ip_pool
+intersight_ip_pool_info:
+  - cisco.intersight.intersight_ip_pool_info
+intersight_ipmi_over_lan_policy:
+  - cisco.intersight.intersight_ipmi_over_lan_policy
+intersight_ipmi_over_lan_policy_info:
+  - cisco.intersight.intersight_ipmi_over_lan_policy_info
+intersight_iqn_pool:
+  - cisco.intersight.intersight_iqn_pool
+intersight_iqn_pool_info:
+  - cisco.intersight.intersight_iqn_pool_info
+intersight_iscsi_adapter_policy:
+  - cisco.intersight.intersight_iscsi_adapter_policy
+intersight_iscsi_adapter_policy_info:
+  - cisco.intersight.intersight_iscsi_adapter_policy_info
+intersight_iscsi_boot_policy:
+  - cisco.intersight.intersight_iscsi_boot_policy
+intersight_iscsi_boot_policy_info:
+  - cisco.intersight.intersight_iscsi_boot_policy_info
+intersight_iscsi_static_target_policy:
+  - cisco.intersight.intersight_iscsi_static_target_policy
+intersight_iscsi_static_target_policy_info:
+  - cisco.intersight.intersight_iscsi_static_target_policy_info
+intersight_kvm_policy:
+  - cisco.intersight.intersight_kvm_policy
+intersight_kvm_policy_info:
+  - cisco.intersight.intersight_kvm_policy_info
+intersight_lan_connectivity_policy:
+  - cisco.intersight.intersight_lan_connectivity_policy
+intersight_lan_connectivity_policy_info:
+  - cisco.intersight.intersight_lan_connectivity_policy_info
+intersight_link_control_policy:
+  - cisco.intersight.intersight_link_control_policy
+intersight_link_control_policy_info:
+  - cisco.intersight.intersight_link_control_policy_info
 intersight_local_user_policy:
   - cisco.intersight.intersight_local_user_policy
+intersight_mac_pool:
+  - cisco.intersight.intersight_mac_pool
+intersight_mac_pool_info:
+  - cisco.intersight.intersight_mac_pool_info
+intersight_multicast_policy:
+  - cisco.intersight.intersight_multicast_policy
+intersight_multicast_policy_info:
+  - cisco.intersight.intersight_multicast_policy_info
+intersight_network_connectivity_policy:
+  - cisco.intersight.intersight_network_connectivity_policy
+intersight_network_connectivity_policy_info:
+  - cisco.intersight.intersight_network_connectivity_policy_info
 intersight_ntp_policy:
   - cisco.intersight.intersight_ntp_policy
+intersight_port_policy:
+  - cisco.intersight.intersight_port_policy
+intersight_port_policy_info:
+  - cisco.intersight.intersight_port_policy_info
+intersight_power_policy:
+  - cisco.intersight.intersight_power_policy
+intersight_power_policy_info:
+  - cisco.intersight.intersight_power_policy_info
 intersight_rest_api:
   - cisco.intersight.intersight_rest_api
+intersight_san_connectivity_policy:
+  - cisco.intersight.intersight_san_connectivity_policy
+intersight_san_connectivity_policy_info:
+  - cisco.intersight.intersight_san_connectivity_policy_info
 intersight_server_profile:
   - cisco.intersight.intersight_server_profile
+intersight_snmp_policy:
+  - cisco.intersight.intersight_snmp_policy
+intersight_snmp_policy_info:
+  - cisco.intersight.intersight_snmp_policy_info
+intersight_storage_policy:
+  - cisco.intersight.intersight_storage_policy
+intersight_storage_policy_info:
+  - cisco.intersight.intersight_storage_policy_info
+intersight_syslog_policy:
+  - cisco.intersight.intersight_syslog_policy
+intersight_syslog_policy_info:
+  - cisco.intersight.intersight_syslog_policy_info
+intersight_system_qos_policy:
+  - cisco.intersight.intersight_system_qos_policy
+intersight_system_qos_policy_info:
+  - cisco.intersight.intersight_system_qos_policy_info
 intersight_target_claim:
   - cisco.intersight.intersight_target_claim
+intersight_thermal_policy:
+  - cisco.intersight.intersight_thermal_policy
+intersight_thermal_policy_info:
+  - cisco.intersight.intersight_thermal_policy_info
+intersight_uuid_pool:
+  - cisco.intersight.intersight_uuid_pool
+intersight_uuid_pool_info:
+  - cisco.intersight.intersight_uuid_pool_info
+intersight_vhba_template:
+  - cisco.intersight.intersight_vhba_template
+intersight_vhba_template_info:
+  - cisco.intersight.intersight_vhba_template_info
 intersight_virtual_media_policy:
   - cisco.intersight.intersight_virtual_media_policy
+intersight_vlan_policy:
+  - cisco.intersight.intersight_vlan_policy
+intersight_vlan_policy_info:
+  - cisco.intersight.intersight_vlan_policy_info
+intersight_vnic_template:
+  - cisco.intersight.intersight_vnic_template
+intersight_vnic_template_info:
+  - cisco.intersight.intersight_vnic_template_info
+intersight_vsan_policy:
+  - cisco.intersight.intersight_vsan_policy
+intersight_vsan_policy_info:
+  - cisco.intersight.intersight_vsan_policy_info
+intersight_wwn_pool:
+  - cisco.intersight.intersight_wwn_pool
+intersight_wwn_pool_info:
+  - cisco.intersight.intersight_wwn_pool_info
 inventory:
   - awx.awx.inventory
 inventory_intent:
@@ -12331,7 +12618,6 @@ lbu:
   - community.general.lbu
 ldap_attrs:
   - community.general.ldap_attrs
-  - debops.debops.ldap_attrs
 ldap_auth_provider:
   - sensu.sensu_go.ldap_auth_provider
 ldap_entry:
@@ -12963,8 +13249,6 @@ mssql_db:
   - community.general.mssql_db
 mssql_script:
   - community.general.mssql_script
-mtu_validate:
-  - dellemc.os10.mtu_validate
 mutator:
   - sensu.sensu_go.mutator
 mutator_info:
@@ -13453,6 +13737,12 @@ ndo_dhcp_option_policy:
   - cisco.mso.ndo_dhcp_option_policy
 ndo_dhcp_relay_policy:
   - cisco.mso.ndo_dhcp_relay_policy
+ndo_fabric_span_session:
+  - cisco.mso.ndo_fabric_span_session
+ndo_fabric_span_session_source:
+  - cisco.mso.ndo_fabric_span_session_source
+ndo_fabric_span_session_source_filter:
+  - cisco.mso.ndo_fabric_span_session_source_filter
 ndo_fex_device:
   - cisco.mso.ndo_fex_device
 ndo_interface_setting:
@@ -13465,6 +13755,8 @@ ndo_l3_domain:
   - cisco.mso.ndo_l3_domain
 ndo_l3out_annotation:
   - cisco.mso.ndo_l3out_annotation
+ndo_l3out_bgp_peer:
+  - cisco.mso.ndo_l3out_bgp_peer
 ndo_l3out_interface_group_policy:
   - cisco.mso.ndo_l3out_interface_group_policy
 ndo_l3out_interface_routing_policy:
@@ -13473,6 +13765,14 @@ ndo_l3out_node_group_policy:
   - cisco.mso.ndo_l3out_node_group_policy
 ndo_l3out_node_routing_policy:
   - cisco.mso.ndo_l3out_node_routing_policy
+ndo_l3out_node_static_route:
+  - cisco.mso.ndo_l3out_node_static_route
+ndo_l3out_node_static_route_next_hop:
+  - cisco.mso.ndo_l3out_node_static_route_next_hop
+ndo_l3out_routed_interface:
+  - cisco.mso.ndo_l3out_routed_interface
+ndo_l3out_routed_sub_interface:
+  - cisco.mso.ndo_l3out_routed_sub_interface
 ndo_l3out_template:
   - cisco.mso.ndo_l3out_template
 ndo_macsec_policy:
@@ -13489,20 +13789,30 @@ ndo_physical_domain:
   - cisco.mso.ndo_physical_domain
 ndo_physical_interface:
   - cisco.mso.ndo_physical_interface
+ndo_pod_profile:
+  - cisco.mso.ndo_pod_profile
+ndo_pod_settings:
+  - cisco.mso.ndo_pod_settings
 ndo_port_channel_interface:
   - cisco.mso.ndo_port_channel_interface
 ndo_ptp_policy:
   - cisco.mso.ndo_ptp_policy
 ndo_ptp_policy_profiles:
   - cisco.mso.ndo_ptp_policy_profiles
+ndo_qos_class_policy:
+  - cisco.mso.ndo_qos_class_policy
 ndo_qos_dscp_cos_translation_policy:
   - cisco.mso.ndo_qos_dscp_cos_translation_policy
 ndo_route_map_policy_multicast:
   - cisco.mso.ndo_route_map_policy_multicast
 ndo_schema_template_bd_dhcp_policy:
   - cisco.mso.ndo_schema_template_bd_dhcp_policy
+ndo_schema_template_contract_service_chain:
+  - cisco.mso.ndo_schema_template_contract_service_chain
 ndo_schema_template_deploy:
   - cisco.mso.ndo_schema_template_deploy
+ndo_service_device_cluster:
+  - cisco.mso.ndo_service_device_cluster
 ndo_synce_interface_policy:
   - cisco.mso.ndo_synce_interface_policy
 ndo_template:
@@ -13517,6 +13827,8 @@ ndo_tenant_igmp_snooping_policy:
   - cisco.mso.ndo_tenant_igmp_snooping_policy
 ndo_tenant_mld_snooping_policy:
   - cisco.mso.ndo_tenant_mld_snooping_policy
+ndo_tenant_span_session:
+  - cisco.mso.ndo_tenant_span_session
 ndo_virtual_port_channel_interface:
   - cisco.mso.ndo_virtual_port_channel_interface
 ndo_vlan_pool:
@@ -15050,6 +15362,8 @@ nios_zone:
   - infoblox.nios_modules.nios_zone
 nmcli:
   - community.general.nmcli
+node:
+  - ravendb.ravendb.node
 node_deployment:
   - cisco.ise.node_deployment
 node_deployment_info:
@@ -15293,6 +15607,8 @@ object:
   - openstack.cloud.object
 object_container:
   - openstack.cloud.object_container
+object_containers_info:
+  - openstack.cloud.object_containers_info
 object_info:
   - microsoft.ad.object_info
 object_storage:
@@ -15672,6 +15988,8 @@ organizations_appliance_uplinks_statuses_overview_info:
   - cisco.meraki.organizations_appliance_uplinks_statuses_overview_info
 organizations_appliance_uplinks_usage_by_network_info:
   - cisco.meraki.organizations_appliance_uplinks_usage_by_network_info
+organizations_appliance_vpn_stats_info:
+  - cisco.meraki.organizations_appliance_vpn_stats_info
 organizations_appliance_vpn_third_party_vpnpeers:
   - cisco.meraki.organizations_appliance_vpn_third_party_vpnpeers
 organizations_appliance_vpn_third_party_vpnpeers_info:
@@ -16006,20 +16324,6 @@ organizations_wireless_ssids_firewall_isolation_allowlist_entries_info:
   - cisco.meraki.organizations_wireless_ssids_firewall_isolation_allowlist_entries_info
 organizations_wireless_ssids_statuses_by_device_info:
   - cisco.meraki.organizations_wireless_ssids_statuses_by_device_info
-os10:
-  - dellemc.os10.os10
-os10_command:
-  - dellemc.os10.os10_command
-os10_config:
-  - dellemc.os10.os10_config
-os10_facts:
-  - dellemc.os10.os10_facts
-os6_command:
-  - dellemc.os6.os6_command
-os6_config:
-  - dellemc.os6.os6_config
-os6_facts:
-  - dellemc.os6.os6_facts
 os_default_template:
   - theforeman.foreman.os_default_template
 os_info:
@@ -16516,6 +16820,12 @@ podman_secret:
   - containers.podman.podman_secret
 podman_secret_info:
   - containers.podman.podman_secret_info
+podman_system_connection:
+  - containers.podman.podman_system_connection
+podman_system_connection_info:
+  - containers.podman.podman_system_connection_info
+podman_system_info:
+  - containers.podman.podman_system_info
 podman_tag:
   - containers.podman.podman_tag
 podman_volume:
@@ -16692,6 +17002,8 @@ provisioning_template:
 proxmox:
   - community.general.proxmox
   - community.proxmox.proxmox
+proxmox_access_acl:
+  - community.proxmox.proxmox_access_acl
 proxmox_backup:
   - community.general.proxmox_backup
   - community.proxmox.proxmox_backup
@@ -16702,6 +17014,12 @@ proxmox_backup_schedule:
   - community.proxmox.proxmox_backup_schedule
 proxmox_cluster:
   - community.proxmox.proxmox_cluster
+proxmox_cluster_ha_groups:
+  - community.proxmox.proxmox_cluster_ha_groups
+proxmox_cluster_ha_resources:
+  - community.proxmox.proxmox_cluster_ha_resources
+proxmox_cluster_ha_rules:
+  - community.proxmox.proxmox_cluster_ha_rules
 proxmox_cluster_join_info:
   - community.proxmox.proxmox_cluster_join_info
 proxmox_disk:
@@ -16710,15 +17028,25 @@ proxmox_disk:
 proxmox_domain_info:
   - community.general.proxmox_domain_info
   - community.proxmox.proxmox_domain_info
+proxmox_firewall:
+  - community.proxmox.proxmox_firewall
+proxmox_firewall_info:
+  - community.proxmox.proxmox_firewall_info
+proxmox_group:
+  - community.proxmox.proxmox_group
 proxmox_group_info:
   - community.general.proxmox_group_info
   - community.proxmox.proxmox_group_info
+proxmox_ipam_info:
+  - community.proxmox.proxmox_ipam_info
 proxmox_kvm:
   - community.general.proxmox_kvm
   - community.proxmox.proxmox_kvm
 proxmox_nic:
   - community.general.proxmox_nic
   - community.proxmox.proxmox_nic
+proxmox_node:
+  - community.proxmox.proxmox_node
 proxmox_node_info:
   - community.general.proxmox_node_info
   - community.proxmox.proxmox_node_info
@@ -16731,24 +17059,38 @@ proxmox_pool_member:
 proxmox_snap:
   - community.general.proxmox_snap
   - community.proxmox.proxmox_snap
+proxmox_storage:
+  - community.proxmox.proxmox_storage
 proxmox_storage_contents_info:
   - community.general.proxmox_storage_contents_info
   - community.proxmox.proxmox_storage_contents_info
 proxmox_storage_info:
   - community.general.proxmox_storage_info
   - community.proxmox.proxmox_storage_info
+proxmox_subnet:
+  - community.proxmox.proxmox_subnet
 proxmox_tasks_info:
   - community.general.proxmox_tasks_info
   - community.proxmox.proxmox_tasks_info
 proxmox_template:
   - community.general.proxmox_template
   - community.proxmox.proxmox_template
+proxmox_user:
+  - community.proxmox.proxmox_user
 proxmox_user_info:
   - community.general.proxmox_user_info
   - community.proxmox.proxmox_user_info
 proxmox_vm_info:
   - community.general.proxmox_vm_info
   - community.proxmox.proxmox_vm_info
+proxmox_vnet:
+  - community.proxmox.proxmox_vnet
+proxmox_vnet_info:
+  - community.proxmox.proxmox_vnet_info
+proxmox_zone:
+  - community.proxmox.proxmox_zone
+proxmox_zone_info:
+  - community.proxmox.proxmox_zone_info
 proxy_connection_settings:
   - cisco.ise.proxy_connection_settings
 proxy_connection_settings_info:
@@ -16763,6 +17105,8 @@ proxysql_info:
   - community.proxysql.proxysql_info
 proxysql_manage_config:
   - community.proxysql.proxysql_manage_config
+proxysql_mysql_hostgroup_attributes:
+  - community.proxysql.proxysql_mysql_hostgroup_attributes
 proxysql_mysql_users:
   - community.proxysql.proxysql_mysql_users
 proxysql_query_rules:
@@ -16929,6 +17273,8 @@ purefa_volume:
   - purestorage.flasharray.purefa_volume
 purefa_volume_tags:
   - purestorage.flasharray.purefa_volume_tags
+purefa_workload:
+  - purestorage.flasharray.purefa_workload
 purefb_ad:
   - purestorage.flashblade.purefb_ad
 purefb_admin:
@@ -16977,6 +17323,8 @@ purefb_inventory:
   - purestorage.flashblade.purefb_inventory
 purefb_keytabs:
   - purestorage.flashblade.purefb_keytabs
+purefb_kmip:
+  - purestorage.flashblade.purefb_kmip
 purefb_lag:
   - purestorage.flashblade.purefb_lag
 purefb_lifecycle:
@@ -18283,10 +18631,12 @@ sgt_bulk_request:
   - cisco.ise.sgt_bulk_request
 sgt_info:
   - cisco.ise.sgt_info
+share_type:
+  - openstack.cloud.share_type
+share_type_info:
+  - openstack.cloud.share_type_info
 shell:
   - ansible.builtin.shell
-show_system_network_summary:
-  - dellemc.os10.show_system_network_summary
 shutdown:
   - community.general.shutdown
 silence:
@@ -19257,8 +19607,6 @@ terraform:
   - community.general.terraform
 tessen:
   - sensu.sensu_go.tessen
-textfsm_parser:
-  - dellemc.os10.textfsm_parser
 threat_vulnerabilities_clear:
   - cisco.ise.threat_vulnerabilities_clear
 threshold_info:
@@ -19848,8 +20196,6 @@ virtual_network_health_summaries_info:
   - cisco.dnac.virtual_network_health_summaries_info
 virtual_network_health_summaries_v1_info:
   - cisco.dnac.virtual_network_health_summaries_v1_info
-vlt_validate:
-  - dellemc.os10.vlt_validate
 vm_list_group_by_clusters_info:
   - vmware.vmware.vm_list_group_by_clusters_info
 vm_portgroup_info:
@@ -20209,6 +20555,8 @@ volume_backup_info:
 volume_info:
   - hetzner.hcloud.volume_info
   - openstack.cloud.volume_info
+volume_manage:
+  - openstack.cloud.volume_manage
 volume_service_info:
   - openstack.cloud.volume_service_info
 volume_snapshot:
@@ -20960,8 +21308,6 @@ wireless_settings_ssids_override_at_sites_info:
   - cisco.dnac.wireless_settings_ssids_override_at_sites_info
 wireless_settings_ssids_override_at_sites_v1_info:
   - cisco.dnac.wireless_settings_ssids_override_at_sites_v1_info
-wiring_validate:
-  - dellemc.os10.wiring_validate
 workflow_approval:
   - awx.awx.workflow_approval
 workflow_job_template:
