@@ -17,10 +17,18 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.11
-      - name: install pyyaml
+      - name: install ansible and pyyaml
         run: |
           python -m pip install --upgrade pip
-          pip install pyyaml
+          pip install pyyaml ansible ansible-core
+      - name: debug
+        run: |
+          ansible --version
+          echo "--------------------"
+          python --version
+          echo "--------------------"
+          pip list
+
       - name: rebuild fqcn map
         run: |
           ./fqcn-fixer.py -f example.yml -u
