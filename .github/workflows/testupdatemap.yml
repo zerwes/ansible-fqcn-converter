@@ -7,7 +7,8 @@ on:
   push:
     paths: '*.py'
   schedule:
-    - cron: "20 5 * * 8"
+    - cron: "40 16 * * 5"
+      timezone: "Europe/Berlin"
 jobs:
   build:
     runs-on: ubuntu-latest
