@@ -111,7 +111,7 @@ currently implemented config settings:
 ### collections
 The script uses all collections installed (in the current directory) to build a translation map (aka. `fqcn-map-file`).
 
-If the file is not found (or `--update-fqcn-map-file` is in use), the file defined by `--fqcn-map-file` will be created. (:warning: **this wounds time** :warning:)
+If the file is not found (or `--update-fqcn-map-file` is in use), the file defined by `--fqcn-map-file` will be created. ( :warning: **this wounds time** :warning: )
 
 ### exclude paths
 You can use a `.ansible-lint` config file as input to `-c` in order to define `EXCLUDE_PATHS`
