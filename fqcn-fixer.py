@@ -324,7 +324,8 @@ if args.config:
         with open(args.config, "r", encoding="utf-8") as ymlfile:
             _config = yaml.load(ymlfile, Loader=yaml.BaseLoader)
     except FileNotFoundError:
-        pass
+        print("error: config file '%s' not found" % args.config, file=sys.stderr)
+        sys.exit(2)
 if _config and 'exclude_paths' in _config.keys():
     for ep in _config['exclude_paths']:
         exclude_paths.append(os.path.abspath(ep))
